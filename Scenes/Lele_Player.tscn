@@ -1,0 +1,73 @@
+[gd_scene load_steps=11 format=3 uid="uid://dp7f17w34esul"]
+
+[ext_resource type="Texture2D" uid="uid://ce3vft1f7lti8" path="res://personajes/Lele_Derecha.png" id="1_xq3gg"]
+[ext_resource type="Texture2D" uid="uid://qouemu6hm1f" path="res://personajes/Lele_Izquierda.png" id="2_afxyx"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_udjv5"]
+size = Vector2(132, 314)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_i1i3n"]
+atlas = ExtResource("1_xq3gg")
+region = Rect2(0, 0, 139, 324)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_83b84"]
+atlas = ExtResource("1_xq3gg")
+region = Rect2(139, 0, 139, 324)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_a3gxk"]
+atlas = ExtResource("1_xq3gg")
+region = Rect2(0, 324, 139, 324)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_a15ik"]
+atlas = ExtResource("2_afxyx")
+region = Rect2(0, 0, 144, 328)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_meiw8"]
+atlas = ExtResource("2_afxyx")
+region = Rect2(144, 0, 144, 328)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_8geyg"]
+atlas = ExtResource("2_afxyx")
+region = Rect2(0, 328, 144, 328)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_mhkpy"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_i1i3n")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_83b84")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_a3gxk")
+}],
+"loop": true,
+"name": &"Derecha",
+"speed": 7.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_a15ik")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_meiw8")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_8geyg")
+}],
+"loop": true,
+"name": &"Izquierda",
+"speed": 5.0
+}]
+
+[node name="CharacterBody2D" type="CharacterBody2D"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(-3, 2)
+shape = SubResource("RectangleShape2D_udjv5")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+sprite_frames = SubResource("SpriteFrames_mhkpy")
+animation = &"Izquierda"
+frame_progress = 0.858282

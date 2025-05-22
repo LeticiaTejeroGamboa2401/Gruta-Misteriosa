@@ -1,0 +1,66 @@
+[gd_scene load_steps=9 format=3 uid="uid://76cc3p1lvffq"]
+
+[ext_resource type="Script" path="res://Scenes/bosque.gd" id="1_52jtc"]
+[ext_resource type="Texture2D" uid="uid://c4ljuuy56jopt" path="res://images/Bosque.jpg" id="1_anv7h"]
+[ext_resource type="PackedScene" uid="uid://ur1624qxlyln" path="res://Scenes/Lucy_Player.tscn" id="2_4m5pc"]
+[ext_resource type="Texture2D" uid="uid://dgix8j6333h6i" path="res://images/HuayChivo.png" id="4_jyrlr"]
+[ext_resource type="PackedScene" uid="uid://cshqucsavs7df" path="res://Scenes/Murcielago_Volando.tscn" id="5_imvvr"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_viedp"]
+size = Vector2(584, 37)
+
+[sub_resource type="PlaceholderTexture2D" id="PlaceholderTexture2D_m153n"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_qundi"]
+size = Vector2(51, 252)
+
+[node name="Control" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_52jtc")
+
+[node name="TextureRect" type="TextureRect" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("1_anv7h")
+
+[node name="StaticBody2D" type="StaticBody2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D"]
+visible = false
+position = Vector2(291, 623.5)
+shape = SubResource("RectangleShape2D_viedp")
+
+[node name="Sprite2D" type="Sprite2D" parent="StaticBody2D"]
+position = Vector2(291.5, 624.625)
+scale = Vector2(583, 47.25)
+texture = SubResource("PlaceholderTexture2D_m153n")
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="StaticBody2D"]
+visible = false
+position = Vector2(555.5, 520)
+shape = SubResource("RectangleShape2D_qundi")
+
+[node name="CharacterBody2D2" parent="." instance=ExtResource("2_4m5pc")]
+position = Vector2(59, 525)
+
+[node name="HuayChivo" type="Sprite2D" parent="."]
+position = Vector2(1019, 446)
+scale = Vector2(0.398426, 0.519444)
+texture = ExtResource("4_jyrlr")
+
+[node name="Polygon2D" type="Polygon2D" parent="."]
+
+[node name="murcielago" parent="." instance=ExtResource("5_imvvr")]
+position = Vector2(1129, 197)
+
+[connection signal="draw" from="HuayChivo" to="." method="_on_huay_chivo_draw"]
+[connection signal="hidden" from="HuayChivo" to="." method="_on_huay_chivo_hidden"]

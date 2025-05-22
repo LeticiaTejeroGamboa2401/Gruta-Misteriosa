@@ -1,0 +1,80 @@
+[gd_scene load_steps=8 format=3 uid="uid://bcgnpj0w4ihk6"]
+
+[ext_resource type="Script" path="res://Scripts/historia_5.gd" id="1_01a0j"]
+[ext_resource type="Texture2D" uid="uid://3hqd2syyrgry" path="res://images/HistoriaCompa.jpg" id="1_deejx"]
+[ext_resource type="PackedScene" uid="uid://1kydvnjxixmp" path="res://Scenes/Aluxe_Personaje.tscn" id="2_wusra"]
+[ext_resource type="FontFile" uid="uid://bd321yblpf1ew" path="res://font/Supermarket of Love.ttf" id="3_ibrml"]
+[ext_resource type="Texture2D" uid="uid://ci1roshk4clhe" path="res://images/Siguiente.png" id="4_7smdm"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_jhx6o"]
+font = ExtResource("3_ibrml")
+font_size = 35
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_fqj4k"]
+
+[node name="Control" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_01a0j")
+
+[node name="ColorRect" type="ColorRect" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0, 0, 0, 1)
+
+[node name="TextureRect" type="TextureRect" parent="."]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -338.0
+offset_top = 5.0
+offset_right = 340.0
+offset_bottom = 485.0
+grow_horizontal = 2
+texture = ExtResource("1_deejx")
+
+[node name="Aluxe" parent="." instance=ExtResource("2_wusra")]
+layout_mode = 1
+offset_left = 741.0
+offset_top = 300.0
+offset_right = -236.0
+offset_bottom = -188.0
+
+[node name="Label" type="Label" parent="."]
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -183.0
+offset_top = -148.0
+offset_right = 182.0
+offset_bottom = -28.0
+grow_horizontal = 2
+grow_vertical = 0
+text = "Para lograrlo, debemos ir al pueblo de los aluxes, 
+ellos te darán 6 trozos de amuleto, con ellos
+tendrás el poder para vencer al brujo y volver a casa."
+label_settings = SubResource("LabelSettings_jhx6o")
+horizontal_alignment = 1
+
+[node name="Siguiente" type="Button" parent="."]
+layout_mode = 0
+offset_left = 1074.0
+offset_top = 568.0
+offset_right = 1152.0
+offset_bottom = 646.0
+theme_override_styles/normal = SubResource("StyleBoxTexture_fqj4k")
+icon = ExtResource("4_7smdm")
+
+[connection signal="pressed" from="Siguiente" to="." method="_on_siguiente_pressed"]

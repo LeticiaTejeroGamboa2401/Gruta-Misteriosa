@@ -1,0 +1,81 @@
+[gd_scene load_steps=12 format=3 uid="uid://cshqucsavs7df"]
+
+[ext_resource type="Script" path="res://Scripts/murcielago_volando.gd" id="1_ad4de"]
+[ext_resource type="Texture2D" uid="uid://cead2kxuc2gnd" path="res://images/murcielago.png" id="1_gh75v"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_udjv5"]
+size = Vector2(85, 103)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_7bu4b"]
+atlas = ExtResource("1_gh75v")
+region = Rect2(0, 0, 89, 156)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_enssy"]
+atlas = ExtResource("1_gh75v")
+region = Rect2(89, 0, 89, 156)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_1psiq"]
+atlas = ExtResource("1_gh75v")
+region = Rect2(178, 0, 89, 156)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_an6qd"]
+atlas = ExtResource("1_gh75v")
+region = Rect2(267, 0, 89, 156)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_r7kjf"]
+atlas = ExtResource("1_gh75v")
+region = Rect2(356, 0, 89, 156)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_mdo0b"]
+atlas = ExtResource("1_gh75v")
+region = Rect2(445, 0, 89, 156)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_7vrhu"]
+atlas = ExtResource("1_gh75v")
+region = Rect2(534, 0, 89, 156)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_mhkpy"]
+animations = [{
+"frames": [],
+"loop": true,
+"name": &"Izquierda",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_7bu4b")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_enssy")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_1psiq")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_an6qd")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_r7kjf")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_mdo0b")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_7vrhu")
+}],
+"loop": true,
+"name": &"Vuelo",
+"speed": 7.0
+}]
+
+[node name="CharacterBody2D" type="CharacterBody2D"]
+script = ExtResource("1_ad4de")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(0.5, -3.5)
+shape = SubResource("RectangleShape2D_udjv5")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+sprite_frames = SubResource("SpriteFrames_mhkpy")
+animation = &"Vuelo"
+frame_progress = 0.405097

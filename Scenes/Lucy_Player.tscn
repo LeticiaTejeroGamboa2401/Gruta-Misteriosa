@@ -1,0 +1,76 @@
+[gd_scene load_steps=12 format=3 uid="uid://ur1624qxlyln"]
+
+[ext_resource type="Script" path="res://Scripts/lucy_player.gd" id="1_kpkkb"]
+[ext_resource type="Texture2D" uid="uid://gtqi8x5y78s" path="res://personajes/Lucy_Derecha.png" id="1_mrkkf"]
+[ext_resource type="Texture2D" uid="uid://bx7kvsiwv71a" path="res://personajes/Lucy_Izquierda.png" id="2_va1bc"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_udjv5"]
+size = Vector2(104, 233)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_jf18p"]
+atlas = ExtResource("1_mrkkf")
+region = Rect2(0, 0, 162, 372)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_3sepx"]
+atlas = ExtResource("1_mrkkf")
+region = Rect2(162, 0, 162, 372)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_g1j2v"]
+atlas = ExtResource("1_mrkkf")
+region = Rect2(0, 372, 162, 372)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_xg3sp"]
+atlas = ExtResource("2_va1bc")
+region = Rect2(0, 0, 160, 380)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_knkk3"]
+atlas = ExtResource("2_va1bc")
+region = Rect2(160, 0, 160, 380)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_k77xm"]
+atlas = ExtResource("2_va1bc")
+region = Rect2(0, 380, 160, 380)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_p3hkm"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_jf18p")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_3sepx")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_g1j2v")
+}],
+"loop": true,
+"name": &"Derecha",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_xg3sp")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_knkk3")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_k77xm")
+}],
+"loop": true,
+"name": &"Izquierda",
+"speed": 5.0
+}]
+
+[node name="CharacterBody2D" type="CharacterBody2D"]
+script = ExtResource("1_kpkkb")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(1, -2.5)
+shape = SubResource("RectangleShape2D_udjv5")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+scale = Vector2(0.712356, 0.648381)
+sprite_frames = SubResource("SpriteFrames_p3hkm")
+animation = &"Derecha"
+frame_progress = 0.276582

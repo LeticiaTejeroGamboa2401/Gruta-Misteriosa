@@ -1,0 +1,57 @@
+[gd_scene load_steps=6 format=3 uid="uid://3kobp1qamf1p"]
+
+[ext_resource type="Script" path="res://Scripts/historia_2.gd" id="1_uyc4l"]
+[ext_resource type="Texture2D" uid="uid://p8s8vafhm5pj" path="res://images/Figura_Tenebrosa.png" id="2_pi3x7"]
+[ext_resource type="Texture2D" uid="uid://ci1roshk4clhe" path="res://images/Siguiente.png" id="3_60vm4"]
+
+[sub_resource type="StyleBoxLine" id="StyleBoxLine_eyx5m"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_2tupj"]
+bg_color = Color(0, 0, 0, 1)
+
+[node name="Control" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_uyc4l")
+
+[node name="ColorRect" type="ColorRect" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0, 0, 0, 1)
+
+[node name="TextureRect" type="TextureRect" parent="."]
+layout_mode = 0
+offset_left = 159.0
+offset_top = 47.0
+offset_right = 991.0
+offset_bottom = 433.0
+texture = ExtResource("2_pi3x7")
+
+[node name="TextEdit" type="TextEdit" parent="."]
+layout_mode = 0
+offset_left = 288.0
+offset_top = 457.0
+offset_right = 882.0
+offset_bottom = 578.0
+theme_override_font_sizes/font_size = 30
+theme_override_styles/normal = SubResource("StyleBoxLine_eyx5m")
+text = "Aparece frente a ti una figura tenebrosa"
+
+[node name="Siguiente" type="Button" parent="."]
+layout_mode = 0
+offset_left = 1074.0
+offset_top = 568.0
+offset_right = 1152.0
+offset_bottom = 646.0
+theme_override_styles/focus = SubResource("StyleBoxFlat_2tupj")
+icon = ExtResource("3_60vm4")
+
+[connection signal="pressed" from="Siguiente" to="." method="_on_siguiente_pressed"]

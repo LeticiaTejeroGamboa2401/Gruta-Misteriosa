@@ -1,0 +1,77 @@
+[gd_scene load_steps=9 format=3 uid="uid://cox8lum0ipe8t"]
+
+[ext_resource type="Texture2D" uid="uid://c4ljuuy56jopt" path="res://images/Bosque.jpg" id="1_dm15r"]
+[ext_resource type="Script" path="res://Scripts/entrada_cueva.gd" id="1_yfyu7"]
+[ext_resource type="Texture2D" uid="uid://u7pgc4jgx8qf" path="res://images/cueva.png" id="2_m1ota"]
+[ext_resource type="PackedScene" uid="uid://ur1624qxlyln" path="res://Scenes/Lucy_Player.tscn" id="4_7a60o"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_foiys"]
+size = Vector2(53.5, 349)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_o5of2"]
+size = Vector2(55, 345)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_hkphu"]
+size = Vector2(1040.5, 6.5)
+
+[sub_resource type="PlaceholderTexture2D" id="PlaceholderTexture2D_k2fqe"]
+
+[node name="Control" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_yfyu7")
+
+[node name="Bosque" type="TextureRect" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("1_dm15r")
+
+[node name="Cueva" type="TextureRect" parent="."]
+layout_mode = 1
+anchors_preset = 3
+anchor_left = 1.0
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -516.0
+offset_top = -358.0
+grow_horizontal = 0
+grow_vertical = 0
+texture = ExtResource("2_m1ota")
+
+[node name="Lucy_Player" parent="." instance=ExtResource("4_7a60o")]
+position = Vector2(52, 532)
+
+[node name="EntradaCueva" type="Area2D" parent="."]
+
+[node name="CuevaTope" type="CollisionShape2D" parent="EntradaCueva"]
+position = Vector2(1006, 474)
+shape = SubResource("RectangleShape2D_foiys")
+
+[node name="StaticBody2D" type="StaticBody2D" parent="."]
+
+[node name="Tope" type="CollisionShape2D" parent="StaticBody2D"]
+visible = false
+position = Vector2(1019.5, 470.5)
+shape = SubResource("RectangleShape2D_o5of2")
+
+[node name="AreaCamino" type="CollisionShape2D" parent="StaticBody2D"]
+visible = false
+position = Vector2(522.75, 643.25)
+shape = SubResource("RectangleShape2D_hkphu")
+
+[node name="Sprite2D" type="Sprite2D" parent="StaticBody2D"]
+visible = false
+position = Vector2(522.625, 644.125)
+scale = Vector2(1044.75, 6.24999)
+texture = SubResource("PlaceholderTexture2D_k2fqe")
+
+[connection signal="body_entered" from="EntradaCueva" to="." method="_on_entrada_cueva_body_entered"]

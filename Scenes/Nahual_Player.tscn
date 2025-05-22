@@ -1,0 +1,128 @@
+[gd_scene load_steps=17 format=3 uid="uid://c5w2vudhd0der"]
+
+[ext_resource type="Texture2D" uid="uid://p14a3p8k04i7" path="res://personajes/Nahual_Derecha.png" id="1_xagyi"]
+[ext_resource type="Texture2D" uid="uid://u7b5ps5x7u3f" path="res://personajes/Nahual_Izquierda.png" id="2_kt4ce"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_gfoss"]
+atlas = ExtResource("1_xagyi")
+region = Rect2(0, 0, 240, 174)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_pishn"]
+atlas = ExtResource("1_xagyi")
+region = Rect2(240, 0, 240, 174)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_2l2dx"]
+atlas = ExtResource("1_xagyi")
+region = Rect2(480, 0, 240, 174)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_etytr"]
+atlas = ExtResource("1_xagyi")
+region = Rect2(0, 174, 240, 174)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ekx55"]
+atlas = ExtResource("1_xagyi")
+region = Rect2(240, 174, 240, 174)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_6f7fr"]
+atlas = ExtResource("1_xagyi")
+region = Rect2(480, 174, 240, 174)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_shjoc"]
+atlas = ExtResource("2_kt4ce")
+region = Rect2(0, 0, 240, 174)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_cngxc"]
+atlas = ExtResource("2_kt4ce")
+region = Rect2(240, 0, 240, 174)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_nal58"]
+atlas = ExtResource("2_kt4ce")
+region = Rect2(480, 0, 240, 174)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_t2xj2"]
+atlas = ExtResource("2_kt4ce")
+region = Rect2(0, 174, 240, 174)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_8cr52"]
+atlas = ExtResource("2_kt4ce")
+region = Rect2(240, 174, 240, 174)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ar88d"]
+atlas = ExtResource("2_kt4ce")
+region = Rect2(480, 174, 240, 174)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_wnkr4"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_gfoss")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_pishn")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_2l2dx")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_etytr")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ekx55")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_6f7fr")
+}],
+"loop": true,
+"name": &"Run_Derecha",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_shjoc")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_cngxc")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_nal58")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_t2xj2")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_8cr52")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ar88d")
+}],
+"loop": true,
+"name": &"Run_Izquierda",
+"speed": 5.0
+}]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_it0rq"]
+size = Vector2(235.75, 102.5)
+
+[node name="Nahual" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 145.0
+offset_top = 215.0
+offset_right = 145.0
+offset_bottom = 215.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+position = Vector2(11, 8)
+sprite_frames = SubResource("SpriteFrames_wnkr4")
+animation = &"Run_Derecha"
+frame_progress = 0.406193
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(8.875, 12.25)
+shape = SubResource("RectangleShape2D_it0rq")

@@ -1,0 +1,88 @@
+[gd_scene load_steps=12 format=3 uid="uid://1kydvnjxixmp"]
+
+[ext_resource type="Script" path="res://Scripts/aluxe_personaje.gd" id="1_f6xoo"]
+[ext_resource type="Texture2D" uid="uid://buc16thqn2bvm" path="res://images/aluxe.png" id="1_wnbvk"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_04qq1"]
+size = Vector2(90, 137)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_scec7"]
+atlas = ExtResource("1_wnbvk")
+region = Rect2(0, 0, 97, 200)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_4b8nw"]
+atlas = ExtResource("1_wnbvk")
+region = Rect2(97, 0, 97, 200)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_g71tq"]
+atlas = ExtResource("1_wnbvk")
+region = Rect2(194, 0, 97, 200)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_js0ay"]
+atlas = ExtResource("1_wnbvk")
+region = Rect2(291, 0, 97, 200)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_tx55w"]
+atlas = ExtResource("1_wnbvk")
+region = Rect2(388, 0, 97, 200)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_k3a5f"]
+atlas = ExtResource("1_wnbvk")
+region = Rect2(485, 0, 97, 200)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_5f8fr"]
+atlas = ExtResource("1_wnbvk")
+region = Rect2(582, 0, 97, 200)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_68dj2"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_scec7")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_4b8nw")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_g71tq")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_js0ay")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_tx55w")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_k3a5f")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_5f8fr")
+}],
+"loop": true,
+"name": &"Levitar",
+"speed": 5.0
+}]
+
+[node name="Aluxe" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 54.0
+offset_top = 108.0
+offset_right = -994.0
+offset_bottom = -416.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_f6xoo")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(35, 58.5)
+shape = SubResource("RectangleShape2D_04qq1")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+position = Vector2(17.25, 40.5)
+scale = Vector2(1.26289, 1.165)
+sprite_frames = SubResource("SpriteFrames_68dj2")
+animation = &"Levitar"
+frame_progress = 0.143723

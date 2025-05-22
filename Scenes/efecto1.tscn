@@ -1,0 +1,43 @@
+[gd_scene load_steps=5 format=3 uid="uid://ciu83tti1vnwg"]
+
+[ext_resource type="VideoStream" path="res://images/efecto.ogv" id="1_mpei4"]
+[ext_resource type="Script" path="res://Scripts/efecto_1.gd" id="1_mtnne"]
+[ext_resource type="FontFile" uid="uid://dqema7q2csftl" path="res://font/The Amazing Spider-Man.ttf" id="3_66g22"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_o7m6a"]
+font = ExtResource("3_66g22")
+font_size = 70
+
+[node name="Control" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_mtnne")
+
+[node name="VideoPlayer" type="VideoStreamPlayer" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+stream = ExtResource("1_mpei4")
+
+[node name="Label" type="Label" parent="."]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -380.5
+offset_top = -32.5
+offset_right = 380.5
+offset_bottom = 32.5
+grow_horizontal = 2
+grow_vertical = 2
+text = "NUNCA DEBISTE SALIR SOLO AL MONTE"
+label_settings = SubResource("LabelSettings_o7m6a")

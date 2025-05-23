@@ -1,6 +1,6 @@
 [gd_scene load_steps=8 format=3 uid="uid://dwqpo5a0hnke5"]
 
-[ext_resource type="Script" path="res://Scripts/historia_4.gd" id="1_50ga4"]
+[ext_resource type="Script" path="res://Scripts/historia6.gd" id="1_va88k"]
 [ext_resource type="Texture2D" uid="uid://3hqd2syyrgry" path="res://images/HistoriaCompa.jpg" id="2_s0nyl"]
 [ext_resource type="PackedScene" uid="uid://1kydvnjxixmp" path="res://Scenes/Aluxe_Personaje.tscn" id="3_vw5n5"]
 [ext_resource type="FontFile" uid="uid://bd321yblpf1ew" path="res://font/Supermarket of Love.ttf" id="4_06xtf"]
@@ -19,7 +19,7 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
-script = ExtResource("1_50ga4")
+script = ExtResource("1_va88k")
 
 [node name="ColorRect" type="ColorRect" parent="."]
 layout_mode = 1

@@ -8,7 +8,7 @@ func _ready():
 	_on_sombra_draw()
 
 	await get_tree().create_timer(3).timeout
-	get_tree().change_scene_to_file("res://Scenes/historia2.tscn")
+	get_tree().change_scene_to_file("res://Scenes/historia4.tscn")
 	
 func _on_sombra_draw() -> void:
 	$sombra.visible = true

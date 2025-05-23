@@ -8,4 +8,4 @@ func _ready():
 
 	# Esperamos 5 segundos y luego cambiamos de escena
 	await get_tree().create_timer(5).timeout
-	get_tree().change_scene_to_file("res://Scenes/EntradaCueva.tscn")
+	get_tree().change_scene_to_file("res://Scenes/bosque_nahual.tscn")

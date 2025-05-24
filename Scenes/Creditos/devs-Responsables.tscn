@@ -1,0 +1,148 @@
+[gd_scene load_steps=12 format=3 uid="uid://cv70cmywwro32"]
+
+[ext_resource type="FontFile" uid="uid://ex6sf638yhh5" path="res://font/Chonky Bunny.ttf" id="1_2bh0v"]
+[ext_resource type="Script" path="res://Scripts/devs_responsables.gd" id="1_ffypl"]
+[ext_resource type="FontFile" uid="uid://q4llc3uguqs2" path="res://font/KGCorneroftheSky.ttf" id="2_piwji"]
+[ext_resource type="Texture2D" uid="uid://2bq0ibxdgxao" path="res://images/return.png" id="4_ic8js"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_tx13x"]
+font = ExtResource("1_2bh0v")
+font_size = 50
+
+[sub_resource type="LabelSettings" id="LabelSettings_q242b"]
+font = ExtResource("2_piwji")
+font_size = 24
+
+[sub_resource type="LabelSettings" id="LabelSettings_md6v1"]
+font = ExtResource("2_piwji")
+font_size = 24
+
+[sub_resource type="LabelSettings" id="LabelSettings_juccj"]
+font = ExtResource("2_piwji")
+font_size = 24
+
+[sub_resource type="LabelSettings" id="LabelSettings_0eyp1"]
+font = ExtResource("2_piwji")
+font_size = 24
+
+[sub_resource type="LabelSettings" id="LabelSettings_en8n0"]
+font = ExtResource("1_2bh0v")
+font_size = 45
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_f01do"]
+
+[node name="Control" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_ffypl")
+
+[node name="ColorRect" type="ColorRect" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0, 0, 0, 1)
+
+[node name="Titulo" type="Label" parent="."]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -214.0
+offset_top = 38.0
+offset_right = 214.0
+offset_bottom = 90.0
+grow_horizontal = 2
+text = "EQUIPO DE MIGRACIÓN"
+label_settings = SubResource("LabelSettings_tx13x")
+
+[node name="Dev1" type="Label" parent="."]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -232.5
+offset_top = 180.0
+offset_right = 232.5
+offset_bottom = 217.0
+grow_horizontal = 2
+text = "ABRAHAM RAYMUNDO CRUZ COLLÍ"
+label_settings = SubResource("LabelSettings_q242b")
+
+[node name="Dev2" type="Label" parent="."]
+layout_mode = 0
+offset_left = 310.0
+offset_top = 233.0
+offset_right = 846.0
+offset_bottom = 270.0
+text = "LETICIA DEL CARMEN TEJERO GAMBOA"
+label_settings = SubResource("LabelSettings_md6v1")
+
+[node name="Resp1" type="Label" parent="."]
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -254.0
+offset_top = -250.0
+offset_right = 254.0
+offset_bottom = -213.0
+grow_horizontal = 2
+grow_vertical = 0
+text = "DR. CARLOS ANDRÉS MIRANDA PALMA"
+label_settings = SubResource("LabelSettings_juccj")
+
+[node name="Resp2" type="Label" parent="."]
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -245.0
+offset_top = -196.0
+offset_right = 245.0
+offset_bottom = -159.0
+grow_horizontal = 2
+grow_vertical = 0
+text = "DRA. LIZZIE EDMEA NARVÁEZ DÍAZ"
+label_settings = SubResource("LabelSettings_0eyp1")
+
+[node name="Sub" type="Label" parent="."]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -317.0
+offset_top = -0.5
+offset_right = 317.0
+offset_bottom = 46.5
+grow_horizontal = 2
+grow_vertical = 2
+text = "RESPONSABLES DEL SERVICIO SOCIAL"
+label_settings = SubResource("LabelSettings_en8n0")
+
+[node name="Button" type="Button" parent="."]
+layout_mode = 1
+anchors_preset = 2
+anchor_top = 1.0
+anchor_bottom = 1.0
+offset_left = 5.0
+offset_top = -85.0
+offset_right = 83.0
+offset_bottom = -7.0
+grow_vertical = 0
+theme_override_styles/normal = SubResource("StyleBoxTexture_f01do")
+icon = ExtResource("4_ic8js")
+
+[connection signal="pressed" from="Button" to="." method="_on_button_pressed"]

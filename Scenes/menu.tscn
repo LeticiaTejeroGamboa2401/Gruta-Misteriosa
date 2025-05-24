@@ -1,4 +1,4 @@
-[gd_scene load_steps=5 format=3 uid="uid://fwbw1ntakfvw"]
+[gd_scene load_steps=6 format=3 uid="uid://fwbw1ntakfvw"]
 
 [ext_resource type="Texture2D" uid="uid://ivs8kjm4fl0p" path="res://images/menu.png" id="1_8u2qd"]
 [ext_resource type="Script" path="res://Scripts/menu.gd" id="1_s6pxs"]
@@ -8,6 +8,9 @@ bg_color = Color(0.00820202, 0.00820203, 0.00820202, 1)
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_xgjpm"]
 bg_color = Color(0, 0, 0, 1)
+corner_detail = 9
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_yhd1w"]
 
 [node name="Menu" type="Control"]
 process_mode = 3
@@ -56,7 +59,7 @@ offset_right = 145.0
 offset_bottom = 282.0
 grow_horizontal = 2
 grow_vertical = 2
-theme_override_constants/separation = 20
+theme_override_constants/separation = 11
 
 [node name="Play" type="Button" parent="ColorRect/VBoxContainer"]
 layout_mode = 2
@@ -70,5 +73,12 @@ theme_override_font_sizes/font_size = 50
 theme_override_styles/normal = SubResource("StyleBoxFlat_xgjpm")
 text = "SALIR"
 
+[node name="Creditos" type="Button" parent="ColorRect/VBoxContainer"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 47
+theme_override_styles/normal = SubResource("StyleBoxTexture_yhd1w")
+text = "CRÉDITOS"
+
 [connection signal="pressed" from="ColorRect/VBoxContainer/Play" to="." method="_on_play_pressed"]
 [connection signal="pressed" from="ColorRect/VBoxContainer/Quit" to="." method="_on_quit_pressed"]
+[connection signal="pressed" from="ColorRect/VBoxContainer/Creditos" to="." method="_on_creditos_pressed"]

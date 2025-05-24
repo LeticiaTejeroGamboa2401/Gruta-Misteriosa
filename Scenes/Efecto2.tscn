@@ -1,7 +1,7 @@
 [gd_scene load_steps=5 format=3 uid="uid://bhxf181vt74g"]
 
 [ext_resource type="Script" path="res://Scripts/efecto_2.gd" id="1_u4hkd"]
-[ext_resource type="VideoStream" path="res://images/efecto.ogv" id="2_0l5u4"]
+[ext_resource type="VideoStream" path="res://images/efecto1.ogv" id="2_ol1it"]
 [ext_resource type="FontFile" uid="uid://dqema7q2csftl" path="res://font/The Amazing Spider-Man.ttf" id="3_t0lve"]
 
 [sub_resource type="LabelSettings" id="LabelSettings_2amj1"]
@@ -24,7 +24,7 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
-stream = ExtResource("2_0l5u4")
+stream = ExtResource("2_ol1it")
 
 [node name="Label" type="Label" parent="."]
 layout_mode = 1

@@ -1,0 +1,87 @@
+[gd_scene load_steps=9 format=3 uid="uid://bho20sgcto7h2"]
+
+[ext_resource type="FontFile" uid="uid://ex6sf638yhh5" path="res://font/Chonky Bunny.ttf" id="1_p5lnm"]
+[ext_resource type="Script" path="res://Scripts/dev_orig.gd" id="1_vt5rx"]
+[ext_resource type="FontFile" uid="uid://q4llc3uguqs2" path="res://font/KGCorneroftheSky.ttf" id="2_k7i6w"]
+[ext_resource type="Texture2D" uid="uid://2bq0ibxdgxao" path="res://images/return.png" id="3_afpab"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_e00pd"]
+font = ExtResource("1_p5lnm")
+font_size = 50
+
+[sub_resource type="LabelSettings" id="LabelSettings_mi2u0"]
+font = ExtResource("2_k7i6w")
+font_size = 24
+
+[sub_resource type="LabelSettings" id="LabelSettings_cv1w5"]
+font = ExtResource("2_k7i6w")
+font_size = 24
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_ok42n"]
+
+[node name="Control" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_vt5rx")
+
+[node name="ColorRect" type="ColorRect" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0, 0, 0, 1)
+
+[node name="Titulo" type="Label" parent="."]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -257.0
+offset_top = 28.0
+offset_right = 257.0
+offset_bottom = 80.0
+grow_horizontal = 2
+text = "DESARROLLADOR ORIGINAL"
+label_settings = SubResource("LabelSettings_e00pd")
+
+[node name="NombreAutor" type="Label" parent="."]
+layout_mode = 0
+offset_left = 334.0
+offset_top = 163.0
+offset_right = 801.0
+offset_bottom = 202.0
+text = "Betsy Guadalupe Asencio García"
+label_settings = SubResource("LabelSettings_mi2u0")
+
+[node name="Información" type="Label" parent="."]
+layout_mode = 0
+offset_left = 73.0
+offset_top = 221.0
+offset_right = 1079.0
+offset_bottom = 538.0
+text = "Desarrolladora del videojuego original como parte de su tesis titulada:
+ \"Desarrollo y análisis de un videojuego educativo de apoyo a la 
+comprensión lectora matemática para niños de educación primaria.\", 
+para la Licenciatura en Ingeniería de Software. 
+Universidad Autónoma de Yucatán, 2023.
+
+El proyecto fue creado originalmente en Stencyl como parte de su 
+investigación académica."
+label_settings = SubResource("LabelSettings_cv1w5")
+
+[node name="Return" type="Button" parent="."]
+layout_mode = 0
+offset_left = 4.0
+offset_top = 565.0
+offset_right = 82.0
+offset_bottom = 643.0
+theme_override_styles/normal = SubResource("StyleBoxTexture_ok42n")
+icon = ExtResource("3_afpab")
+
+[connection signal="pressed" from="Return" to="." method="_on_return_pressed"]

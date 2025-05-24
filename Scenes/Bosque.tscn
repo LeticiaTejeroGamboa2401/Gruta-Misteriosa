@@ -7,7 +7,7 @@
 [ext_resource type="PackedScene" uid="uid://cshqucsavs7df" path="res://Scenes/Murcielago_Volando.tscn" id="5_imvvr"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_viedp"]
-size = Vector2(584, 37)
+size = Vector2(584, 1)
 
 [sub_resource type="PlaceholderTexture2D" id="PlaceholderTexture2D_m153n"]
 
@@ -36,12 +36,13 @@ texture = ExtResource("1_anv7h")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D"]
 visible = false
-position = Vector2(291, 623.5)
+position = Vector2(291, 642.5)
 shape = SubResource("RectangleShape2D_viedp")
 
 [node name="Sprite2D" type="Sprite2D" parent="StaticBody2D"]
-position = Vector2(291.5, 624.625)
-scale = Vector2(583, 47.25)
+visible = false
+position = Vector2(291.5, 645.125)
+scale = Vector2(583, 6.25002)
 texture = SubResource("PlaceholderTexture2D_m153n")
 
 [node name="CollisionShape2D2" type="CollisionShape2D" parent="StaticBody2D"]

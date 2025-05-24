@@ -1,0 +1,152 @@
+[gd_scene load_steps=18 format=3 uid="uid://cslref2fpm576"]
+
+[ext_resource type="Script" path="res://Scripts/creditos_1.gd" id="1_oc2ik"]
+[ext_resource type="FontFile" uid="uid://ex6sf638yhh5" path="res://font/Chonky Bunny.ttf" id="1_yu0k1"]
+[ext_resource type="FontFile" uid="uid://q4llc3uguqs2" path="res://font/KGCorneroftheSky.ttf" id="2_pv3y1"]
+[ext_resource type="Texture2D" uid="uid://2bq0ibxdgxao" path="res://images/return.png" id="3_637cw"]
+[ext_resource type="Texture2D" uid="uid://d3slqh6gwd7vi" path="res://images/EqMig.png" id="4_4145x"]
+[ext_resource type="Texture2D" uid="uid://dvpmlatur4e3q" path="res://images/DevOrig.png" id="5_vv55t"]
+[ext_resource type="Texture2D" uid="uid://fkobhq0d0agd" path="res://images/HyT.png" id="6_td4xp"]
+[ext_resource type="Texture2D" uid="uid://be4mhqth3ldy3" path="res://images/MatDA.png" id="7_6jewi"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_u2rpd"]
+font = ExtResource("1_yu0k1")
+font_size = 50
+
+[sub_resource type="LabelSettings" id="LabelSettings_u8imo"]
+font = ExtResource("1_yu0k1")
+font_size = 45
+
+[sub_resource type="LabelSettings" id="LabelSettings_5vik2"]
+font = ExtResource("2_pv3y1")
+font_size = 35
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_mxwk1"]
+
+[sub_resource type="FontFile" id="FontFile_2qf0l"]
+cache/0/16/0/ascent = 0.0
+cache/0/16/0/descent = 0.0
+cache/0/16/0/underline_position = 0.0
+cache/0/16/0/underline_thickness = 0.0
+cache/0/16/0/scale = 1.0
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_dk2p5"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_u6kwo"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_8lp0u"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_y5wxk"]
+
+[node name="Control" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_oc2ik")
+
+[node name="ColorRect" type="ColorRect" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0, 0, 0, 1)
+
+[node name="Creditos" type="Label" parent="."]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -91.0
+offset_top = 30.0
+offset_right = 91.0
+offset_bottom = 82.0
+grow_horizontal = 2
+text = "CRÉDITOS"
+label_settings = SubResource("LabelSettings_u2rpd")
+
+[node name="Propiedad intelecutal" type="Label" parent="."]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -209.0
+offset_top = 163.0
+offset_right = 207.0
+offset_bottom = 210.0
+grow_horizontal = 2
+text = "PROPIEDAD INTELECTUAL"
+label_settings = SubResource("LabelSettings_u8imo")
+
+[node name="Nombre" type="Label" parent="."]
+layout_mode = 0
+offset_left = 241.0
+offset_top = 237.0
+offset_right = 904.0
+offset_bottom = 291.0
+text = "Betsy Guadalupe Asencio García"
+label_settings = SubResource("LabelSettings_5vik2")
+
+[node name="Base" type="Label" parent="."]
+layout_mode = 0
+offset_left = 276.0
+offset_top = 303.0
+offset_right = 876.0
+offset_bottom = 326.0
+text = "Basado en el proyecto de tesis de la Universidad Autónoma de Yucatán, 2023."
+
+[node name="EquipoSS" type="Button" parent="."]
+layout_mode = 0
+offset_left = 574.0
+offset_top = 415.0
+offset_right = 924.0
+offset_bottom = 495.0
+theme_override_styles/normal = SubResource("StyleBoxTexture_mxwk1")
+icon = ExtResource("4_4145x")
+
+[node name="DevOriginal" type="Button" parent="."]
+layout_mode = 0
+offset_left = 210.0
+offset_top = 415.0
+offset_right = 560.0
+offset_bottom = 495.0
+theme_override_fonts/font = SubResource("FontFile_2qf0l")
+theme_override_styles/normal = SubResource("StyleBoxTexture_dk2p5")
+icon = ExtResource("5_vv55t")
+
+[node name="Herramientas" type="Button" parent="."]
+layout_mode = 0
+offset_left = 575.0
+offset_top = 507.0
+offset_right = 928.0
+offset_bottom = 587.0
+theme_override_styles/normal = SubResource("StyleBoxTexture_u6kwo")
+icon = ExtResource("6_td4xp")
+
+[node name="MaterialDA" type="Button" parent="."]
+layout_mode = 0
+offset_left = 210.0
+offset_top = 508.0
+offset_right = 560.0
+offset_bottom = 588.0
+theme_override_styles/normal = SubResource("StyleBoxTexture_8lp0u")
+icon = ExtResource("7_6jewi")
+
+[node name="Regreso" type="Button" parent="."]
+layout_mode = 0
+offset_left = 3.0
+offset_top = 565.0
+offset_right = 81.0
+offset_bottom = 643.0
+theme_override_styles/normal = SubResource("StyleBoxTexture_y5wxk")
+icon = ExtResource("3_637cw")
+
+[connection signal="pressed" from="EquipoSS" to="." method="_on_equipo_ss_pressed"]
+[connection signal="pressed" from="DevOriginal" to="." method="_on_dev_original_pressed"]
+[connection signal="pressed" from="Herramientas" to="." method="_on_herramientas_pressed"]
+[connection signal="pressed" from="MaterialDA" to="." method="_on_material_da_pressed"]
+[connection signal="pressed" from="Regreso" to="." method="_on_regreso_pressed"]

@@ -1,13 +1,16 @@
-[gd_scene load_steps=6 format=3 uid="uid://bl8tto2aq7grr"]
+[gd_scene load_steps=7 format=3 uid="uid://bl8tto2aq7grr"]
 
 [ext_resource type="Texture2D" uid="uid://p8s8vafhm5pj" path="res://images/Figura_Tenebrosa.png" id="1_61hnu"]
 [ext_resource type="Script" path="res://Scripts/historia_3.gd" id="1_x4m4k"]
 [ext_resource type="Texture2D" uid="uid://ci1roshk4clhe" path="res://images/Siguiente.png" id="3_tqelf"]
-
-[sub_resource type="StyleBoxLine" id="StyleBoxLine_eyx5m"]
+[ext_resource type="FontFile" uid="uid://bd321yblpf1ew" path="res://font/Supermarket of Love.ttf" id="4_jclol"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_airgo"]
 bg_color = Color(0, 0, 0, 1)
+
+[sub_resource type="LabelSettings" id="LabelSettings_rwxt4"]
+font = ExtResource("4_jclol")
+font_size = 50
 
 [node name="Control" type="Control"]
 layout_mode = 3
@@ -35,16 +38,6 @@ offset_right = 991.0
 offset_bottom = 433.0
 texture = ExtResource("1_61hnu")
 
-[node name="TextEdit" type="TextEdit" parent="."]
-layout_mode = 0
-offset_left = 288.0
-offset_top = 457.0
-offset_right = 882.0
-offset_bottom = 578.0
-theme_override_font_sizes/font_size = 30
-theme_override_styles/normal = SubResource("StyleBoxLine_eyx5m")
-text = "La figura te dice que ahora le perteneces"
-
 [node name="Button" type="Button" parent="."]
 layout_mode = 0
 offset_left = 1073.0
@@ -53,5 +46,14 @@ offset_right = 1151.0
 offset_bottom = 648.0
 theme_override_styles/focus = SubResource("StyleBoxFlat_airgo")
 icon = ExtResource("3_tqelf")
+
+[node name="Label" type="Label" parent="."]
+layout_mode = 0
+offset_left = 253.0
+offset_top = 457.0
+offset_right = 918.0
+offset_bottom = 510.0
+text = "La figura te dice que le perteneces..."
+label_settings = SubResource("LabelSettings_rwxt4")
 
 [connection signal="pressed" from="Button" to="." method="_on_button_pressed"]

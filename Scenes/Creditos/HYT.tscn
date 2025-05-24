@@ -1,0 +1,131 @@
+[gd_scene load_steps=14 format=3 uid="uid://biu4uccsbamgq"]
+
+[ext_resource type="FontFile" uid="uid://ex6sf638yhh5" path="res://font/Chonky Bunny.ttf" id="1_8rsbj"]
+[ext_resource type="Script" path="res://Scripts/hyt.gd" id="1_cxidb"]
+[ext_resource type="Texture2D" uid="uid://2bq0ibxdgxao" path="res://images/return.png" id="2_maql6"]
+[ext_resource type="Texture2D" uid="uid://bdvcq05wjdtkr" path="res://images/Stencyl.png" id="3_rcrkf"]
+[ext_resource type="Texture2D" uid="uid://dc2adgoqn2oux" path="res://images/Godot.png" id="4_uf70o"]
+[ext_resource type="FontFile" uid="uid://q4llc3uguqs2" path="res://font/KGCorneroftheSky.ttf" id="5_cnxfn"]
+[ext_resource type="Texture2D" uid="uid://cq4lqt7xrmf2s" path="res://images/lenguaje.png" id="6_5qhpt"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_kkvkn"]
+font = ExtResource("1_8rsbj")
+font_size = 50
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_6p1hp"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_st5kt"]
+font = ExtResource("1_8rsbj")
+font_size = 45
+
+[sub_resource type="LabelSettings" id="LabelSettings_cqn2m"]
+font = ExtResource("1_8rsbj")
+font_size = 45
+
+[sub_resource type="LabelSettings" id="LabelSettings_ry62x"]
+font = ExtResource("5_cnxfn")
+
+[sub_resource type="LabelSettings" id="LabelSettings_lgl0k"]
+font = ExtResource("5_cnxfn")
+
+[node name="Control" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_cxidb")
+
+[node name="ColorRect" type="ColorRect" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0, 0, 0, 1)
+
+[node name="Titulo" type="Label" parent="."]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -410.0
+offset_top = 20.0
+offset_right = 410.0
+offset_bottom = 72.0
+grow_horizontal = 2
+text = "HERRAMIENTAS Y TECNOLOGÍAS UTILIZADAS"
+label_settings = SubResource("LabelSettings_kkvkn")
+
+[node name="return" type="Button" parent="."]
+layout_mode = 0
+offset_left = 5.0
+offset_top = 563.0
+offset_right = 83.0
+offset_bottom = 641.0
+theme_override_styles/normal = SubResource("StyleBoxTexture_6p1hp")
+icon = ExtResource("2_maql6")
+
+[node name="Sub1" type="Label" parent="."]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -76.0
+offset_top = 111.0
+offset_right = 76.0
+offset_bottom = 158.0
+grow_horizontal = 2
+text = "MOTORES"
+label_settings = SubResource("LabelSettings_st5kt")
+
+[node name="Sub2" type="Label" parent="."]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -93.0
+offset_top = 351.0
+offset_right = 93.0
+offset_bottom = 398.0
+grow_horizontal = 2
+text = "LENGUAJES"
+label_settings = SubResource("LabelSettings_cqn2m")
+
+[node name="Stencyl" type="Sprite2D" parent="."]
+position = Vector2(379, 237)
+scale = Vector2(0.214844, 0.197266)
+texture = ExtResource("3_rcrkf")
+
+[node name="Godot" type="Sprite2D" parent="."]
+position = Vector2(775, 241)
+scale = Vector2(0.0527344, 0.0507812)
+texture = ExtResource("4_uf70o")
+
+[node name="Stencyl2" type="Label" parent="."]
+layout_mode = 0
+offset_left = 298.0
+offset_top = 285.0
+offset_right = 455.0
+offset_bottom = 338.0
+text = "STENCYL
+(versión original)"
+label_settings = SubResource("LabelSettings_ry62x")
+horizontal_alignment = 1
+
+[node name="Godot2" type="Label" parent="."]
+layout_mode = 0
+offset_left = 747.0
+offset_top = 295.0
+offset_right = 806.0
+offset_bottom = 320.0
+text = "GODOT"
+label_settings = SubResource("LabelSettings_lgl0k")
+
+[node name="Lenguaje" type="Sprite2D" parent="."]
+position = Vector2(587, 488)
+texture = ExtResource("6_5qhpt")
+
+[connection signal="pressed" from="return" to="." method="_on_return_pressed"]

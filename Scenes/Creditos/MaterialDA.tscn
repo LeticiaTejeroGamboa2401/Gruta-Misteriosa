@@ -1,0 +1,53 @@
+[gd_scene load_steps=6 format=3 uid="uid://cp5b7qhfu7x3r"]
+
+[ext_resource type="Script" path="res://Scripts/control.gd" id="1_owfmq"]
+[ext_resource type="FontFile" uid="uid://ex6sf638yhh5" path="res://font/Chonky Bunny.ttf" id="2_t2qcw"]
+[ext_resource type="Texture2D" uid="uid://2bq0ibxdgxao" path="res://images/return.png" id="3_f14uw"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_8lt0v"]
+font = ExtResource("2_t2qcw")
+font_size = 50
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_bir03"]
+
+[node name="Control" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_owfmq")
+
+[node name="ColorRect" type="ColorRect" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0, 0, 0, 1)
+
+[node name="Titulo" type="Label" parent="."]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -331.5
+offset_top = 25.0
+offset_right = 331.5
+offset_bottom = 77.0
+grow_horizontal = 2
+text = "MATERIAL CON DERECHOS DE AUTOR"
+label_settings = SubResource("LabelSettings_8lt0v")
+
+[node name="return" type="Button" parent="."]
+layout_mode = 0
+offset_left = 7.0
+offset_top = 562.0
+offset_right = 85.0
+offset_bottom = 640.0
+theme_override_styles/normal = SubResource("StyleBoxTexture_bir03")
+icon = ExtResource("3_f14uw")
+
+[connection signal="pressed" from="return" to="." method="_on_return_pressed"]

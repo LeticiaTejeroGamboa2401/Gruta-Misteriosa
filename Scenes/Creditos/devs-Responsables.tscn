@@ -1,9 +1,11 @@
-[gd_scene load_steps=12 format=3 uid="uid://cv70cmywwro32"]
+[gd_scene load_steps=14 format=3 uid="uid://cv70cmywwro32"]
 
 [ext_resource type="FontFile" uid="uid://ex6sf638yhh5" path="res://font/Chonky Bunny.ttf" id="1_2bh0v"]
 [ext_resource type="Script" path="res://Scripts/devs_responsables.gd" id="1_ffypl"]
 [ext_resource type="FontFile" uid="uid://q4llc3uguqs2" path="res://font/KGCorneroftheSky.ttf" id="2_piwji"]
 [ext_resource type="Texture2D" uid="uid://2bq0ibxdgxao" path="res://images/return.png" id="4_ic8js"]
+[ext_resource type="Texture2D" uid="uid://bwwoheq101ax2" path="res://images/lics.png" id="5_uuhgu"]
+[ext_resource type="Texture2D" uid="uid://wpolgwpt2qjq" path="res://images/dev.png" id="6_c5qlc"]
 
 [sub_resource type="LabelSettings" id="LabelSettings_tx13x"]
 font = ExtResource("1_2bh0v")
@@ -68,9 +70,9 @@ anchors_preset = 5
 anchor_left = 0.5
 anchor_right = 0.5
 offset_left = -232.5
-offset_top = 180.0
+offset_top = 207.0
 offset_right = 232.5
-offset_bottom = 217.0
+offset_bottom = 244.0
 grow_horizontal = 2
 text = "ABRAHAM RAYMUNDO CRUZ COLLÍ"
 label_settings = SubResource("LabelSettings_q242b")
@@ -78,9 +80,9 @@ label_settings = SubResource("LabelSettings_q242b")
 [node name="Dev2" type="Label" parent="."]
 layout_mode = 0
 offset_left = 310.0
-offset_top = 233.0
+offset_top = 260.0
 offset_right = 846.0
-offset_bottom = 270.0
+offset_bottom = 297.0
 text = "LETICIA DEL CARMEN TEJERO GAMBOA"
 label_settings = SubResource("LabelSettings_md6v1")
 
@@ -124,9 +126,9 @@ anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
 offset_left = -317.0
-offset_top = -0.5
+offset_top = 16.5
 offset_right = 317.0
-offset_bottom = 46.5
+offset_bottom = 63.5
 grow_horizontal = 2
 grow_vertical = 2
 text = "RESPONSABLES DEL SERVICIO SOCIAL"
@@ -144,5 +146,32 @@ offset_bottom = -7.0
 grow_vertical = 0
 theme_override_styles/normal = SubResource("StyleBoxTexture_f01do")
 icon = ExtResource("4_ic8js")
+
+[node name="Sub2" type="Label" parent="."]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -317.0
+offset_top = -175.5
+offset_right = 317.0
+offset_bottom = -128.5
+grow_horizontal = 2
+grow_vertical = 2
+text = "EQUIPO DE DESARROLLO"
+label_settings = SubResource("LabelSettings_en8n0")
+horizontal_alignment = 1
+
+[node name="Lics" type="Sprite2D" parent="."]
+position = Vector2(1019, 499)
+scale = Vector2(0.51634, 0.503268)
+texture = ExtResource("5_uuhgu")
+
+[node name="Dev" type="Sprite2D" parent="."]
+position = Vector2(197.125, 219.938)
+scale = Vector2(0.168542, 0.166563)
+texture = ExtResource("6_c5qlc")
 
 [connection signal="pressed" from="Button" to="." method="_on_button_pressed"]

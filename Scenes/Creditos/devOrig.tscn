@@ -62,17 +62,14 @@ label_settings = SubResource("LabelSettings_mi2u0")
 [node name="Información" type="Label" parent="."]
 layout_mode = 0
 offset_left = 73.0
-offset_top = 221.0
+offset_top = 242.0
 offset_right = 1079.0
-offset_bottom = 538.0
+offset_bottom = 448.0
 text = "Desarrolladora del videojuego original como parte de su tesis titulada:
  \"Desarrollo y análisis de un videojuego educativo de apoyo a la 
 comprensión lectora matemática para niños de educación primaria.\", 
 para la Licenciatura en Ingeniería de Software. 
-Universidad Autónoma de Yucatán, 2023.
-
-El proyecto fue creado originalmente en Stencyl como parte de su 
-investigación académica."
+Universidad Autónoma de Yucatán, 2023."
 label_settings = SubResource("LabelSettings_cv1w5")
 
 [node name="Return" type="Button" parent="."]

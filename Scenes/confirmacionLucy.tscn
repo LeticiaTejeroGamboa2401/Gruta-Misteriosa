@@ -1,12 +1,10 @@
-[gd_scene load_steps=10 format=3 uid="uid://be8411pvy721s"]
+[gd_scene load_steps=11 format=3 uid="uid://be8411pvy721s"]
 
 [ext_resource type="Texture2D" uid="uid://dpnoip6oomyfo" path="res://images/Lucy_eleccion.png" id="1_gug71"]
 [ext_resource type="Script" path="res://Scripts/confirmacion_lucy.gd" id="1_rhn8s"]
 [ext_resource type="Texture2D" uid="uid://dht1gtbnsm5oh" path="res://images/Confirmación_si.png" id="2_hfld2"]
 [ext_resource type="Texture2D" uid="uid://cf4dfadooemjd" path="res://images/Confirmacion_no.png" id="3_7e3mx"]
-
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_pfo3g"]
-bg_color = Color(0, 0, 0, 1)
+[ext_resource type="FontFile" uid="uid://ex6sf638yhh5" path="res://font/Chonky Bunny.ttf" id="5_n73hk"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_onke5"]
 bg_color = Color(0, 0, 0, 0.921569)
@@ -19,6 +17,10 @@ bg_color = Color(0, 0, 0, 0.921569)
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_aen71"]
 bg_color = Color(0, 0, 0, 1)
+
+[sub_resource type="LabelSettings" id="LabelSettings_1457c"]
+font = ExtResource("5_n73hk")
+font_size = 50
 
 [node name="Control" type="Control"]
 layout_mode = 3
@@ -50,21 +52,11 @@ offset_bottom = 401.0
 grow_horizontal = 2
 texture = ExtResource("1_gug71")
 
-[node name="TextEdit" type="TextEdit" parent="ColorRect"]
-layout_mode = 0
-offset_left = 228.0
-offset_top = 415.0
-offset_right = 926.0
-offset_bottom = 484.0
-theme_override_font_sizes/font_size = 35
-theme_override_styles/normal = SubResource("StyleBoxFlat_pfo3g")
-text = "¿La elección de tu personaje es correcta?"
-
 [node name="Yes" type="Button" parent="ColorRect"]
 layout_mode = 0
-offset_left = 367.0
+offset_left = 388.0
 offset_top = 488.0
-offset_right = 487.0
+offset_right = 508.0
 offset_bottom = 552.0
 theme_override_styles/pressed_mirrored = SubResource("StyleBoxFlat_onke5")
 theme_override_styles/normal = SubResource("StyleBoxFlat_fd8vj")
@@ -72,13 +64,29 @@ icon = ExtResource("2_hfld2")
 
 [node name="No" type="Button" parent="ColorRect"]
 layout_mode = 0
-offset_left = 605.0
+offset_left = 611.0
 offset_top = 488.0
-offset_right = 725.0
+offset_right = 731.0
 offset_bottom = 552.0
 theme_override_styles/pressed = SubResource("StyleBoxFlat_0gbgo")
 theme_override_styles/normal = SubResource("StyleBoxFlat_aen71")
 icon = ExtResource("3_7e3mx")
+
+[node name="Label" type="Label" parent="ColorRect"]
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -364.5
+offset_top = -224.0
+offset_right = 364.5
+offset_bottom = -172.0
+grow_horizontal = 2
+grow_vertical = 0
+text = "¿La elección de tu personaje es correcta?"
+label_settings = SubResource("LabelSettings_1457c")
 
 [connection signal="pressed" from="ColorRect/Yes" to="." method="_on_yes_pressed"]
 [connection signal="pressed" from="ColorRect/No" to="." method="_on_no_pressed"]

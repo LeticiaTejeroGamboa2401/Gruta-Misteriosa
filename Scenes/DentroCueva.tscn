@@ -1,4 +1,4 @@
-[gd_scene load_steps=8 format=3 uid="uid://biucq7vgway8p"]
+[gd_scene load_steps=9 format=3 uid="uid://biucq7vgway8p"]
 
 [ext_resource type="Texture2D" uid="uid://brecquw82vupe" path="res://images/DentroCueva.jpg" id="1_ljuwf"]
 [ext_resource type="Script" path="res://Scripts/dentro_cueva.gd" id="1_p6typ"]
@@ -11,7 +11,10 @@ size = Vector2(916, 12.5)
 [sub_resource type="PlaceholderTexture2D" id="PlaceholderTexture2D_ataps"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_ow6gt"]
-size = Vector2(280, 484)
+size = Vector2(62, 320)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_dhmrr"]
+size = Vector2(57.5, 320)
 
 [node name="Control" type="Control"]
 layout_mode = 3
@@ -20,7 +23,6 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
-script = ExtResource("1_p6typ")
 
 [node name="TextureRect" type="TextureRect" parent="."]
 layout_mode = 1
@@ -30,11 +32,6 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 texture = ExtResource("1_ljuwf")
-
-[node name="sombra" type="Sprite2D" parent="."]
-position = Vector2(1035, 489)
-scale = Vector2(0.659875, 0.612565)
-texture = ExtResource("2_llvct")
 
 [node name="StaticBody2D" type="StaticBody2D" parent="."]
 
@@ -50,11 +47,23 @@ scale = Vector2(-925.014, -14.0814)
 texture = SubResource("PlaceholderTexture2D_ataps")
 
 [node name="CollisionShape2D2" type="CollisionShape2D" parent="StaticBody2D"]
-visible = false
-position = Vector2(992, 404)
+position = Vector2(761, 487)
 shape = SubResource("RectangleShape2D_ow6gt")
 
-[node name="CharacterBody2D" parent="." instance=ExtResource("3_fnd8h")]
+[node name="Lucy_Player" parent="." instance=ExtResource("3_fnd8h")]
 position = Vector2(-12, 535)
 
-[connection signal="draw" from="sombra" to="." method="_on_sombra_draw"]
+[node name="Area2D" type="Area2D" parent="."]
+script = ExtResource("1_p6typ")
+
+[node name="tope" type="CollisionShape2D" parent="Area2D"]
+position = Vector2(642, 488)
+shape = SubResource("RectangleShape2D_dhmrr")
+
+[node name="sombra" type="Sprite2D" parent="Area2D"]
+position = Vector2(1035, 489)
+scale = Vector2(0.659875, 0.612565)
+texture = ExtResource("2_llvct")
+
+[connection signal="body_entered" from="Area2D" to="Area2D" method="_on_body_entered"]
+[connection signal="draw" from="Area2D/sombra" to="." method="_on_sombra_draw"]

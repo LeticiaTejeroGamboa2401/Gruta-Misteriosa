@@ -1,12 +1,14 @@
-[gd_scene load_steps=9 format=3 uid="uid://cox8lum0ipe8t"]
+[gd_scene load_steps=11 format=3 uid="uid://cox8lum0ipe8t"]
 
 [ext_resource type="Texture2D" uid="uid://c4ljuuy56jopt" path="res://images/Bosque.jpg" id="1_dm15r"]
-[ext_resource type="Script" path="res://Scripts/entrada_cueva.gd" id="1_yfyu7"]
+[ext_resource type="Script" path="res://Scripts/entrada_cueva1.gd" id="1_y4bkf"]
 [ext_resource type="Texture2D" uid="uid://u7pgc4jgx8qf" path="res://images/cueva.png" id="2_m1ota"]
 [ext_resource type="PackedScene" uid="uid://ur1624qxlyln" path="res://Scenes/Lucy_Player.tscn" id="4_7a60o"]
+[ext_resource type="Script" path="res://Scripts/entrada_cueva_1.gd" id="4_ln2lw"]
+[ext_resource type="PackedScene" uid="uid://cshqucsavs7df" path="res://Scenes/Murcielago_Volando.tscn" id="6_dakeb"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_foiys"]
-size = Vector2(53.5, 349)
+size = Vector2(89.75, 239.5)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_o5of2"]
 size = Vector2(55, 345)
@@ -23,7 +25,7 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
-script = ExtResource("1_yfyu7")
+script = ExtResource("1_y4bkf")
 
 [node name="Bosque" type="TextureRect" parent="."]
 layout_mode = 1
@@ -51,9 +53,10 @@ texture = ExtResource("2_m1ota")
 position = Vector2(52, 532)
 
 [node name="EntradaCueva" type="Area2D" parent="."]
+script = ExtResource("4_ln2lw")
 
 [node name="CuevaTope" type="CollisionShape2D" parent="EntradaCueva"]
-position = Vector2(1006, 474)
+position = Vector2(987.875, 528.75)
 shape = SubResource("RectangleShape2D_foiys")
 
 [node name="StaticBody2D" type="StaticBody2D" parent="."]
@@ -74,4 +77,8 @@ position = Vector2(522.625, 644.125)
 scale = Vector2(1044.75, 6.24999)
 texture = SubResource("PlaceholderTexture2D_k2fqe")
 
-[connection signal="body_entered" from="EntradaCueva" to="." method="_on_entrada_cueva_body_entered"]
+[node name="murcielago" parent="." instance=ExtResource("6_dakeb")]
+position = Vector2(1106, 170)
+
+[connection signal="body_entered" from="EntradaCueva" to="EntradaCueva" method="_on_body_entered"]
+[connection signal="body_exited" from="EntradaCueva" to="EntradaCueva" method="_on_body_exited"]

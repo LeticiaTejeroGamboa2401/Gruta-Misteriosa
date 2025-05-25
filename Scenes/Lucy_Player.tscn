@@ -73,4 +73,4 @@ shape = SubResource("RectangleShape2D_udjv5")
 scale = Vector2(0.712356, 0.648381)
 sprite_frames = SubResource("SpriteFrames_p3hkm")
 animation = &"Derecha"
-frame_progress = 0.276582
+frame_progress = 0.436119

@@ -4,7 +4,7 @@
 [ext_resource type="Texture2D" uid="uid://cead2kxuc2gnd" path="res://images/murcielago.png" id="1_gh75v"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_udjv5"]
-size = Vector2(85, 103)
+size = Vector2(85, 108)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_7bu4b"]
 atlas = ExtResource("1_gh75v")
@@ -72,10 +72,12 @@ animations = [{
 script = ExtResource("1_ad4de")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2(0.5, -3.5)
+position = Vector2(0.5, -1)
 shape = SubResource("RectangleShape2D_udjv5")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+position = Vector2(0, -1.5)
+scale = Vector2(1, 0.685897)
 sprite_frames = SubResource("SpriteFrames_mhkpy")
 animation = &"Vuelo"
-frame_progress = 0.405097
+frame_progress = 0.47901

@@ -1,9 +1,9 @@
 [gd_scene load_steps=9 format=3 uid="uid://biucq7vgway8p"]
 
+[ext_resource type="Script" path="res://Scripts/dentro_cueva1.gd" id="1_3emvn"]
 [ext_resource type="Texture2D" uid="uid://brecquw82vupe" path="res://images/DentroCueva.jpg" id="1_ljuwf"]
 [ext_resource type="Script" path="res://Scripts/dentro_cueva.gd" id="1_p6typ"]
 [ext_resource type="Texture2D" uid="uid://dgii1lhdjxf24" path="res://images/compi.png" id="2_llvct"]
-[ext_resource type="PackedScene" uid="uid://ur1624qxlyln" path="res://Scenes/Lucy_Player.tscn" id="3_fnd8h"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_g748c"]
 size = Vector2(916, 12.5)
@@ -23,6 +23,7 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+script = ExtResource("1_3emvn")
 
 [node name="TextureRect" type="TextureRect" parent="."]
 layout_mode = 1
@@ -49,9 +50,6 @@ texture = SubResource("PlaceholderTexture2D_ataps")
 [node name="CollisionShape2D2" type="CollisionShape2D" parent="StaticBody2D"]
 position = Vector2(761, 487)
 shape = SubResource("RectangleShape2D_ow6gt")
-
-[node name="Lucy_Player" parent="." instance=ExtResource("3_fnd8h")]
-position = Vector2(-12, 535)
 
 [node name="Area2D" type="Area2D" parent="."]
 script = ExtResource("1_p6typ")

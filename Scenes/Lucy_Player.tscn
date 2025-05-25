@@ -1,11 +1,37 @@
-[gd_scene load_steps=12 format=3 uid="uid://ur1624qxlyln"]
+[gd_scene load_steps=20 format=3 uid="uid://ur1624qxlyln"]
 
 [ext_resource type="Script" path="res://Scripts/lucy_player.gd" id="1_kpkkb"]
 [ext_resource type="Texture2D" uid="uid://gtqi8x5y78s" path="res://personajes/Lucy_Derecha.png" id="1_mrkkf"]
+[ext_resource type="Texture2D" uid="uid://du2q1g1w5f71h" path="res://images/Lucy_Abajo.png" id="2_bci34"]
 [ext_resource type="Texture2D" uid="uid://bx7kvsiwv71a" path="res://personajes/Lucy_Izquierda.png" id="2_va1bc"]
+[ext_resource type="Texture2D" uid="uid://c7uoc5hfcgxwg" path="res://images/Lucy_Arriba.png" id="3_v6lal"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_udjv5"]
 size = Vector2(104, 233)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_4pba6"]
+atlas = ExtResource("2_bci34")
+region = Rect2(0, 0, 144, 368)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_xfly5"]
+atlas = ExtResource("2_bci34")
+region = Rect2(144, 0, 144, 368)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_42pue"]
+atlas = ExtResource("2_bci34")
+region = Rect2(0, 368, 144, 368)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_wx418"]
+atlas = ExtResource("3_v6lal")
+region = Rect2(0, 0, 148, 354)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_jhv2h"]
+atlas = ExtResource("3_v6lal")
+region = Rect2(148, 0, 148, 363)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_s54ts"]
+atlas = ExtResource("3_v6lal")
+region = Rect2(0, 348, 148, 348)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_jf18p"]
 atlas = ExtResource("1_mrkkf")
@@ -33,6 +59,34 @@ region = Rect2(0, 380, 160, 380)
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_p3hkm"]
 animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_4pba6")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_xfly5")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_42pue")
+}],
+"loop": true,
+"name": &"Abajo",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_wx418")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_jhv2h")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_s54ts")
+}],
+"loop": true,
+"name": &"Arriba",
+"speed": 5.0
+}, {
 "frames": [{
 "duration": 1.0,
 "texture": SubResource("AtlasTexture_jf18p")
@@ -73,4 +127,4 @@ shape = SubResource("RectangleShape2D_udjv5")
 scale = Vector2(0.712356, 0.648381)
 sprite_frames = SubResource("SpriteFrames_p3hkm")
 animation = &"Derecha"
-frame_progress = 0.436119
+frame_progress = 0.647346

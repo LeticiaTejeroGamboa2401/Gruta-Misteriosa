@@ -1,72 +1,13 @@
-[gd_scene load_steps=25 format=3 uid="uid://baprmlaeq60or"]
+[gd_scene load_steps=17 format=3 uid="uid://baprmlaeq60or"]
 
 [ext_resource type="Texture2D" uid="uid://u2rji7tqqd36" path="res://assets/bosque.jpg" id="1_np1lt"]
-[ext_resource type="Script" path="res://Scenes/lucy.gd" id="2_30aug"]
-[ext_resource type="Texture2D" uid="uid://cvk5pq38bmpf8" path="res://assets/lucy-derecha.png" id="2_40ssn"]
-[ext_resource type="Texture2D" uid="uid://d0rdie6btyutc" path="res://assets/lucy-izquierda.png" id="3_dl40j"]
+[ext_resource type="Script" path="res://Scenes/bosque_nahual.gd" id="1_yjny1"]
 [ext_resource type="Script" path="res://Scripts/nahual.gd" id="4_d0kbo"]
 [ext_resource type="Texture2D" uid="uid://p14a3p8k04i7" path="res://personajes/Nahual_Derecha.png" id="4_gc35m"]
+[ext_resource type="Script" path="res://Scripts/tope_scene_bosque_nahuatl.gd" id="5_88eit"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_bc2qh"]
 size = Vector2(1151, 14)
-
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_bk16j"]
-size = Vector2(20, 65.7277)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_fnesa"]
-atlas = ExtResource("2_40ssn")
-region = Rect2(0, 0, 164, 380)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_e7x3w"]
-atlas = ExtResource("2_40ssn")
-region = Rect2(164, 0, 164, 380)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_dubb4"]
-atlas = ExtResource("2_40ssn")
-region = Rect2(0, 380, 164, 380)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_3nel1"]
-atlas = ExtResource("3_dl40j")
-region = Rect2(0, 0, 160, 380)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_3qepl"]
-atlas = ExtResource("3_dl40j")
-region = Rect2(160, 0, 160, 380)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_n105g"]
-atlas = ExtResource("3_dl40j")
-region = Rect2(0, 380, 160, 380)
-
-[sub_resource type="SpriteFrames" id="SpriteFrames_pl6yc"]
-animations = [{
-"frames": [{
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_fnesa")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_e7x3w")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_dubb4")
-}],
-"loop": true,
-"name": &"derecha",
-"speed": 5.0
-}, {
-"frames": [{
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_3nel1")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_3qepl")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_n105g")
-}],
-"loop": true,
-"name": &"izquierda",
-"speed": 5.0
-}]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_ts5nx"]
 atlas = ExtResource("4_gc35m")
@@ -124,7 +65,11 @@ size = Vector2(120.556, 50.867)
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_jnqg4"]
 size = Vector2(46.1111, 54.9847)
 
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_4gnib"]
+size = Vector2(20, 189)
+
 [node name="BosqueNahual" type="Node2D"]
+script = ExtResource("1_yjny1")
 
 [node name="Bosque" type="Sprite2D" parent="."]
 position = Vector2(576, 325)
@@ -139,24 +84,6 @@ metadata/_edit_lock_ = true
 [node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D"]
 shape = SubResource("RectangleShape2D_bc2qh")
 one_way_collision_margin = 128.0
-
-[node name="lucy" type="CharacterBody2D" parent="."]
-position = Vector2(408, 588)
-scale = Vector2(1.8, 1.34583)
-script = ExtResource("2_30aug")
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="lucy"]
-position = Vector2(0.916748, -0.410324)
-shape = SubResource("RectangleShape2D_bk16j")
-metadata/_edit_lock_ = true
-
-[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="lucy"]
-position = Vector2(0.916702, -23.2742)
-scale = Vector2(0.302507, 0.342879)
-sprite_frames = SubResource("SpriteFrames_pl6yc")
-animation = &"derecha"
-frame_progress = 0.167583
-metadata/_edit_lock_ = true
 
 [node name="nahual" type="CharacterBody2D" parent="."]
 position = Vector2(-117, 581)
@@ -198,6 +125,13 @@ metadata/_edit_lock_ = true
 [node name="CollisionShape2D" type="CollisionShape2D" parent="nahual/Area2D"]
 position = Vector2(60.2778, -3.71518)
 shape = SubResource("RectangleShape2D_jnqg4")
-metadata/_edit_lock_ = true
+
+[node name="TopeScene" type="Area2D" parent="."]
+script = ExtResource("5_88eit")
+
+[node name="NextScene" type="CollisionShape2D" parent="TopeScene"]
+position = Vector2(1142, 553)
+shape = SubResource("RectangleShape2D_4gnib")
 
 [connection signal="body_entered" from="nahual/Area2D" to="nahual" method="_on_area_2d_body_entered"]
+[connection signal="body_entered" from="TopeScene" to="TopeScene" method="_on_body_entered"]

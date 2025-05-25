@@ -1,10 +1,37 @@
-[gd_scene load_steps=11 format=3 uid="uid://dp7f17w34esul"]
+[gd_scene load_steps=20 format=3 uid="uid://dp7f17w34esul"]
 
+[ext_resource type="Script" path="res://Scripts/lele_player.gd" id="1_83m7h"]
 [ext_resource type="Texture2D" uid="uid://ce3vft1f7lti8" path="res://personajes/Lele_Derecha.png" id="1_xq3gg"]
+[ext_resource type="Texture2D" uid="uid://j6r7bod16nu" path="res://images/Lele_Abajo.png" id="2_5huft"]
 [ext_resource type="Texture2D" uid="uid://qouemu6hm1f" path="res://personajes/Lele_Izquierda.png" id="2_afxyx"]
+[ext_resource type="Texture2D" uid="uid://cpwoberbelqmv" path="res://images/Lele_Arriba.png" id="3_c7i2v"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_udjv5"]
-size = Vector2(132, 314)
+size = Vector2(98, 208)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ykvou"]
+atlas = ExtResource("2_5huft")
+region = Rect2(0, 0, 156, 336)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_iux2h"]
+atlas = ExtResource("2_5huft")
+region = Rect2(156, 0, 156, 336)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_tgl11"]
+atlas = ExtResource("2_5huft")
+region = Rect2(0, 336, 156, 336)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_quj8g"]
+atlas = ExtResource("3_c7i2v")
+region = Rect2(0, 0, 164, 360)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_57u60"]
+atlas = ExtResource("3_c7i2v")
+region = Rect2(164, 0, 164, 360)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_drynr"]
+atlas = ExtResource("3_c7i2v")
+region = Rect2(0, 360, 164, 360)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_i1i3n"]
 atlas = ExtResource("1_xq3gg")
@@ -32,6 +59,34 @@ region = Rect2(0, 328, 144, 328)
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_mhkpy"]
 animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ykvou")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_iux2h")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_tgl11")
+}],
+"loop": true,
+"name": &"Abajo",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_quj8g")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_57u60")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_drynr")
+}],
+"loop": true,
+"name": &"Arriba",
+"speed": 5.0
+}, {
 "frames": [{
 "duration": 1.0,
 "texture": SubResource("AtlasTexture_i1i3n")
@@ -62,12 +117,14 @@ animations = [{
 }]
 
 [node name="CharacterBody2D" type="CharacterBody2D"]
+script = ExtResource("1_83m7h")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2(-3, 2)
+position = Vector2(-3, 0)
 shape = SubResource("RectangleShape2D_udjv5")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+position = Vector2(-0.999998, -0.999996)
+scale = Vector2(0.715827, 0.62963)
 sprite_frames = SubResource("SpriteFrames_mhkpy")
-animation = &"Izquierda"
-frame_progress = 0.858282
+animation = &"Derecha"

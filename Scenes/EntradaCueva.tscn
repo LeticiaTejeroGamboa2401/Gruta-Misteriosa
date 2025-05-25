@@ -1,10 +1,9 @@
-[gd_scene load_steps=11 format=3 uid="uid://cox8lum0ipe8t"]
+[gd_scene load_steps=10 format=3 uid="uid://cox8lum0ipe8t"]
 
 [ext_resource type="Texture2D" uid="uid://c4ljuuy56jopt" path="res://images/Bosque.jpg" id="1_dm15r"]
-[ext_resource type="Script" path="res://Scripts/entrada_cueva1.gd" id="1_y4bkf"]
+[ext_resource type="Script" path="res://Scripts/entrada_cueva_control.gd" id="1_kevb2"]
 [ext_resource type="Texture2D" uid="uid://u7pgc4jgx8qf" path="res://images/cueva.png" id="2_m1ota"]
-[ext_resource type="PackedScene" uid="uid://ur1624qxlyln" path="res://Scenes/Lucy_Player.tscn" id="4_7a60o"]
-[ext_resource type="Script" path="res://Scripts/entrada_cueva_1.gd" id="4_ln2lw"]
+[ext_resource type="Script" path="res://Scenes/entrada_cueva_area.gd" id="4_jnyy8"]
 [ext_resource type="PackedScene" uid="uid://cshqucsavs7df" path="res://Scenes/Murcielago_Volando.tscn" id="6_dakeb"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_foiys"]
@@ -25,7 +24,7 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
-script = ExtResource("1_y4bkf")
+script = ExtResource("1_kevb2")
 
 [node name="Bosque" type="TextureRect" parent="."]
 layout_mode = 1
@@ -49,11 +48,8 @@ grow_horizontal = 0
 grow_vertical = 0
 texture = ExtResource("2_m1ota")
 
-[node name="Lucy_Player" parent="." instance=ExtResource("4_7a60o")]
-position = Vector2(52, 532)
-
 [node name="EntradaCueva" type="Area2D" parent="."]
-script = ExtResource("4_ln2lw")
+script = ExtResource("4_jnyy8")
 
 [node name="CuevaTope" type="CollisionShape2D" parent="EntradaCueva"]
 position = Vector2(987.875, 528.75)
@@ -81,4 +77,3 @@ texture = SubResource("PlaceholderTexture2D_k2fqe")
 position = Vector2(1106, 170)
 
 [connection signal="body_entered" from="EntradaCueva" to="EntradaCueva" method="_on_body_entered"]
-[connection signal="body_exited" from="EntradaCueva" to="EntradaCueva" method="_on_body_exited"]

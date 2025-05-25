@@ -25,8 +25,8 @@ func apply_gravity(delta: float) -> void:
 
 func _on_area_2d_body_entered(body: Node) -> void:
 	print("Entró un cuerpo:", body.name)
-	if body.name == "lucy":
-		print("¡El nahual atrapó a la niña!")
+	if body.name == "Lucy_Player" or body.name == "Lele_Player":
+		print("¡El nahual atrap{o al jugador}!")
 		show_game_over()
 
 func show_game_over() -> void:

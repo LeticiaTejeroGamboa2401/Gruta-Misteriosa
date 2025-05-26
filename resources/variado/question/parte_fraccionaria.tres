@@ -1,0 +1,16 @@
+[gd_resource type="Resource" script_class="QuizQuestion" load_steps=8 format=3 uid="uid://cgfvc3rnx2ngo"]
+
+[ext_resource type="Script" path="res://Scripts/Juegos/AdivinaProducto/resources/questions.gd" id="1_nkdnr"]
+[ext_resource type="Texture2D" uid="uid://dmjq602s6q7aj" path="res://images/Tortilla.png" id="1_y1p1k"]
+[ext_resource type="Texture2D" uid="uid://cum0rb755gfoy" path="res://images/Maiz.png" id="2_l7met"]
+[ext_resource type="Texture2D" uid="uid://f2orkftgtpoo" path="res://images/Frijol.png" id="3_ymyg3"]
+[ext_resource type="Texture2D" uid="uid://6jt221fhv2pq" path="res://images/mango.png" id="4_320ki"]
+[ext_resource type="Texture2D" uid="uid://k8e0l1w2qhym" path="res://images/Platano.png" id="5_qjrm2"]
+[ext_resource type="Texture2D" uid="uid://chk841wvagfr8" path="res://images/Tamal.png" id="6_l1bx4"]
+
+[resource]
+script = ExtResource("1_nkdnr")
+question_info = "¿Qué producto cuesta una quinta parte de lo que cuesta el tamal?"
+type = 0
+options = Array[Texture2D]([ExtResource("2_l7met"), ExtResource("3_ymyg3"), ExtResource("4_320ki"), ExtResource("5_qjrm2"), ExtResource("6_l1bx4"), ExtResource("1_y1p1k")])
+correct = ExtResource("1_y1p1k")

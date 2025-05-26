@@ -1,0 +1,15 @@
+[gd_resource type="Resource" script_class="QuizTheme" load_steps=10 format=3 uid="uid://bsd62iacmqeje"]
+
+[ext_resource type="Script" path="res://Scripts/Juegos/AdivinaProducto/resources/theme.gd" id="1_djuse"]
+[ext_resource type="Script" path="res://Scripts/Juegos/AdivinaProducto/resources/questions.gd" id="2_3htld"]
+[ext_resource type="Resource" uid="uid://clbamtd3e1nd1" path="res://resources/variado/question/mas_barato_opciones.tres" id="3_t8wot"]
+[ext_resource type="Resource" uid="uid://cfvk8uba14ny1" path="res://resources/variado/question/mayorque_menorque.tres" id="4_f0plf"]
+[ext_resource type="Resource" uid="uid://c3nt2hmd1fd7y" path="res://resources/variado/question/producto_mas_barato.tres" id="5_cfoyj"]
+[ext_resource type="Resource" uid="uid://d1wcyl0t0wr1n" path="res://resources/variado/question/producto_mas_caro.tres" id="6_nkga8"]
+[ext_resource type="Resource" uid="uid://cgfvc3rnx2ngo" path="res://resources/variado/question/parte_fraccionaria.tres" id="7_3mh1j"]
+[ext_resource type="Resource" uid="uid://bj3de4asi2i8x" path="res://resources/variado/question/cuesta_menos_que.tres" id="8_m4nxw"]
+[ext_resource type="Resource" uid="uid://dtwcr1ts7afw4" path="res://resources/variado/question/multiplo.tres" id="9_fkihp"]
+
+[resource]
+script = ExtResource("1_djuse")
+theme = Array[ExtResource("2_3htld")]([ExtResource("3_t8wot"), ExtResource("4_f0plf"), ExtResource("5_cfoyj"), ExtResource("6_nkga8"), ExtResource("7_3mh1j"), ExtResource("8_m4nxw"), ExtResource("9_fkihp")])

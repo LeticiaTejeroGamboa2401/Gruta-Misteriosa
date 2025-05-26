@@ -1,0 +1,310 @@
+[gd_scene load_steps=69 format=3 uid="uid://hv2ego4ojv0c"]
+
+[ext_resource type="Texture2D" uid="uid://ce5ueoos67bfl" path="res://images/fondo_juego_adiv_el_prod.png" id="1_q170l"]
+[ext_resource type="Script" path="res://Scripts/Juegos/AdivinaProducto/explicacion_juego.gd" id="1_xu6vg"]
+[ext_resource type="Texture2D" uid="uid://bwf8mkwr4gktp" path="res://images/siguiente_flecha.png" id="3_1tmvn"]
+[ext_resource type="FontFile" uid="uid://ex6sf638yhh5" path="res://font/Chonky Bunny.ttf" id="3_bs2uw"]
+[ext_resource type="Texture2D" uid="uid://cum0rb755gfoy" path="res://images/Maiz.png" id="4_frp37"]
+[ext_resource type="Texture2D" uid="uid://f2orkftgtpoo" path="res://images/Frijol.png" id="5_7pk4a"]
+[ext_resource type="Texture2D" uid="uid://6jt221fhv2pq" path="res://images/mango.png" id="6_af70e"]
+[ext_resource type="Texture2D" uid="uid://k8e0l1w2qhym" path="res://images/Platano.png" id="7_p7gmq"]
+[ext_resource type="Texture2D" uid="uid://chk841wvagfr8" path="res://images/Tamal.png" id="8_vr753"]
+[ext_resource type="Texture2D" uid="uid://dmjq602s6q7aj" path="res://images/Tortilla.png" id="9_32lx1"]
+[ext_resource type="Texture2D" uid="uid://cudr4q3y4gwnt" path="res://images/cursor.png" id="10_llwb3"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_kqhsp"]
+font = ExtResource("3_bs2uw")
+font_size = 50
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_tn4ju"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_uuncm"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_glc1o"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_nl1iq"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_yfob6"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_rl0rx"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_61fuk"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_ugprd"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_addlv"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_q682s"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_dysp1"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_egco2"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_1qrr2"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_6wxno"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_wnicw"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_db52d"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_wmfkg"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_4pv7g"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_sx2af"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_ijox6"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_fa5jf"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_myi16"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_2d6ng"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_hy1nc"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_0cca0"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_mn3ai"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_j8crq"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_htg5w"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_frc5p"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_2y37f"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_t67y4"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_qtlmg"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_kshgk"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_hoehe"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_05r1l"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_obmc4"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_xfm7f"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_cotxm"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_13jjf"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_1yua4"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_8dioh"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_xg425"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_0xehu"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_we5bn"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_yar7x"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_rp2gr"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_843k2"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_o7r4l"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_lbssj"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_kft0m"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_8fayd"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_ylk73"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_ry0sg"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_tjfen"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_yylst"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_kix0t"]
+
+[node name="Control" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_xu6vg")
+
+[node name="TextureRect" type="TextureRect" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("1_q170l")
+expand_mode = 2
+
+[node name="Panel" type="Panel" parent="."]
+layout_mode = 0
+offset_left = 22.0
+offset_top = 476.0
+offset_right = 1127.0
+offset_bottom = 648.0
+
+[node name="Label" type="Label" parent="Panel"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -531.5
+offset_top = -65.5
+offset_right = 538.5
+offset_bottom = 65.5
+grow_horizontal = 2
+grow_vertical = 2
+text = "Para jugar debes leer la pregunta del vendedor y 
+selecionar el producto correcto."
+label_settings = SubResource("LabelSettings_kqhsp")
+
+[node name="Continuar" type="Button" parent="."]
+layout_mode = 0
+offset_left = 528.0
+offset_top = 598.0
+offset_right = 596.0
+offset_bottom = 644.0
+theme_override_styles/normal = SubResource("StyleBoxTexture_tn4ju")
+icon = ExtResource("3_1tmvn")
+
+[node name="Botones" type="Panel" parent="."]
+layout_mode = 0
+offset_left = 205.0
+offset_top = 17.0
+offset_right = 932.0
+offset_bottom = 436.0
+
+[node name="MenuButton" type="MenuButton" parent="Botones"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Maiz" type="Button" parent="Botones/MenuButton"]
+layout_mode = 0
+offset_left = 55.0
+offset_top = 41.0
+offset_right = 193.0
+offset_bottom = 179.0
+theme_override_styles/focus = SubResource("StyleBoxTexture_uuncm")
+theme_override_styles/disabled_mirrored = SubResource("StyleBoxTexture_glc1o")
+theme_override_styles/disabled = SubResource("StyleBoxTexture_nl1iq")
+theme_override_styles/hover_pressed_mirrored = SubResource("StyleBoxTexture_yfob6")
+theme_override_styles/hover_pressed = SubResource("StyleBoxTexture_rl0rx")
+theme_override_styles/hover_mirrored = SubResource("StyleBoxTexture_61fuk")
+theme_override_styles/hover = SubResource("StyleBoxTexture_ugprd")
+theme_override_styles/pressed_mirrored = SubResource("StyleBoxTexture_addlv")
+theme_override_styles/pressed = SubResource("StyleBoxTexture_q682s")
+theme_override_styles/normal_mirrored = SubResource("StyleBoxTexture_dysp1")
+theme_override_styles/normal = SubResource("StyleBoxTexture_egco2")
+icon = ExtResource("4_frp37")
+
+[node name="Frijol" type="Button" parent="Botones/MenuButton"]
+layout_mode = 0
+offset_left = 284.0
+offset_top = 41.0
+offset_right = 422.0
+offset_bottom = 179.0
+theme_override_styles/focus = SubResource("StyleBoxTexture_1qrr2")
+theme_override_styles/disabled_mirrored = SubResource("StyleBoxTexture_6wxno")
+theme_override_styles/disabled = SubResource("StyleBoxTexture_wnicw")
+theme_override_styles/hover_pressed_mirrored = SubResource("StyleBoxTexture_db52d")
+theme_override_styles/hover_pressed = SubResource("StyleBoxTexture_wmfkg")
+theme_override_styles/hover_mirrored = SubResource("StyleBoxTexture_4pv7g")
+theme_override_styles/hover = SubResource("StyleBoxTexture_sx2af")
+theme_override_styles/pressed_mirrored = SubResource("StyleBoxTexture_ijox6")
+theme_override_styles/pressed = SubResource("StyleBoxTexture_fa5jf")
+theme_override_styles/normal_mirrored = SubResource("StyleBoxTexture_myi16")
+theme_override_styles/normal = SubResource("StyleBoxTexture_2d6ng")
+icon = ExtResource("5_7pk4a")
+
+[node name="Mango" type="Button" parent="Botones/MenuButton"]
+layout_mode = 0
+offset_left = 539.0
+offset_top = 45.0
+offset_right = 677.0
+offset_bottom = 183.0
+theme_override_styles/focus = SubResource("StyleBoxTexture_hy1nc")
+theme_override_styles/disabled_mirrored = SubResource("StyleBoxTexture_0cca0")
+theme_override_styles/disabled = SubResource("StyleBoxTexture_mn3ai")
+theme_override_styles/hover_pressed_mirrored = SubResource("StyleBoxTexture_j8crq")
+theme_override_styles/hover_pressed = SubResource("StyleBoxTexture_htg5w")
+theme_override_styles/hover_mirrored = SubResource("StyleBoxTexture_frc5p")
+theme_override_styles/hover = SubResource("StyleBoxTexture_2y37f")
+theme_override_styles/pressed_mirrored = SubResource("StyleBoxTexture_t67y4")
+theme_override_styles/pressed = SubResource("StyleBoxTexture_qtlmg")
+theme_override_styles/normal_mirrored = SubResource("StyleBoxTexture_kshgk")
+theme_override_styles/normal = SubResource("StyleBoxTexture_hoehe")
+icon = ExtResource("6_af70e")
+
+[node name="Plátano" type="Button" parent="Botones/MenuButton"]
+layout_mode = 0
+offset_left = 54.0
+offset_top = 242.0
+offset_right = 192.0
+offset_bottom = 380.0
+icon = ExtResource("7_p7gmq")
+
+[node name="Tamales" type="Button" parent="Botones/MenuButton"]
+layout_mode = 0
+offset_left = 287.0
+offset_top = 243.0
+offset_right = 425.0
+offset_bottom = 381.0
+theme_override_styles/focus = SubResource("StyleBoxTexture_05r1l")
+theme_override_styles/disabled_mirrored = SubResource("StyleBoxTexture_obmc4")
+theme_override_styles/disabled = SubResource("StyleBoxTexture_xfm7f")
+theme_override_styles/hover_pressed_mirrored = SubResource("StyleBoxTexture_cotxm")
+theme_override_styles/hover_pressed = SubResource("StyleBoxTexture_13jjf")
+theme_override_styles/hover_mirrored = SubResource("StyleBoxTexture_1yua4")
+theme_override_styles/hover = SubResource("StyleBoxTexture_8dioh")
+theme_override_styles/pressed_mirrored = SubResource("StyleBoxTexture_xg425")
+theme_override_styles/pressed = SubResource("StyleBoxTexture_0xehu")
+theme_override_styles/normal_mirrored = SubResource("StyleBoxTexture_we5bn")
+theme_override_styles/normal = SubResource("StyleBoxTexture_yar7x")
+icon = ExtResource("8_vr753")
+
+[node name="Tortilla" type="Button" parent="Botones/MenuButton"]
+layout_mode = 0
+offset_left = 536.0
+offset_top = 242.0
+offset_right = 674.0
+offset_bottom = 380.0
+theme_override_styles/focus = SubResource("StyleBoxTexture_rp2gr")
+theme_override_styles/disabled_mirrored = SubResource("StyleBoxTexture_843k2")
+theme_override_styles/disabled = SubResource("StyleBoxTexture_o7r4l")
+theme_override_styles/hover_pressed_mirrored = SubResource("StyleBoxTexture_lbssj")
+theme_override_styles/hover_pressed = SubResource("StyleBoxTexture_kft0m")
+theme_override_styles/hover_mirrored = SubResource("StyleBoxTexture_8fayd")
+theme_override_styles/hover = SubResource("StyleBoxTexture_ylk73")
+theme_override_styles/pressed_mirrored = SubResource("StyleBoxTexture_ry0sg")
+theme_override_styles/pressed = SubResource("StyleBoxTexture_tjfen")
+theme_override_styles/normal_mirrored = SubResource("StyleBoxTexture_yylst")
+theme_override_styles/normal = SubResource("StyleBoxTexture_kix0t")
+icon = ExtResource("9_32lx1")
+
+[node name="TextureRect2" type="TextureRect" parent="."]
+layout_mode = 0
+offset_left = 336.0
+offset_top = 352.0
+offset_right = 410.0
+offset_bottom = 416.0
+texture = ExtResource("10_llwb3")
+expand_mode = 1
+
+[connection signal="pressed" from="Continuar" to="." method="_on_continuar_pressed"]

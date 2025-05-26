@@ -1,0 +1,98 @@
+[gd_scene load_steps=10 format=3 uid="uid://dg33ycaiampji"]
+
+[ext_resource type="Script" path="res://Scripts/Juegos/AdivinaProducto/explicacion_puntuacion.gd" id="1_esqyj"]
+[ext_resource type="Texture2D" uid="uid://ce5ueoos67bfl" path="res://images/fondo_juego_adiv_el_prod.png" id="2_odwms"]
+[ext_resource type="Texture2D" uid="uid://2hrlki10uwee" path="res://images/aluxe_vendedor.png" id="3_ienh2"]
+[ext_resource type="Texture2D" uid="uid://bwf8mkwr4gktp" path="res://images/siguiente_flecha.png" id="4_wi6tq"]
+[ext_resource type="FontFile" uid="uid://ex6sf638yhh5" path="res://font/Chonky Bunny.ttf" id="4_wvk6p"]
+[ext_resource type="Texture2D" uid="uid://84o2c68uke0l" path="res://images/respuesta_correcta.png" id="5_4qm6a"]
+[ext_resource type="Texture2D" uid="uid://3yg6jd1c17lr" path="res://images/respuesta_incorrecta.png" id="6_1aoil"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_kqhsp"]
+font = ExtResource("4_wvk6p")
+font_size = 50
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_ja54s"]
+
+[node name="Control" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_esqyj")
+
+[node name="TextureRect" type="TextureRect" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("2_odwms")
+expand_mode = 2
+
+[node name="AluxeVendedor_Correcto" type="Sprite2D" parent="."]
+position = Vector2(321, 291)
+scale = Vector2(0.586679, 0.584193)
+texture = ExtResource("3_ienh2")
+
+[node name="AluxeVendedor_Incorrecto" type="Sprite2D" parent="."]
+position = Vector2(735, 291)
+scale = Vector2(0.586679, 0.584193)
+texture = ExtResource("3_ienh2")
+
+[node name="Panel" type="Panel" parent="."]
+layout_mode = 0
+offset_left = 19.0
+offset_top = 480.0
+offset_right = 1133.0
+offset_bottom = 642.0
+
+[node name="Label" type="Label" parent="Panel"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 12.0
+offset_right = -11.0
+grow_horizontal = 2
+grow_vertical = 2
+text = "Si el producto es correcto o incorrecto el vendedor 
+lo indicará."
+label_settings = SubResource("LabelSettings_kqhsp")
+
+[node name="siguiente" type="Button" parent="."]
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -34.0
+offset_top = -61.0
+offset_right = 34.0
+offset_bottom = -15.0
+grow_horizontal = 2
+grow_vertical = 0
+theme_override_styles/normal = SubResource("StyleBoxTexture_ja54s")
+icon = ExtResource("4_wi6tq")
+
+[node name="Correcto" type="TextureRect" parent="."]
+layout_mode = 0
+offset_left = 383.0
+offset_top = 70.0
+offset_right = 564.0
+offset_bottom = 193.0
+texture = ExtResource("5_4qm6a")
+
+[node name="Incorrecto" type="TextureRect" parent="."]
+layout_mode = 0
+offset_left = 799.0
+offset_top = 74.0
+offset_right = 980.0
+offset_bottom = 197.0
+texture = ExtResource("6_1aoil")
+
+[connection signal="pressed" from="siguiente" to="." method="_on_siguiente_pressed"]

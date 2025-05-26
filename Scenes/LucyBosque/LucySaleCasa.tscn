@@ -1,16 +1,10 @@
-[gd_scene load_steps=12 format=3 uid="uid://cdi8wd4866i6s"]
+[gd_scene load_steps=9 format=3 uid="uid://cdi8wd4866i6s"]
 
 [ext_resource type="Texture2D" uid="uid://dyjnmo7ko60jf" path="res://images/Lucy_camina_bosque.png" id="1_8nlr0"]
 [ext_resource type="Script" path="res://Scripts/lucy_sale_casa.gd" id="1_g0f5i"]
 [ext_resource type="Texture2D" uid="uid://dlmspgti705ed" path="res://images/omitirBoton.png" id="3_f05c2"]
 [ext_resource type="Texture2D" uid="uid://ci1roshk4clhe" path="res://images/Siguiente.png" id="4_qsht5"]
 [ext_resource type="FontFile" uid="uid://bd321yblpf1ew" path="res://font/Supermarket of Love.ttf" id="5_hcxdn"]
-
-[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_8lp13"]
-
-[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_6kp6s"]
-
-[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_qd8hw"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_x2sw0"]
 bg_color = Color(0, 0, 0, 1)
@@ -51,26 +45,6 @@ offset_bottom = 372.0
 grow_horizontal = 2
 texture = ExtResource("1_8nlr0")
 
-[node name="Omitir" type="Button" parent="."]
-layout_mode = 1
-anchors_preset = 2
-anchor_top = 1.0
-anchor_bottom = 1.0
-offset_left = 7.0
-offset_top = -77.0
-offset_right = 154.0
-offset_bottom = -7.0
-grow_vertical = 0
-theme_override_colors/font_disabled_color = Color(0, 0, 0, 1)
-theme_override_colors/font_hover_pressed_color = Color(0, 0, 0, 1)
-theme_override_colors/font_hover_color = Color(0, 0, 0, 1)
-theme_override_colors/font_pressed_color = Color(0, 0, 0, 1)
-theme_override_styles/hover = SubResource("StyleBoxTexture_8lp13")
-theme_override_styles/pressed = SubResource("StyleBoxTexture_6kp6s")
-theme_override_styles/normal = SubResource("StyleBoxTexture_qd8hw")
-button_mask = 0
-icon = ExtResource("3_f05c2")
-
 [node name="Siguiente" type="Button" parent="."]
 layout_mode = 0
 offset_left = 1072.0
@@ -101,5 +75,13 @@ label_settings = SubResource("LabelSettings_s45y3")
 horizontal_alignment = 1
 vertical_alignment = 1
 
-[connection signal="pressed" from="Omitir" to="." method="_on_omitir_pressed"]
+[node name="Omitir" type="Button" parent="."]
+layout_mode = 0
+offset_left = 5.0
+offset_top = 562.0
+offset_right = 160.0
+offset_bottom = 640.0
+icon = ExtResource("3_f05c2")
+
 [connection signal="pressed" from="Siguiente" to="." method="_on_siguiente_pressed"]
+[connection signal="pressed" from="Omitir" to="." method="_on_omitir_pressed"]

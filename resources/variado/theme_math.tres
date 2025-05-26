@@ -1,0 +1,12 @@
+[gd_resource type="Resource" script_class="QuizzTheme" load_steps=7 format=3 uid="uid://bsd62iacmqeje"]
+
+[ext_resource type="Script" path="res://Scripts/Juegos/AdivinaProducto/resources/theme.gd" id="1_1dby2"]
+[ext_resource type="Script" path="res://Scripts/Juegos/AdivinaProducto/resources/questions.gd" id="2_aemq5"]
+[ext_resource type="Resource" uid="uid://clbamtd3e1nd1" path="res://resources/variado/question/mas_barato_opciones.tres" id="3_ryabb"]
+[ext_resource type="Resource" uid="uid://cfvk8uba14ny1" path="res://resources/variado/question/mayorque_menorque.tres" id="4_exq3l"]
+[ext_resource type="Resource" uid="uid://c3nt2hmd1fd7y" path="res://resources/variado/question/producto_mas_barato.tres" id="5_kdenw"]
+[ext_resource type="Resource" uid="uid://d1wcyl0t0wr1n" path="res://resources/variado/question/producto_mas_caro.tres" id="6_4kr4j"]
+
+[resource]
+script = ExtResource("1_1dby2")
+theme = Array[ExtResource("2_aemq5")]([ExtResource("3_ryabb"), ExtResource("4_exq3l"), ExtResource("5_kdenw"), ExtResource("6_4kr4j")])

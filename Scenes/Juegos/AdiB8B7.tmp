@@ -1,0 +1,161 @@
+[gd_scene load_steps=17 format=3 uid="uid://diis7rlrywery"]
+
+[ext_resource type="Texture2D" uid="uid://ce5ueoos67bfl" path="res://images/fondo_juego_adiv_el_prod.png" id="1_2kkp3"]
+[ext_resource type="Script" path="res://Scripts/Juegos/Controllers/game_controller.gd" id="1_v6eyu"]
+[ext_resource type="Texture2D" uid="uid://2hrlki10uwee" path="res://images/aluxe_vendedor.png" id="2_olux1"]
+[ext_resource type="Texture2D" uid="uid://84o2c68uke0l" path="res://images/respuesta_correcta.png" id="3_x1tss"]
+[ext_resource type="Texture2D" uid="uid://3yg6jd1c17lr" path="res://images/respuesta_incorrecta.png" id="4_koi0e"]
+[ext_resource type="Texture2D" uid="uid://drkey568lpq68" path="res://images/esperando_respuesta.png" id="8_pq8au"]
+[ext_resource type="FontFile" uid="uid://ex6sf638yhh5" path="res://font/Chonky Bunny.ttf" id="9_fr26q"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_0ykvr"]
+bg_color = Color(0.306923, 0.306923, 0.306923, 0.501961)
+border_color = Color(1, 0.180392, 0, 1)
+border_blend = true
+corner_radius_top_left = 25
+corner_radius_top_right = 25
+corner_radius_bottom_right = 25
+corner_radius_bottom_left = 25
+expand_margin_left = 5.0
+expand_margin_top = 5.0
+expand_margin_right = 5.0
+expand_margin_bottom = 5.0
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_hxb38"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_14jps"]
+bg_color = Color(0.6, 0.6, 0.6, 0)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_0t2md"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_8ksqj"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_s1mq2"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_3rpio"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_bqtag"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_27erm"]
+font = ExtResource("9_fr26q")
+font_size = 35
+
+[node name="Main" type="CanvasLayer"]
+script = ExtResource("1_v6eyu")
+imgCorrecto = ExtResource("3_x1tss")
+imgIncorrecto = ExtResource("4_koi0e")
+
+[node name="Control" type="Control" parent="."]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Fondo" type="TextureRect" parent="Control"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("1_2kkp3")
+expand_mode = 2
+
+[node name="TextureRect" type="TextureRect" parent="Control"]
+layout_mode = 0
+offset_left = 41.0
+offset_top = 102.0
+offset_right = 406.0
+offset_bottom = 465.0
+texture = ExtResource("2_olux1")
+expand_mode = 1
+
+[node name="Botones" type="Panel" parent="Control"]
+layout_mode = 0
+offset_left = 575.0
+offset_top = 44.0
+offset_right = 1081.0
+offset_bottom = 436.0
+theme_override_styles/panel = SubResource("StyleBoxFlat_0ykvr")
+
+[node name="MenuButton" type="MenuButton" parent="Control/Botones"]
+layout_mode = 0
+offset_left = 10.0
+offset_top = 3.0
+offset_right = 500.0
+offset_bottom = 379.0
+theme_override_styles/normal = SubResource("StyleBoxTexture_hxb38")
+
+[node name="Maiz" type="Button" parent="Control/Botones/MenuButton"]
+layout_mode = 0
+offset_left = 18.0
+offset_top = 22.0
+offset_right = 156.0
+offset_bottom = 160.0
+theme_override_styles/normal = SubResource("StyleBoxFlat_14jps")
+
+[node name="Frijol" type="Button" parent="Control/Botones/MenuButton"]
+layout_mode = 0
+offset_left = 182.0
+offset_top = 24.0
+offset_right = 320.0
+offset_bottom = 162.0
+theme_override_styles/normal = SubResource("StyleBoxTexture_0t2md")
+
+[node name="Mango" type="Button" parent="Control/Botones/MenuButton"]
+layout_mode = 0
+offset_left = 341.0
+offset_top = 26.0
+offset_right = 479.0
+offset_bottom = 161.0
+theme_override_styles/normal = SubResource("StyleBoxTexture_8ksqj")
+
+[node name="Plátano" type="Button" parent="Control/Botones/MenuButton"]
+layout_mode = 0
+offset_left = 18.0
+offset_top = 203.0
+offset_right = 156.0
+offset_bottom = 341.0
+theme_override_styles/normal = SubResource("StyleBoxTexture_s1mq2")
+
+[node name="Tamal" type="Button" parent="Control/Botones/MenuButton"]
+layout_mode = 0
+offset_left = 180.0
+offset_top = 203.0
+offset_right = 318.0
+offset_bottom = 341.0
+theme_override_styles/normal = SubResource("StyleBoxTexture_3rpio")
+
+[node name="Tortillas" type="Button" parent="Control/Botones/MenuButton"]
+layout_mode = 0
+offset_left = 336.0
+offset_top = 203.0
+offset_right = 474.0
+offset_bottom = 341.0
+theme_override_styles/normal = SubResource("StyleBoxTexture_bqtag")
+
+[node name="Panel" type="Panel" parent="Control"]
+layout_mode = 0
+offset_left = 39.0
+offset_top = 479.0
+offset_right = 906.0
+offset_bottom = 642.0
+
+[node name="Preguntas" type="VBoxContainer" parent="Control/Panel"]
+layout_mode = 0
+offset_left = 4.0
+offset_top = 5.0
+offset_right = 864.0
+offset_bottom = 156.0
+
+[node name="PreguntaTexto" type="Label" parent="Control/Panel/Preguntas"]
+layout_mode = 2
+size_flags_horizontal = 4
+text = "Pregunta"
+label_settings = SubResource("LabelSettings_27erm")
+
+[node name="EsperandoRespuesta" type="Sprite2D" parent="."]
+position = Vector2(392, 130)
+texture = ExtResource("8_pq8au")

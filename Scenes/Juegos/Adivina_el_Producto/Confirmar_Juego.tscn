@@ -1,0 +1,90 @@
+[gd_scene load_steps=10 format=3 uid="uid://d3oj7i28ad8kq"]
+
+[ext_resource type="Script" path="res://Scripts/Juegos/AdivinaProducto/confirmar_juego.gd" id="1_p8h1m"]
+[ext_resource type="Texture2D" uid="uid://ce5ueoos67bfl" path="res://images/fondo_juego_adiv_el_prod.png" id="2_8wlw3"]
+[ext_resource type="Texture2D" uid="uid://2hrlki10uwee" path="res://images/aluxe_vendedor.png" id="3_u6rm6"]
+[ext_resource type="FontFile" uid="uid://ex6sf638yhh5" path="res://font/Chonky Bunny.ttf" id="4_1gs4q"]
+[ext_resource type="Texture2D" uid="uid://ia7h51bd82fs" path="res://images/jugar.png" id="5_ve7t5"]
+[ext_resource type="Texture2D" uid="uid://c4w7uy881hqor" path="res://images/salir.png" id="6_r4fmc"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_kqhsp"]
+font = ExtResource("4_1gs4q")
+font_size = 60
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_4dfvs"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_liybp"]
+
+[node name="Control" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_p8h1m")
+
+[node name="TextureRect" type="TextureRect" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("2_8wlw3")
+expand_mode = 2
+
+[node name="AluxeVendedor" type="Sprite2D" parent="."]
+position = Vector2(557, 239)
+scale = Vector2(0.793796, 0.786942)
+texture = ExtResource("3_u6rm6")
+
+[node name="Panel" type="Panel" parent="."]
+layout_mode = 0
+offset_left = 19.0
+offset_top = 487.0
+offset_right = 933.0
+offset_bottom = 622.0
+
+[node name="Label" type="Label" parent="Panel"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -0.5
+offset_top = -11.5
+offset_right = 0.5
+offset_bottom = 11.5
+grow_horizontal = 2
+grow_vertical = 2
+text = "Alux vendedor:
+¿Te gustaría jugar \"Adivina el Producto\"?"
+label_settings = SubResource("LabelSettings_kqhsp")
+
+[node name="MenuButton" type="MenuButton" parent="."]
+layout_mode = 0
+offset_left = 944.0
+offset_top = 479.0
+offset_right = 1140.0
+offset_bottom = 621.0
+
+[node name="Jugar" type="Button" parent="MenuButton"]
+layout_mode = 0
+offset_right = 8.0
+offset_bottom = 8.0
+theme_override_styles/normal = SubResource("StyleBoxTexture_4dfvs")
+icon = ExtResource("5_ve7t5")
+
+[node name="Salir" type="Button" parent="MenuButton"]
+layout_mode = 0
+offset_left = -2.0
+offset_top = 73.0
+offset_right = 195.0
+offset_bottom = 145.0
+theme_override_styles/normal = SubResource("StyleBoxTexture_liybp")
+icon = ExtResource("6_r4fmc")
+
+[connection signal="pressed" from="MenuButton/Jugar" to="." method="_on_jugar_pressed"]
+[connection signal="pressed" from="MenuButton/Salir" to="." method="_on_salir_pressed"]

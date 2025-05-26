@@ -1,0 +1,16 @@
+[gd_resource type="Resource" script_class="QuizzQuestion" load_steps=8 format=3 uid="uid://c3nt2hmd1fd7y"]
+
+[ext_resource type="Script" path="res://Scripts/Juegos/AdivinaProducto/resources/questions.gd" id="1_cfsuq"]
+[ext_resource type="Texture2D" uid="uid://f2orkftgtpoo" path="res://images/Frijol.png" id="1_qhyqo"]
+[ext_resource type="Texture2D" uid="uid://cum0rb755gfoy" path="res://images/Maiz.png" id="2_32r20"]
+[ext_resource type="Texture2D" uid="uid://6jt221fhv2pq" path="res://images/mango.png" id="3_6fngu"]
+[ext_resource type="Texture2D" uid="uid://k8e0l1w2qhym" path="res://images/Platano.png" id="4_xsjfp"]
+[ext_resource type="Texture2D" uid="uid://chk841wvagfr8" path="res://images/Tamal.png" id="5_e4c63"]
+[ext_resource type="Texture2D" uid="uid://dmjq602s6q7aj" path="res://images/Tortilla.png" id="6_ae3gq"]
+
+[resource]
+script = ExtResource("1_cfsuq")
+question_info = "¿Cuál es el producto más barato?"
+type = 0
+options = Array[Texture2D]([ExtResource("2_32r20"), ExtResource("1_qhyqo"), ExtResource("3_6fngu"), ExtResource("4_xsjfp"), ExtResource("5_e4c63"), ExtResource("6_ae3gq")])
+correct = ExtResource("1_qhyqo")

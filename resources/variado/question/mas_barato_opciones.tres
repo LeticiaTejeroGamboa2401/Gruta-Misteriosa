@@ -1,0 +1,16 @@
+[gd_resource type="Resource" script_class="QuizzQuestion" load_steps=8 format=3 uid="uid://clbamtd3e1nd1"]
+
+[ext_resource type="Texture2D" uid="uid://f2orkftgtpoo" path="res://images/Frijol.png" id="1_ln3in"]
+[ext_resource type="Script" path="res://Scripts/Juegos/AdivinaProducto/resources/questions.gd" id="1_u66yj"]
+[ext_resource type="Texture2D" uid="uid://cum0rb755gfoy" path="res://images/Maiz.png" id="2_3i387"]
+[ext_resource type="Texture2D" uid="uid://6jt221fhv2pq" path="res://images/mango.png" id="3_glxh2"]
+[ext_resource type="Texture2D" uid="uid://k8e0l1w2qhym" path="res://images/Platano.png" id="4_w5xqi"]
+[ext_resource type="Texture2D" uid="uid://chk841wvagfr8" path="res://images/Tamal.png" id="5_yxijl"]
+[ext_resource type="Texture2D" uid="uid://dmjq602s6q7aj" path="res://images/Tortilla.png" id="6_0d8x3"]
+
+[resource]
+script = ExtResource("1_u66yj")
+question_info = "¿Qué producto es más barato: frijoles, plátano o tortillas?"
+type = 0
+options = Array[Texture2D]([ExtResource("2_3i387"), ExtResource("1_ln3in"), ExtResource("3_glxh2"), ExtResource("4_w5xqi"), ExtResource("5_yxijl"), ExtResource("6_0d8x3")])
+correct = ExtResource("1_ln3in")

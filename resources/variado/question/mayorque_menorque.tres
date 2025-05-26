@@ -1,0 +1,16 @@
+[gd_resource type="Resource" script_class="QuizQuestion" load_steps=8 format=3 uid="uid://cfvk8uba14ny1"]
+
+[ext_resource type="Texture2D" uid="uid://6jt221fhv2pq" path="res://images/mango.png" id="1_qh8xk"]
+[ext_resource type="Texture2D" uid="uid://cum0rb755gfoy" path="res://images/Maiz.png" id="2_mtd5c"]
+[ext_resource type="Texture2D" uid="uid://f2orkftgtpoo" path="res://images/Frijol.png" id="3_dej38"]
+[ext_resource type="Texture2D" uid="uid://k8e0l1w2qhym" path="res://images/Platano.png" id="4_7ecwx"]
+[ext_resource type="Texture2D" uid="uid://chk841wvagfr8" path="res://images/Tamal.png" id="5_o4uqn"]
+[ext_resource type="Texture2D" uid="uid://dmjq602s6q7aj" path="res://images/Tortilla.png" id="6_obifg"]
+[ext_resource type="Script" path="res://Scripts/Juegos/AdivinaProducto/resources/questions.gd" id="7_u1tkn"]
+
+[resource]
+script = ExtResource("7_u1tkn")
+question_info = "¿Qué producto es mayor que los plátanos, pero menor que el elote??"
+type = 0
+options = Array[Texture2D]([ExtResource("2_mtd5c"), ExtResource("3_dej38"), ExtResource("1_qh8xk"), ExtResource("4_7ecwx"), ExtResource("5_o4uqn"), ExtResource("6_obifg")])
+correct = ExtResource("1_qh8xk")

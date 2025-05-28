@@ -2,6 +2,8 @@ extends Node2D
 
 
 func _ready() -> void:
+	MusicManager.play_music("res://audio/mapa.ogg")
+	
 	if Global.selected_character_scene != null:
 		var player_instance = Global.selected_character_scene.instantiate()
 		player_instance.name = Global.selected_character_name

@@ -24,7 +24,12 @@ stream = ExtResource("2_64c2o")
 
 [node name="Aluxe" parent="." instance=ExtResource("3_3p4te")]
 layout_mode = 1
-offset_left = 537.0
-offset_top = 81.0
-offset_right = -511.0
-offset_bottom = -443.0
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.0
+offset_left = 0.0
+offset_top = 113.0
+offset_right = 0.0
+offset_bottom = 113.0
+grow_vertical = 1

@@ -14,6 +14,8 @@ var selected_questions: Array = []  # preguntas seleccionadas aleatoriamente
 @onready var feedback_image: TextureRect = $Control/FeedBackImage
 
 func _ready() -> void:
+	MusicManager.play_music("res://audio/adivina.ogg")
+	
 	for button in $Control/Botones/MenuButton.get_children():
 		buttons.append(button)
 	
@@ -71,4 +73,4 @@ func show_final_score():
 	if correct == selected_questions.size():  # todas correctas
 		get_tree().change_scene_to_file("res://Scenes/Juegos/Adivina_el_Producto/Ganaste.tscn")
 	else:
-		get_tree().change_scene_to_file("res://Scenes/mapa.tscn")
+		get_tree().change_scene_to_file("res://Scenes/Juegos/Atinale_al_Puerquito/Perdiste.tscn")

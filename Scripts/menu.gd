@@ -1,6 +1,7 @@
 extends Control
 
-
+func _ready() -> void:
+	MusicManager.play_music("res://audio/menu.ogg")
 
 
 func _on_play_pressed() -> void:

@@ -1,0 +1,203 @@
+[gd_scene load_steps=25 format=3 uid="uid://xfdrsu1ap26e"]
+
+[ext_resource type="Script" path="res://Scripts/Juegos/AtinalePuerquito/explicacion_juego.gd" id="1_cs8q5"]
+[ext_resource type="Texture2D" uid="uid://dkus0r5unvohb" path="res://images/Juegos/Atinale_al_Puerquito/fondo.png" id="1_fxy3s"]
+[ext_resource type="FontFile" uid="uid://ex6sf638yhh5" path="res://font/Chonky Bunny.ttf" id="2_oyn08"]
+[ext_resource type="Texture2D" uid="uid://ch81viu3aj55i" path="res://images/Juegos/Atinale_al_Puerquito/imgCorrecto.png" id="3_is3bl"]
+[ext_resource type="Texture2D" uid="uid://b4axhsaahojxl" path="res://images/Juegos/Atinale_al_Puerquito/imgIncorrecto.png" id="4_6vvq6"]
+[ext_resource type="Texture2D" uid="uid://d4eexyfqrkvwe" path="res://images/Juegos/Atinale_al_Puerquito/linea.png" id="5_yet8s"]
+[ext_resource type="Texture2D" uid="uid://ccvtkqj7230jh" path="res://images/Juegos/Atinale_al_Puerquito/incorrecto.png" id="6_jcrvb"]
+[ext_resource type="Texture2D" uid="uid://dyidgbixgog6p" path="res://images/Juegos/Atinale_al_Puerquito/correcto.png" id="7_yox2b"]
+[ext_resource type="Texture2D" uid="uid://bwf8mkwr4gktp" path="res://images/siguiente_flecha.png" id="8_6nw8j"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_sg6ff"]
+bg_color = Color(1, 1, 1, 0.54902)
+border_width_left = 3
+border_width_top = 3
+border_width_right = 3
+border_width_bottom = 3
+border_color = Color(1, 1, 1, 1)
+corner_radius_top_left = 15
+corner_radius_top_right = 15
+corner_radius_bottom_right = 15
+corner_radius_bottom_left = 15
+
+[sub_resource type="LabelSettings" id="LabelSettings_yt00c"]
+font = ExtResource("2_oyn08")
+font_size = 35
+font_color = Color(0, 0, 0, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_s5so3"]
+bg_color = Color(1, 1, 1, 1)
+corner_radius_top_left = 15
+corner_radius_top_right = 15
+corner_radius_bottom_right = 15
+corner_radius_bottom_left = 15
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_i3sdd"]
+bg_color = Color(1, 1, 1, 1)
+corner_radius_top_left = 15
+corner_radius_top_right = 15
+corner_radius_bottom_right = 15
+corner_radius_bottom_left = 15
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_scukc"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_44s2n"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_ojebt"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_joiin"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_q22d1"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_jmn6j"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_h38ow"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_5uo7f"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_qxemu"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_dkuld"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_nkh1l"]
+
+[node name="Control" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_cs8q5")
+
+[node name="TextureRect" type="TextureRect" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("1_fxy3s")
+
+[node name="Panel" type="Panel" parent="."]
+layout_mode = 1
+anchors_preset = 12
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 31.0
+offset_top = -212.0
+offset_right = -24.0
+offset_bottom = -19.0
+grow_horizontal = 2
+grow_vertical = 0
+theme_override_styles/panel = SubResource("StyleBoxFlat_sg6ff")
+
+[node name="Label" type="Label" parent="Panel"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -524.0
+offset_top = -58.5
+offset_right = 524.0
+offset_bottom = 58.5
+grow_horizontal = 2
+grow_vertical = 2
+text = "Para jugar, el alux anciano te dará varias cantidades de monedas y billetes que contiene el cochinito, deberás presionar la cantidad de dinero en total que contiene el cochinito. Si aciertas el cochinito se romperá, pero si fallas se reirá."
+label_settings = SubResource("LabelSettings_yt00c")
+horizontal_alignment = 1
+autowrap_mode = 2
+
+[node name="Correcto" type="TextureRect" parent="."]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -289.5
+offset_top = -116.0
+offset_right = -54.5
+offset_bottom = 34.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("3_is3bl")
+
+[node name="Incorrecto" type="TextureRect" parent="."]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = 54.5
+offset_top = -115.0
+offset_right = 289.5
+offset_bottom = 35.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("4_6vvq6")
+
+[node name="Linea" type="Sprite2D" parent="."]
+position = Vector2(581, 258)
+scale = Vector2(1.75, 1.62)
+texture = ExtResource("5_yet8s")
+
+[node name="Correcto2" type="Panel" parent="."]
+layout_mode = 0
+offset_left = 320.0
+offset_top = 139.0
+offset_right = 490.0
+offset_bottom = 198.0
+theme_override_styles/panel = SubResource("StyleBoxFlat_s5so3")
+
+[node name="Incorrecto2" type="Panel" parent="."]
+layout_mode = 0
+offset_left = 656.0
+offset_top = 139.0
+offset_right = 826.0
+offset_bottom = 198.0
+theme_override_styles/panel = SubResource("StyleBoxFlat_i3sdd")
+
+[node name="Incorrecto3" type="Sprite2D" parent="."]
+position = Vector2(744, 168)
+scale = Vector2(0.0253873, 0.0313038)
+texture = ExtResource("6_jcrvb")
+
+[node name="Correcto3" type="Sprite2D" parent="."]
+position = Vector2(407, 163)
+scale = Vector2(0.0392857, 0.030921)
+texture = ExtResource("7_yox2b")
+
+[node name="Button" type="Button" parent="."]
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -34.0
+offset_top = -67.0
+offset_right = 34.0
+offset_bottom = -21.0
+grow_horizontal = 2
+grow_vertical = 0
+theme_override_styles/focus = SubResource("StyleBoxTexture_scukc")
+theme_override_styles/disabled_mirrored = SubResource("StyleBoxTexture_44s2n")
+theme_override_styles/disabled = SubResource("StyleBoxTexture_ojebt")
+theme_override_styles/hover_pressed_mirrored = SubResource("StyleBoxFlat_joiin")
+theme_override_styles/hover_pressed = SubResource("StyleBoxFlat_q22d1")
+theme_override_styles/hover_mirrored = SubResource("StyleBoxTexture_jmn6j")
+theme_override_styles/hover = SubResource("StyleBoxFlat_h38ow")
+theme_override_styles/pressed_mirrored = SubResource("StyleBoxTexture_5uo7f")
+theme_override_styles/pressed = SubResource("StyleBoxTexture_qxemu")
+theme_override_styles/normal_mirrored = SubResource("StyleBoxTexture_dkuld")
+theme_override_styles/normal = SubResource("StyleBoxTexture_nkh1l")
+icon = ExtResource("8_6nw8j")
+
+[connection signal="pressed" from="Button" to="." method="_on_button_pressed"]

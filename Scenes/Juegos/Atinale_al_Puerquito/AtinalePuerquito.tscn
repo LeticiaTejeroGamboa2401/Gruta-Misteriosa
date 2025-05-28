@@ -1,0 +1,304 @@
+[gd_scene load_steps=23 format=3 uid="uid://btpr74bawfy3o"]
+
+[ext_resource type="Texture2D" uid="uid://dkus0r5unvohb" path="res://images/Juegos/Atinale_al_Puerquito/fondo.png" id="1_25d5w"]
+[ext_resource type="Script" path="res://Scripts/Juegos/Controllers/game_controller_puerquito.gd" id="1_hqy58"]
+[ext_resource type="Texture2D" uid="uid://cik2d7yixadem" path="res://images/Juegos/Atinale_al_Puerquito/taburete.png" id="2_4enek"]
+[ext_resource type="Resource" uid="uid://b0f24i5te2ads" path="res://resources/variado/theme/theme_puerquito.tres" id="2_5w431"]
+[ext_resource type="Texture2D" uid="uid://do3jpide6k7os" path="res://images/Juegos/Atinale_al_Puerquito/puerquito.png" id="3_ckxom"]
+[ext_resource type="FontFile" uid="uid://ex6sf638yhh5" path="res://font/Chonky Bunny.ttf" id="4_bvi87"]
+[ext_resource type="Texture2D" uid="uid://ch81viu3aj55i" path="res://images/Juegos/Atinale_al_Puerquito/imgCorrecto.png" id="4_wg2fi"]
+[ext_resource type="Texture2D" uid="uid://b4axhsaahojxl" path="res://images/Juegos/Atinale_al_Puerquito/imgIncorrecto.png" id="5_hdbkr"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_mwxkx"]
+bg_color = Color(0, 0, 0, 0.627451)
+border_width_left = 4
+border_width_top = 4
+border_width_right = 4
+border_width_bottom = 4
+corner_radius_top_left = 15
+corner_radius_top_right = 15
+corner_radius_bottom_right = 15
+corner_radius_bottom_left = 15
+expand_margin_left = 5.0
+expand_margin_top = 5.0
+expand_margin_right = 5.0
+expand_margin_bottom = 5.0
+
+[sub_resource type="LabelSettings" id="LabelSettings_q6acn"]
+font = ExtResource("4_bvi87")
+font_size = 38
+
+[sub_resource type="FontVariation" id="FontVariation_b0gil"]
+base_font = ExtResource("4_bvi87")
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_x07pr"]
+bg_color = Color(1, 1, 1, 1)
+border_width_left = 3
+border_width_top = 3
+border_width_right = 3
+border_width_bottom = 3
+border_color = Color(0.121569, 0.572549, 0, 1)
+corner_radius_top_left = 15
+corner_radius_top_right = 15
+corner_radius_bottom_right = 15
+corner_radius_bottom_left = 15
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_8om0s"]
+bg_color = Color(1, 1, 1, 1)
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+border_color = Color(0.866667, 0.415686, 0.352941, 1)
+corner_radius_top_left = 15
+corner_radius_top_right = 15
+corner_radius_bottom_right = 15
+corner_radius_bottom_left = 15
+
+[sub_resource type="FontVariation" id="FontVariation_loxpt"]
+base_font = ExtResource("4_bvi87")
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_18n4y"]
+bg_color = Color(1, 1, 1, 1)
+border_width_left = 3
+border_width_top = 3
+border_width_right = 3
+border_width_bottom = 3
+border_color = Color(0.121569, 0.572549, 0, 1)
+corner_radius_top_left = 15
+corner_radius_top_right = 15
+corner_radius_bottom_right = 15
+corner_radius_bottom_left = 15
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_jje0d"]
+bg_color = Color(1, 1, 1, 1)
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+border_color = Color(0.866667, 0.415686, 0.352941, 1)
+corner_radius_top_left = 15
+corner_radius_top_right = 15
+corner_radius_bottom_right = 15
+corner_radius_bottom_left = 15
+
+[sub_resource type="FontVariation" id="FontVariation_73jxf"]
+base_font = ExtResource("4_bvi87")
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_3jmky"]
+bg_color = Color(1, 1, 1, 1)
+border_width_left = 3
+border_width_top = 3
+border_width_right = 3
+border_width_bottom = 3
+border_color = Color(0.121569, 0.572549, 0, 1)
+corner_radius_top_left = 15
+corner_radius_top_right = 15
+corner_radius_bottom_right = 15
+corner_radius_bottom_left = 15
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_pyfh6"]
+bg_color = Color(1, 1, 1, 1)
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+border_color = Color(0.865829, 0.414337, 0.352279, 1)
+corner_radius_top_left = 15
+corner_radius_top_right = 15
+corner_radius_bottom_right = 15
+corner_radius_bottom_left = 15
+
+[sub_resource type="FontVariation" id="FontVariation_a7sc4"]
+base_font = ExtResource("4_bvi87")
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_ury4w"]
+bg_color = Color(1, 1, 1, 1)
+border_width_left = 3
+border_width_top = 3
+border_width_right = 3
+border_width_bottom = 3
+border_color = Color(0.121569, 0.572549, 0, 1)
+corner_radius_top_left = 15
+corner_radius_top_right = 15
+corner_radius_bottom_right = 15
+corner_radius_bottom_left = 15
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_3l7cr"]
+bg_color = Color(1, 1, 1, 1)
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+border_color = Color(0.866667, 0.415686, 0.352941, 1)
+corner_radius_top_left = 15
+corner_radius_top_right = 15
+corner_radius_bottom_right = 15
+corner_radius_bottom_left = 15
+
+[node name="Main" type="CanvasLayer"]
+script = ExtResource("1_hqy58")
+quiz = ExtResource("2_5w431")
+imgCorrecto = ExtResource("4_wg2fi")
+imgIncorrecto = ExtResource("5_hdbkr")
+imgDefault = ExtResource("3_ckxom")
+
+[node name="Control" type="Control" parent="."]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+metadata/_edit_lock_ = true
+
+[node name="Fondo" type="TextureRect" parent="Control"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("1_25d5w")
+expand_mode = 2
+metadata/_edit_lock_ = true
+
+[node name="Taburete" type="TextureRect" parent="Control"]
+layout_mode = 1
+anchors_preset = 12
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -41.0
+offset_top = -649.0
+offset_right = 46.0
+grow_horizontal = 2
+grow_vertical = 0
+texture = ExtResource("2_4enek")
+expand_mode = 1
+metadata/_edit_lock_ = true
+
+[node name="Puerquito" type="TextureRect" parent="Control"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -114.0
+offset_top = -14.5
+offset_right = 114.0
+offset_bottom = 132.5
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("3_ckxom")
+
+[node name="Pregunta" type="Panel" parent="Control"]
+layout_mode = 0
+offset_left = 59.0
+offset_top = 467.0
+offset_right = 647.0
+offset_bottom = 643.0
+theme_override_styles/panel = SubResource("StyleBoxFlat_mwxkx")
+
+[node name="PreguntaTexto" type="Label" parent="Control/Pregunta"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_right = -2.0
+grow_horizontal = 2
+grow_vertical = 2
+text = "Pregunta"
+label_settings = SubResource("LabelSettings_q6acn")
+horizontal_alignment = 1
+vertical_alignment = 1
+autowrap_mode = 2
+
+[node name="Botones" type="Panel" parent="Control"]
+layout_mode = 0
+offset_left = 692.0
+offset_top = 466.0
+offset_right = 1097.0
+offset_bottom = 643.0
+
+[node name="MenuButton" type="MenuButton" parent="Control/Botones"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Button" type="Button" parent="Control/Botones/MenuButton"]
+layout_mode = 0
+offset_left = 229.0
+offset_top = 13.0
+offset_right = 386.0
+offset_bottom = 75.0
+theme_override_colors/font_disabled_color = Color(0, 0, 0, 1)
+theme_override_colors/font_hover_pressed_color = Color(0, 0, 0, 1)
+theme_override_colors/font_hover_color = Color(0, 0, 0, 1)
+theme_override_colors/font_pressed_color = Color(0, 0, 0, 1)
+theme_override_colors/font_focus_color = Color(0, 0, 0, 1)
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = SubResource("FontVariation_b0gil")
+theme_override_font_sizes/font_size = 40
+theme_override_styles/hover = SubResource("StyleBoxFlat_x07pr")
+theme_override_styles/normal = SubResource("StyleBoxFlat_8om0s")
+
+[node name="Button2" type="Button" parent="Control/Botones/MenuButton"]
+layout_mode = 0
+offset_left = 230.0
+offset_top = 100.0
+offset_right = 384.0
+offset_bottom = 159.0
+theme_override_colors/font_disabled_color = Color(0, 0, 0, 1)
+theme_override_colors/font_hover_pressed_color = Color(0, 0, 0, 1)
+theme_override_colors/font_hover_color = Color(0, 0, 0, 1)
+theme_override_colors/font_pressed_color = Color(0, 0, 0, 1)
+theme_override_colors/font_focus_color = Color(0, 0, 0, 1)
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = SubResource("FontVariation_loxpt")
+theme_override_font_sizes/font_size = 50
+theme_override_styles/hover = SubResource("StyleBoxFlat_18n4y")
+theme_override_styles/normal = SubResource("StyleBoxFlat_jje0d")
+autowrap_mode = 2
+
+[node name="Button3" type="Button" parent="Control/Botones/MenuButton"]
+layout_mode = 0
+offset_left = 38.0
+offset_top = 14.0
+offset_right = 193.0
+offset_bottom = 76.0
+theme_override_colors/font_disabled_color = Color(0, 0, 0, 1)
+theme_override_colors/font_hover_pressed_color = Color(0, 0, 0, 1)
+theme_override_colors/font_hover_color = Color(0, 0, 0, 1)
+theme_override_colors/font_pressed_color = Color(0, 0, 0, 1)
+theme_override_colors/font_focus_color = Color(0, 0, 0, 1)
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = SubResource("FontVariation_73jxf")
+theme_override_font_sizes/font_size = 50
+theme_override_styles/hover = SubResource("StyleBoxFlat_3jmky")
+theme_override_styles/normal = SubResource("StyleBoxFlat_pyfh6")
+
+[node name="Button4" type="Button" parent="Control/Botones/MenuButton"]
+layout_mode = 0
+offset_left = 38.0
+offset_top = 98.0
+offset_right = 192.0
+offset_bottom = 160.0
+theme_override_colors/font_disabled_color = Color(0, 0, 0, 1)
+theme_override_colors/font_hover_pressed_color = Color(0, 0, 0, 1)
+theme_override_colors/font_hover_color = Color(0, 0, 0, 1)
+theme_override_colors/font_pressed_color = Color(0, 0, 0, 1)
+theme_override_colors/font_focus_color = Color(0, 0, 0, 1)
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = SubResource("FontVariation_a7sc4")
+theme_override_font_sizes/font_size = 50
+theme_override_styles/hover = SubResource("StyleBoxFlat_ury4w")
+theme_override_styles/normal = SubResource("StyleBoxFlat_3l7cr")

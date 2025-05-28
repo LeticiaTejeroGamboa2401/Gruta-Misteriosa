@@ -1,4 +1,4 @@
-[gd_scene load_steps=9 format=3 uid="uid://cdi8wd4866i6s"]
+[gd_scene load_steps=10 format=3 uid="uid://cdi8wd4866i6s"]
 
 [ext_resource type="Texture2D" uid="uid://dyjnmo7ko60jf" path="res://images/Lucy_camina_bosque.png" id="1_8nlr0"]
 [ext_resource type="Script" path="res://Scripts/lucy_sale_casa.gd" id="1_g0f5i"]
@@ -14,6 +14,8 @@ bg_color = Color(0, 0, 0, 1)
 [sub_resource type="LabelSettings" id="LabelSettings_s45y3"]
 font = ExtResource("5_hcxdn")
 font_size = 35
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_lbgat"]
 
 [node name="LucySaleCasa" type="Control"]
 layout_mode = 3
@@ -81,6 +83,7 @@ offset_left = 5.0
 offset_top = 562.0
 offset_right = 160.0
 offset_bottom = 640.0
+theme_override_styles/normal = SubResource("StyleBoxTexture_lbgat")
 icon = ExtResource("3_f05c2")
 
 [connection signal="pressed" from="Siguiente" to="." method="_on_siguiente_pressed"]

@@ -1,7 +1,8 @@
-[gd_scene load_steps=6 format=3 uid="uid://fwbw1ntakfvw"]
+[gd_scene load_steps=7 format=3 uid="uid://fwbw1ntakfvw"]
 
 [ext_resource type="Texture2D" uid="uid://ivs8kjm4fl0p" path="res://images/menu.png" id="1_8u2qd"]
 [ext_resource type="Script" path="res://Scripts/menu.gd" id="1_s6pxs"]
+[ext_resource type="AudioStream" uid="uid://bgo08kv34b4t4" path="res://audio/menu.ogg" id="3_s3tf3"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_lxt0g"]
 bg_color = Color(0.00820202, 0.00820203, 0.00820202, 1)
@@ -78,6 +79,11 @@ layout_mode = 2
 theme_override_font_sizes/font_size = 47
 theme_override_styles/normal = SubResource("StyleBoxTexture_yhd1w")
 text = "CRÉDITOS"
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("3_s3tf3")
+autoplay = true
+parameters/looping = true
 
 [connection signal="pressed" from="ColorRect/VBoxContainer/Play" to="." method="_on_play_pressed"]
 [connection signal="pressed" from="ColorRect/VBoxContainer/Quit" to="." method="_on_quit_pressed"]

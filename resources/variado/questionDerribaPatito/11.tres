@@ -1,0 +1,18 @@
+[gd_resource type="Resource" script_class="QuizQuestionPatito" load_steps=10 format=3 uid="uid://ddujadcb3s4d5"]
+
+[ext_resource type="PackedScene" uid="uid://ds2ipdiv80mcf" path="res://Scenes/Juegos/Derriba_al_Pato/Patos/Pato18.tscn" id="1_bbawe"]
+[ext_resource type="Script" path="res://Scripts/Juegos/DerribaPato/question.gd" id="1_nfwv2"]
+[ext_resource type="PackedScene" uid="uid://dhr0srn6io11" path="res://Scenes/Juegos/Derriba_al_Pato/Patos/Pato25.tscn" id="2_10ei8"]
+[ext_resource type="PackedScene" uid="uid://cqstednhcedej" path="res://Scenes/Juegos/Derriba_al_Pato/Patos/Pato12.tscn" id="3_oyerl"]
+[ext_resource type="PackedScene" uid="uid://73ggadh637kp" path="res://Scenes/Juegos/Derriba_al_Pato/Patos/Pato20.tscn" id="4_4f2xg"]
+[ext_resource type="PackedScene" uid="uid://jpwbovcjx7jf" path="res://Scenes/Juegos/Derriba_al_Pato/Patos/Pato27.tscn" id="5_n6bkl"]
+[ext_resource type="PackedScene" uid="uid://bnt4u70ladyu5" path="res://Scenes/Juegos/Derriba_al_Pato/Patos/Pato30.tscn" id="6_w6kax"]
+[ext_resource type="PackedScene" uid="uid://oxtuirf6toq6" path="res://Scenes/Juegos/Derriba_al_Pato/Patos/Pato14.tscn" id="7_67sqq"]
+[ext_resource type="PackedScene" uid="uid://b624q6wut6ubb" path="res://Scenes/Juegos/Derriba_al_Pato/Patos/Pato9.tscn" id="8_yxsud"]
+
+[resource]
+script = ExtResource("1_nfwv2")
+question_info = "Cada aluxe come 3 frutas. Si hay 6 aluxes, ¿cuántas frutas comen en total?"
+type = 0
+options = Array[PackedScene]([ExtResource("2_10ei8"), ExtResource("1_bbawe"), ExtResource("3_oyerl"), ExtResource("4_4f2xg"), ExtResource("5_n6bkl"), ExtResource("6_w6kax"), ExtResource("7_67sqq"), ExtResource("8_yxsud")])
+correct = ExtResource("1_bbawe")

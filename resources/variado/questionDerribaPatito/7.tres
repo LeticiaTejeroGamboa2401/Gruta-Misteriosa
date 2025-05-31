@@ -1,0 +1,18 @@
+[gd_resource type="Resource" script_class="QuizQuestionPatito" load_steps=10 format=3 uid="uid://bhthq8pjww0pq"]
+
+[ext_resource type="PackedScene" uid="uid://bnt4u70ladyu5" path="res://Scenes/Juegos/Derriba_al_Pato/Patos/Pato30.tscn" id="1_ny61y"]
+[ext_resource type="Script" path="res://Scripts/Juegos/DerribaPato/question.gd" id="1_wopp2"]
+[ext_resource type="PackedScene" uid="uid://dhr0srn6io11" path="res://Scenes/Juegos/Derriba_al_Pato/Patos/Pato25.tscn" id="2_fim0p"]
+[ext_resource type="PackedScene" uid="uid://oxtuirf6toq6" path="res://Scenes/Juegos/Derriba_al_Pato/Patos/Pato14.tscn" id="3_j6axa"]
+[ext_resource type="PackedScene" uid="uid://cqstednhcedej" path="res://Scenes/Juegos/Derriba_al_Pato/Patos/Pato12.tscn" id="4_3bkwo"]
+[ext_resource type="PackedScene" uid="uid://5yscailg1tp7" path="res://Scenes/Juegos/Derriba_al_Pato/Patos/Pato6.tscn" id="5_tpeld"]
+[ext_resource type="PackedScene" uid="uid://73ggadh637kp" path="res://Scenes/Juegos/Derriba_al_Pato/Patos/Pato20.tscn" id="6_1my1w"]
+[ext_resource type="PackedScene" uid="uid://eyq736gkhx0r" path="res://Scenes/Juegos/Derriba_al_Pato/Patos/Pato5.tscn" id="7_vke0v"]
+[ext_resource type="PackedScene" uid="uid://ds2ipdiv80mcf" path="res://Scenes/Juegos/Derriba_al_Pato/Patos/Pato18.tscn" id="8_tkury"]
+
+[resource]
+script = ExtResource("1_wopp2")
+question_info = "El alux cocinero hace 6 tortillas por día. ¿Cuántas hace en 5 días?"
+type = 0
+options = Array[PackedScene]([ExtResource("2_fim0p"), ExtResource("3_j6axa"), ExtResource("4_3bkwo"), ExtResource("5_tpeld"), ExtResource("1_ny61y"), ExtResource("6_1my1w"), ExtResource("7_vke0v"), ExtResource("8_tkury")])
+correct = ExtResource("1_ny61y")

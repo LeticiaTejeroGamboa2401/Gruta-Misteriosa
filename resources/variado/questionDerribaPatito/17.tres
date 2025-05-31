@@ -1,0 +1,18 @@
+[gd_resource type="Resource" script_class="QuizQuestionPatito" load_steps=10 format=3 uid="uid://p1bmrbhyltbs"]
+
+[ext_resource type="Script" path="res://Scripts/Juegos/DerribaPato/question.gd" id="1_cwvjo"]
+[ext_resource type="PackedScene" uid="uid://5yscailg1tp7" path="res://Scenes/Juegos/Derriba_al_Pato/Patos/Pato6.tscn" id="1_vp4pm"]
+[ext_resource type="PackedScene" uid="uid://b624q6wut6ubb" path="res://Scenes/Juegos/Derriba_al_Pato/Patos/Pato9.tscn" id="2_eupxc"]
+[ext_resource type="PackedScene" uid="uid://eyq736gkhx0r" path="res://Scenes/Juegos/Derriba_al_Pato/Patos/Pato5.tscn" id="3_gxw4e"]
+[ext_resource type="PackedScene" uid="uid://ds2ipdiv80mcf" path="res://Scenes/Juegos/Derriba_al_Pato/Patos/Pato18.tscn" id="4_hwqs8"]
+[ext_resource type="PackedScene" uid="uid://bc4ymhukleldv" path="res://Scenes/Juegos/Derriba_al_Pato/Patos/Pato21.tscn" id="5_bh5kq"]
+[ext_resource type="PackedScene" uid="uid://dhr0srn6io11" path="res://Scenes/Juegos/Derriba_al_Pato/Patos/Pato25.tscn" id="6_jv3hb"]
+[ext_resource type="PackedScene" uid="uid://oxtuirf6toq6" path="res://Scenes/Juegos/Derriba_al_Pato/Patos/Pato14.tscn" id="7_sdip1"]
+[ext_resource type="PackedScene" uid="uid://73ggadh637kp" path="res://Scenes/Juegos/Derriba_al_Pato/Patos/Pato20.tscn" id="8_b1a4a"]
+
+[resource]
+script = ExtResource("1_cwvjo")
+question_info = "El alux sabio tiene 30 pergaminos. Si reparte 5 a cada aprendiz, ¿a cuántos aprendices puede darles?"
+type = 0
+options = Array[PackedScene]([ExtResource("2_eupxc"), ExtResource("3_gxw4e"), ExtResource("4_hwqs8"), ExtResource("5_bh5kq"), ExtResource("1_vp4pm"), ExtResource("6_jv3hb"), ExtResource("7_sdip1"), ExtResource("8_b1a4a")])
+correct = ExtResource("1_vp4pm")

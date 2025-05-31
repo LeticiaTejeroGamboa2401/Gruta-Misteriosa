@@ -1,6 +1,8 @@
 extends Control
 
 func _ready():
+	MusicManager.play_music("res://audio/suspenso.ogg")
+	
 	$VideoPlayer.play()
 
 	# Esperamos 5 segundos y luego cambiamos de escena

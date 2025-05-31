@@ -1,0 +1,97 @@
+[gd_scene load_steps=10 format=3 uid="uid://b020q8eigpo5q"]
+
+[ext_resource type="Texture2D" uid="uid://7synd1ohp3bp" path="res://images/Juegos/Derriba_al_Pato/fondos.png" id="1_hh0qm"]
+[ext_resource type="Script" path="res://Scripts/Juegos/DerribaPato/confirmacion_juego.gd" id="1_tc4py"]
+[ext_resource type="FontFile" uid="uid://ex6sf638yhh5" path="res://font/Chonky Bunny.ttf" id="2_sd5wr"]
+[ext_resource type="Texture2D" uid="uid://ia7h51bd82fs" path="res://images/jugar.png" id="3_sg6f3"]
+[ext_resource type="Texture2D" uid="uid://c4w7uy881hqor" path="res://images/salir.png" id="4_8d5f6"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_wllnp"]
+bg_color = Color(0, 0, 0, 0.54902)
+border_width_left = 3
+border_width_top = 3
+border_width_right = 3
+border_width_bottom = 3
+border_color = Color(1, 1, 1, 1)
+corner_radius_top_left = 15
+corner_radius_top_right = 15
+corner_radius_bottom_right = 15
+corner_radius_bottom_left = 15
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_0uyma"]
+bg_color = Color(0.6, 0.6, 0.6, 0)
+border_width_left = 8
+border_width_top = 8
+border_width_right = 8
+border_width_bottom = 8
+border_color = Color(0.8, 0.8, 0.8, 0)
+corner_radius_top_left = 15
+corner_radius_top_right = 15
+corner_radius_bottom_right = 15
+corner_radius_bottom_left = 15
+
+[sub_resource type="LabelSettings" id="LabelSettings_4c514"]
+font = ExtResource("2_sd5wr")
+font_size = 50
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_yaxwg"]
+
+[node name="Control" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_tc4py")
+
+[node name="TextureRect" type="TextureRect" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("1_hh0qm")
+
+[node name="Panel" type="Panel" parent="."]
+layout_mode = 0
+offset_left = 40.0
+offset_top = 470.0
+offset_right = 808.0
+offset_bottom = 641.0
+theme_override_styles/panel = SubResource("StyleBoxFlat_wllnp")
+
+[node name="Label" type="Label" parent="Panel"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/normal = SubResource("StyleBoxFlat_0uyma")
+text = "   Alux Inteligente:
+   ¿Te gustaría jugar \"Derriba al pato\"?"
+label_settings = SubResource("LabelSettings_4c514")
+vertical_alignment = 1
+
+[node name="Jugar" type="Button" parent="."]
+layout_mode = 0
+offset_left = 828.0
+offset_top = 471.0
+offset_right = 1013.0
+offset_bottom = 540.0
+theme_override_styles/normal = SubResource("StyleBoxTexture_yaxwg")
+icon = ExtResource("3_sg6f3")
+
+[node name="Salir" type="Button" parent="."]
+layout_mode = 0
+offset_left = 825.0
+offset_top = 554.0
+offset_right = 1014.0
+offset_bottom = 623.0
+theme_override_styles/normal = SubResource("StyleBoxTexture_yaxwg")
+icon = ExtResource("4_8d5f6")
+
+[connection signal="pressed" from="Jugar" to="." method="_on_jugar_pressed"]
+[connection signal="pressed" from="Salir" to="." method="_on_salir_pressed"]

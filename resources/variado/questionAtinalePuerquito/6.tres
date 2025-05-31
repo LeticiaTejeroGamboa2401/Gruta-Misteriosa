@@ -4,7 +4,7 @@
 
 [resource]
 script = ExtResource("1_ebbfg")
-question_info = "En esta alcancía había: 1 billetes de $500, 1 billete de $200, 3 billetes de $50 y 3 monedas de 5"
+question_info = "En esta alcancía había: 1 billetes de $500, 1 billete de $200, 3 billetes de $50 y 3 monedas de $5"
 type = 0
 options = Array[String](["$790", "$855", "$915", "$865"])
 correct = "$865"

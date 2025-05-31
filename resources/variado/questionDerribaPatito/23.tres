@@ -1,0 +1,18 @@
+[gd_resource type="Resource" script_class="QuizQuestionPatito" load_steps=10 format=3 uid="uid://c6glxecjwwlkc"]
+
+[ext_resource type="PackedScene" uid="uid://b624q6wut6ubb" path="res://Scenes/Juegos/Derriba_al_Pato/Patos/Pato9.tscn" id="1_i4cyc"]
+[ext_resource type="Script" path="res://Scripts/Juegos/DerribaPato/question.gd" id="1_jn4by"]
+[ext_resource type="PackedScene" uid="uid://5yscailg1tp7" path="res://Scenes/Juegos/Derriba_al_Pato/Patos/Pato6.tscn" id="2_ugn0n"]
+[ext_resource type="PackedScene" uid="uid://cqstednhcedej" path="res://Scenes/Juegos/Derriba_al_Pato/Patos/Pato12.tscn" id="3_3406a"]
+[ext_resource type="PackedScene" uid="uid://bdv5fdij5c310" path="res://Scenes/Juegos/Derriba_al_Pato/Patos/Pato4.tscn" id="4_ikkea"]
+[ext_resource type="PackedScene" uid="uid://dhr0srn6io11" path="res://Scenes/Juegos/Derriba_al_Pato/Patos/Pato25.tscn" id="5_3c4e4"]
+[ext_resource type="PackedScene" uid="uid://oxtuirf6toq6" path="res://Scenes/Juegos/Derriba_al_Pato/Patos/Pato14.tscn" id="6_1pgjc"]
+[ext_resource type="PackedScene" uid="uid://eyq736gkhx0r" path="res://Scenes/Juegos/Derriba_al_Pato/Patos/Pato5.tscn" id="7_sfeah"]
+[ext_resource type="PackedScene" uid="uid://ds2ipdiv80mcf" path="res://Scenes/Juegos/Derriba_al_Pato/Patos/Pato18.tscn" id="8_bnjaf"]
+
+[resource]
+script = ExtResource("1_jn4by")
+question_info = "Un alux tiene 12 monedas y pierde 3. ¿Cuántas le quedan?"
+type = 0
+options = Array[PackedScene]([ExtResource("2_ugn0n"), ExtResource("3_3406a"), ExtResource("4_ikkea"), ExtResource("1_i4cyc"), ExtResource("5_3c4e4"), ExtResource("6_1pgjc"), ExtResource("7_sfeah"), ExtResource("8_bnjaf")])
+correct = ExtResource("1_i4cyc")

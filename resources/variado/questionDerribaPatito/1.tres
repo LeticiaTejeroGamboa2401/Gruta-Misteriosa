@@ -1,0 +1,18 @@
+[gd_resource type="Resource" script_class="QuizQuestionPatito" load_steps=10 format=3 uid="uid://do4f5f6yrmg3t"]
+
+[ext_resource type="Script" path="res://Scripts/Juegos/DerribaPato/question.gd" id="1_061mh"]
+[ext_resource type="PackedScene" uid="uid://jpwbovcjx7jf" path="res://Scenes/Juegos/Derriba_al_Pato/Patos/Pato27.tscn" id="1_jv4lb"]
+[ext_resource type="PackedScene" uid="uid://ds2ipdiv80mcf" path="res://Scenes/Juegos/Derriba_al_Pato/Patos/Pato18.tscn" id="2_gffgl"]
+[ext_resource type="PackedScene" uid="uid://73ggadh637kp" path="res://Scenes/Juegos/Derriba_al_Pato/Patos/Pato20.tscn" id="3_jjqqw"]
+[ext_resource type="PackedScene" uid="uid://b624q6wut6ubb" path="res://Scenes/Juegos/Derriba_al_Pato/Patos/Pato9.tscn" id="4_mxdrq"]
+[ext_resource type="PackedScene" uid="uid://bnt4u70ladyu5" path="res://Scenes/Juegos/Derriba_al_Pato/Patos/Pato30.tscn" id="5_byu6p"]
+[ext_resource type="PackedScene" uid="uid://oxtuirf6toq6" path="res://Scenes/Juegos/Derriba_al_Pato/Patos/Pato14.tscn" id="6_dwcs1"]
+[ext_resource type="PackedScene" uid="uid://dhr0srn6io11" path="res://Scenes/Juegos/Derriba_al_Pato/Patos/Pato25.tscn" id="7_ohwwv"]
+[ext_resource type="PackedScene" uid="uid://cqstednhcedej" path="res://Scenes/Juegos/Derriba_al_Pato/Patos/Pato12.tscn" id="8_aa7ll"]
+
+[resource]
+script = ExtResource("1_061mh")
+question_info = "¿Cuántas ruedas tienen 9 triciclos?"
+type = 0
+options = Array[PackedScene]([ExtResource("2_gffgl"), ExtResource("3_jjqqw"), ExtResource("4_mxdrq"), ExtResource("1_jv4lb"), ExtResource("5_byu6p"), ExtResource("6_dwcs1"), ExtResource("7_ohwwv"), ExtResource("8_aa7ll")])
+correct = ExtResource("1_jv4lb")

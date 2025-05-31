@@ -1,6 +1,7 @@
 extends Control
 
 func _ready() -> void:
+	Input.set_custom_mouse_cursor(null)
 	MusicManager.play_music("res://audio/menu.ogg")
 
 

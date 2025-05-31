@@ -1,0 +1,77 @@
+[gd_scene load_steps=6 format=3 uid="uid://wcxrwmkglnup"]
+
+[ext_resource type="Script" path="res://Scripts/Juegos/AtinalePuerquito/perdiste.gd" id="1_skiv2"]
+[ext_resource type="Texture2D" uid="uid://ce5ueoos67bfl" path="res://images/fondo_juego_adiv_el_prod.png" id="2_6lk3k"]
+[ext_resource type="FontFile" uid="uid://bd321yblpf1ew" path="res://font/Supermarket of Love.ttf" id="3_d0j0w"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_kqtck"]
+font = ExtResource("3_d0j0w")
+font_size = 65
+font_color = Color(1, 0.537255, 0, 1)
+
+[sub_resource type="LabelSettings" id="LabelSettings_i3bqd"]
+font = ExtResource("3_d0j0w")
+font_size = 50
+
+[node name="Control" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_skiv2")
+
+[node name="TextureRect" type="TextureRect" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("2_6lk3k")
+expand_mode = 2
+
+[node name="Panel" type="Panel" parent="."]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -380.5
+offset_top = -191.5
+offset_right = 380.5
+offset_bottom = 191.5
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Ganaste" type="Label" parent="Panel"]
+layout_mode = 1
+anchors_preset = 10
+anchor_right = 1.0
+offset_top = 8.0
+offset_bottom = 61.0
+grow_horizontal = 2
+text = "¡HAS FALLADO!"
+label_settings = SubResource("LabelSettings_kqtck")
+horizontal_alignment = 1
+
+[node name="Label" type="Label" parent="Panel"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -341.0
+offset_top = -82.5
+offset_right = 341.0
+offset_bottom = 82.5
+grow_horizontal = 2
+grow_vertical = 2
+text = "El fragmento del talismán se te ha
+escapado...
+¡Inténtalo de nuevo y recupéralo!"
+label_settings = SubResource("LabelSettings_i3bqd")
+horizontal_alignment = 1

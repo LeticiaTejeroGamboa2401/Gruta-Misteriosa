@@ -1,22 +1,188 @@
-[gd_scene load_steps=4 format=3 uid="uid://ckdc57imwojcn"]
+[gd_scene load_steps=27 format=3 uid="uid://dy8eonorti10n"]
 
-[ext_resource type="Script" path="res://Scripts/mapa.gd" id="1_pyr20"]
-[ext_resource type="Texture2D" uid="uid://cljhi06k04ujl" path="res://assets/mapa.png" id="1_y1e1x"]
+[ext_resource type="Script" path="res://Scripts/mapa_1.gd" id="1_lbv64"]
+[ext_resource type="Texture2D" uid="uid://ch2faqyjs7kwt" path="res://images/mapa.png" id="1_tmcc6"]
+[ext_resource type="Script" path="res://Scripts/Juegos/AtinalePuerquito/entrada_mapa.gd" id="3_5bv8k"]
+[ext_resource type="Script" path="res://Scripts/Juegos/AdivinaProducto/entrada_Mapa.gd" id="4_dmg56"]
+[ext_resource type="Script" path="res://Scripts/Juegos/DerribaPato/entrada_mapa.gd" id="5_42wqn"]
 
-[sub_resource type="PhysicsMaterial" id="PhysicsMaterial_32wcn"]
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_e46v1"]
+size = Vector2(218, 42.5)
 
-[node name="mapa" type="Node2D"]
-script = ExtResource("1_pyr20")
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_hk2gk"]
+size = Vector2(45.5, 98)
 
-[node name="Mapa" type="Sprite2D" parent="."]
-position = Vector2(577.5, 325.125)
-scale = Vector2(0.452734, 0.339453)
-texture = ExtResource("1_y1e1x")
-metadata/_edit_lock_ = true
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_6xxv5"]
+size = Vector2(39, 34)
 
-[node name="StaticBody2D" type="StaticBody2D" parent="."]
-position = Vector2(137, 224)
-physics_material_override = SubResource("PhysicsMaterial_32wcn")
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_ri5fm"]
+size = Vector2(83, 17)
 
-[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="StaticBody2D"]
-polygon = PackedVector2Array(-38, 20, -99, 12, -70, 64, 560, 62, 569, 216, 642, 229, 633, 325, 574, 316, 568, 279, 479, 281, 479, 323, 423, 318, 425, 147, 343, 135, 338, 150, 121, 145, 34, 143, 44, 192, 316, 202, 320, 244, 172, 253, 180, 300, 315, 308, 336, 357, 876, 385, 1015, 387, 1014, 426, -136, 423, -138, -223, 1014, -221, 1014, 385, 964, 387, 977, 345, 903, 340, 697, 328, 695, 234, 799, 224, 799, 47, 831, 31, 826, 6, 703, 6, 708, 34, 745, 74, 742, 168, 629, 177, 614, 14, 469, 14, 461, -45, 469, -85, 389, -81, 404, -49, 409, 17, 63, 18)
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_wauax"]
+size = Vector2(113, 79)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_omrk0"]
+size = Vector2(87.5, 94.5)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_qmcmd"]
+size = Vector2(203, 7.5)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_14s2g"]
+size = Vector2(586, 35)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_10wtq"]
+size = Vector2(199, 30)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_4oesh"]
+size = Vector2(215.5, 315)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_gk38n"]
+size = Vector2(325, 186.5)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_3823v"]
+size = Vector2(52, 101.5)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_tnula"]
+size = Vector2(235, 169.5)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_88s0q"]
+size = Vector2(353.5, 57)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_4dwiq"]
+size = Vector2(195.5, 122.5)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_la8tx"]
+size = Vector2(168, 243.5)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_m4i0i"]
+size = Vector2(102, 393)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_hpqfl"]
+size = Vector2(537.75, 172.75)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_emxtt"]
+size = Vector2(55.5, 78)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_xmrhe"]
+size = Vector2(53, 94)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_lkmk0"]
+size = Vector2(50, 67.5)
+
+[node name="Control" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_lbv64")
+
+[node name="Mapa" type="TextureRect" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("1_tmcc6")
+
+[node name="AreaNoPasar" type="StaticBody2D" parent="."]
+
+[node name="Area18" type="CollisionShape2D" parent="AreaNoPasar"]
+position = Vector2(929, 628.75)
+shape = SubResource("RectangleShape2D_e46v1")
+
+[node name="Area17" type="CollisionShape2D" parent="AreaNoPasar"]
+position = Vector2(579.75, 444)
+shape = SubResource("RectangleShape2D_hk2gk")
+
+[node name="Area16" type="CollisionShape2D" parent="AreaNoPasar"]
+position = Vector2(742.5, 463)
+shape = SubResource("RectangleShape2D_6xxv5")
+
+[node name="Area15" type="CollisionShape2D" parent="AreaNoPasar"]
+position = Vector2(784.5, 253.5)
+shape = SubResource("RectangleShape2D_ri5fm")
+
+[node name="Area14" type="CollisionShape2D" parent="AreaNoPasar"]
+position = Vector2(818.5, 301.5)
+shape = SubResource("RectangleShape2D_wauax")
+
+[node name="Area13" type="CollisionShape2D" parent="AreaNoPasar"]
+position = Vector2(646.25, 383.75)
+shape = SubResource("RectangleShape2D_omrk0")
+
+[node name="Area12" type="CollisionShape2D" parent="AreaNoPasar"]
+position = Vector2(371.5, 419.25)
+shape = SubResource("RectangleShape2D_qmcmd")
+
+[node name="Area11" type="CollisionShape2D" parent="AreaNoPasar"]
+position = Vector2(394, 300.5)
+shape = SubResource("RectangleShape2D_14s2g")
+
+[node name="Area10" type="CollisionShape2D" parent="AreaNoPasar"]
+position = Vector2(941.5, 483)
+shape = SubResource("RectangleShape2D_10wtq")
+
+[node name="Area9" type="CollisionShape2D" parent="AreaNoPasar"]
+position = Vector2(1041.75, 339.5)
+shape = SubResource("RectangleShape2D_4oesh")
+
+[node name="Area8" type="CollisionShape2D" parent="AreaNoPasar"]
+position = Vector2(988.5, 91.75)
+shape = SubResource("RectangleShape2D_gk38n")
+
+[node name="Area7" type="CollisionShape2D" parent="AreaNoPasar"]
+position = Vector2(564, 52.25)
+shape = SubResource("RectangleShape2D_3823v")
+
+[node name="Area6" type="CollisionShape2D" parent="AreaNoPasar"]
+position = Vector2(708.5, 83.25)
+shape = SubResource("RectangleShape2D_tnula")
+
+[node name="Area5" type="CollisionShape2D" parent="AreaNoPasar"]
+position = Vector2(644.25, 621.5)
+shape = SubResource("RectangleShape2D_88s0q")
+
+[node name="Area4" type="CollisionShape2D" parent="AreaNoPasar"]
+position = Vector2(369.25, 585.25)
+shape = SubResource("RectangleShape2D_4dwiq")
+
+[node name="Area3" type="CollisionShape2D" parent="AreaNoPasar"]
+position = Vector2(186, 527.25)
+shape = SubResource("RectangleShape2D_la8tx")
+
+[node name="Area2" type="CollisionShape2D" parent="AreaNoPasar"]
+position = Vector2(50, 449.5)
+shape = SubResource("RectangleShape2D_m4i0i")
+
+[node name="Area1" type="CollisionShape2D" parent="AreaNoPasar"]
+position = Vector2(270.125, 86.625)
+shape = SubResource("RectangleShape2D_hpqfl")
+
+[node name="AtinaleAlPuerquito" type="Area2D" parent="."]
+position = Vector2(58, 55)
+script = ExtResource("3_5bv8k")
+
+[node name="entradaJuego" type="CollisionShape2D" parent="AtinaleAlPuerquito"]
+position = Vector2(846.25, 168)
+shape = SubResource("RectangleShape2D_emxtt")
+
+[node name="AdivinaElProducto" type="Area2D" parent="."]
+script = ExtResource("4_dmg56")
+
+[node name="entradaJuego" type="CollisionShape2D" parent="AdivinaElProducto"]
+position = Vector2(297.5, 477)
+shape = SubResource("RectangleShape2D_xmrhe")
+
+[node name="DerribaAlPato" type="Area2D" parent="."]
+script = ExtResource("5_42wqn")
+
+[node name="entradaJuego" type="CollisionShape2D" parent="DerribaAlPato"]
+position = Vector2(565, 138.25)
+shape = SubResource("RectangleShape2D_lkmk0")
+
+[connection signal="body_entered" from="AtinaleAlPuerquito" to="AtinaleAlPuerquito" method="_on_body_entered"]
+[connection signal="body_entered" from="AdivinaElProducto" to="AdivinaElProducto" method="_on_body_entered"]
+[connection signal="body_entered" from="DerribaAlPato" to="DerribaAlPato" method="_on_body_entered"]

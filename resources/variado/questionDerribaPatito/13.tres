@@ -1,0 +1,18 @@
+[gd_resource type="Resource" script_class="QuizQuestionPatito" load_steps=10 format=3 uid="uid://tqn1kg6nk2p4"]
+
+[ext_resource type="Script" path="res://Scripts/Juegos/DerribaPato/question.gd" id="1_8mo8m"]
+[ext_resource type="PackedScene" uid="uid://jpwbovcjx7jf" path="res://Scenes/Juegos/Derriba_al_Pato/Patos/Pato27.tscn" id="1_p3xj0"]
+[ext_resource type="PackedScene" uid="uid://73ggadh637kp" path="res://Scenes/Juegos/Derriba_al_Pato/Patos/Pato20.tscn" id="2_f4fe6"]
+[ext_resource type="PackedScene" uid="uid://bc4ymhukleldv" path="res://Scenes/Juegos/Derriba_al_Pato/Patos/Pato21.tscn" id="3_d0bie"]
+[ext_resource type="PackedScene" uid="uid://bnt4u70ladyu5" path="res://Scenes/Juegos/Derriba_al_Pato/Patos/Pato30.tscn" id="4_tex6f"]
+[ext_resource type="PackedScene" uid="uid://dhr0srn6io11" path="res://Scenes/Juegos/Derriba_al_Pato/Patos/Pato25.tscn" id="5_ng16a"]
+[ext_resource type="PackedScene" uid="uid://cqstednhcedej" path="res://Scenes/Juegos/Derriba_al_Pato/Patos/Pato12.tscn" id="6_o8oys"]
+[ext_resource type="PackedScene" uid="uid://oxtuirf6toq6" path="res://Scenes/Juegos/Derriba_al_Pato/Patos/Pato14.tscn" id="7_75y6s"]
+[ext_resource type="PackedScene" uid="uid://b624q6wut6ubb" path="res://Scenes/Juegos/Derriba_al_Pato/Patos/Pato9.tscn" id="8_t5sla"]
+
+[resource]
+script = ExtResource("1_8mo8m")
+question_info = "Un alux recolecta el fruto de 3 árboles por día. ¿Cuántos árboles ya cosechó después de 9 días?"
+type = 0
+options = Array[PackedScene]([ExtResource("2_f4fe6"), ExtResource("3_d0bie"), ExtResource("1_p3xj0"), ExtResource("4_tex6f"), ExtResource("5_ng16a"), ExtResource("6_o8oys"), ExtResource("7_75y6s"), ExtResource("8_t5sla")])
+correct = ExtResource("1_p3xj0")

@@ -1,0 +1,249 @@
+[gd_scene load_steps=23 format=3 uid="uid://dcopm3ywqg7e3"]
+
+[ext_resource type="Texture2D" uid="uid://is538sjidm1k" path="res://images/Juegos/Derriba_al_Pato/Fondo.png" id="1_2wcyq"]
+[ext_resource type="Script" path="res://Scripts/Juegos/DerribaPato/descripcion_juego.gd" id="1_8hkx3"]
+[ext_resource type="Texture2D" uid="uid://xo3a6yi72t15" path="res://images/Juegos/Derriba_al_Pato/Pato.png" id="2_2kdsg"]
+[ext_resource type="Texture2D" uid="uid://cc4pdettce2ln" path="res://images/Juegos/Derriba_al_Pato/incorrecto.png" id="3_m8rba"]
+[ext_resource type="Texture2D" uid="uid://cgtmk0ygac04k" path="res://images/Juegos/Derriba_al_Pato/correcto.png" id="4_lvmty"]
+[ext_resource type="FontFile" uid="uid://ex6sf638yhh5" path="res://font/Chonky Bunny.ttf" id="5_jmfpw"]
+[ext_resource type="Texture2D" uid="uid://bwf8mkwr4gktp" path="res://images/siguiente_flecha.png" id="6_nr0we"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_wc1rs"]
+bg_color = Color(0.647059, 0.490196, 0.329412, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_640kx"]
+bg_color = Color(0.647059, 0.490196, 0.329412, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_v4lna"]
+bg_color = Color(0.647059, 0.490196, 0.329412, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_2dgey"]
+bg_color = Color(0.647059, 0.490196, 0.329412, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_t43lt"]
+bg_color = Color(0.647059, 0.490196, 0.329412, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_udlgb"]
+bg_color = Color(0.647059, 0.490196, 0.329412, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_v26w8"]
+bg_color = Color(0.647059, 0.490196, 0.329412, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_pj8dx"]
+bg_color = Color(0.647059, 0.490196, 0.329412, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_q20ou"]
+bg_color = Color(0.647059, 0.490196, 0.329412, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_arqwl"]
+bg_color = Color(0.647059, 0.490196, 0.329412, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_fuqa7"]
+bg_color = Color(0.647059, 0.490196, 0.329412, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_sqfrk"]
+bg_color = Color(0, 0, 0, 0.54902)
+border_width_left = 3
+border_width_top = 3
+border_width_right = 3
+border_width_bottom = 3
+border_color = Color(1, 1, 1, 1)
+corner_radius_top_left = 15
+corner_radius_top_right = 15
+corner_radius_bottom_right = 15
+corner_radius_bottom_left = 15
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_mk3ah"]
+bg_color = Color(0, 0, 0, 0.54902)
+border_width_left = 3
+border_width_top = 3
+border_width_right = 3
+border_width_bottom = 3
+border_color = Color(1, 1, 1, 1)
+corner_radius_top_left = 15
+corner_radius_top_right = 15
+corner_radius_bottom_right = 15
+corner_radius_bottom_left = 15
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_qkxt3"]
+bg_color = Color(1, 1, 1, 0.784314)
+border_width_left = 3
+border_width_top = 3
+border_width_right = 3
+border_width_bottom = 3
+border_color = Color(0, 0, 0, 1)
+corner_radius_top_left = 15
+corner_radius_top_right = 15
+corner_radius_bottom_right = 15
+corner_radius_bottom_left = 15
+
+[sub_resource type="LabelSettings" id="LabelSettings_ays5e"]
+font = ExtResource("5_jmfpw")
+font_size = 35
+font_color = Color(0, 0, 0, 1)
+
+[node name="Control" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_8hkx3")
+metadata/_edit_horizontal_guides_ = [-8.0]
+
+[node name="Fondo" type="TextureRect" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("1_2wcyq")
+
+[node name="Button" type="Button" parent="."]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -407.0
+offset_top = -163.0
+offset_right = 407.0
+offset_bottom = -111.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/focus = SubResource("StyleBoxFlat_wc1rs")
+theme_override_styles/disabled_mirrored = SubResource("StyleBoxFlat_640kx")
+theme_override_styles/disabled = SubResource("StyleBoxFlat_v4lna")
+theme_override_styles/hover_pressed_mirrored = SubResource("StyleBoxFlat_2dgey")
+theme_override_styles/hover_pressed = SubResource("StyleBoxFlat_t43lt")
+theme_override_styles/hover_mirrored = SubResource("StyleBoxFlat_udlgb")
+theme_override_styles/hover = SubResource("StyleBoxFlat_v26w8")
+theme_override_styles/pressed_mirrored = SubResource("StyleBoxFlat_pj8dx")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_q20ou")
+theme_override_styles/normal_mirrored = SubResource("StyleBoxFlat_arqwl")
+theme_override_styles/normal = SubResource("StyleBoxFlat_fuqa7")
+
+[node name="Pato1" type="TextureRect" parent="."]
+layout_mode = 0
+offset_left = 221.0
+offset_top = 23.0
+offset_right = 378.0
+offset_bottom = 161.0
+texture = ExtResource("2_2kdsg")
+
+[node name="Pato2" type="TextureRect" parent="."]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -78.5
+offset_top = 23.0
+offset_right = 78.5
+offset_bottom = 161.0
+grow_horizontal = 2
+texture = ExtResource("2_2kdsg")
+
+[node name="Pato3" type="TextureRect" parent="."]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = 197.5
+offset_top = 23.0
+offset_right = 354.5
+offset_bottom = 161.0
+grow_horizontal = 2
+texture = ExtResource("2_2kdsg")
+
+[node name="Incorrecto" type="Panel" parent="."]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = 100.5
+offset_top = -71.0
+offset_right = 261.5
+offset_bottom = 71.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_sqfrk")
+
+[node name="TextureRect" type="TextureRect" parent="Incorrecto"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("3_m8rba")
+expand_mode = 2
+
+[node name="Correcto" type="Panel" parent="."]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -261.5
+offset_top = -71.0
+offset_right = -100.5
+offset_bottom = 71.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_mk3ah")
+
+[node name="TextureRect" type="TextureRect" parent="Correcto"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("4_lvmty")
+expand_mode = 2
+
+[node name="Info" type="Panel" parent="."]
+layout_mode = 0
+offset_left = 140.0
+offset_top = 495.0
+offset_right = 1010.0
+offset_bottom = 641.0
+theme_override_styles/panel = SubResource("StyleBoxFlat_qkxt3")
+
+[node name="Label" type="Label" parent="Info"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 18.0
+offset_top = 10.0
+offset_right = -20.0
+offset_bottom = -14.0
+grow_horizontal = 2
+grow_vertical = 2
+text = "Para jugar deberás leer detenidamente el acertijo y encontrar al patito con la respuesta correcta y dispararle. Si aciertas verás una palomita verde y si fallas una tachita roja."
+label_settings = SubResource("LabelSettings_ays5e")
+autowrap_mode = 2
+
+[node name="Siguiente" type="Button" parent="."]
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -34.0
+offset_top = -46.0
+offset_right = 34.0
+grow_horizontal = 2
+grow_vertical = 0
+icon = ExtResource("6_nr0we")
+flat = true
+
+[connection signal="pressed" from="Siguiente" to="." method="_on_siguiente_pressed"]

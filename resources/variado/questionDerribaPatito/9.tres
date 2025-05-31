@@ -1,0 +1,18 @@
+[gd_resource type="Resource" script_class="QuizQuestionPatito" load_steps=10 format=3 uid="uid://bkv16htqwhtw2"]
+
+[ext_resource type="Script" path="res://Scripts/Juegos/DerribaPato/question.gd" id="1_i3gsa"]
+[ext_resource type="PackedScene" uid="uid://eyq736gkhx0r" path="res://Scenes/Juegos/Derriba_al_Pato/Patos/Pato5.tscn" id="1_y6rwo"]
+[ext_resource type="PackedScene" uid="uid://b624q6wut6ubb" path="res://Scenes/Juegos/Derriba_al_Pato/Patos/Pato9.tscn" id="2_08303"]
+[ext_resource type="PackedScene" uid="uid://bdv5fdij5c310" path="res://Scenes/Juegos/Derriba_al_Pato/Patos/Pato4.tscn" id="3_7qecb"]
+[ext_resource type="PackedScene" uid="uid://5yscailg1tp7" path="res://Scenes/Juegos/Derriba_al_Pato/Patos/Pato6.tscn" id="4_xvjy5"]
+[ext_resource type="PackedScene" uid="uid://cqstednhcedej" path="res://Scenes/Juegos/Derriba_al_Pato/Patos/Pato12.tscn" id="5_s3hgt"]
+[ext_resource type="PackedScene" uid="uid://bnt4u70ladyu5" path="res://Scenes/Juegos/Derriba_al_Pato/Patos/Pato30.tscn" id="6_idoij"]
+[ext_resource type="PackedScene" uid="uid://bc4ymhukleldv" path="res://Scenes/Juegos/Derriba_al_Pato/Patos/Pato21.tscn" id="7_f7v1c"]
+[ext_resource type="PackedScene" uid="uid://c0dq18126cbtd" path="res://Scenes/Juegos/Derriba_al_Pato/Patos/Pato40.tscn" id="8_66hbt"]
+
+[resource]
+script = ExtResource("1_i3gsa")
+question_info = "Si un alux tiene 40 piedas y las reparte en montones de 8, ¿cuántos montones obtiene?"
+type = 0
+options = Array[PackedScene]([ExtResource("2_08303"), ExtResource("1_y6rwo"), ExtResource("3_7qecb"), ExtResource("4_xvjy5"), ExtResource("5_s3hgt"), ExtResource("6_idoij"), ExtResource("7_f7v1c"), ExtResource("8_66hbt")])
+correct = ExtResource("1_y6rwo")

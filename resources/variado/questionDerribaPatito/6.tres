@@ -1,0 +1,17 @@
+[gd_resource type="Resource" script_class="QuizQuestionPatito" load_steps=9 format=3 uid="uid://cfm2rdyr8cqfv"]
+
+[ext_resource type="Script" path="res://Scripts/Juegos/DerribaPato/question.gd" id="1_83aid"]
+[ext_resource type="PackedScene" uid="uid://jpwbovcjx7jf" path="res://Scenes/Juegos/Derriba_al_Pato/Patos/Pato27.tscn" id="1_bv63v"]
+[ext_resource type="PackedScene" uid="uid://bc4ymhukleldv" path="res://Scenes/Juegos/Derriba_al_Pato/Patos/Pato21.tscn" id="2_0htgy"]
+[ext_resource type="PackedScene" uid="uid://ds2ipdiv80mcf" path="res://Scenes/Juegos/Derriba_al_Pato/Patos/Pato18.tscn" id="3_80pbq"]
+[ext_resource type="PackedScene" uid="uid://b624q6wut6ubb" path="res://Scenes/Juegos/Derriba_al_Pato/Patos/Pato9.tscn" id="4_k6h4l"]
+[ext_resource type="PackedScene" uid="uid://dhr0srn6io11" path="res://Scenes/Juegos/Derriba_al_Pato/Patos/Pato25.tscn" id="5_mpyjr"]
+[ext_resource type="PackedScene" uid="uid://cqstednhcedej" path="res://Scenes/Juegos/Derriba_al_Pato/Patos/Pato12.tscn" id="6_j0hrp"]
+[ext_resource type="PackedScene" uid="uid://5yscailg1tp7" path="res://Scenes/Juegos/Derriba_al_Pato/Patos/Pato6.tscn" id="7_08h4x"]
+
+[resource]
+script = ExtResource("1_83aid")
+question_info = "Un grupo de aluxes forma 3 filas con 9 aluxes en cada una. ¿Cuántos aluxes hay en total?"
+type = 0
+options = Array[PackedScene]([ExtResource("2_0htgy"), ExtResource("2_0htgy"), ExtResource("3_80pbq"), ExtResource("4_k6h4l"), ExtResource("5_mpyjr"), ExtResource("6_j0hrp"), ExtResource("7_08h4x"), ExtResource("1_bv63v")])
+correct = ExtResource("1_bv63v")

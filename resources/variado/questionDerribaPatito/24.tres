@@ -1,0 +1,18 @@
+[gd_resource type="Resource" script_class="QuizQuestionPatito" load_steps=10 format=3 uid="uid://bte4ay68wmtwv"]
+
+[ext_resource type="PackedScene" uid="uid://bnt4u70ladyu5" path="res://Scenes/Juegos/Derriba_al_Pato/Patos/Pato30.tscn" id="1_76n33"]
+[ext_resource type="Script" path="res://Scripts/Juegos/DerribaPato/question.gd" id="1_ocqoe"]
+[ext_resource type="PackedScene" uid="uid://dhr0srn6io11" path="res://Scenes/Juegos/Derriba_al_Pato/Patos/Pato25.tscn" id="2_rrmrl"]
+[ext_resource type="PackedScene" uid="uid://jpwbovcjx7jf" path="res://Scenes/Juegos/Derriba_al_Pato/Patos/Pato27.tscn" id="3_gxn1a"]
+[ext_resource type="PackedScene" uid="uid://ds2ipdiv80mcf" path="res://Scenes/Juegos/Derriba_al_Pato/Patos/Pato18.tscn" id="4_tw7kb"]
+[ext_resource type="PackedScene" uid="uid://73ggadh637kp" path="res://Scenes/Juegos/Derriba_al_Pato/Patos/Pato20.tscn" id="5_mchuj"]
+[ext_resource type="PackedScene" uid="uid://bc4ymhukleldv" path="res://Scenes/Juegos/Derriba_al_Pato/Patos/Pato21.tscn" id="6_j0i5n"]
+[ext_resource type="PackedScene" uid="uid://oxtuirf6toq6" path="res://Scenes/Juegos/Derriba_al_Pato/Patos/Pato14.tscn" id="7_kuber"]
+[ext_resource type="PackedScene" uid="uid://cqstednhcedej" path="res://Scenes/Juegos/Derriba_al_Pato/Patos/Pato12.tscn" id="8_px4do"]
+
+[resource]
+script = ExtResource("1_ocqoe")
+question_info = "Cada carreta puede llevar 10 sacos de maíz, Si hay 3 carretas, ¿cuántos sacos pueden llevar en total??"
+type = 0
+options = Array[PackedScene]([ExtResource("2_rrmrl"), ExtResource("3_gxn1a"), ExtResource("4_tw7kb"), ExtResource("5_mchuj"), ExtResource("1_76n33"), ExtResource("6_j0i5n"), ExtResource("7_kuber"), ExtResource("8_px4do")])
+correct = ExtResource("1_76n33")

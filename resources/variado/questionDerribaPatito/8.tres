@@ -1,0 +1,18 @@
+[gd_resource type="Resource" script_class="QuizQuestionPatito" load_steps=10 format=3 uid="uid://c0itsc5kee3n3"]
+
+[ext_resource type="PackedScene" uid="uid://cqstednhcedej" path="res://Scenes/Juegos/Derriba_al_Pato/Patos/Pato12.tscn" id="1_copc5"]
+[ext_resource type="Script" path="res://Scripts/Juegos/DerribaPato/question.gd" id="1_g7swi"]
+[ext_resource type="PackedScene" uid="uid://b624q6wut6ubb" path="res://Scenes/Juegos/Derriba_al_Pato/Patos/Pato9.tscn" id="2_5swrk"]
+[ext_resource type="PackedScene" uid="uid://ds2ipdiv80mcf" path="res://Scenes/Juegos/Derriba_al_Pato/Patos/Pato18.tscn" id="3_s024y"]
+[ext_resource type="PackedScene" uid="uid://oxtuirf6toq6" path="res://Scenes/Juegos/Derriba_al_Pato/Patos/Pato14.tscn" id="4_j6y4a"]
+[ext_resource type="PackedScene" uid="uid://dhr0srn6io11" path="res://Scenes/Juegos/Derriba_al_Pato/Patos/Pato25.tscn" id="5_cuoei"]
+[ext_resource type="PackedScene" uid="uid://73ggadh637kp" path="res://Scenes/Juegos/Derriba_al_Pato/Patos/Pato20.tscn" id="6_24e0j"]
+[ext_resource type="PackedScene" uid="uid://jpwbovcjx7jf" path="res://Scenes/Juegos/Derriba_al_Pato/Patos/Pato27.tscn" id="7_2pug8"]
+[ext_resource type="PackedScene" uid="uid://bdv5fdij5c310" path="res://Scenes/Juegos/Derriba_al_Pato/Patos/Pato4.tscn" id="8_i6mp1"]
+
+[resource]
+script = ExtResource("1_g7swi")
+question_info = "Un alux planta 3 semillas en cada una de sus 4 macetas. ¿Cuántas semillas pllanta en total?"
+type = 0
+options = Array[PackedScene]([ExtResource("2_5swrk"), ExtResource("3_s024y"), ExtResource("4_j6y4a"), ExtResource("5_cuoei"), ExtResource("1_copc5"), ExtResource("6_24e0j"), ExtResource("7_2pug8"), ExtResource("8_i6mp1")])
+correct = ExtResource("1_copc5")

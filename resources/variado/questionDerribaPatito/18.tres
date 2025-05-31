@@ -1,0 +1,18 @@
+[gd_resource type="Resource" script_class="QuizQuestionPatito" load_steps=10 format=3 uid="uid://c6qg2h4p2bf8q"]
+
+[ext_resource type="Script" path="res://Scripts/Juegos/DerribaPato/question.gd" id="1_rlw8t"]
+[ext_resource type="PackedScene" uid="uid://73ggadh637kp" path="res://Scenes/Juegos/Derriba_al_Pato/Patos/Pato20.tscn" id="1_uvwua"]
+[ext_resource type="PackedScene" uid="uid://bnt4u70ladyu5" path="res://Scenes/Juegos/Derriba_al_Pato/Patos/Pato30.tscn" id="2_2l0dt"]
+[ext_resource type="PackedScene" uid="uid://dhr0srn6io11" path="res://Scenes/Juegos/Derriba_al_Pato/Patos/Pato25.tscn" id="3_fwas6"]
+[ext_resource type="PackedScene" uid="uid://oxtuirf6toq6" path="res://Scenes/Juegos/Derriba_al_Pato/Patos/Pato14.tscn" id="4_imfwn"]
+[ext_resource type="PackedScene" uid="uid://5yscailg1tp7" path="res://Scenes/Juegos/Derriba_al_Pato/Patos/Pato6.tscn" id="5_h5o3h"]
+[ext_resource type="PackedScene" uid="uid://bdv5fdij5c310" path="res://Scenes/Juegos/Derriba_al_Pato/Patos/Pato4.tscn" id="6_apykx"]
+[ext_resource type="PackedScene" uid="uid://cqstednhcedej" path="res://Scenes/Juegos/Derriba_al_Pato/Patos/Pato12.tscn" id="7_jxbra"]
+[ext_resource type="PackedScene" uid="uid://jpwbovcjx7jf" path="res://Scenes/Juegos/Derriba_al_Pato/Patos/Pato27.tscn" id="8_bngu5"]
+
+[resource]
+script = ExtResource("1_rlw8t")
+question_info = "Una fogata necesiita 4 troncos para mantenerse encendida. Si hay 5 fogatas, ¿cuántos troncos se requieren en total?"
+type = 0
+options = Array[PackedScene]([ExtResource("2_2l0dt"), ExtResource("3_fwas6"), ExtResource("4_imfwn"), ExtResource("5_h5o3h"), ExtResource("6_apykx"), ExtResource("1_uvwua"), ExtResource("7_jxbra"), ExtResource("8_bngu5")])
+correct = ExtResource("1_uvwua")

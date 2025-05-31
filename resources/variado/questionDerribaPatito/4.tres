@@ -1,0 +1,18 @@
+[gd_resource type="Resource" script_class="QuizQuestionPatito" load_steps=10 format=3 uid="uid://bt312subpanb3"]
+
+[ext_resource type="PackedScene" uid="uid://oxtuirf6toq6" path="res://Scenes/Juegos/Derriba_al_Pato/Patos/Pato14.tscn" id="1_jcpqg"]
+[ext_resource type="Script" path="res://Scripts/Juegos/DerribaPato/question.gd" id="1_tpl6e"]
+[ext_resource type="PackedScene" uid="uid://73ggadh637kp" path="res://Scenes/Juegos/Derriba_al_Pato/Patos/Pato20.tscn" id="2_icm14"]
+[ext_resource type="PackedScene" uid="uid://cqstednhcedej" path="res://Scenes/Juegos/Derriba_al_Pato/Patos/Pato12.tscn" id="3_p2w5p"]
+[ext_resource type="PackedScene" uid="uid://dhr0srn6io11" path="res://Scenes/Juegos/Derriba_al_Pato/Patos/Pato25.tscn" id="4_rj4pp"]
+[ext_resource type="PackedScene" uid="uid://ds2ipdiv80mcf" path="res://Scenes/Juegos/Derriba_al_Pato/Patos/Pato18.tscn" id="5_geelx"]
+[ext_resource type="PackedScene" uid="uid://eyq736gkhx0r" path="res://Scenes/Juegos/Derriba_al_Pato/Patos/Pato5.tscn" id="6_4bhp0"]
+[ext_resource type="PackedScene" uid="uid://bnt4u70ladyu5" path="res://Scenes/Juegos/Derriba_al_Pato/Patos/Pato30.tscn" id="7_mlxsd"]
+[ext_resource type="PackedScene" uid="uid://b624q6wut6ubb" path="res://Scenes/Juegos/Derriba_al_Pato/Patos/Pato9.tscn" id="8_e5nmq"]
+
+[resource]
+script = ExtResource("1_tpl6e")
+question_info = "Un alux encuentra 5 cocos. Luego, encuentra 9 más. ¿Cuántos tiene en total?"
+type = 0
+options = Array[PackedScene]([ExtResource("7_mlxsd"), ExtResource("4_rj4pp"), ExtResource("6_4bhp0"), ExtResource("2_icm14"), ExtResource("8_e5nmq"), ExtResource("3_p2w5p"), ExtResource("5_geelx"), ExtResource("1_jcpqg")])
+correct = ExtResource("1_jcpqg")

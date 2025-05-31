@@ -22,7 +22,7 @@ func _ready() -> void:
 	# Seleccionar preguntas aleatorias
 	selected_questions = quiz.theme.duplicate()
 	selected_questions.shuffle()
-	selected_questions = selected_questions.slice(0, 4)
+	selected_questions = selected_questions.slice(0, 6)
 
 	load_quiz()
 

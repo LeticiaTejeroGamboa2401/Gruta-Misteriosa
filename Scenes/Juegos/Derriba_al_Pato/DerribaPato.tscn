@@ -1,0 +1,530 @@
+[gd_scene load_steps=110 format=3 uid="uid://bb854koqsn1kc"]
+
+[ext_resource type="Texture2D" uid="uid://is538sjidm1k" path="res://images/Juegos/Derriba_al_Pato/Fondo.png" id="1_fjxex"]
+[ext_resource type="Script" path="res://Scripts/Juegos/Controllers/game_controller_patito.gd" id="1_hldf4"]
+[ext_resource type="Resource" uid="uid://cd05h172tnqeo" path="res://resources/variado/theme/theme_patito.tres" id="2_0fd0c"]
+[ext_resource type="FontFile" uid="uid://ex6sf638yhh5" path="res://font/Chonky Bunny.ttf" id="2_v072q"]
+[ext_resource type="Texture2D" uid="uid://cgtmk0ygac04k" path="res://images/Juegos/Derriba_al_Pato/correcto.png" id="3_dhruy"]
+[ext_resource type="Texture2D" uid="uid://cc4pdettce2ln" path="res://images/Juegos/Derriba_al_Pato/incorrecto.png" id="4_fryu5"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_lg1qf"]
+bg_color = Color(0.647059, 0.490196, 0.329412, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_alj7m"]
+bg_color = Color(0.647059, 0.490196, 0.329412, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_iu8rn"]
+bg_color = Color(0.647059, 0.490196, 0.329412, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_362vv"]
+bg_color = Color(0.647059, 0.490196, 0.329412, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_uc8fk"]
+bg_color = Color(0.647059, 0.490196, 0.329412, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_m6y1h"]
+bg_color = Color(0.647059, 0.490196, 0.329412, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_rt4r1"]
+bg_color = Color(0.647059, 0.490196, 0.329412, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_qwopo"]
+bg_color = Color(0.647059, 0.490196, 0.329412, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_ooti3"]
+bg_color = Color(0.647059, 0.490196, 0.329412, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_b2uck"]
+bg_color = Color(0.647059, 0.490196, 0.329412, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_07h2n"]
+bg_color = Color(0.648182, 0.490632, 0.328072, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_lkrp7"]
+bg_color = Color(0, 0, 0, 0.54902)
+border_width_left = 3
+border_width_top = 3
+border_width_right = 3
+border_width_bottom = 3
+border_color = Color(0, 0, 0, 1)
+corner_radius_top_left = 15
+corner_radius_top_right = 15
+corner_radius_bottom_right = 15
+corner_radius_bottom_left = 15
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_1kg6x"]
+bg_color = Color(0.6, 0.6, 0.6, 0)
+border_width_left = 10
+border_width_top = 10
+border_width_right = 10
+border_width_bottom = 10
+border_color = Color(0.8, 0.8, 0.8, 0)
+corner_radius_top_left = 15
+corner_radius_top_right = 15
+corner_radius_bottom_right = 15
+corner_radius_bottom_left = 15
+
+[sub_resource type="LabelSettings" id="LabelSettings_bfxvb"]
+font = ExtResource("2_v072q")
+font_size = 40
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_yns6h"]
+bg_color = Color(0, 0, 0, 0.54902)
+border_width_left = 3
+border_width_top = 3
+border_width_right = 3
+border_width_bottom = 3
+border_color = Color(0, 0, 0, 1)
+corner_radius_top_left = 15
+corner_radius_top_right = 15
+corner_radius_bottom_right = 15
+corner_radius_bottom_left = 15
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_j8uia"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_w0y32"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_wm6ge"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_lmxu7"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_ot3pp"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_qtoil"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_51ngc"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_jugkd"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_mfkdy"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_kkbrg"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_4fqeq"]
+bg_color = Color(0.6, 0.6, 0.6, 0)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_5kf76"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_xijw5"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_7vo5t"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_3f2k4"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_nvh2x"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_3qjjj"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_kjs7a"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_wmt1a"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_piq1c"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_3u4p4"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_r27ot"]
+bg_color = Color(0.6, 0.6, 0.6, 0)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_h86lp"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_j5fv2"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_ou6hv"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_mjvq2"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_dvgyo"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_tbd8c"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_o7wmj"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_n6oa8"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_qbdeq"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_s16sx"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_usnif"]
+bg_color = Color(0.6, 0.6, 0.6, 0)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_djdto"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_m27wv"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_0aalr"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_24g4c"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_loqkp"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_5mp78"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_t5nbg"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_il15w"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_kahmm"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_tqtp1"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_b7evd"]
+bg_color = Color(0.6, 0.6, 0.6, 0)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_goxhk"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_4md4t"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_4xcao"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_d8e1j"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_7d0vi"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_kgfrj"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_gvfkv"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_n1ak7"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_cy5xt"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_hi7mp"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_axaxs"]
+bg_color = Color(0.6, 0.6, 0.6, 0)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_s7iyl"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_bw7b0"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_uxvly"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_vhpl6"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_86hbh"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_5dcv5"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_5pgid"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_1c1c3"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_7u3e6"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_njc4g"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_drvjk"]
+bg_color = Color(0.6, 0.6, 0.6, 0)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_7uxu4"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_a4pp0"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_20an6"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_0xmsc"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_kfbv1"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_0rtwv"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_bgh3q"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_ej1ci"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_pmm4j"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_gksnk"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_a17ia"]
+bg_color = Color(0.6, 0.6, 0.6, 0)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_ax6wj"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_48p5p"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_g20jt"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_sdr1m"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_dgc3m"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_4j7ex"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_mnh43"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_mk5c0"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_i64it"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_8oosc"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_0geqk"]
+bg_color = Color(0.6, 0.6, 0.6, 0)
+
+[node name="Main" type="CanvasLayer"]
+script = ExtResource("1_hldf4")
+quiz = ExtResource("2_0fd0c")
+imgCorrecto = ExtResource("3_dhruy")
+imgIncorrecto = ExtResource("4_fryu5")
+
+[node name="Control" type="Control" parent="."]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="TextureRect" type="TextureRect" parent="Control"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("1_fjxex")
+metadata/_edit_lock_ = true
+
+[node name="Arriba" type="Button" parent="Control"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -413.5
+offset_top = -178.5
+offset_right = 413.5
+offset_bottom = -131.5
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/focus = SubResource("StyleBoxFlat_lg1qf")
+theme_override_styles/disabled_mirrored = SubResource("StyleBoxFlat_alj7m")
+theme_override_styles/disabled = SubResource("StyleBoxFlat_iu8rn")
+theme_override_styles/hover_pressed_mirrored = SubResource("StyleBoxFlat_362vv")
+theme_override_styles/hover_pressed = SubResource("StyleBoxFlat_uc8fk")
+theme_override_styles/hover_mirrored = SubResource("StyleBoxFlat_m6y1h")
+theme_override_styles/hover = SubResource("StyleBoxFlat_rt4r1")
+theme_override_styles/pressed_mirrored = SubResource("StyleBoxFlat_qwopo")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_ooti3")
+theme_override_styles/normal_mirrored = SubResource("StyleBoxFlat_b2uck")
+theme_override_styles/normal = SubResource("StyleBoxFlat_07h2n")
+metadata/_edit_lock_ = true
+
+[node name="Abajo" type="Button" parent="Control"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -413.5
+offset_top = 25.5
+offset_right = 413.5
+offset_bottom = 72.5
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/focus = SubResource("StyleBoxFlat_lg1qf")
+theme_override_styles/disabled_mirrored = SubResource("StyleBoxFlat_alj7m")
+theme_override_styles/disabled = SubResource("StyleBoxFlat_iu8rn")
+theme_override_styles/hover_pressed_mirrored = SubResource("StyleBoxFlat_362vv")
+theme_override_styles/hover_pressed = SubResource("StyleBoxFlat_uc8fk")
+theme_override_styles/hover_mirrored = SubResource("StyleBoxFlat_m6y1h")
+theme_override_styles/hover = SubResource("StyleBoxFlat_rt4r1")
+theme_override_styles/pressed_mirrored = SubResource("StyleBoxFlat_qwopo")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_ooti3")
+theme_override_styles/normal_mirrored = SubResource("StyleBoxFlat_b2uck")
+theme_override_styles/normal = SubResource("StyleBoxFlat_07h2n")
+metadata/_edit_lock_ = true
+
+[node name="Pregunta" type="Panel" parent="Control"]
+layout_mode = 0
+offset_left = 16.0
+offset_top = 497.0
+offset_right = 804.0
+offset_bottom = 641.0
+theme_override_styles/panel = SubResource("StyleBoxFlat_lkrp7")
+
+[node name="PreguntaTexto" type="Label" parent="Control/Pregunta"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/normal = SubResource("StyleBoxFlat_1kg6x")
+text = "Pregunta"
+label_settings = SubResource("LabelSettings_bfxvb")
+horizontal_alignment = 1
+vertical_alignment = 1
+autowrap_mode = 2
+
+[node name="Acierto" type="Panel" parent="Control"]
+layout_mode = 0
+offset_left = 880.0
+offset_top = 496.0
+offset_right = 1040.0
+offset_bottom = 637.0
+theme_override_styles/panel = SubResource("StyleBoxFlat_yns6h")
+
+[node name="Correcto" type="TextureRect" parent="Control/Acierto"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+expand_mode = 1
+stretch_mode = 5
+
+[node name="MenuPatitos" type="MenuButton" parent="Control"]
+layout_mode = 0
+offset_right = 8.0
+offset_bottom = 8.0
+
+[node name="Pato1" type="Button" parent="Control/MenuPatitos"]
+layout_mode = 0
+offset_left = 191.0
+offset_top = 18.0
+offset_right = 316.0
+offset_bottom = 146.0
+theme_override_styles/focus = SubResource("StyleBoxTexture_j8uia")
+theme_override_styles/disabled_mirrored = SubResource("StyleBoxTexture_w0y32")
+theme_override_styles/disabled = SubResource("StyleBoxTexture_wm6ge")
+theme_override_styles/hover_pressed_mirrored = SubResource("StyleBoxTexture_lmxu7")
+theme_override_styles/hover_pressed = SubResource("StyleBoxTexture_ot3pp")
+theme_override_styles/hover_mirrored = SubResource("StyleBoxTexture_qtoil")
+theme_override_styles/hover = SubResource("StyleBoxTexture_51ngc")
+theme_override_styles/pressed_mirrored = SubResource("StyleBoxTexture_jugkd")
+theme_override_styles/pressed = SubResource("StyleBoxTexture_mfkdy")
+theme_override_styles/normal_mirrored = SubResource("StyleBoxTexture_kkbrg")
+theme_override_styles/normal = SubResource("StyleBoxFlat_4fqeq")
+
+[node name="Pato5" type="Button" parent="Control/MenuPatitos"]
+layout_mode = 0
+offset_left = 191.0
+offset_top = 222.0
+offset_right = 316.0
+offset_bottom = 350.0
+theme_override_styles/focus = SubResource("StyleBoxTexture_5kf76")
+theme_override_styles/disabled_mirrored = SubResource("StyleBoxTexture_xijw5")
+theme_override_styles/disabled = SubResource("StyleBoxTexture_7vo5t")
+theme_override_styles/hover_pressed_mirrored = SubResource("StyleBoxTexture_3f2k4")
+theme_override_styles/hover_pressed = SubResource("StyleBoxTexture_nvh2x")
+theme_override_styles/hover_mirrored = SubResource("StyleBoxTexture_3qjjj")
+theme_override_styles/hover = SubResource("StyleBoxTexture_kjs7a")
+theme_override_styles/pressed_mirrored = SubResource("StyleBoxTexture_wmt1a")
+theme_override_styles/pressed = SubResource("StyleBoxTexture_piq1c")
+theme_override_styles/normal_mirrored = SubResource("StyleBoxTexture_3u4p4")
+theme_override_styles/normal = SubResource("StyleBoxFlat_r27ot")
+
+[node name="Pato4" type="Button" parent="Control/MenuPatitos"]
+layout_mode = 0
+offset_left = 404.0
+offset_top = 18.0
+offset_right = 529.0
+offset_bottom = 146.0
+theme_override_styles/focus = SubResource("StyleBoxTexture_h86lp")
+theme_override_styles/disabled_mirrored = SubResource("StyleBoxTexture_j5fv2")
+theme_override_styles/disabled = SubResource("StyleBoxTexture_ou6hv")
+theme_override_styles/hover_pressed_mirrored = SubResource("StyleBoxTexture_mjvq2")
+theme_override_styles/hover_pressed = SubResource("StyleBoxTexture_dvgyo")
+theme_override_styles/hover_mirrored = SubResource("StyleBoxTexture_tbd8c")
+theme_override_styles/hover = SubResource("StyleBoxTexture_o7wmj")
+theme_override_styles/pressed_mirrored = SubResource("StyleBoxTexture_n6oa8")
+theme_override_styles/pressed = SubResource("StyleBoxTexture_qbdeq")
+theme_override_styles/normal_mirrored = SubResource("StyleBoxTexture_s16sx")
+theme_override_styles/normal = SubResource("StyleBoxFlat_usnif")
+
+[node name="Pato2" type="Button" parent="Control/MenuPatitos"]
+layout_mode = 0
+offset_left = 835.0
+offset_top = 18.0
+offset_right = 960.0
+offset_bottom = 146.0
+theme_override_styles/focus = SubResource("StyleBoxTexture_djdto")
+theme_override_styles/disabled_mirrored = SubResource("StyleBoxTexture_m27wv")
+theme_override_styles/disabled = SubResource("StyleBoxTexture_0aalr")
+theme_override_styles/hover_pressed_mirrored = SubResource("StyleBoxTexture_24g4c")
+theme_override_styles/hover_pressed = SubResource("StyleBoxTexture_loqkp")
+theme_override_styles/hover_mirrored = SubResource("StyleBoxTexture_5mp78")
+theme_override_styles/hover = SubResource("StyleBoxTexture_t5nbg")
+theme_override_styles/pressed_mirrored = SubResource("StyleBoxTexture_il15w")
+theme_override_styles/pressed = SubResource("StyleBoxTexture_kahmm")
+theme_override_styles/normal_mirrored = SubResource("StyleBoxTexture_tqtp1")
+theme_override_styles/normal = SubResource("StyleBoxFlat_b7evd")
+
+[node name="Pato8" type="Button" parent="Control/MenuPatitos"]
+layout_mode = 0
+offset_left = 835.0
+offset_top = 222.0
+offset_right = 960.0
+offset_bottom = 350.0
+theme_override_styles/focus = SubResource("StyleBoxTexture_goxhk")
+theme_override_styles/disabled_mirrored = SubResource("StyleBoxTexture_4md4t")
+theme_override_styles/disabled = SubResource("StyleBoxTexture_4xcao")
+theme_override_styles/hover_pressed_mirrored = SubResource("StyleBoxTexture_d8e1j")
+theme_override_styles/hover_pressed = SubResource("StyleBoxTexture_7d0vi")
+theme_override_styles/hover_mirrored = SubResource("StyleBoxTexture_kgfrj")
+theme_override_styles/hover = SubResource("StyleBoxTexture_gvfkv")
+theme_override_styles/pressed_mirrored = SubResource("StyleBoxTexture_n1ak7")
+theme_override_styles/pressed = SubResource("StyleBoxTexture_cy5xt")
+theme_override_styles/normal_mirrored = SubResource("StyleBoxTexture_hi7mp")
+theme_override_styles/normal = SubResource("StyleBoxFlat_axaxs")
+
+[node name="Pato3" type="Button" parent="Control/MenuPatitos"]
+layout_mode = 0
+offset_left = 627.0
+offset_top = 18.0
+offset_right = 752.0
+offset_bottom = 146.0
+theme_override_styles/focus = SubResource("StyleBoxTexture_s7iyl")
+theme_override_styles/disabled_mirrored = SubResource("StyleBoxTexture_bw7b0")
+theme_override_styles/disabled = SubResource("StyleBoxTexture_uxvly")
+theme_override_styles/hover_pressed_mirrored = SubResource("StyleBoxTexture_vhpl6")
+theme_override_styles/hover_pressed = SubResource("StyleBoxTexture_86hbh")
+theme_override_styles/hover_mirrored = SubResource("StyleBoxTexture_5dcv5")
+theme_override_styles/hover = SubResource("StyleBoxTexture_5pgid")
+theme_override_styles/pressed_mirrored = SubResource("StyleBoxTexture_1c1c3")
+theme_override_styles/pressed = SubResource("StyleBoxTexture_7u3e6")
+theme_override_styles/normal_mirrored = SubResource("StyleBoxTexture_njc4g")
+theme_override_styles/normal = SubResource("StyleBoxFlat_drvjk")
+
+[node name="Pato7" type="Button" parent="Control/MenuPatitos"]
+layout_mode = 0
+offset_left = 627.0
+offset_top = 222.0
+offset_right = 752.0
+offset_bottom = 350.0
+theme_override_styles/focus = SubResource("StyleBoxTexture_7uxu4")
+theme_override_styles/disabled_mirrored = SubResource("StyleBoxTexture_a4pp0")
+theme_override_styles/disabled = SubResource("StyleBoxTexture_20an6")
+theme_override_styles/hover_pressed_mirrored = SubResource("StyleBoxTexture_0xmsc")
+theme_override_styles/hover_pressed = SubResource("StyleBoxTexture_kfbv1")
+theme_override_styles/hover_mirrored = SubResource("StyleBoxTexture_0rtwv")
+theme_override_styles/hover = SubResource("StyleBoxTexture_bgh3q")
+theme_override_styles/pressed_mirrored = SubResource("StyleBoxTexture_ej1ci")
+theme_override_styles/pressed = SubResource("StyleBoxTexture_pmm4j")
+theme_override_styles/normal_mirrored = SubResource("StyleBoxTexture_gksnk")
+theme_override_styles/normal = SubResource("StyleBoxFlat_a17ia")
+
+[node name="Pato6" type="Button" parent="Control/MenuPatitos"]
+layout_mode = 0
+offset_left = 404.0
+offset_top = 222.0
+offset_right = 529.0
+offset_bottom = 350.0
+theme_override_styles/focus = SubResource("StyleBoxTexture_ax6wj")
+theme_override_styles/disabled_mirrored = SubResource("StyleBoxTexture_48p5p")
+theme_override_styles/disabled = SubResource("StyleBoxTexture_g20jt")
+theme_override_styles/hover_pressed_mirrored = SubResource("StyleBoxTexture_sdr1m")
+theme_override_styles/hover_pressed = SubResource("StyleBoxTexture_dgc3m")
+theme_override_styles/hover_mirrored = SubResource("StyleBoxTexture_4j7ex")
+theme_override_styles/hover = SubResource("StyleBoxTexture_mnh43")
+theme_override_styles/pressed_mirrored = SubResource("StyleBoxTexture_mk5c0")
+theme_override_styles/pressed = SubResource("StyleBoxTexture_i64it")
+theme_override_styles/normal_mirrored = SubResource("StyleBoxTexture_8oosc")
+theme_override_styles/normal = SubResource("StyleBoxFlat_0geqk")

@@ -1,0 +1,18 @@
+[gd_resource type="Resource" script_class="QuizQuestionPatito" load_steps=10 format=3 uid="uid://pki48rgyg5wi"]
+
+[ext_resource type="PackedScene" uid="uid://ds2ipdiv80mcf" path="res://Scenes/Juegos/Derriba_al_Pato/Patos/Pato18.tscn" id="1_0ni3d"]
+[ext_resource type="Script" path="res://Scripts/Juegos/DerribaPato/question.gd" id="1_7h1lv"]
+[ext_resource type="PackedScene" uid="uid://b624q6wut6ubb" path="res://Scenes/Juegos/Derriba_al_Pato/Patos/Pato9.tscn" id="2_foi62"]
+[ext_resource type="PackedScene" uid="uid://73ggadh637kp" path="res://Scenes/Juegos/Derriba_al_Pato/Patos/Pato20.tscn" id="3_r8r0n"]
+[ext_resource type="PackedScene" uid="uid://bnt4u70ladyu5" path="res://Scenes/Juegos/Derriba_al_Pato/Patos/Pato30.tscn" id="4_5xpfg"]
+[ext_resource type="PackedScene" uid="uid://dhr0srn6io11" path="res://Scenes/Juegos/Derriba_al_Pato/Patos/Pato25.tscn" id="5_ln5o0"]
+[ext_resource type="PackedScene" uid="uid://oxtuirf6toq6" path="res://Scenes/Juegos/Derriba_al_Pato/Patos/Pato14.tscn" id="6_g51kn"]
+[ext_resource type="PackedScene" uid="uid://eyq736gkhx0r" path="res://Scenes/Juegos/Derriba_al_Pato/Patos/Pato5.tscn" id="7_icgba"]
+[ext_resource type="PackedScene" uid="uid://cqstednhcedej" path="res://Scenes/Juegos/Derriba_al_Pato/Patos/Pato12.tscn" id="8_5iiq8"]
+
+[resource]
+script = ExtResource("1_7h1lv")
+question_info = "Si el alux tiene 2 pies y usa una sandalia por pie, ¿cuántas sandalias necesita por 9 aluxes?"
+type = 0
+options = Array[PackedScene]([ExtResource("2_foi62"), ExtResource("3_r8r0n"), ExtResource("4_5xpfg"), ExtResource("1_0ni3d"), ExtResource("5_ln5o0"), ExtResource("6_g51kn"), ExtResource("7_icgba"), ExtResource("8_5iiq8")])
+correct = ExtResource("1_0ni3d")

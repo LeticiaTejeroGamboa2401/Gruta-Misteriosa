@@ -1,0 +1,18 @@
+[gd_resource type="Resource" script_class="QuizQuestionPatito" load_steps=10 format=3 uid="uid://fq4e0v0h5vf5"]
+
+[ext_resource type="Script" path="res://Scripts/Juegos/DerribaPato/question.gd" id="1_gbblr"]
+[ext_resource type="PackedScene" uid="uid://cqstednhcedej" path="res://Scenes/Juegos/Derriba_al_Pato/Patos/Pato12.tscn" id="1_yldcc"]
+[ext_resource type="PackedScene" uid="uid://ds2ipdiv80mcf" path="res://Scenes/Juegos/Derriba_al_Pato/Patos/Pato18.tscn" id="2_7sbt7"]
+[ext_resource type="PackedScene" uid="uid://oxtuirf6toq6" path="res://Scenes/Juegos/Derriba_al_Pato/Patos/Pato14.tscn" id="3_d7kqo"]
+[ext_resource type="PackedScene" uid="uid://jpwbovcjx7jf" path="res://Scenes/Juegos/Derriba_al_Pato/Patos/Pato27.tscn" id="4_1by1g"]
+[ext_resource type="PackedScene" uid="uid://dhr0srn6io11" path="res://Scenes/Juegos/Derriba_al_Pato/Patos/Pato25.tscn" id="5_a7cu4"]
+[ext_resource type="PackedScene" uid="uid://bdv5fdij5c310" path="res://Scenes/Juegos/Derriba_al_Pato/Patos/Pato4.tscn" id="6_yr5d4"]
+[ext_resource type="PackedScene" uid="uid://73ggadh637kp" path="res://Scenes/Juegos/Derriba_al_Pato/Patos/Pato20.tscn" id="7_0e3oy"]
+[ext_resource type="PackedScene" uid="uid://eyq736gkhx0r" path="res://Scenes/Juegos/Derriba_al_Pato/Patos/Pato5.tscn" id="8_tpg5d"]
+
+[resource]
+script = ExtResource("1_gbblr")
+question_info = "Un alux recoge 3 flores cada hora. Si trabaja durante 4 horas, ¿cuántas flores tiene?"
+type = 0
+options = Array[PackedScene]([ExtResource("2_7sbt7"), ExtResource("1_yldcc"), ExtResource("3_d7kqo"), ExtResource("4_1by1g"), ExtResource("5_a7cu4"), ExtResource("6_yr5d4"), ExtResource("7_0e3oy"), ExtResource("8_tpg5d")])
+correct = ExtResource("1_yldcc")

@@ -8,6 +8,8 @@ var scene_changed := false
 var player_instance
 
 func _ready() -> void:
+	MusicManager.play_music("res://audio/historia.ogg")
+	
 	if Global.selected_character_scene != null:
 		player_instance = Global.selected_character_scene.instantiate()
 		player_instance.name = Global.selected_character_name

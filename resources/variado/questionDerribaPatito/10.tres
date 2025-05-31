@@ -1,0 +1,17 @@
+[gd_resource type="Resource" script_class="QuizQuestionPatito" load_steps=9 format=3 uid="uid://ur80ghy07xxf"]
+
+[ext_resource type="PackedScene" uid="uid://eyq736gkhx0r" path="res://Scenes/Juegos/Derriba_al_Pato/Patos/Pato5.tscn" id="1_c5fcq"]
+[ext_resource type="Script" path="res://Scripts/Juegos/DerribaPato/question.gd" id="1_jahx5"]
+[ext_resource type="PackedScene" uid="uid://bdv5fdij5c310" path="res://Scenes/Juegos/Derriba_al_Pato/Patos/Pato4.tscn" id="2_k4iuy"]
+[ext_resource type="PackedScene" uid="uid://b624q6wut6ubb" path="res://Scenes/Juegos/Derriba_al_Pato/Patos/Pato9.tscn" id="3_47a2s"]
+[ext_resource type="PackedScene" uid="uid://oxtuirf6toq6" path="res://Scenes/Juegos/Derriba_al_Pato/Patos/Pato14.tscn" id="4_p6t3p"]
+[ext_resource type="PackedScene" uid="uid://dhr0srn6io11" path="res://Scenes/Juegos/Derriba_al_Pato/Patos/Pato25.tscn" id="5_c4nii"]
+[ext_resource type="PackedScene" uid="uid://jpwbovcjx7jf" path="res://Scenes/Juegos/Derriba_al_Pato/Patos/Pato27.tscn" id="6_6p4gn"]
+[ext_resource type="PackedScene" uid="uid://bnt4u70ladyu5" path="res://Scenes/Juegos/Derriba_al_Pato/Patos/Pato30.tscn" id="7_qut2j"]
+
+[resource]
+script = ExtResource("1_jahx5")
+question_info = "Si 11 aluxes bailan en parejas, ¿cuántas parejas completas se forman?"
+type = 0
+options = Array[PackedScene]([ExtResource("2_k4iuy"), ExtResource("3_47a2s"), ExtResource("4_p6t3p"), ExtResource("1_c5fcq"), ExtResource("5_c4nii"), ExtResource("3_47a2s"), ExtResource("6_6p4gn"), ExtResource("7_qut2j")])
+correct = ExtResource("1_c5fcq")

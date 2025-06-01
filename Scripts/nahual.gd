@@ -7,8 +7,8 @@ var target_position_x = 900
 func _ready():
 	print("Nahual listo")  # Verifica que el script se ejecuta
 
-func _physics_process(delta: float) -> void:
-	apply_gravity(delta)
+func _physics_process(_delta: float) -> void:
+	apply_gravity(_delta)
 
 	if global_position.x < target_position_x:
 		velocity.x = speed
@@ -30,4 +30,7 @@ func _on_area_2d_body_entered(body: Node) -> void:
 		show_game_over()
 
 func show_game_over() -> void:
+	call_deferred("_change_scene")
+
+func _change_scene():
 	get_tree().change_scene_to_file("res://scenes/GameOver.tscn")

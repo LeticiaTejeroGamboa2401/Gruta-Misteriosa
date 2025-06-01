@@ -2,13 +2,13 @@ extends Node2D
 
 const GRAVITY: float = 980.0
 
-@onready var sprite: AnimatedSprite2D = $AnimatedSprite2D
+@onready var sprite: AnimatedSprite2D = $nahual/AnimatedSprite2D 
 
 var scene_changed := false
 var player_instance
 
 func _ready() -> void:
-	MusicManager.play_music("res://audio/historia.ogg")
+	MusicManager.play_music("res://audio/persecución1.ogg")
 	
 	if Global.selected_character_scene != null:
 		player_instance = Global.selected_character_scene.instantiate()

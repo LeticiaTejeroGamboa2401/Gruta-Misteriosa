@@ -1,6 +1,5 @@
 extends Control
 
-
 func _ready() -> void:
 	MusicManager.play_music("res://audio/mapa.ogg")
 
@@ -16,3 +15,16 @@ func _ready() -> void:
 			player_instance.position = Vector2(100, 250)  # posición por defecto
 	else:
 		print("No se ha seleccionado personaje.")
+
+	# Actualizar el label de juegos ganados
+	actualizar_label_juegos_ganados()
+
+
+func actualizar_label_juegos_ganados():
+	var ganados = 0
+	for k in Global.juegos_ganados.keys():
+		if Global.juegos_ganados[k]:
+			ganados += 1
+	$Conteno.text = "X %d" % ganados
+	if ganados == 6:
+		get_tree().change_scene_to_file("res://Scenes/Juegos/Talisman.tscn")

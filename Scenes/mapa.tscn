@@ -1,10 +1,12 @@
-[gd_scene load_steps=27 format=3 uid="uid://dy8eonorti10n"]
+[gd_scene load_steps=30 format=3 uid="uid://dy8eonorti10n"]
 
 [ext_resource type="Script" path="res://Scripts/mapa_1.gd" id="1_lbv64"]
 [ext_resource type="Texture2D" uid="uid://ch2faqyjs7kwt" path="res://images/mapa.png" id="1_tmcc6"]
 [ext_resource type="Script" path="res://Scripts/Juegos/AtinalePuerquito/entrada_mapa.gd" id="3_5bv8k"]
 [ext_resource type="Script" path="res://Scripts/Juegos/AdivinaProducto/entrada_Mapa.gd" id="4_dmg56"]
 [ext_resource type="Script" path="res://Scripts/Juegos/DerribaPato/entrada_mapa.gd" id="5_42wqn"]
+[ext_resource type="Texture2D" uid="uid://fpancvs688ep" path="res://images/Juegos/Juegos_Ganados.png" id="6_h1v58"]
+[ext_resource type="FontFile" uid="uid://ex6sf638yhh5" path="res://font/Chonky Bunny.ttf" id="7_f328p"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_e46v1"]
 size = Vector2(218, 42.5)
@@ -69,6 +71,11 @@ size = Vector2(53, 94)
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_lkmk0"]
 size = Vector2(50, 67.5)
 
+[sub_resource type="LabelSettings" id="LabelSettings_1lgld"]
+font = ExtResource("7_f328p")
+font_size = 45
+font_color = Color(0, 0, 0, 1)
+
 [node name="Control" type="Control"]
 layout_mode = 3
 anchors_preset = 15
@@ -86,8 +93,11 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 texture = ExtResource("1_tmcc6")
+metadata/_edit_lock_ = true
 
 [node name="AreaNoPasar" type="StaticBody2D" parent="."]
+visible = false
+metadata/_edit_lock_ = true
 
 [node name="Area18" type="CollisionShape2D" parent="AreaNoPasar"]
 position = Vector2(929, 628.75)
@@ -162,26 +172,50 @@ position = Vector2(270.125, 86.625)
 shape = SubResource("RectangleShape2D_hpqfl")
 
 [node name="AtinaleAlPuerquito" type="Area2D" parent="."]
+visible = false
 position = Vector2(58, 55)
 script = ExtResource("3_5bv8k")
+metadata/_edit_lock_ = true
 
 [node name="entradaJuego" type="CollisionShape2D" parent="AtinaleAlPuerquito"]
 position = Vector2(846.25, 168)
 shape = SubResource("RectangleShape2D_emxtt")
 
 [node name="AdivinaElProducto" type="Area2D" parent="."]
+visible = false
 script = ExtResource("4_dmg56")
+metadata/_edit_lock_ = true
 
 [node name="entradaJuego" type="CollisionShape2D" parent="AdivinaElProducto"]
 position = Vector2(297.5, 477)
 shape = SubResource("RectangleShape2D_xmrhe")
 
 [node name="DerribaAlPato" type="Area2D" parent="."]
+visible = false
 script = ExtResource("5_42wqn")
+metadata/_edit_lock_ = true
 
 [node name="entradaJuego" type="CollisionShape2D" parent="DerribaAlPato"]
 position = Vector2(565, 138.25)
 shape = SubResource("RectangleShape2D_lkmk0")
+
+[node name="TextureRect" type="TextureRect" parent="."]
+layout_mode = 0
+offset_left = 963.0
+offset_top = 5.0
+offset_right = 1147.0
+offset_bottom = 86.0
+texture = ExtResource("6_h1v58")
+metadata/_edit_lock_ = true
+
+[node name="Conteno" type="Label" parent="."]
+layout_mode = 0
+offset_left = 1039.0
+offset_top = 23.0
+offset_right = 1114.0
+offset_bottom = 71.0
+label_settings = SubResource("LabelSettings_1lgld")
+horizontal_alignment = 1
 
 [connection signal="body_entered" from="AtinaleAlPuerquito" to="AtinaleAlPuerquito" method="_on_body_entered"]
 [connection signal="body_entered" from="AdivinaElProducto" to="AdivinaElProducto" method="_on_body_entered"]

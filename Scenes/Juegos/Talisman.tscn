@@ -1,0 +1,40 @@
+[gd_scene load_steps=5 format=3 uid="uid://cosimb50whwtw"]
+
+[ext_resource type="Script" path="res://Scripts/Juegos/talisman.gd" id="1_gmfx3"]
+[ext_resource type="VideoStream" path="res://images/Talismán_Completo.ogv" id="1_u02gc"]
+[ext_resource type="FontFile" uid="uid://ex6sf638yhh5" path="res://font/Chonky Bunny.ttf" id="2_tukrb"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_w64lp"]
+font = ExtResource("2_tukrb")
+font_size = 45
+
+[node name="Control" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_gmfx3")
+
+[node name="VideoStreamPlayer" type="VideoStreamPlayer" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+stream = ExtResource("1_u02gc")
+autoplay = true
+
+[node name="Label" type="Label" parent="."]
+layout_mode = 1
+anchors_preset = 10
+anchor_right = 1.0
+offset_bottom = 23.0
+grow_horizontal = 2
+text = "¡LO LOGRASTE!
+¡CONSEGUISTE EL TALISMÁN!"
+label_settings = SubResource("LabelSettings_w64lp")
+horizontal_alignment = 1
+vertical_alignment = 1

@@ -1,4 +1,4 @@
-[gd_resource type="Resource" script_class="QuizThemeAlcancia" load_steps=13 format=3 uid="uid://b0f24i5te2ads"]
+[gd_resource type="Resource" script_class="QuizThemeAlcancia" load_steps=28 format=3 uid="uid://b0f24i5te2ads"]
 
 [ext_resource type="Script" path="res://Scripts/Juegos/AtinalePuerquito/theme.gd" id="1_lj4n6"]
 [ext_resource type="Script" path="res://Scripts/Juegos/AtinalePuerquito/question.gd" id="2_vfgli"]
@@ -12,7 +12,22 @@
 [ext_resource type="Resource" uid="uid://bpt77085mcfgh" path="res://resources/variado/questionAtinalePuerquito/8.tres" id="10_o26ot"]
 [ext_resource type="Resource" uid="uid://w62cq4d67aui" path="res://resources/variado/questionAtinalePuerquito/9.tres" id="11_83t6k"]
 [ext_resource type="Resource" uid="uid://dbl3s7dnpe572" path="res://resources/variado/questionAtinalePuerquito/10.tres" id="11_dkd0e"]
+[ext_resource type="Resource" uid="uid://yqwakquwg4hy" path="res://resources/variado/questionAtinalePuerquito/11.tres" id="13_imtmx"]
+[ext_resource type="Resource" uid="uid://duohn8j0cya0v" path="res://resources/variado/questionAtinalePuerquito/12.tres" id="14_8uxnk"]
+[ext_resource type="Resource" uid="uid://cl6j55jhv605g" path="res://resources/variado/questionAtinalePuerquito/13.tres" id="15_hw0sx"]
+[ext_resource type="Resource" uid="uid://d1k3pdukunbt" path="res://resources/variado/questionAtinalePuerquito/14.tres" id="16_kta2e"]
+[ext_resource type="Resource" uid="uid://b4sie23upfx51" path="res://resources/variado/questionAtinalePuerquito/15.tres" id="17_sogrw"]
+[ext_resource type="Resource" uid="uid://cxm5utkawevgm" path="res://resources/variado/questionAtinalePuerquito/16.tres" id="18_mt1m0"]
+[ext_resource type="Resource" uid="uid://3v0xovpkx8q0" path="res://resources/variado/questionAtinalePuerquito/17.tres" id="19_2sp7v"]
+[ext_resource type="Resource" uid="uid://djgaofubs7dkw" path="res://resources/variado/questionAtinalePuerquito/18.tres" id="20_kncs3"]
+[ext_resource type="Resource" uid="uid://hkon6roc6clg" path="res://resources/variado/questionAtinalePuerquito/19.tres" id="21_hngx1"]
+[ext_resource type="Resource" uid="uid://clb507xlt1iuk" path="res://resources/variado/questionAtinalePuerquito/20.tres" id="22_jv35l"]
+[ext_resource type="Resource" uid="uid://vm41jeki5w03" path="res://resources/variado/questionAtinalePuerquito/21.tres" id="23_f408x"]
+[ext_resource type="Resource" uid="uid://dc0a1nu2x4o4v" path="res://resources/variado/questionAtinalePuerquito/22.tres" id="24_gu8ug"]
+[ext_resource type="Resource" uid="uid://cdtl60w7i34i0" path="res://resources/variado/questionAtinalePuerquito/23.tres" id="25_8h0ug"]
+[ext_resource type="Resource" uid="uid://d15ajdyku7ist" path="res://resources/variado/questionAtinalePuerquito/24.tres" id="26_5p7pi"]
+[ext_resource type="Resource" uid="uid://bvysmrrkr7wff" path="res://resources/variado/questionAtinalePuerquito/25.tres" id="27_md2tf"]
 
 [resource]
 script = ExtResource("1_lj4n6")
-theme = Array[ExtResource("2_vfgli")]([ExtResource("3_v4xmx"), ExtResource("4_7beyx"), ExtResource("5_y3nnf"), ExtResource("6_vfg1f"), ExtResource("7_pyiu2"), ExtResource("8_dwbll"), ExtResource("9_3efvw"), ExtResource("10_o26ot"), ExtResource("11_83t6k"), ExtResource("11_dkd0e")])
+theme = Array[ExtResource("2_vfgli")]([ExtResource("3_v4xmx"), ExtResource("4_7beyx"), ExtResource("5_y3nnf"), ExtResource("6_vfg1f"), ExtResource("7_pyiu2"), ExtResource("8_dwbll"), ExtResource("9_3efvw"), ExtResource("10_o26ot"), ExtResource("11_83t6k"), ExtResource("11_dkd0e"), ExtResource("13_imtmx"), ExtResource("14_8uxnk"), ExtResource("15_hw0sx"), ExtResource("16_kta2e"), ExtResource("17_sogrw"), ExtResource("18_mt1m0"), ExtResource("19_2sp7v"), ExtResource("20_kncs3"), ExtResource("21_hngx1"), ExtResource("22_jv35l"), ExtResource("23_f408x"), ExtResource("24_gu8ug"), ExtResource("25_8h0ug"), ExtResource("26_5p7pi"), ExtResource("27_md2tf")])

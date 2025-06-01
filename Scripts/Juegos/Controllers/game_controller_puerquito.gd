@@ -73,6 +73,7 @@ func _buttons_answer(button) -> void:
 
 func show_final_score():
 	if correct == selected_questions.size():  # todas correctas
+		Global.juegos_ganados["juego_puerquito"] = true
 		get_tree().change_scene_to_file("res://Scenes/Juegos/Atinale_al_Puerquito/Ganaste.tscn")
 	else:
 		get_tree().change_scene_to_file("res://Scenes/Juegos/Atinale_al_Puerquito/Perdiste.tscn")

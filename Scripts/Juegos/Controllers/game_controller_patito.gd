@@ -26,7 +26,7 @@ func _ready() -> void:
 	# Seleccionar preguntas aleatorias
 	selected_questions = quiz.theme.duplicate()
 	selected_questions.shuffle()
-	selected_questions = selected_questions.slice(0, 25)
+	selected_questions = selected_questions.slice(0, 6)
 
 	load_quiz()
 
@@ -92,6 +92,7 @@ func _buttons_answer(selected_scene: PackedScene) -> void:
 func show_final_score():
 	Input.set_custom_mouse_cursor(null)
 	if correct == selected_questions.size():
+		Global.juegos_ganados["juego_patito"] = true
 		get_tree().change_scene_to_file("res://Scenes/Juegos/Derriba_al_Pato/Ganaste.tscn")
 	else:
 		get_tree().change_scene_to_file("res://Scenes/Juegos/Derriba_al_Pato/Perdiste.tscn")

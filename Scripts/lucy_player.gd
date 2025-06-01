@@ -3,7 +3,7 @@ extends CharacterBody2D
 @export var speed: float = 100.0
 @onready var sprite: AnimatedSprite2D = $AnimatedSprite2D
 
-func _physics_process(delta):
+func _physics_process(_delta):
 	var direction = Vector2.ZERO
 	
 	# Movimiento horizontal

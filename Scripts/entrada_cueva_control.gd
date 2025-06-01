@@ -3,6 +3,8 @@ extends Control
 var murcielago_escena = preload("res://Scenes/Murcielago_Volando.tscn")
 
 func _ready():
+	MusicManager.play_music("res://audio/historia.ogg")
+	
 	if Global.selected_character_scene != null:
 		var player_instance = Global.selected_character_scene.instantiate()
 		player_instance.name = Global.selected_character_name

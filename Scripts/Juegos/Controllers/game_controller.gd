@@ -71,6 +71,7 @@ func _buttons_answer(button) -> void:
 
 func show_final_score():
 	if correct == selected_questions.size():  # todas correctas
+		Global.juegos_ganados["juego_producto"] = true
 		get_tree().change_scene_to_file("res://Scenes/Juegos/Adivina_el_Producto/Ganaste.tscn")
 	else:
 		get_tree().change_scene_to_file("res://Scenes/Juegos/Atinale_al_Puerquito/Perdiste.tscn")

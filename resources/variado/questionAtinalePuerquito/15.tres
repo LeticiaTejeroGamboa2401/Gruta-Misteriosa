@@ -1,0 +1,10 @@
+[gd_resource type="Resource" script_class="QuizQuestionPuerquito" load_steps=2 format=3 uid="uid://b4sie23upfx51"]
+
+[ext_resource type="Script" path="res://Scripts/Juegos/AtinalePuerquito/question.gd" id="1_fve2y"]
+
+[resource]
+script = ExtResource("1_fve2y")
+question_info = "En esta alcancía había: 3 billetes de $100, 3 billetes de $50 y 2 monedas de $10"
+type = 0
+options = Array[String](["$460", "$430", "$470", "$420"])
+correct = "$470"

@@ -1,0 +1,10 @@
+[gd_resource type="Resource" script_class="QuizQuestionCaballo" load_steps=2 format=3 uid="uid://b71l6nl2n0g1q"]
+
+[ext_resource type="Script" path="res://Scripts/Juegos/CarreraCaballo/question.gd" id="1_2uv7b"]
+
+[resource]
+script = ExtResource("1_2uv7b")
+question_info = "En el mercado, un kilogramo de naranjas consta de 9 piezas y cuesta $10. En la milpa venden el kilogramo de 8 piezas de naranja en $8. ¿En dónde conviene comprar las naranjas?"
+type = 0
+options = Array[String](["En el mercado", "En la milpa"])
+correct = "En la milpa"

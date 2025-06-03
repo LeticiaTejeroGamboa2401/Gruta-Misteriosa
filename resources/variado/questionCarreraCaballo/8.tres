@@ -1,0 +1,10 @@
+[gd_resource type="Resource" script_class="QuizQuestionCaballo" load_steps=2 format=3 uid="uid://bhu0ki5qv4mdc"]
+
+[ext_resource type="Script" path="res://Scripts/Juegos/CarreraCaballo/question.gd" id="1_obapr"]
+
+[resource]
+script = ExtResource("1_obapr")
+question_info = "Un supermercado ofrece 3 litros de leche por $45. Una tienda de abarrotes cercana vende 2 litros de leche por $28. ¿Dónde es más económico comprar la leche?"
+type = 0
+options = Array[String](["Tienda de abarrotes ", "Supermercado"])
+correct = "Supermercado"

@@ -1,0 +1,10 @@
+[gd_resource type="Resource" script_class="QuizQuestionCaballo" load_steps=2 format=3 uid="uid://dafaft2muxs7i"]
+
+[ext_resource type="Script" path="res://Scripts/Juegos/CarreraCaballo/question.gd" id="1_ufb7x"]
+
+[resource]
+script = ExtResource("1_ufb7x")
+question_info = "Un rollo de 10 metros de cable eléctrico cuesta $80 en la ferretería \"El Clavo\". Un rollo de 15 metros del mismo cable cuesta $110 en la ferretería \"La Tuerca\". ¿Dónde no conviene comprar el cable eléctrico? "
+type = 0
+options = Array[String](["Ferretería “El Clavo”", "Ferretería “La Tuerca”"])
+correct = "Ferretería “El Clavo”"

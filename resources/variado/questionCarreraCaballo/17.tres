@@ -1,0 +1,10 @@
+[gd_resource type="Resource" script_class="QuizQuestionCaballo" load_steps=2 format=3 uid="uid://cnfukuodwdopw"]
+
+[ext_resource type="Script" path="res://Scripts/Juegos/CarreraCaballo/question.gd" id="1_1laaa"]
+
+[resource]
+script = ExtResource("1_1laaa")
+question_info = "En la papelería \"El Lápiz\", un paquete de 100 hojas de papel bond cuesta $35. En la tienda de artículos de oficina \"Todo Papel\", un paquete de 500 hojas de papel bond cuesta $160. ¿Cuál es la opción más económica por hoja de papel?"
+type = 0
+options = Array[String](["Papelería \"El Lápiz\"", "Tienda “Todo Papel”"])
+correct = "Tienda “Todo Papel”"

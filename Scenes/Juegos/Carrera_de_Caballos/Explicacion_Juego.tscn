@@ -1,0 +1,179 @@
+[gd_scene load_steps=23 format=3 uid="uid://bnn871qoyt1w0"]
+
+[ext_resource type="Script" path="res://Scripts/Juegos/CarreraCaballo/explicacion_juego.gd" id="1_h52r4"]
+[ext_resource type="Texture2D" uid="uid://c0oy83uovjplo" path="res://images/Juegos/Carrera_de_Caballos/fondos.png" id="1_scnkj"]
+[ext_resource type="Texture2D" uid="uid://g03nsepo5pce" path="res://images/Juegos/Carrera_de_Caballos/CaballoBlanco.png" id="2_0gc2d"]
+[ext_resource type="Texture2D" uid="uid://cl6g2pujgh5kv" path="res://images/Juegos/Carrera_de_Caballos/CaballoNegro.png" id="3_0s21b"]
+[ext_resource type="FontFile" uid="uid://ex6sf638yhh5" path="res://font/Chonky Bunny.ttf" id="4_3hmb6"]
+[ext_resource type="FontFile" uid="uid://q4llc3uguqs2" path="res://font/KGCorneroftheSky.ttf" id="5_apl2y"]
+[ext_resource type="Texture2D" uid="uid://c5acbo24opeyb" path="res://images/Juegos/Carrera_de_Caballos/flecha_curva.png" id="6_mkfkt"]
+[ext_resource type="Texture2D" uid="uid://bwf8mkwr4gktp" path="res://images/siguiente_flecha.png" id="7_rt4f6"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_rfrxq"]
+bg_color = Color(1, 1, 1, 0.686275)
+border_width_left = 5
+border_width_top = 5
+border_width_right = 5
+border_width_bottom = 5
+border_color = Color(1, 1, 1, 1)
+corner_radius_top_left = 15
+corner_radius_top_right = 15
+corner_radius_bottom_right = 15
+corner_radius_bottom_left = 15
+
+[sub_resource type="LabelSettings" id="LabelSettings_p1kae"]
+font = ExtResource("4_3hmb6")
+font_size = 35
+font_color = Color(0, 0, 0, 1)
+
+[sub_resource type="LabelSettings" id="LabelSettings_t5oi3"]
+font = ExtResource("5_apl2y")
+font_size = 30
+font_color = Color(0, 0, 0, 1)
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_c4yjx"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_4a71t"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_lqep0"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_gm3xt"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_whp12"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_ot2ke"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_n8348"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_dvwlm"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_70d3y"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_d77tn"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_vjpb1"]
+
+[node name="Control" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_h52r4")
+
+[node name="Fondo" type="TextureRect" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("1_scnkj")
+
+[node name="CaballoBlanco" type="TextureRect" parent="."]
+layout_mode = 0
+offset_left = 338.0
+offset_top = 248.0
+offset_right = 514.0
+offset_bottom = 460.0
+texture = ExtResource("2_0gc2d")
+
+[node name="CaballoNegro" type="TextureRect" parent="."]
+layout_mode = 0
+offset_left = 658.0
+offset_top = 248.0
+offset_right = 834.0
+offset_bottom = 460.0
+texture = ExtResource("3_0s21b")
+
+[node name="Panel" type="Panel" parent="."]
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -391.0
+offset_top = -172.0
+offset_right = 391.0
+offset_bottom = -13.0
+grow_horizontal = 2
+grow_vertical = 0
+theme_override_styles/panel = SubResource("StyleBoxFlat_rfrxq")
+
+[node name="Label" type="Label" parent="Panel"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 10.0
+offset_right = -9.0
+grow_horizontal = 2
+grow_vertical = 2
+text = "Verás dos caballitos en el tablero. Tu caballito será el blanco y el café será tu rival. Deberás lograr que tu caballo llegue primero a la meta para ganar."
+label_settings = SubResource("LabelSettings_p1kae")
+horizontal_alignment = 1
+vertical_alignment = 1
+autowrap_mode = 2
+
+[node name="Tú" type="Label" parent="."]
+layout_mode = 0
+offset_left = 444.0
+offset_top = 122.0
+offset_right = 485.0
+offset_bottom = 168.0
+text = "TÚ"
+label_settings = SubResource("LabelSettings_t5oi3")
+
+[node name="Rival" type="Label" parent="."]
+layout_mode = 0
+offset_left = 719.0
+offset_top = 122.0
+offset_right = 828.0
+offset_bottom = 168.0
+text = "RIVAL"
+label_settings = SubResource("LabelSettings_t5oi3")
+
+[node name="Flecha" type="TextureRect" parent="."]
+layout_mode = 0
+offset_left = 435.0
+offset_top = 114.0
+offset_right = 635.0
+offset_bottom = 314.0
+texture = ExtResource("6_mkfkt")
+
+[node name="Flecha2" type="TextureRect" parent="."]
+layout_mode = 0
+offset_left = 769.0
+offset_top = 114.0
+offset_right = 969.0
+offset_bottom = 314.0
+texture = ExtResource("6_mkfkt")
+
+[node name="Siguiente" type="Button" parent="."]
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -34.0
+offset_top = -46.0
+offset_right = 34.0
+grow_horizontal = 2
+grow_vertical = 0
+theme_override_styles/focus = SubResource("StyleBoxEmpty_c4yjx")
+theme_override_styles/disabled_mirrored = SubResource("StyleBoxEmpty_4a71t")
+theme_override_styles/disabled = SubResource("StyleBoxEmpty_lqep0")
+theme_override_styles/hover_pressed_mirrored = SubResource("StyleBoxEmpty_gm3xt")
+theme_override_styles/hover_pressed = SubResource("StyleBoxEmpty_whp12")
+theme_override_styles/hover_mirrored = SubResource("StyleBoxEmpty_ot2ke")
+theme_override_styles/hover = SubResource("StyleBoxEmpty_n8348")
+theme_override_styles/pressed_mirrored = SubResource("StyleBoxEmpty_dvwlm")
+theme_override_styles/pressed = SubResource("StyleBoxEmpty_70d3y")
+theme_override_styles/normal_mirrored = SubResource("StyleBoxEmpty_d77tn")
+theme_override_styles/normal = SubResource("StyleBoxEmpty_vjpb1")
+icon = ExtResource("7_rt4f6")
+
+[connection signal="pressed" from="Siguiente" to="." method="_on_siguiente_pressed"]

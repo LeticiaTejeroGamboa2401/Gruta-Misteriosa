@@ -1,0 +1,10 @@
+[gd_resource type="Resource" script_class="QuizQuestionCaballo" load_steps=2 format=3 uid="uid://dyd2g36cn28di"]
+
+[ext_resource type="Script" path="res://Scripts/Juegos/CarreraCaballo/question.gd" id="1_xi4xh"]
+
+[resource]
+script = ExtResource("1_xi4xh")
+question_info = "En el cine \"Cinemex\", un combo de palomitas grandes y refresco grande cuesta $90. En el cine \"Cinépolis\", las palomitas grandes cuestan $60 y el refresco grande cuesta $35. ¿En qué cine es más barato el combo completo? "
+type = 0
+options = Array[String](["Cinemex", "Cinépolis"])
+correct = "Cinemex"

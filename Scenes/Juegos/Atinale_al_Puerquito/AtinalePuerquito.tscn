@@ -1,4 +1,4 @@
-[gd_scene load_steps=23 format=3 uid="uid://btpr74bawfy3o"]
+[gd_scene load_steps=59 format=3 uid="uid://btpr74bawfy3o"]
 
 [ext_resource type="Texture2D" uid="uid://dkus0r5unvohb" path="res://images/Juegos/Atinale_al_Puerquito/fondo.png" id="1_25d5w"]
 [ext_resource type="Script" path="res://Scripts/Juegos/Controllers/game_controller_puerquito.gd" id="1_hqy58"]
@@ -31,6 +31,18 @@ font_size = 38
 [sub_resource type="FontVariation" id="FontVariation_b0gil"]
 base_font = ExtResource("4_bvi87")
 
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_hf413"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_ydejy"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_x1djc"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_p1x68"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_hd6cc"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_2wv0n"]
+
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_x07pr"]
 bg_color = Color(1, 1, 1, 1)
 border_width_left = 3
@@ -42,6 +54,12 @@ corner_radius_top_left = 15
 corner_radius_top_right = 15
 corner_radius_bottom_right = 15
 corner_radius_bottom_left = 15
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_irsim"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_gik4d"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_nbo45"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_8om0s"]
 bg_color = Color(1, 1, 1, 1)
@@ -58,6 +76,18 @@ corner_radius_bottom_left = 15
 [sub_resource type="FontVariation" id="FontVariation_loxpt"]
 base_font = ExtResource("4_bvi87")
 
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_yyhu8"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_w0boi"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_s5swu"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_f8aex"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_y2ean"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_ma18h"]
+
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_18n4y"]
 bg_color = Color(1, 1, 1, 1)
 border_width_left = 3
@@ -69,6 +99,12 @@ corner_radius_top_left = 15
 corner_radius_top_right = 15
 corner_radius_bottom_right = 15
 corner_radius_bottom_left = 15
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_t8gae"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_y18dy"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_ho43f"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_jje0d"]
 bg_color = Color(1, 1, 1, 1)
@@ -85,6 +121,18 @@ corner_radius_bottom_left = 15
 [sub_resource type="FontVariation" id="FontVariation_73jxf"]
 base_font = ExtResource("4_bvi87")
 
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_s3x4h"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_kl8e8"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_kt8mk"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_ebvq5"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_u4e2l"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_ifbas"]
+
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_3jmky"]
 bg_color = Color(1, 1, 1, 1)
 border_width_left = 3
@@ -96,6 +144,12 @@ corner_radius_top_left = 15
 corner_radius_top_right = 15
 corner_radius_bottom_right = 15
 corner_radius_bottom_left = 15
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_lwaru"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_g6t3u"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_u7blr"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_pyfh6"]
 bg_color = Color(1, 1, 1, 1)
@@ -112,6 +166,18 @@ corner_radius_bottom_left = 15
 [sub_resource type="FontVariation" id="FontVariation_a7sc4"]
 base_font = ExtResource("4_bvi87")
 
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_q2om8"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_dqfhc"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_4c5jj"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_vyy84"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_ydgld"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_yff4j"]
+
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_ury4w"]
 bg_color = Color(1, 1, 1, 1)
 border_width_left = 3
@@ -123,6 +189,12 @@ corner_radius_top_left = 15
 corner_radius_top_right = 15
 corner_radius_bottom_right = 15
 corner_radius_bottom_left = 15
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_4gewc"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_satsu"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_8mq33"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_3l7cr"]
 bg_color = Color(1, 1, 1, 1)
@@ -245,7 +317,16 @@ theme_override_colors/font_color = Color(0, 0, 0, 1)
 theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
 theme_override_fonts/font = SubResource("FontVariation_b0gil")
 theme_override_font_sizes/font_size = 40
+theme_override_styles/focus = SubResource("StyleBoxTexture_hf413")
+theme_override_styles/disabled_mirrored = SubResource("StyleBoxEmpty_ydejy")
+theme_override_styles/disabled = SubResource("StyleBoxEmpty_x1djc")
+theme_override_styles/hover_pressed_mirrored = SubResource("StyleBoxEmpty_p1x68")
+theme_override_styles/hover_pressed = SubResource("StyleBoxEmpty_hd6cc")
+theme_override_styles/hover_mirrored = SubResource("StyleBoxEmpty_2wv0n")
 theme_override_styles/hover = SubResource("StyleBoxFlat_x07pr")
+theme_override_styles/pressed_mirrored = SubResource("StyleBoxEmpty_irsim")
+theme_override_styles/pressed = SubResource("StyleBoxEmpty_gik4d")
+theme_override_styles/normal_mirrored = SubResource("StyleBoxEmpty_nbo45")
 theme_override_styles/normal = SubResource("StyleBoxFlat_8om0s")
 
 [node name="Button2" type="Button" parent="Control/Botones/MenuButton"]
@@ -263,7 +344,16 @@ theme_override_colors/font_color = Color(0, 0, 0, 1)
 theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
 theme_override_fonts/font = SubResource("FontVariation_loxpt")
 theme_override_font_sizes/font_size = 50
+theme_override_styles/focus = SubResource("StyleBoxTexture_yyhu8")
+theme_override_styles/disabled_mirrored = SubResource("StyleBoxTexture_w0boi")
+theme_override_styles/disabled = SubResource("StyleBoxTexture_s5swu")
+theme_override_styles/hover_pressed_mirrored = SubResource("StyleBoxTexture_f8aex")
+theme_override_styles/hover_pressed = SubResource("StyleBoxTexture_y2ean")
+theme_override_styles/hover_mirrored = SubResource("StyleBoxTexture_ma18h")
 theme_override_styles/hover = SubResource("StyleBoxFlat_18n4y")
+theme_override_styles/pressed_mirrored = SubResource("StyleBoxTexture_t8gae")
+theme_override_styles/pressed = SubResource("StyleBoxTexture_y18dy")
+theme_override_styles/normal_mirrored = SubResource("StyleBoxTexture_ho43f")
 theme_override_styles/normal = SubResource("StyleBoxFlat_jje0d")
 autowrap_mode = 2
 
@@ -282,7 +372,16 @@ theme_override_colors/font_color = Color(0, 0, 0, 1)
 theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
 theme_override_fonts/font = SubResource("FontVariation_73jxf")
 theme_override_font_sizes/font_size = 50
+theme_override_styles/focus = SubResource("StyleBoxTexture_s3x4h")
+theme_override_styles/disabled_mirrored = SubResource("StyleBoxTexture_kl8e8")
+theme_override_styles/disabled = SubResource("StyleBoxTexture_kt8mk")
+theme_override_styles/hover_pressed_mirrored = SubResource("StyleBoxTexture_ebvq5")
+theme_override_styles/hover_pressed = SubResource("StyleBoxTexture_u4e2l")
+theme_override_styles/hover_mirrored = SubResource("StyleBoxTexture_ifbas")
 theme_override_styles/hover = SubResource("StyleBoxFlat_3jmky")
+theme_override_styles/pressed_mirrored = SubResource("StyleBoxTexture_lwaru")
+theme_override_styles/pressed = SubResource("StyleBoxTexture_g6t3u")
+theme_override_styles/normal_mirrored = SubResource("StyleBoxTexture_u7blr")
 theme_override_styles/normal = SubResource("StyleBoxFlat_pyfh6")
 
 [node name="Button4" type="Button" parent="Control/Botones/MenuButton"]
@@ -300,5 +399,14 @@ theme_override_colors/font_color = Color(0, 0, 0, 1)
 theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
 theme_override_fonts/font = SubResource("FontVariation_a7sc4")
 theme_override_font_sizes/font_size = 50
+theme_override_styles/focus = SubResource("StyleBoxTexture_q2om8")
+theme_override_styles/disabled_mirrored = SubResource("StyleBoxEmpty_dqfhc")
+theme_override_styles/disabled = SubResource("StyleBoxEmpty_4c5jj")
+theme_override_styles/hover_pressed_mirrored = SubResource("StyleBoxEmpty_vyy84")
+theme_override_styles/hover_pressed = SubResource("StyleBoxEmpty_ydgld")
+theme_override_styles/hover_mirrored = SubResource("StyleBoxEmpty_yff4j")
 theme_override_styles/hover = SubResource("StyleBoxFlat_ury4w")
+theme_override_styles/pressed_mirrored = SubResource("StyleBoxEmpty_4gewc")
+theme_override_styles/pressed = SubResource("StyleBoxEmpty_satsu")
+theme_override_styles/normal_mirrored = SubResource("StyleBoxEmpty_8mq33")
 theme_override_styles/normal = SubResource("StyleBoxFlat_3l7cr")

@@ -1,0 +1,10 @@
+[gd_resource type="Resource" script_class="QuizQuestionCaballo" load_steps=2 format=3 uid="uid://cxbphm0ks860c"]
+
+[ext_resource type="Script" path="res://Scripts/Juegos/CarreraCaballo/question.gd" id="1_3nlik"]
+
+[resource]
+script = ExtResource("1_3nlik")
+question_info = "En la Panadería \"El Buen Pan\", una docena de conchas cuesta $36. En la Panadería \"La Delicia\", media docena de conchas cuesta $15. ¿En qué panadería es más barato comprar las conchas por unidad?"
+type = 0
+options = Array[String](["Panadería “El Buen Pan”", "Panadería “La Delicia”"])
+correct = "Panadería “La Delicia”"

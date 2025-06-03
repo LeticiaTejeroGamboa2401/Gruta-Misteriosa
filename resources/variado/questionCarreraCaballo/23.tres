@@ -1,0 +1,10 @@
+[gd_resource type="Resource" script_class="QuizQuestionCaballo" load_steps=2 format=3 uid="uid://cfrkv675hkb6o"]
+
+[ext_resource type="Script" path="res://Scripts/Juegos/CarreraCaballo/question.gd" id="1_iubij"]
+
+[resource]
+script = ExtResource("1_iubij")
+question_info = "Un paquete de 12 lápices de colores cuesta $40 en la librería \"El Saber\". Un paquete de 24 lápices de colores cuesta $75 en la tienda de manualidades \"Creatividad al Máximo\". ¿Dónde te sale más barato cada lápiz de color?"
+type = 0
+options = Array[String](["Librería", "Tienda de manualidades"])
+correct = "Tienda de manualidades"

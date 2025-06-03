@@ -1,0 +1,10 @@
+[gd_resource type="Resource" script_class="QuizQuestionCaballo" load_steps=2 format=3 uid="uid://dq3ovroxktvep"]
+
+[ext_resource type="Script" path="res://Scripts/Juegos/CarreraCaballo/question.gd" id="1_eg7i5"]
+
+[resource]
+script = ExtResource("1_eg7i5")
+question_info = "En un puesto pequeño una bolsa de 15 frijoles cuesta $30 y en el puesto grande una bolsa de 12 frijoles cuesta $36. ¿En qué lugar es preferible comprar?"
+type = 0
+options = Array[String](["Puesto pequeño", "Puesto grande"])
+correct = "Puesto pequeño"

@@ -1,0 +1,10 @@
+[gd_resource type="Resource" script_class="QuizQuestionCaballo" load_steps=2 format=3 uid="uid://dc7t6bk12xeoa"]
+
+[ext_resource type="Script" path="res://Scripts/Juegos/CarreraCaballo/question.gd" id="1_x42dt"]
+
+[resource]
+script = ExtResource("1_x42dt")
+question_info = "El paquete A tiene 5 limones y cuesta $15, el paquete B tiene 6 limones y cuesta $12. ¿En quépaquete el limón es más barato?"
+type = 0
+options = Array[String](["Paquete A", "Paquete B"])
+correct = "Paquete B"

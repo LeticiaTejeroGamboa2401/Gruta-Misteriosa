@@ -1,0 +1,10 @@
+[gd_resource type="Resource" script_class="QuizQuestionCaballo" load_steps=2 format=3 uid="uid://bbnbqxfb6ycwt"]
+
+[ext_resource type="Script" path="res://Scripts/Juegos/CarreraCaballo/question.gd" id="1_fasri"]
+
+[resource]
+script = ExtResource("1_fasri")
+question_info = "Un kilo de tortilla de maíz cuesta $22 en la tortillería \"La Espiga\". En el supermercado, un paquete de 500 gramos de tortilla de maíz cuesta $10. ¿Dónde te conviene comprar la tortilla si buscas el precio más bajo por kilo?"
+type = 0
+options = Array[String](["Tortillería “La Espiga”", "Supermercado"])
+correct = "Supermercado"

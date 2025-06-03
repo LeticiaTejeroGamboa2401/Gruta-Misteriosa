@@ -1,0 +1,115 @@
+[gd_scene load_steps=16 format=3 uid="uid://cfum3cka2ewm6"]
+
+[ext_resource type="Texture2D" uid="uid://bymgt6drbupx6" path="res://images/Juegos/Carrera_de_Caballos/Fondo_Explicacion.png" id="1_1uwqu"]
+[ext_resource type="Script" path="res://Scripts/Juegos/CarreraCaballo/confirmacion_juego.gd" id="1_ioy8n"]
+[ext_resource type="FontFile" uid="uid://ex6sf638yhh5" path="res://font/Chonky Bunny.ttf" id="2_lf27g"]
+[ext_resource type="Texture2D" uid="uid://ia7h51bd82fs" path="res://images/jugar.png" id="2_qnb11"]
+[ext_resource type="Texture2D" uid="uid://c4w7uy881hqor" path="res://images/salir.png" id="4_ihgmd"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_fwdj4"]
+bg_color = Color(0, 0, 0, 0.54902)
+border_width_left = 3
+border_width_top = 3
+border_width_right = 3
+border_width_bottom = 3
+border_color = Color(1, 1, 1, 1)
+corner_radius_top_left = 15
+corner_radius_top_right = 15
+corner_radius_bottom_right = 15
+corner_radius_bottom_left = 15
+
+[sub_resource type="LabelSettings" id="LabelSettings_u8abr"]
+font = ExtResource("2_lf27g")
+font_size = 45
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_0c8om"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_o0sh3"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_7fmrv"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_t2jkg"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_hqc1t"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_0oll3"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_u5qgc"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_ogy5v"]
+bg_color = Color(1, 1, 1, 0)
+
+[node name="Control" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_ioy8n")
+
+[node name="Fondo" type="TextureRect" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("1_1uwqu")
+
+[node name="Panel" type="Panel" parent="."]
+layout_mode = 0
+offset_left = 88.0
+offset_top = 469.0
+offset_right = 801.0
+offset_bottom = 640.0
+theme_override_styles/panel = SubResource("StyleBoxFlat_fwdj4")
+
+[node name="Label" type="Label" parent="Panel"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 16.0
+offset_right = -16.0
+grow_horizontal = 2
+grow_vertical = 2
+text = "Alux bromista:
+¿Te gustaría jugar \"Carrera de Caballos\"?"
+label_settings = SubResource("LabelSettings_u8abr")
+vertical_alignment = 1
+
+[node name="Jugar" type="Button" parent="."]
+layout_mode = 0
+offset_left = 830.0
+offset_top = 476.0
+offset_right = 1015.0
+offset_bottom = 545.0
+theme_override_styles/focus = SubResource("StyleBoxFlat_0c8om")
+theme_override_styles/disabled_mirrored = SubResource("StyleBoxEmpty_o0sh3")
+theme_override_styles/disabled = SubResource("StyleBoxEmpty_7fmrv")
+theme_override_styles/hover_pressed_mirrored = SubResource("StyleBoxEmpty_t2jkg")
+theme_override_styles/hover_pressed = SubResource("StyleBoxEmpty_hqc1t")
+theme_override_styles/hover_mirrored = SubResource("StyleBoxEmpty_0oll3")
+theme_override_styles/hover = SubResource("StyleBoxEmpty_u5qgc")
+theme_override_styles/normal = SubResource("StyleBoxFlat_ogy5v")
+icon = ExtResource("2_qnb11")
+
+[node name="Salir" type="Button" parent="."]
+layout_mode = 0
+offset_left = 826.0
+offset_top = 557.0
+offset_right = 1015.0
+offset_bottom = 626.0
+theme_override_styles/focus = SubResource("StyleBoxFlat_0c8om")
+theme_override_styles/disabled_mirrored = SubResource("StyleBoxEmpty_o0sh3")
+theme_override_styles/disabled = SubResource("StyleBoxEmpty_7fmrv")
+theme_override_styles/hover_pressed_mirrored = SubResource("StyleBoxEmpty_t2jkg")
+theme_override_styles/hover_pressed = SubResource("StyleBoxEmpty_hqc1t")
+theme_override_styles/hover_mirrored = SubResource("StyleBoxEmpty_0oll3")
+theme_override_styles/hover = SubResource("StyleBoxEmpty_u5qgc")
+theme_override_styles/normal = SubResource("StyleBoxFlat_ogy5v")
+icon = ExtResource("4_ihgmd")
+
+[connection signal="pressed" from="Jugar" to="." method="_on_jugar_pressed"]
+[connection signal="pressed" from="Salir" to="." method="_on_salir_pressed"]

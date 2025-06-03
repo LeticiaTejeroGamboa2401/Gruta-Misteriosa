@@ -1,0 +1,10 @@
+[gd_resource type="Resource" script_class="QuizQuestionCaballo" load_steps=2 format=3 uid="uid://r0pqqaa172rc"]
+
+[ext_resource type="Script" path="res://Scripts/Juegos/CarreraCaballo/question.gd" id="1_fakag"]
+
+[resource]
+script = ExtResource("1_fakag")
+question_info = "En el Restaurante X, un menú de hamburguesa con papas fritas cuesta $10 y un refresco cuesta $2. En el Restaurante Y, las papas fritas cuestan $12, pero el refresco cuesta $0 porque es de regalo. ¿En ómico para el menú de hamburguesas con papas fritas y refresco?"
+type = 0
+options = Array[String](["Restaurante X", "Restaurante Y"])
+correct = "Restaurante X"

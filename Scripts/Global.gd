@@ -12,5 +12,6 @@ var use_respawn_in_scene: String = "res://Scenes/mapa.tscn"
 var juegos_ganados = {
 	"juego_puerquito": false,
 	"juego_patito": false,
-	"juego_producto": false
+	"juego_producto": false,
+	"juego_caballo": false,
 }

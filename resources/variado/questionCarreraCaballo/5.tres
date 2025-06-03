@@ -1,0 +1,10 @@
+[gd_resource type="Resource" script_class="QuizQuestionCaballo" load_steps=2 format=3 uid="uid://3lp7e06fmf7d"]
+
+[ext_resource type="Script" path="res://Scripts/Juegos/CarreraCaballo/question.gd" id="1_dlyru"]
+
+[resource]
+script = ExtResource("1_dlyru")
+question_info = "En el Mercado A, una piña grande cuesta $4 y una docena de plátanos cuesta $3. En el Mercado B, una piña grande cuesta $3.50 y una docena de plátanos cuesta $3.75. Realiza los cálculos necesarios para determinar en cuál mercado es más conveniente comprar ambas frutas. ¿Cuál de los dos conviene comprar ambas frutas?"
+type = 0
+options = Array[String](["Mercado A", "Mercado B"])
+correct = "Mercado A"

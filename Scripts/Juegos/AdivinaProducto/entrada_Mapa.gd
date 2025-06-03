@@ -2,7 +2,7 @@ extends Area2D
 
 func _on_body_entered(body: Node) -> void:
 	if body.name == "Lucy_Player" or body.name == "Lele_Player":
-		if not Global.juegos_ganados["juego_puerquito"]:
+		if not Global.juegos_ganados["juego_producto"]:
 			Global.use_respawn_in_scene = "res://Scenes/Mapa.tscn"
 			call_deferred("_change_scene")
 		else:

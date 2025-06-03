@@ -1,0 +1,10 @@
+[gd_resource type="Resource" script_class="QuizQuestionCaballo" load_steps=2 format=3 uid="uid://cedliv8q3fj5q"]
+
+[ext_resource type="Script" path="res://Scripts/Juegos/CarreraCaballo/question.gd" id="1_51gka"]
+
+[resource]
+script = ExtResource("1_51gka")
+question_info = "En la tienda de ropa \"Moda Joven\", una camiseta básica cuesta $150 y unos jeans cuestan $300. En la tienda \"Estilo Urbano\", la misma camiseta básica cuesta $130 y los jeans cuestan $310. ¿En cuál tienda es más económico comprar ambas prendas?"
+type = 0
+options = Array[String](["Moda Joven", "Estilo Urbano"])
+correct = "Estilo Urbano"

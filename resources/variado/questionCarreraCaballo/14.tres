@@ -1,0 +1,10 @@
+[gd_resource type="Resource" script_class="QuizQuestionCaballo" load_steps=2 format=3 uid="uid://doqhg1i5v2fdq"]
+
+[ext_resource type="Script" path="res://Scripts/Juegos/CarreraCaballo/question.gd" id="1_aegnf"]
+
+[resource]
+script = ExtResource("1_aegnf")
+question_info = "En la frutería \"El Manzano\", un kilogramo de manzanas rojas (aproximadamente 5 piezas) cuesta $25. En el puesto de la carretera, un kilogramo de manzanas verdes (aproximadamente 6 piezas) cuesta $28. ¿En qué lugar obtienes las manzanas a un precio más bajo por unidad?"
+type = 0
+options = Array[String](["Frutería \"El Manzano\"", "Puesto de la carretera"])
+correct = "Puesto de la carretera"

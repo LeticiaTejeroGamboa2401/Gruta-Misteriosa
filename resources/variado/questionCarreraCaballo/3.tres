@@ -1,0 +1,10 @@
+[gd_resource type="Resource" script_class="QuizQuestionCaballo" load_steps=2 format=3 uid="uid://bu1cbtlmh78up"]
+
+[ext_resource type="Script" path="res://Scripts/Juegos/CarreraCaballo/question.gd" id="1_ivtsj"]
+
+[resource]
+script = ExtResource("1_ivtsj")
+question_info = "La bolsa de galletas A cuesta $6 y contiene 18 piezas. La bolsa de balletas B tiene 6 piezas y cuesta $3. ¿Qué bolsa conviene comprar?"
+type = 0
+options = Array[String](["Bolsa de galletas A", "Bolsa de galletas B"])
+correct = "Bolsa de galletas A"

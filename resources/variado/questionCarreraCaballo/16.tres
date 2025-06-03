@@ -1,0 +1,10 @@
+[gd_resource type="Resource" script_class="QuizQuestionCaballo" load_steps=2 format=3 uid="uid://dmnmio7ao3gcm"]
+
+[ext_resource type="Script" path="res://Scripts/Juegos/CarreraCaballo/question.gd" id="1_2tnno"]
+
+[resource]
+script = ExtResource("1_2tnno")
+question_info = "Un paquete de 20 pañales desechables para bebé cuesta $120 en la farmacia \"Vida Sana\". Una caja de 50 pañales desechables de la misma marca cuesta $280 en la tienda departamental. ¿Dónde es menos barato comprar los pañales por unidad?"
+type = 0
+options = Array[String](["Farmacia “Vida Sana”", "Tienda departamental"])
+correct = "Farmacia “Vida Sana”"

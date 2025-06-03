@@ -1,0 +1,10 @@
+[gd_resource type="Resource" script_class="QuizQuestionCaballo" load_steps=2 format=3 uid="uid://c6n42ro1wh85e"]
+
+[ext_resource type="Script" path="res://Scripts/Juegos/CarreraCaballo/question.gd" id="1_rsxtl"]
+
+[resource]
+script = ExtResource("1_rsxtl")
+question_info = "Una botella de 1.5 litros de agua embotellada cuesta $10 en la tienda de la esquina. Un paquete de 6 botellas de 500 ml de agua embotellada cuesta $25 en el supermercado. ¿Qué opción es más conveniente si buscas el precio más bajo por litro de agua?"
+type = 0
+options = Array[String](["Tienda de la esquina", "Supermercado"])
+correct = "Tienda de la esquina"

@@ -1,0 +1,10 @@
+[gd_resource type="Resource" script_class="QuizQuestionCaballo" load_steps=2 format=3 uid="uid://coe78bvog4auo"]
+
+[ext_resource type="Script" path="res://Scripts/Juegos/CarreraCaballo/question.gd" id="1_q0jg8"]
+
+[resource]
+script = ExtResource("1_q0jg8")
+question_info = "Un galón de pintura blanca (3.78 litros) cuesta $350 en la tlapalería \"El Pincel\". Un bote de 5 litros de pintura blanca cuesta $450 en la ferretería \"La Pintura\". ¿Dónde es más económico comprar la pintura por litro?"
+type = 0
+options = Array[String](["Tlapalería “El Pincel”", "Ferretería “La Pintura”"])
+correct = "Ferretería “La Pintura”"

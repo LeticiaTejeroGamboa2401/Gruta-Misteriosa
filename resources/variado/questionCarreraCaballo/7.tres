@@ -1,0 +1,10 @@
+[gd_resource type="Resource" script_class="QuizQuestionCaballo" load_steps=2 format=3 uid="uid://dhe8wrs0tevd1"]
+
+[ext_resource type="Script" path="res://Scripts/Juegos/CarreraCaballo/question.gd" id="1_bc5ni"]
+
+[resource]
+script = ExtResource("1_bc5ni")
+question_info = "La tienda \"Todo Barato\" vende un paquete de 10 rollos de papel higiénico por $25. La tienda \"Ahorro Más\" vende un paquete de 8 rollos de papel higiénico por $22. ¿En qué tienda conviene comprar el papel higiénico?"
+type = 0
+options = Array[String](["Tienda “Todo Barato” ", "Tienda “Ahorro Más”"])
+correct = "Tienda “Todo Barato” "

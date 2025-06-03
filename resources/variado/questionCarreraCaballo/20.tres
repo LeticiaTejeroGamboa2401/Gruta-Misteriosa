@@ -1,0 +1,10 @@
+[gd_resource type="Resource" script_class="QuizQuestionCaballo" load_steps=2 format=3 uid="uid://c7c3h8doylrrn"]
+
+[ext_resource type="Script" path="res://Scripts/Juegos/CarreraCaballo/question.gd" id="1_fgbly"]
+
+[resource]
+script = ExtResource("1_fgbly")
+question_info = "Una barra de chocolate de 100 gramos cuesta $25 en la dulcería. Una caja de 3 barras de chocolate de 50 gramos cada una cuesta $35 en el supermercado. ¿Cuál opción te da más chocolate por tu dinero?"
+type = 0
+options = Array[String](["Dulcería", "Supermercado"])
+correct = "Supermercado"

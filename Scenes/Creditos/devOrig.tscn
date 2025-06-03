@@ -53,24 +53,29 @@ label_settings = SubResource("LabelSettings_e00pd")
 [node name="NombreAutor" type="Label" parent="."]
 layout_mode = 0
 offset_left = 334.0
-offset_top = 163.0
+offset_top = 151.0
 offset_right = 801.0
-offset_bottom = 202.0
+offset_bottom = 190.0
 text = "Betsy Guadalupe Asencio García"
 label_settings = SubResource("LabelSettings_mi2u0")
 
 [node name="Información" type="Label" parent="."]
 layout_mode = 0
 offset_left = 73.0
-offset_top = 242.0
+offset_top = 214.0
 offset_right = 1079.0
-offset_bottom = 448.0
+offset_bottom = 420.0
 text = "Desarrolladora del videojuego original como parte de su tesis titulada:
  \"Desarrollo y análisis de un videojuego educativo de apoyo a la 
 comprensión lectora matemática para niños de educación primaria.\", 
 para la Licenciatura en Ingeniería de Software. 
-Universidad Autónoma de Yucatán, 2023."
+Universidad Autónoma de Yucatán, 2023.
+
+Asesores de la tesis:
+Dra. Lizzie Edmea Narváez Díaz
+Dr. Carlos Andrés Miranda Palma"
 label_settings = SubResource("LabelSettings_cv1w5")
+autowrap_mode = 2
 
 [node name="Return" type="Button" parent="."]
 layout_mode = 0

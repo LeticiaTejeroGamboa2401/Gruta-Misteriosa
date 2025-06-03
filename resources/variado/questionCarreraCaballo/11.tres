@@ -1,0 +1,10 @@
+[gd_resource type="Resource" script_class="QuizQuestionCaballo" load_steps=2 format=3 uid="uid://csu2mkbidcwra"]
+
+[ext_resource type="Script" path="res://Scripts/Juegos/CarreraCaballo/question.gd" id="1_1iwcn"]
+
+[resource]
+script = ExtResource("1_1iwcn")
+question_info = "Una caja de 12 huevos en el supermercado \"La Granja\" cuesta $36. En el mercado local, una caja de 18 huevos cuesta $51. ¿En qué lugar no conviene comprar los huevos si buscas el precio más bajo por unidad?"
+type = 0
+options = Array[String](["Supermercado", "Mercado local"])
+correct = "Supermercado"

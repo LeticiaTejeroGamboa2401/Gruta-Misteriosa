@@ -1,0 +1,10 @@
+[gd_resource type="Resource" script_class="QuizQuestionCaballo" load_steps=2 format=3 uid="uid://c2ssjkg51blvg"]
+
+[ext_resource type="Script" path="res://Scripts/Juegos/CarreraCaballo/question.gd" id="1_1h40s"]
+
+[resource]
+script = ExtResource("1_1h40s")
+question_info = "Un paquete de 4 pilas AA de la marca Energizer cuesta $20, mientras que un paquete de 6 pilas AA de la marca Duracell cuesta $27. ¿Qué marca de pilas ofrece un mejor precio por unidad?"
+type = 0
+options = Array[String](["Energizer", "Duracell"])
+correct = "Duracell"

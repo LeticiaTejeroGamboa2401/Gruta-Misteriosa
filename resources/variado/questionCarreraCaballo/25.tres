@@ -1,0 +1,10 @@
+[gd_resource type="Resource" script_class="QuizQuestionCaballo" load_steps=2 format=3 uid="uid://gyr7b62k5u4w"]
+
+[ext_resource type="Script" path="res://Scripts/Juegos/CarreraCaballo/question.gd" id="1_yv647"]
+
+[resource]
+script = ExtResource("1_yv647")
+question_info = "Un paquete de 6 vasos desechables cuesta $18 en el supermercado. Un paquete de 10 vasos desechables cuesta $25 en la tienda de abarrotes. ¿Dónde es más conveniente comprar los vasos desechables?"
+type = 0
+options = Array[String](["Tienda de abarrotes", "Supermercado"])
+correct = "Tienda de abarrotes"

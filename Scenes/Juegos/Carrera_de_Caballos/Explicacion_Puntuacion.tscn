@@ -1,0 +1,211 @@
+[gd_scene load_steps=25 format=3 uid="uid://clrqwf3kuksop"]
+
+[ext_resource type="Texture2D" uid="uid://c0oy83uovjplo" path="res://images/Juegos/Carrera_de_Caballos/fondos.png" id="1_hu1kp"]
+[ext_resource type="Script" path="res://Scripts/Juegos/CarreraCaballo/explicacion_puntuacion.gd" id="1_xaclo"]
+[ext_resource type="Texture2D" uid="uid://g03nsepo5pce" path="res://images/Juegos/Carrera_de_Caballos/CaballoBlanco.png" id="2_01jkf"]
+[ext_resource type="Texture2D" uid="uid://cl6g2pujgh5kv" path="res://images/Juegos/Carrera_de_Caballos/CaballoNegro.png" id="3_77hga"]
+[ext_resource type="FontFile" uid="uid://ex6sf638yhh5" path="res://font/Chonky Bunny.ttf" id="4_mm1mf"]
+[ext_resource type="Texture2D" uid="uid://cefe6tdbcqu1i" path="res://images/Juegos/Carrera_de_Caballos/correcto.png" id="5_c2off"]
+[ext_resource type="Texture2D" uid="uid://47n5dr2lwsn5" path="res://images/Juegos/Carrera_de_Caballos/incorrecto.png" id="6_515xs"]
+[ext_resource type="Texture2D" uid="uid://blu0tedjqpmq4" path="res://images/Juegos/Carrera_de_Caballos/linea.png" id="7_wlc7k"]
+[ext_resource type="Texture2D" uid="uid://cxddbyrdvcdch" path="res://images/Juegos/Carrera_de_Caballos/flecha.png" id="8_7djil"]
+[ext_resource type="Texture2D" uid="uid://bwf8mkwr4gktp" path="res://images/siguiente_flecha.png" id="9_v46do"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_rfrxq"]
+bg_color = Color(1, 1, 1, 0.686275)
+border_width_left = 5
+border_width_top = 5
+border_width_right = 5
+border_width_bottom = 5
+border_color = Color(1, 1, 1, 1)
+corner_radius_top_left = 15
+corner_radius_top_right = 15
+corner_radius_bottom_right = 15
+corner_radius_bottom_left = 15
+
+[sub_resource type="LabelSettings" id="LabelSettings_p1kae"]
+font = ExtResource("4_mm1mf")
+font_size = 35
+font_color = Color(0, 0, 0, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_iy1gp"]
+bg_color = Color(0.99558, 0.99558, 0.99558, 1)
+border_width_left = 3
+border_width_top = 3
+border_width_right = 3
+border_width_bottom = 3
+border_color = Color(0, 0, 0, 1)
+corner_radius_top_left = 15
+corner_radius_top_right = 15
+corner_radius_bottom_right = 15
+corner_radius_bottom_left = 15
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_qcuj2"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_640n6"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_17ul0"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_66riy"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_a5km3"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_7ylv6"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_2qo8e"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_aw1wq"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_wkofk"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_uv8v1"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_xjpkv"]
+
+[node name="Control" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_xaclo")
+
+[node name="Fondo" type="TextureRect" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("1_hu1kp")
+
+[node name="CaballoBlanco" type="TextureRect" parent="."]
+layout_mode = 0
+offset_left = 276.0
+offset_top = 248.0
+offset_right = 452.0
+offset_bottom = 460.0
+texture = ExtResource("2_01jkf")
+
+[node name="CaballoNegro" type="TextureRect" parent="."]
+layout_mode = 0
+offset_left = 762.0
+offset_top = 241.0
+offset_right = 938.0
+offset_bottom = 455.0
+texture = ExtResource("3_77hga")
+
+[node name="Info" type="Panel" parent="."]
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -451.0
+offset_top = -193.0
+offset_right = 451.0
+offset_bottom = -25.0
+grow_horizontal = 2
+grow_vertical = 0
+theme_override_styles/panel = SubResource("StyleBoxFlat_rfrxq")
+
+[node name="Label" type="Label" parent="Info"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 10.0
+offset_right = -9.0
+grow_horizontal = 2
+grow_vertical = 2
+text = "Para lograrlo deberás leer detenidamente el acertijo y elegir cuál de las dos respuesta es la correcta. Si elijes la respuesta correcta verás una palomita verdey tu caballo avanzará, pero si te equivocas verás una tachita y el caballo de tu rival avanzará."
+label_settings = SubResource("LabelSettings_p1kae")
+horizontal_alignment = 1
+vertical_alignment = 1
+autowrap_mode = 2
+
+[node name="Correcto" type="Panel" parent="."]
+layout_mode = 0
+offset_left = 318.0
+offset_top = 49.0
+offset_right = 461.0
+offset_bottom = 188.0
+theme_override_styles/panel = SubResource("StyleBoxFlat_iy1gp")
+
+[node name="TextureRect" type="TextureRect" parent="Correcto"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("5_c2off")
+expand_mode = 1
+
+[node name="Incorrecto" type="Panel" parent="."]
+layout_mode = 0
+offset_left = 743.0
+offset_top = 49.0
+offset_right = 886.0
+offset_bottom = 188.0
+theme_override_styles/panel = SubResource("StyleBoxFlat_iy1gp")
+
+[node name="TextureRect" type="TextureRect" parent="Incorrecto"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("6_515xs")
+expand_mode = 1
+
+[node name="Linea" type="Sprite2D" parent="."]
+position = Vector2(598, 238)
+scale = Vector2(1.925, 2.24)
+texture = ExtResource("7_wlc7k")
+
+[node name="Flecha" type="TextureRect" parent="."]
+layout_mode = 0
+offset_left = 414.0
+offset_top = 228.0
+offset_right = 614.0
+offset_bottom = 428.0
+texture = ExtResource("8_7djil")
+
+[node name="Flecha2" type="TextureRect" parent="."]
+layout_mode = 0
+offset_left = 893.0
+offset_top = 228.0
+offset_right = 1093.0
+offset_bottom = 428.0
+texture = ExtResource("8_7djil")
+
+[node name="Siguiente" type="Button" parent="."]
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -34.0
+offset_top = -46.0
+offset_right = 34.0
+grow_horizontal = 2
+grow_vertical = 0
+theme_override_styles/focus = SubResource("StyleBoxEmpty_qcuj2")
+theme_override_styles/disabled_mirrored = SubResource("StyleBoxEmpty_640n6")
+theme_override_styles/disabled = SubResource("StyleBoxEmpty_17ul0")
+theme_override_styles/hover_pressed_mirrored = SubResource("StyleBoxEmpty_66riy")
+theme_override_styles/hover_pressed = SubResource("StyleBoxEmpty_a5km3")
+theme_override_styles/hover_mirrored = SubResource("StyleBoxEmpty_7ylv6")
+theme_override_styles/hover = SubResource("StyleBoxEmpty_2qo8e")
+theme_override_styles/pressed_mirrored = SubResource("StyleBoxEmpty_aw1wq")
+theme_override_styles/pressed = SubResource("StyleBoxEmpty_wkofk")
+theme_override_styles/normal_mirrored = SubResource("StyleBoxEmpty_uv8v1")
+theme_override_styles/normal = SubResource("StyleBoxEmpty_xjpkv")
+icon = ExtResource("9_v46do")
+
+[connection signal="pressed" from="Siguiente" to="." method="_on_siguiente_pressed"]

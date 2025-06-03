@@ -1,0 +1,10 @@
+[gd_resource type="Resource" script_class="QuizQuestionCaballo" load_steps=2 format=3 uid="uid://cnxpwk5lgpxlm"]
+
+[ext_resource type="Script" path="res://Scripts/Juegos/CarreraCaballo/question.gd" id="1_vcmik"]
+
+[resource]
+script = ExtResource("1_vcmik")
+question_info = "En la tienda de mascotas \"Mascotitas Felices\", un kilo de comida para perro cuesta $50. En la tienda online \"PetWorld\", un paquete de 3 kilos de la misma comida cuesta $140. ¿Dónde es más económico comprar la comida para perro?"
+type = 0
+options = Array[String](["Mascotitas Felices", "PetWorld"])
+correct = "PetWorld"

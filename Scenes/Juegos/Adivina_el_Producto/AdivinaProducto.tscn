@@ -1,4 +1,4 @@
-[gd_scene load_steps=19 format=3 uid="uid://diis7rlrywery"]
+[gd_scene load_steps=25 format=3 uid="uid://diis7rlrywery"]
 
 [ext_resource type="Texture2D" uid="uid://ce5ueoos67bfl" path="res://images/fondo_juego_adiv_el_prod.png" id="1_2kkp3"]
 [ext_resource type="Script" path="res://Scripts/Juegos/Controllers/game_controller.gd" id="1_v6eyu"]
@@ -28,16 +28,28 @@ expand_margin_bottom = 5.0
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_hxb38"]
 
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_8ppcr"]
+
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_14jps"]
 bg_color = Color(0.6, 0.6, 0.6, 0)
 
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_2vpps"]
+
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_0t2md"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_pw1ag"]
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_8ksqj"]
 
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_bymki"]
+
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_s1mq2"]
 
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_lqhvu"]
+
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_3rpio"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_gjrb3"]
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_bqtag"]
 
@@ -112,6 +124,7 @@ offset_left = 18.0
 offset_top = 22.0
 offset_right = 156.0
 offset_bottom = 160.0
+theme_override_styles/focus = SubResource("StyleBoxEmpty_8ppcr")
 theme_override_styles/normal = SubResource("StyleBoxFlat_14jps")
 
 [node name="TextureRect" type="TextureRect" parent="Control/Botones/MenuButton/Maiz"]
@@ -125,6 +138,7 @@ offset_left = 182.0
 offset_top = 24.0
 offset_right = 320.0
 offset_bottom = 162.0
+theme_override_styles/focus = SubResource("StyleBoxTexture_2vpps")
 theme_override_styles/normal = SubResource("StyleBoxTexture_0t2md")
 
 [node name="TextureRect" type="TextureRect" parent="Control/Botones/MenuButton/Frijol"]
@@ -138,6 +152,7 @@ offset_left = 341.0
 offset_top = 26.0
 offset_right = 479.0
 offset_bottom = 161.0
+theme_override_styles/focus = SubResource("StyleBoxTexture_pw1ag")
 theme_override_styles/normal = SubResource("StyleBoxTexture_8ksqj")
 
 [node name="TextureRect" type="TextureRect" parent="Control/Botones/MenuButton/Mango"]
@@ -151,6 +166,7 @@ offset_left = 18.0
 offset_top = 203.0
 offset_right = 156.0
 offset_bottom = 341.0
+theme_override_styles/focus = SubResource("StyleBoxTexture_bymki")
 theme_override_styles/normal = SubResource("StyleBoxTexture_s1mq2")
 
 [node name="TextureRect" type="TextureRect" parent="Control/Botones/MenuButton/Plátano"]
@@ -164,6 +180,7 @@ offset_left = 180.0
 offset_top = 203.0
 offset_right = 318.0
 offset_bottom = 341.0
+theme_override_styles/focus = SubResource("StyleBoxTexture_lqhvu")
 theme_override_styles/normal = SubResource("StyleBoxTexture_3rpio")
 
 [node name="TextureRect" type="TextureRect" parent="Control/Botones/MenuButton/Tamal"]
@@ -177,6 +194,7 @@ offset_left = 336.0
 offset_top = 203.0
 offset_right = 474.0
 offset_bottom = 341.0
+theme_override_styles/focus = SubResource("StyleBoxTexture_gjrb3")
 theme_override_styles/normal = SubResource("StyleBoxTexture_bqtag")
 
 [node name="TextureRect" type="TextureRect" parent="Control/Botones/MenuButton/Tortillas"]

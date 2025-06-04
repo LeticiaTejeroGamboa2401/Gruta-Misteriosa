@@ -1,4 +1,4 @@
-[gd_scene load_steps=10 format=3 uid="uid://dg33ycaiampji"]
+[gd_scene load_steps=20 format=3 uid="uid://dg33ycaiampji"]
 
 [ext_resource type="Script" path="res://Scripts/Juegos/AdivinaProducto/explicacion_puntuacion.gd" id="1_esqyj"]
 [ext_resource type="Texture2D" uid="uid://ce5ueoos67bfl" path="res://images/fondo_juego_adiv_el_prod.png" id="2_odwms"]
@@ -11,6 +11,31 @@
 [sub_resource type="LabelSettings" id="LabelSettings_kqhsp"]
 font = ExtResource("4_wvk6p")
 font_size = 50
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_nhdew"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_yuyce"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_mqkc3"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_jnmo2"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_mt1ur"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_3ptp6"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_pm4yf"]
+bg_color = Color(0, 0, 0, 0.231373)
+corner_radius_top_left = 15
+corner_radius_top_right = 15
+corner_radius_bottom_right = 15
+corner_radius_bottom_left = 15
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_3f436"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_imdmx"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_7lbn5"]
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_ja54s"]
 
@@ -70,12 +95,22 @@ anchor_left = 0.5
 anchor_top = 1.0
 anchor_right = 0.5
 anchor_bottom = 1.0
-offset_left = -34.0
-offset_top = -61.0
-offset_right = 34.0
-offset_bottom = -15.0
+offset_left = -30.0
+offset_top = -46.0
+offset_right = 30.0
+offset_bottom = -8.0
 grow_horizontal = 2
 grow_vertical = 0
+theme_override_styles/focus = SubResource("StyleBoxEmpty_nhdew")
+theme_override_styles/disabled_mirrored = SubResource("StyleBoxEmpty_yuyce")
+theme_override_styles/disabled = SubResource("StyleBoxEmpty_mqkc3")
+theme_override_styles/hover_pressed_mirrored = SubResource("StyleBoxEmpty_jnmo2")
+theme_override_styles/hover_pressed = SubResource("StyleBoxEmpty_mt1ur")
+theme_override_styles/hover_mirrored = SubResource("StyleBoxEmpty_3ptp6")
+theme_override_styles/hover = SubResource("StyleBoxFlat_pm4yf")
+theme_override_styles/pressed_mirrored = SubResource("StyleBoxEmpty_3f436")
+theme_override_styles/pressed = SubResource("StyleBoxEmpty_imdmx")
+theme_override_styles/normal_mirrored = SubResource("StyleBoxEmpty_7lbn5")
 theme_override_styles/normal = SubResource("StyleBoxTexture_ja54s")
 icon = ExtResource("4_wi6tq")
 

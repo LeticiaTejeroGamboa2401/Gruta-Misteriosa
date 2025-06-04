@@ -9,7 +9,8 @@
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_x2sw0"]
 bg_color = Color(0, 0, 0, 1)
 
-[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_mnkh2"]
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_7w3iu"]
+bg_color = Color(0.6, 0.6, 0.6, 0)
 
 [sub_resource type="LabelSettings" id="LabelSettings_s45y3"]
 font = ExtResource("5_hcxdn")
@@ -54,7 +55,7 @@ offset_top = 568.0
 offset_right = 1150.0
 offset_bottom = 646.0
 theme_override_styles/focus = SubResource("StyleBoxFlat_x2sw0")
-theme_override_styles/normal = SubResource("StyleBoxTexture_mnkh2")
+theme_override_styles/normal = SubResource("StyleBoxFlat_7w3iu")
 icon = ExtResource("4_qsht5")
 
 [node name="Label" type="Label" parent="."]

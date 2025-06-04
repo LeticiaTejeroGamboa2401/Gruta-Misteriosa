@@ -1,15 +1,24 @@
-[gd_resource type="Resource" script_class="QuizTheme" load_steps=10 format=3 uid="uid://bsd62iacmqeje"]
+[gd_resource type="Resource" script_class="QuizTheme" load_steps=19 format=3 uid="uid://bsd62iacmqeje"]
 
 [ext_resource type="Script" path="res://Scripts/Juegos/AdivinaProducto/resources/theme.gd" id="1_djuse"]
 [ext_resource type="Script" path="res://Scripts/Juegos/AdivinaProducto/resources/questions.gd" id="2_3htld"]
-[ext_resource type="Resource" uid="uid://clbamtd3e1nd1" path="res://resources/variado/questionAdivinaProducto/mas_barato_opciones.tres" id="3_t8wot"]
-[ext_resource type="Resource" uid="uid://cfvk8uba14ny1" path="res://resources/variado/questionAdivinaProducto/mayorque_menorque.tres" id="4_f0plf"]
-[ext_resource type="Resource" uid="uid://c3nt2hmd1fd7y" path="res://resources/variado/questionAdivinaProducto/producto_mas_barato.tres" id="5_cfoyj"]
-[ext_resource type="Resource" uid="uid://d1wcyl0t0wr1n" path="res://resources/variado/questionAdivinaProducto/producto_mas_caro.tres" id="6_nkga8"]
-[ext_resource type="Resource" uid="uid://cgfvc3rnx2ngo" path="res://resources/variado/questionAdivinaProducto/parte_fraccionaria.tres" id="7_3mh1j"]
-[ext_resource type="Resource" uid="uid://bj3de4asi2i8x" path="res://resources/variado/questionAdivinaProducto/cuesta_menos_que.tres" id="8_m4nxw"]
-[ext_resource type="Resource" uid="uid://dtwcr1ts7afw4" path="res://resources/variado/questionAdivinaProducto/multiplo.tres" id="9_fkihp"]
+[ext_resource type="Resource" uid="uid://bj3de4asi2i8x" path="res://resources/variado/questionAdivinaProducto/1.tres" id="3_nvah2"]
+[ext_resource type="Resource" uid="uid://clbamtd3e1nd1" path="res://resources/variado/questionAdivinaProducto/2.tres" id="4_d71v8"]
+[ext_resource type="Resource" uid="uid://cfvk8uba14ny1" path="res://resources/variado/questionAdivinaProducto/3.tres" id="5_sjoiv"]
+[ext_resource type="Resource" uid="uid://dtwcr1ts7afw4" path="res://resources/variado/questionAdivinaProducto/4.tres" id="6_t5fq5"]
+[ext_resource type="Resource" uid="uid://cgfvc3rnx2ngo" path="res://resources/variado/questionAdivinaProducto/5.tres" id="7_rh0ti"]
+[ext_resource type="Resource" uid="uid://c3nt2hmd1fd7y" path="res://resources/variado/questionAdivinaProducto/6.tres" id="8_ypu0s"]
+[ext_resource type="Resource" uid="uid://d1wcyl0t0wr1n" path="res://resources/variado/questionAdivinaProducto/7.tres" id="9_ud63t"]
+[ext_resource type="Resource" uid="uid://ssj1eul2s8bc" path="res://resources/variado/questionAdivinaProducto/8.tres" id="10_wg3id"]
+[ext_resource type="Resource" uid="uid://pmpn2t1483ca" path="res://resources/variado/questionAdivinaProducto/9.tres" id="11_djinp"]
+[ext_resource type="Resource" uid="uid://b6v23jjuyoxtd" path="res://resources/variado/questionAdivinaProducto/10.tres" id="12_shk3r"]
+[ext_resource type="Resource" uid="uid://bg886pmbmr6s2" path="res://resources/variado/questionAdivinaProducto/11.tres" id="13_r1o8k"]
+[ext_resource type="Resource" uid="uid://bvsf1g1h24v3y" path="res://resources/variado/questionAdivinaProducto/12.tres" id="14_fpnid"]
+[ext_resource type="Resource" uid="uid://dgdcdr8cvy3qn" path="res://resources/variado/questionAdivinaProducto/13.tres" id="15_h6bsv"]
+[ext_resource type="Resource" uid="uid://si4w1i5gsjw7" path="res://resources/variado/questionAdivinaProducto/14.tres" id="16_f1iww"]
+[ext_resource type="Resource" uid="uid://bl43le15tibv" path="res://resources/variado/questionAdivinaProducto/15.tres" id="17_o32fm"]
+[ext_resource type="Resource" uid="uid://cubpmrdatuevc" path="res://resources/variado/questionAdivinaProducto/16.tres" id="18_dofnc"]
 
 [resource]
 script = ExtResource("1_djuse")
-theme = Array[ExtResource("2_3htld")]([ExtResource("3_t8wot"), ExtResource("4_f0plf"), ExtResource("5_cfoyj"), ExtResource("6_nkga8"), ExtResource("7_3mh1j"), ExtResource("8_m4nxw"), ExtResource("9_fkihp")])
+theme = Array[ExtResource("2_3htld")]([ExtResource("3_nvah2"), ExtResource("4_d71v8"), ExtResource("5_sjoiv"), ExtResource("6_t5fq5"), ExtResource("7_rh0ti"), ExtResource("8_ypu0s"), ExtResource("9_ud63t"), ExtResource("10_wg3id"), ExtResource("11_djinp"), ExtResource("12_shk3r"), ExtResource("13_r1o8k"), ExtResource("14_fpnid"), ExtResource("15_h6bsv"), ExtResource("16_f1iww"), ExtResource("17_o32fm"), ExtResource("18_dofnc")])

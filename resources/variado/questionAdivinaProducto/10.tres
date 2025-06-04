@@ -1,0 +1,16 @@
+[gd_resource type="Resource" script_class="QuizQuestion" load_steps=8 format=3 uid="uid://b6v23jjuyoxtd"]
+
+[ext_resource type="Script" path="res://Scripts/Juegos/AdivinaProducto/resources/questions.gd" id="1_0lgdg"]
+[ext_resource type="Texture2D" uid="uid://7yfknnel5vb5" path="res://images/Juegos/Adivina_el_Producto/Naranja.png" id="1_a1njt"]
+[ext_resource type="Texture2D" uid="uid://b0h0ouby7uwo0" path="res://images/Juegos/Adivina_el_Producto/Mamey.png" id="2_vllsf"]
+[ext_resource type="Texture2D" uid="uid://c1utjlw02035i" path="res://images/Juegos/Adivina_el_Producto/Coco.png" id="3_1v8iq"]
+[ext_resource type="Texture2D" uid="uid://d3t0um3jk2jss" path="res://images/Juegos/Adivina_el_Producto/Guayaba.png" id="4_wbjdb"]
+[ext_resource type="Texture2D" uid="uid://bcb47n210l0xy" path="res://images/Juegos/Adivina_el_Producto/Tamarindo.png" id="5_xklqk"]
+[ext_resource type="Texture2D" uid="uid://ci4fafnoofyfd" path="res://images/Juegos/Adivina_el_Producto/Guanábana.png" id="6_ccre1"]
+
+[resource]
+script = ExtResource("1_0lgdg")
+question_info = "¿Qué producto cuesta más que la guayaba, pero menos que el coco?"
+type = 0
+options = Array[Texture2D]([ExtResource("1_a1njt"), ExtResource("2_vllsf"), ExtResource("3_1v8iq"), ExtResource("4_wbjdb"), ExtResource("5_xklqk"), ExtResource("6_ccre1")])
+correct = ExtResource("1_a1njt")

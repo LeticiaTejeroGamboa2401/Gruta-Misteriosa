@@ -1,0 +1,16 @@
+[gd_resource type="Resource" script_class="QuizQuestion" load_steps=8 format=3 uid="uid://bl43le15tibv"]
+
+[ext_resource type="Texture2D" uid="uid://bcb47n210l0xy" path="res://images/Juegos/Adivina_el_Producto/Tamarindo.png" id="1_01wa7"]
+[ext_resource type="Script" path="res://Scripts/Juegos/AdivinaProducto/resources/questions.gd" id="1_ca8e7"]
+[ext_resource type="Texture2D" uid="uid://7yfknnel5vb5" path="res://images/Juegos/Adivina_el_Producto/Naranja.png" id="2_422od"]
+[ext_resource type="Texture2D" uid="uid://b0h0ouby7uwo0" path="res://images/Juegos/Adivina_el_Producto/Mamey.png" id="3_si6n1"]
+[ext_resource type="Texture2D" uid="uid://c1utjlw02035i" path="res://images/Juegos/Adivina_el_Producto/Coco.png" id="4_jmnbu"]
+[ext_resource type="Texture2D" uid="uid://d3t0um3jk2jss" path="res://images/Juegos/Adivina_el_Producto/Guayaba.png" id="5_qg4sc"]
+[ext_resource type="Texture2D" uid="uid://ci4fafnoofyfd" path="res://images/Juegos/Adivina_el_Producto/Guanábana.png" id="6_ak5o7"]
+
+[resource]
+script = ExtResource("1_ca8e7")
+question_info = "¿Qué producto cuesta un tercio de lo que cuesta el Mamey?"
+type = 0
+options = Array[Texture2D]([ExtResource("2_422od"), ExtResource("3_si6n1"), ExtResource("4_jmnbu"), ExtResource("5_qg4sc"), ExtResource("1_01wa7"), ExtResource("6_ak5o7")])
+correct = ExtResource("1_01wa7")

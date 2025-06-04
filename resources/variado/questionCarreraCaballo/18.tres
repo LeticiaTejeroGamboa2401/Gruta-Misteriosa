@@ -4,7 +4,7 @@
 
 [resource]
 script = ExtResource("1_0obrq")
-question_info = "Un paquete de 6 vasos desechables cuesta $18 en el supermercado. Un paquete de 10 vasos desechables cuesta $25 en la tienda de abarrotes. ¿Dónde es más conveniente comprar los vasos desechables?"
+question_info = "Un refresco de cola de 600 ml cuesta $15 en la tienda de conveniencia. Una lata de refresco de cola de 355 ml cuesta $9 en la máquina expendedora. ¿Dónde obtienes más refresco por tu dinero?"
 type = 0
 options = Array[String](["Tienda de conveniencia", "Máquina expendedora"])
 correct = "Tienda de conveniencia"

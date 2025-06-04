@@ -1,0 +1,16 @@
+[gd_resource type="Resource" script_class="QuizQuestion" load_steps=8 format=3 uid="uid://bvsf1g1h24v3y"]
+
+[ext_resource type="Texture2D" uid="uid://7yfknnel5vb5" path="res://images/Juegos/Adivina_el_Producto/Naranja.png" id="1_ipp2v"]
+[ext_resource type="Script" path="res://Scripts/Juegos/AdivinaProducto/resources/questions.gd" id="1_rosfd"]
+[ext_resource type="Texture2D" uid="uid://b0h0ouby7uwo0" path="res://images/Juegos/Adivina_el_Producto/Mamey.png" id="2_athai"]
+[ext_resource type="Texture2D" uid="uid://c1utjlw02035i" path="res://images/Juegos/Adivina_el_Producto/Coco.png" id="3_2vqgp"]
+[ext_resource type="Texture2D" uid="uid://d3t0um3jk2jss" path="res://images/Juegos/Adivina_el_Producto/Guayaba.png" id="4_x036m"]
+[ext_resource type="Texture2D" uid="uid://bcb47n210l0xy" path="res://images/Juegos/Adivina_el_Producto/Tamarindo.png" id="5_gvde6"]
+[ext_resource type="Texture2D" uid="uid://ci4fafnoofyfd" path="res://images/Juegos/Adivina_el_Producto/Guanábana.png" id="6_syh8t"]
+
+[resource]
+script = ExtResource("1_rosfd")
+question_info = "¿Qué producto cuesta $2 menos que el Coco?"
+type = 0
+options = Array[Texture2D]([ExtResource("1_ipp2v"), ExtResource("2_athai"), ExtResource("3_2vqgp"), ExtResource("4_x036m"), ExtResource("5_gvde6"), ExtResource("6_syh8t")])
+correct = ExtResource("1_ipp2v")

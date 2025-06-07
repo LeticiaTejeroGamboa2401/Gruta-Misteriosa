@@ -1,4 +1,4 @@
-[gd_scene load_steps=79 format=3 uid="uid://hv2ego4ojv0c"]
+[gd_scene load_steps=80 format=3 uid="uid://hv2ego4ojv0c"]
 
 [ext_resource type="Texture2D" uid="uid://ce5ueoos67bfl" path="res://images/fondo_juego_adiv_el_prod.png" id="1_q170l"]
 [ext_resource type="Script" path="res://Scripts/Juegos/AdivinaProducto/explicacion_juego.gd" id="1_xu6vg"]
@@ -12,9 +12,21 @@
 [ext_resource type="Texture2D" uid="uid://dmjq602s6q7aj" path="res://images/Tortilla.png" id="9_32lx1"]
 [ext_resource type="Texture2D" uid="uid://cudr4q3y4gwnt" path="res://images/cursor.png" id="10_llwb3"]
 
-[sub_resource type="LabelSettings" id="LabelSettings_kqhsp"]
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_nvulj"]
+bg_color = Color(0, 0, 0, 0.54902)
+border_width_left = 3
+border_width_top = 3
+border_width_right = 3
+border_width_bottom = 3
+border_color = Color(1, 1, 1, 1)
+corner_radius_top_left = 15
+corner_radius_top_right = 15
+corner_radius_bottom_right = 15
+corner_radius_bottom_left = 15
+
+[sub_resource type="LabelSettings" id="LabelSettings_mtnax"]
 font = ExtResource("3_bs2uw")
-font_size = 50
+font_size = 45
 
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_d11j2"]
 
@@ -172,29 +184,36 @@ grow_vertical = 2
 texture = ExtResource("1_q170l")
 expand_mode = 2
 
-[node name="Panel" type="Panel" parent="."]
-layout_mode = 0
-offset_left = 22.0
-offset_top = 476.0
-offset_right = 1127.0
-offset_bottom = 648.0
-
-[node name="Label" type="Label" parent="Panel"]
+[node name="Explicación" type="Panel" parent="."]
 layout_mode = 1
-anchors_preset = 8
+anchors_preset = 7
 anchor_left = 0.5
-anchor_top = 0.5
+anchor_top = 1.0
 anchor_right = 0.5
-anchor_bottom = 0.5
-offset_left = -531.5
-offset_top = -65.5
-offset_right = 538.5
-offset_bottom = 65.5
+anchor_bottom = 1.0
+offset_left = -508.0
+offset_top = -161.0
+offset_right = 508.0
+offset_bottom = -6.0
+grow_horizontal = 2
+grow_vertical = 0
+theme_override_styles/panel = SubResource("StyleBoxFlat_nvulj")
+
+[node name="Texto" type="Label" parent="Explicación"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 30.0
+offset_right = -30.0
+offset_bottom = -17.0
 grow_horizontal = 2
 grow_vertical = 2
-text = "Para jugar debes leer la pregunta del vendedor y 
-selecionar el producto correcto."
-label_settings = SubResource("LabelSettings_kqhsp")
+text = "Para jugar debes leer la pregunta del vendedor y selecionar el producto correcto."
+label_settings = SubResource("LabelSettings_mtnax")
+horizontal_alignment = 1
+vertical_alignment = 1
+autowrap_mode = 2
 
 [node name="Continuar" type="Button" parent="."]
 layout_mode = 1

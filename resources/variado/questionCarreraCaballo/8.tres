@@ -7,4 +7,4 @@ script = ExtResource("1_obapr")
 question_info = "Un supermercado ofrece 3 litros de leche por $45. Una tienda de abarrotes cercana vende 2 litros de leche por $28. ¿Dónde es más económico comprar la leche?"
 type = 0
 options = Array[String](["Tienda de abarrotes ", "Supermercado"])
-correct = "Supermercado"
+correct = "Tienda de abarrotes"

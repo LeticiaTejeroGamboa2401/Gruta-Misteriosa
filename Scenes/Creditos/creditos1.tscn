@@ -1,4 +1,4 @@
-[gd_scene load_steps=18 format=3 uid="uid://cslref2fpm576"]
+[gd_scene load_steps=23 format=3 uid="uid://cslref2fpm576"]
 
 [ext_resource type="Script" path="res://Scripts/creditos_1.gd" id="1_oc2ik"]
 [ext_resource type="FontFile" uid="uid://ex6sf638yhh5" path="res://font/Chonky Bunny.ttf" id="1_yu0k1"]
@@ -21,6 +21,8 @@ font_size = 45
 font = ExtResource("2_pv3y1")
 font_size = 35
 
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_hnqmk"]
+
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_mxwk1"]
 
 [sub_resource type="FontFile" id="FontFile_2qf0l"]
@@ -30,11 +32,20 @@ cache/0/16/0/underline_position = 0.0
 cache/0/16/0/underline_thickness = 0.0
 cache/0/16/0/scale = 1.0
 
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_0qyl3"]
+
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_dk2p5"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_5gayc"]
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_u6kwo"]
 
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_fta1k"]
+
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_8lp0u"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_ek5nw"]
+bg_color = Color(0.6, 0.6, 0.6, 0)
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_y5wxk"]
 
@@ -105,6 +116,7 @@ offset_left = 574.0
 offset_top = 415.0
 offset_right = 924.0
 offset_bottom = 495.0
+theme_override_styles/hover = SubResource("StyleBoxEmpty_hnqmk")
 theme_override_styles/normal = SubResource("StyleBoxTexture_mxwk1")
 icon = ExtResource("4_4145x")
 
@@ -115,6 +127,7 @@ offset_top = 415.0
 offset_right = 560.0
 offset_bottom = 495.0
 theme_override_fonts/font = SubResource("FontFile_2qf0l")
+theme_override_styles/hover = SubResource("StyleBoxEmpty_0qyl3")
 theme_override_styles/normal = SubResource("StyleBoxTexture_dk2p5")
 icon = ExtResource("5_vv55t")
 
@@ -124,6 +137,7 @@ offset_left = 575.0
 offset_top = 507.0
 offset_right = 928.0
 offset_bottom = 587.0
+theme_override_styles/hover = SubResource("StyleBoxEmpty_5gayc")
 theme_override_styles/normal = SubResource("StyleBoxTexture_u6kwo")
 icon = ExtResource("6_td4xp")
 
@@ -133,6 +147,7 @@ offset_left = 210.0
 offset_top = 508.0
 offset_right = 560.0
 offset_bottom = 588.0
+theme_override_styles/hover = SubResource("StyleBoxEmpty_fta1k")
 theme_override_styles/normal = SubResource("StyleBoxTexture_8lp0u")
 icon = ExtResource("7_6jewi")
 
@@ -142,6 +157,7 @@ offset_left = 3.0
 offset_top = 565.0
 offset_right = 81.0
 offset_bottom = 643.0
+theme_override_styles/hover = SubResource("StyleBoxFlat_ek5nw")
 theme_override_styles/normal = SubResource("StyleBoxTexture_y5wxk")
 icon = ExtResource("3_637cw")
 

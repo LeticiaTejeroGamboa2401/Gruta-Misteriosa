@@ -1,4 +1,4 @@
-[gd_scene load_steps=9 format=3 uid="uid://bscvl1kbdvgkl"]
+[gd_scene load_steps=11 format=3 uid="uid://bscvl1kbdvgkl"]
 
 [ext_resource type="Script" path="res://Scripts/personaje.gd" id="1_3uqtx"]
 [ext_resource type="Texture2D" uid="uid://dqydg8h8ws00p" path="res://images/Lucy.png" id="1_oh42h"]
@@ -7,11 +7,16 @@
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_s75i2"]
 bg_color = Color(0, 0, 0, 1)
 
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_1104x"]
-bg_color = Color(0, 0, 0, 0.921569)
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_w5hh5"]
+bg_color = Color(0.6, 0.6, 0.6, 0)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_cfyd0"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_pq10n"]
 bg_color = Color(0, 0, 0, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_4pjvq"]
+bg_color = Color(0.6, 0.6, 0.6, 0)
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_5vkct"]
 bg_color = Color(0, 0, 0, 0.921569)
@@ -54,21 +59,37 @@ theme_override_styles/normal = SubResource("StyleBoxFlat_s75i2")
 text = "¿Quién eres?"
 
 [node name="Lucy" type="Button" parent="ColorRect"]
-layout_mode = 0
-offset_left = 154.0
-offset_top = 147.0
-offset_right = 482.0
-offset_bottom = 525.0
-theme_override_styles/pressed = SubResource("StyleBoxFlat_1104x")
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -346.5
+offset_top = -152.0
+offset_right = -111.5
+offset_bottom = 152.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/hover = SubResource("StyleBoxFlat_w5hh5")
+theme_override_styles/pressed_mirrored = SubResource("StyleBoxTexture_cfyd0")
 theme_override_styles/normal = SubResource("StyleBoxFlat_pq10n")
 icon = ExtResource("1_oh42h")
 
 [node name="Lele" type="Button" parent="ColorRect"]
-layout_mode = 0
-offset_left = 577.0
-offset_top = 139.0
-offset_right = 924.0
-offset_bottom = 517.0
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = 103.5
+offset_top = -152.5
+offset_right = 342.5
+offset_bottom = 152.5
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/hover = SubResource("StyleBoxFlat_4pjvq")
 theme_override_styles/pressed_mirrored = SubResource("StyleBoxFlat_5vkct")
 theme_override_styles/normal = SubResource("StyleBoxFlat_y6ekp")
 icon = ExtResource("2_bpw3o")

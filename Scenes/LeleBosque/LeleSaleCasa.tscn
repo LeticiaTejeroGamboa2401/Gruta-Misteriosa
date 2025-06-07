@@ -1,4 +1,4 @@
-[gd_scene load_steps=8 format=3 uid="uid://tyqwor5jwt0m"]
+[gd_scene load_steps=11 format=3 uid="uid://tyqwor5jwt0m"]
 
 [ext_resource type="Script" path="res://Scenes/LeleBosque/lele_sale_casa.gd" id="1_cxp1w"]
 [ext_resource type="Texture2D" uid="uid://b4o55dvv1vfru" path="res://images/Lele_camina_bosque.png" id="1_iude8"]
@@ -6,7 +6,16 @@
 [ext_resource type="Texture2D" uid="uid://ci1roshk4clhe" path="res://images/Siguiente.png" id="4_g3f0f"]
 [ext_resource type="FontFile" uid="uid://bd321yblpf1ew" path="res://font/Supermarket of Love.ttf" id="5_2ix2o"]
 
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_odu2w"]
+bg_color = Color(0.6, 0.6, 0.6, 0)
+
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_ehukg"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_i01ws"]
+bg_color = Color(0.6, 0.6, 0.6, 0)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_gih3g"]
+bg_color = Color(0.6, 0.6, 0.6, 0)
 
 [sub_resource type="LabelSettings" id="LabelSettings_onkd6"]
 font = ExtResource("5_2ix2o")
@@ -48,6 +57,7 @@ offset_left = 12.0
 offset_top = 561.0
 offset_right = 167.0
 offset_bottom = 639.0
+theme_override_styles/hover = SubResource("StyleBoxFlat_odu2w")
 theme_override_styles/normal = SubResource("StyleBoxTexture_ehukg")
 icon = ExtResource("3_oql5u")
 
@@ -57,6 +67,8 @@ offset_left = 1068.0
 offset_top = 565.0
 offset_right = 1146.0
 offset_bottom = 643.0
+theme_override_styles/hover = SubResource("StyleBoxFlat_i01ws")
+theme_override_styles/normal = SubResource("StyleBoxFlat_gih3g")
 icon = ExtResource("4_g3f0f")
 
 [node name="Label" type="Label" parent="."]

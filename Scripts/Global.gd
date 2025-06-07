@@ -15,3 +15,6 @@ var juegos_ganados = {
 	"juego_producto": false,
 	"juego_caballo": false,
 }
+
+# Vidas en el juego del nahual
+var lives: int =3

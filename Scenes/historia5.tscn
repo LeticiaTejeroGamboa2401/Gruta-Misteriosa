@@ -1,4 +1,4 @@
-[gd_scene load_steps=8 format=3 uid="uid://bcgnpj0w4ihk6"]
+[gd_scene load_steps=9 format=3 uid="uid://bcgnpj0w4ihk6"]
 
 [ext_resource type="Script" path="res://Scripts/historia_5.gd" id="1_01a0j"]
 [ext_resource type="Texture2D" uid="uid://3hqd2syyrgry" path="res://images/HistoriaCompa.jpg" id="1_deejx"]
@@ -10,7 +10,11 @@
 font = ExtResource("3_ibrml")
 font_size = 35
 
-[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_fqj4k"]
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_nxkhf"]
+bg_color = Color(0.6, 0.6, 0.6, 0)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_pil8f"]
+bg_color = Color(0.6, 0.6, 0.6, 0)
 
 [node name="Control" type="Control"]
 layout_mode = 3
@@ -74,7 +78,8 @@ offset_left = 1074.0
 offset_top = 568.0
 offset_right = 1152.0
 offset_bottom = 646.0
-theme_override_styles/normal = SubResource("StyleBoxTexture_fqj4k")
+theme_override_styles/hover = SubResource("StyleBoxFlat_nxkhf")
+theme_override_styles/normal = SubResource("StyleBoxFlat_pil8f")
 icon = ExtResource("4_7smdm")
 
 [connection signal="pressed" from="Siguiente" to="." method="_on_siguiente_pressed"]

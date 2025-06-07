@@ -1,4 +1,4 @@
-[gd_scene load_steps=6 format=3 uid="uid://cp5b7qhfu7x3r"]
+[gd_scene load_steps=7 format=3 uid="uid://cp5b7qhfu7x3r"]
 
 [ext_resource type="Script" path="res://Scripts/control.gd" id="1_owfmq"]
 [ext_resource type="FontFile" uid="uid://ex6sf638yhh5" path="res://font/Chonky Bunny.ttf" id="2_t2qcw"]
@@ -7,6 +7,8 @@
 [sub_resource type="LabelSettings" id="LabelSettings_8lt0v"]
 font = ExtResource("2_t2qcw")
 font_size = 50
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_b2g4p"]
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_bir03"]
 
@@ -47,6 +49,7 @@ offset_left = 7.0
 offset_top = 562.0
 offset_right = 85.0
 offset_bottom = 640.0
+theme_override_styles/hover = SubResource("StyleBoxEmpty_b2g4p")
 theme_override_styles/normal = SubResource("StyleBoxTexture_bir03")
 icon = ExtResource("3_f14uw")
 

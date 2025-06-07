@@ -3,9 +3,10 @@ extends CharacterBody2D
 const GRAVITY = 500
 var speed = 245
 var target_position_x = 900
+var was_hit := false  # Para evitar múltiples impactos seguidos
 
 func _ready():
-	print("Nahual listo")  # Verifica que el script se ejecuta
+	print("Nahual listo")
 
 func _physics_process(_delta: float) -> void:
 	apply_gravity(_delta)
@@ -24,13 +25,16 @@ func apply_gravity(delta: float) -> void:
 		velocity.y = 0
 
 func _on_area_2d_body_entered(body: Node) -> void:
-	print("Entró un cuerpo:", body.name)
+	if was_hit:
+		return
+
 	if body.name == "Lucy_Player" or body.name == "Lele_Player":
-		print("¡El nahual atrap{o al jugador}!")
-		show_game_over()
+		print("¡El nahual atrapó al jugador!")
 
-func show_game_over() -> void:
-	call_deferred("_change_scene")
+		var root = get_tree().get_current_scene()
+		if root.has_method("on_player_hit"):
+			root.call("on_player_hit")
 
-func _change_scene():
-	get_tree().change_scene_to_file("res://scenes/GameOver.tscn")
+		was_hit = true
+		await get_tree().create_timer(0.5).timeout  # Tiempo de invulnerabilidad del jugador
+		was_hit = false

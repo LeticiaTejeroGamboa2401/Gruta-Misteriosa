@@ -1,4 +1,4 @@
-[gd_scene load_steps=20 format=3 uid="uid://dg33ycaiampji"]
+[gd_scene load_steps=21 format=3 uid="uid://dg33ycaiampji"]
 
 [ext_resource type="Script" path="res://Scripts/Juegos/AdivinaProducto/explicacion_puntuacion.gd" id="1_esqyj"]
 [ext_resource type="Texture2D" uid="uid://ce5ueoos67bfl" path="res://images/fondo_juego_adiv_el_prod.png" id="2_odwms"]
@@ -8,9 +8,21 @@
 [ext_resource type="Texture2D" uid="uid://84o2c68uke0l" path="res://images/respuesta_correcta.png" id="5_4qm6a"]
 [ext_resource type="Texture2D" uid="uid://3yg6jd1c17lr" path="res://images/respuesta_incorrecta.png" id="6_1aoil"]
 
-[sub_resource type="LabelSettings" id="LabelSettings_kqhsp"]
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_nmrgp"]
+bg_color = Color(0, 0, 0, 0.54902)
+border_width_left = 3
+border_width_top = 3
+border_width_right = 3
+border_width_bottom = 3
+border_color = Color(1, 1, 1, 1)
+corner_radius_top_left = 15
+corner_radius_top_right = 15
+corner_radius_bottom_right = 15
+corner_radius_bottom_left = 15
+
+[sub_resource type="LabelSettings" id="LabelSettings_evsb2"]
 font = ExtResource("4_wvk6p")
-font_size = 50
+font_size = 45
 
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_nhdew"]
 
@@ -68,25 +80,36 @@ position = Vector2(735, 291)
 scale = Vector2(0.586679, 0.584193)
 texture = ExtResource("3_ienh2")
 
-[node name="Panel" type="Panel" parent="."]
-layout_mode = 0
-offset_left = 19.0
-offset_top = 480.0
-offset_right = 1133.0
-offset_bottom = 642.0
+[node name="Explicación" type="Panel" parent="."]
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -503.5
+offset_top = -156.0
+offset_right = 503.5
+offset_bottom = -16.0
+grow_horizontal = 2
+grow_vertical = 0
+theme_override_styles/panel = SubResource("StyleBoxFlat_nmrgp")
 
-[node name="Label" type="Label" parent="Panel"]
+[node name="Texto" type="Label" parent="Explicación"]
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
-offset_left = 12.0
-offset_right = -11.0
+offset_left = 25.0
+offset_right = -30.0
+offset_bottom = -15.0
 grow_horizontal = 2
 grow_vertical = 2
-text = "Si el producto es correcto o incorrecto el vendedor 
-lo indicará."
-label_settings = SubResource("LabelSettings_kqhsp")
+text = "Si el producto es correcto o incorrecto el vendedor lo indicará."
+label_settings = SubResource("LabelSettings_evsb2")
+horizontal_alignment = 1
+vertical_alignment = 1
+autowrap_mode = 2
 
 [node name="siguiente" type="Button" parent="."]
 layout_mode = 1
@@ -96,9 +119,9 @@ anchor_top = 1.0
 anchor_right = 0.5
 anchor_bottom = 1.0
 offset_left = -30.0
-offset_top = -46.0
+offset_top = -52.0
 offset_right = 30.0
-offset_bottom = -8.0
+offset_bottom = -14.0
 grow_horizontal = 2
 grow_vertical = 0
 theme_override_styles/focus = SubResource("StyleBoxEmpty_nhdew")

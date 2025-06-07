@@ -1,4 +1,4 @@
-[gd_scene load_steps=7 format=3 uid="uid://3kobp1qamf1p"]
+[gd_scene load_steps=9 format=3 uid="uid://3kobp1qamf1p"]
 
 [ext_resource type="Script" path="res://Scripts/historia_2.gd" id="1_uyc4l"]
 [ext_resource type="Texture2D" uid="uid://p8s8vafhm5pj" path="res://images/Figura_Tenebrosa.png" id="2_pi3x7"]
@@ -7,6 +7,12 @@
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_2tupj"]
 bg_color = Color(0, 0, 0, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_3ert2"]
+bg_color = Color(0.6, 0.6, 0.6, 0)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_cfk8y"]
+bg_color = Color(0.6, 0.6, 0.6, 0)
 
 [sub_resource type="LabelSettings" id="LabelSettings_67t38"]
 font = ExtResource("4_leybb")
@@ -45,6 +51,8 @@ offset_top = 568.0
 offset_right = 1152.0
 offset_bottom = 646.0
 theme_override_styles/focus = SubResource("StyleBoxFlat_2tupj")
+theme_override_styles/hover = SubResource("StyleBoxFlat_3ert2")
+theme_override_styles/normal = SubResource("StyleBoxFlat_cfk8y")
 icon = ExtResource("3_60vm4")
 
 [node name="Label" type="Label" parent="."]

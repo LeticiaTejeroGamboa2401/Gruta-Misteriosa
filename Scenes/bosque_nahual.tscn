@@ -1,10 +1,11 @@
-[gd_scene load_steps=17 format=3 uid="uid://baprmlaeq60or"]
+[gd_scene load_steps=19 format=3 uid="uid://baprmlaeq60or"]
 
 [ext_resource type="Texture2D" uid="uid://u2rji7tqqd36" path="res://assets/bosque.jpg" id="1_np1lt"]
 [ext_resource type="Script" path="res://Scenes/bosque_nahual.gd" id="1_yjny1"]
 [ext_resource type="Script" path="res://Scripts/nahual.gd" id="4_d0kbo"]
 [ext_resource type="Texture2D" uid="uid://p14a3p8k04i7" path="res://personajes/Nahual_Derecha.png" id="4_gc35m"]
 [ext_resource type="Script" path="res://Scripts/tope_scene_bosque_nahuatl.gd" id="5_88eit"]
+[ext_resource type="Texture2D" uid="uid://dvxui8shhcgnj" path="res://images/Juegos/vidas.png" id="6_0otr6"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_bc2qh"]
 size = Vector2(1151, 14)
@@ -67,6 +68,9 @@ size = Vector2(46.1111, 54.9847)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_4gnib"]
 size = Vector2(20, 189)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_u57rf"]
+bg_color = Color(0.6, 0.6, 0.6, 0)
 
 [node name="BosqueNahual" type="Node2D"]
 script = ExtResource("1_yjny1")
@@ -132,6 +136,36 @@ script = ExtResource("5_88eit")
 [node name="NextScene" type="CollisionShape2D" parent="TopeScene"]
 position = Vector2(1142, 553)
 shape = SubResource("RectangleShape2D_4gnib")
+
+[node name="Panel" type="Panel" parent="."]
+offset_left = 884.0
+offset_top = -1.0
+offset_right = 1152.0
+offset_bottom = 97.0
+theme_override_styles/panel = SubResource("StyleBoxFlat_u57rf")
+
+[node name="Heart1" type="TextureRect" parent="Panel"]
+layout_mode = 0
+offset_right = 91.0
+offset_bottom = 97.0
+texture = ExtResource("6_0otr6")
+expand_mode = 1
+
+[node name="Heart2" type="TextureRect" parent="Panel"]
+layout_mode = 0
+offset_left = 87.0
+offset_right = 178.0
+offset_bottom = 97.0
+texture = ExtResource("6_0otr6")
+expand_mode = 1
+
+[node name="Heart3" type="TextureRect" parent="Panel"]
+layout_mode = 0
+offset_left = 170.0
+offset_right = 261.0
+offset_bottom = 97.0
+texture = ExtResource("6_0otr6")
+expand_mode = 1
 
 [connection signal="body_entered" from="nahual/Area2D" to="nahual" method="_on_area_2d_body_entered"]
 [connection signal="body_entered" from="TopeScene" to="TopeScene" method="_on_body_entered"]

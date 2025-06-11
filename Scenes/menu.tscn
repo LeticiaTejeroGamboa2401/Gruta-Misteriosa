@@ -1,16 +1,45 @@
-[gd_scene load_steps=6 format=3 uid="uid://fwbw1ntakfvw"]
+[gd_scene load_steps=16 format=3 uid="uid://fwbw1ntakfvw"]
 
 [ext_resource type="Texture2D" uid="uid://ivs8kjm4fl0p" path="res://images/menu.png" id="1_8u2qd"]
 [ext_resource type="Script" path="res://Scripts/menu.gd" id="1_s6pxs"]
+[ext_resource type="FontFile" uid="uid://bd321yblpf1ew" path="res://font/Supermarket of Love.ttf" id="3_1fu2u"]
+
+[sub_resource type="FontVariation" id="FontVariation_fmlg1"]
+base_font = ExtResource("3_1fu2u")
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_dnx5q"]
+bg_color = Color(0.6, 0.6, 0.6, 0)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_30oji"]
+bg_color = Color(0, 0, 0, 0.231373)
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_lxt0g"]
 bg_color = Color(0.00820202, 0.00820203, 0.00820202, 1)
+
+[sub_resource type="FontVariation" id="FontVariation_lv63i"]
+base_font = ExtResource("3_1fu2u")
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_4po4g"]
+bg_color = Color(0.6, 0.6, 0.6, 0)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_ei608"]
+bg_color = Color(0, 0, 0, 0.231373)
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_xgjpm"]
 bg_color = Color(0, 0, 0, 1)
 corner_detail = 9
 
-[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_yhd1w"]
+[sub_resource type="FontVariation" id="FontVariation_j2uya"]
+base_font = ExtResource("3_1fu2u")
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_00kpm"]
+bg_color = Color(0.6, 0.6, 0.6, 0)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_cayb4"]
+bg_color = Color(0, 0, 0, 0.231373)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_y81a7"]
+bg_color = Color(0, 0, 0, 0)
 
 [node name="Menu" type="Control"]
 process_mode = 3
@@ -63,20 +92,29 @@ theme_override_constants/separation = 11
 
 [node name="Play" type="Button" parent="ColorRect/VBoxContainer"]
 layout_mode = 2
-theme_override_font_sizes/font_size = 50
+theme_override_fonts/font = SubResource("FontVariation_fmlg1")
+theme_override_font_sizes/font_size = 60
+theme_override_styles/focus = SubResource("StyleBoxFlat_dnx5q")
+theme_override_styles/hover = SubResource("StyleBoxFlat_30oji")
 theme_override_styles/normal = SubResource("StyleBoxFlat_lxt0g")
 text = "JUGAR"
 
 [node name="Quit" type="Button" parent="ColorRect/VBoxContainer"]
 layout_mode = 2
-theme_override_font_sizes/font_size = 50
+theme_override_fonts/font = SubResource("FontVariation_lv63i")
+theme_override_font_sizes/font_size = 60
+theme_override_styles/focus = SubResource("StyleBoxFlat_4po4g")
+theme_override_styles/hover = SubResource("StyleBoxFlat_ei608")
 theme_override_styles/normal = SubResource("StyleBoxFlat_xgjpm")
 text = "SALIR"
 
 [node name="Creditos" type="Button" parent="ColorRect/VBoxContainer"]
 layout_mode = 2
-theme_override_font_sizes/font_size = 47
-theme_override_styles/normal = SubResource("StyleBoxTexture_yhd1w")
+theme_override_fonts/font = SubResource("FontVariation_j2uya")
+theme_override_font_sizes/font_size = 60
+theme_override_styles/focus = SubResource("StyleBoxFlat_00kpm")
+theme_override_styles/hover = SubResource("StyleBoxFlat_cayb4")
+theme_override_styles/normal = SubResource("StyleBoxFlat_y81a7")
 text = "CRÉDITOS"
 
 [connection signal="pressed" from="ColorRect/VBoxContainer/Play" to="." method="_on_play_pressed"]

@@ -7,8 +7,8 @@ func _ready() -> void:
 		var player_instance = Global.selected_character_scene.instantiate()
 		player_instance.name = Global.selected_character_name
 		add_child(player_instance)
-		player_instance.scale = Vector2(0.3, 0.3)
-
+		player_instance.scale = Vector2(0.4, 0.4)
+		player_instance.speed = 150
 		if get_scene_file_path() == Global.use_respawn_in_scene:
 			player_instance.position = Global.respawn_position
 		else:

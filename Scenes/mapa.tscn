@@ -46,7 +46,7 @@ size = Vector2(325, 186.5)
 size = Vector2(52, 101.5)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_tnula"]
-size = Vector2(235, 169.5)
+size = Vector2(235, 194.5)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_88s0q"]
 size = Vector2(353.5, 57)
@@ -61,7 +61,7 @@ size = Vector2(168, 243.5)
 size = Vector2(102, 393)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_hpqfl"]
-size = Vector2(537.75, 172.75)
+size = Vector2(537.75, 195.75)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_emxtt"]
 size = Vector2(55.5, 78)
@@ -100,8 +100,6 @@ texture = ExtResource("1_tmcc6")
 metadata/_edit_lock_ = true
 
 [node name="AreaNoPasar" type="StaticBody2D" parent="."]
-visible = false
-metadata/_edit_lock_ = true
 
 [node name="Area18" type="CollisionShape2D" parent="AreaNoPasar"]
 position = Vector2(929, 628.75)
@@ -152,7 +150,7 @@ position = Vector2(564, 52.25)
 shape = SubResource("RectangleShape2D_3823v")
 
 [node name="Area6" type="CollisionShape2D" parent="AreaNoPasar"]
-position = Vector2(708.5, 83.25)
+position = Vector2(708.5, 95.75)
 shape = SubResource("RectangleShape2D_tnula")
 
 [node name="Area5" type="CollisionShape2D" parent="AreaNoPasar"]
@@ -172,7 +170,7 @@ position = Vector2(50, 449.5)
 shape = SubResource("RectangleShape2D_m4i0i")
 
 [node name="Area1" type="CollisionShape2D" parent="AreaNoPasar"]
-position = Vector2(270.125, 86.625)
+position = Vector2(270.125, 98.125)
 shape = SubResource("RectangleShape2D_hpqfl")
 
 [node name="AtinaleAlPuerquito" type="Area2D" parent="."]

@@ -1,4 +1,4 @@
-[gd_scene load_steps=9 format=3 uid="uid://biucq7vgway8p"]
+[gd_scene load_steps=11 format=3 uid="uid://biucq7vgway8p"]
 
 [ext_resource type="Script" path="res://Scripts/dentro_cueva1.gd" id="1_3emvn"]
 [ext_resource type="Texture2D" uid="uid://brecquw82vupe" path="res://images/DentroCueva.jpg" id="1_ljuwf"]
@@ -12,6 +12,12 @@ size = Vector2(916, 12.5)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_ow6gt"]
 size = Vector2(62, 320)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_wwioo"]
+size = Vector2(856, 20)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_6i2j1"]
+size = Vector2(13.5, 241.5)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_dhmrr"]
 size = Vector2(57.5, 320)
@@ -50,6 +56,14 @@ texture = SubResource("PlaceholderTexture2D_ataps")
 [node name="CollisionShape2D2" type="CollisionShape2D" parent="StaticBody2D"]
 position = Vector2(761, 487)
 shape = SubResource("RectangleShape2D_ow6gt")
+
+[node name="CollisionShape2D3" type="CollisionShape2D" parent="StaticBody2D"]
+position = Vector2(364, 411)
+shape = SubResource("RectangleShape2D_wwioo")
+
+[node name="CollisionShape2D4" type="CollisionShape2D" parent="StaticBody2D"]
+position = Vector2(-8, 527)
+shape = SubResource("RectangleShape2D_6i2j1")
 
 [node name="Area2D" type="Area2D" parent="."]
 script = ExtResource("1_p6typ")

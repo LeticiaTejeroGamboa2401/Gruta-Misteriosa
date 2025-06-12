@@ -1,7 +1,7 @@
-[gd_scene load_steps=19 format=3 uid="uid://baprmlaeq60or"]
+[gd_scene load_steps=20 format=3 uid="uid://baprmlaeq60or"]
 
 [ext_resource type="Texture2D" uid="uid://u2rji7tqqd36" path="res://assets/bosque.jpg" id="1_np1lt"]
-[ext_resource type="Script" path="res://Scenes/bosque_nahual.gd" id="1_yjny1"]
+[ext_resource type="Script" path="res://Scripts/bosque_nahual.gd" id="1_yjny1"]
 [ext_resource type="Script" path="res://Scripts/nahual.gd" id="4_d0kbo"]
 [ext_resource type="Texture2D" uid="uid://p14a3p8k04i7" path="res://personajes/Nahual_Derecha.png" id="4_gc35m"]
 [ext_resource type="Script" path="res://Scripts/tope_scene_bosque_nahuatl.gd" id="5_88eit"]
@@ -9,6 +9,9 @@
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_bc2qh"]
 size = Vector2(1151, 14)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_ddbh4"]
+size = Vector2(1151, 15)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_ts5nx"]
 atlas = ExtResource("4_gc35m")
@@ -83,11 +86,14 @@ metadata/_edit_lock_ = true
 
 [node name="StaticBody2D" type="StaticBody2D" parent="."]
 position = Vector2(575.5, 642)
-metadata/_edit_lock_ = true
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D"]
 shape = SubResource("RectangleShape2D_bc2qh")
 one_way_collision_margin = 128.0
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="StaticBody2D"]
+position = Vector2(1, -233.5)
+shape = SubResource("RectangleShape2D_ddbh4")
 
 [node name="nahual" type="CharacterBody2D" parent="."]
 position = Vector2(-117, 581)

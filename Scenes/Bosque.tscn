@@ -1,4 +1,4 @@
-[gd_scene load_steps=10 format=3 uid="uid://76cc3p1lvffq"]
+[gd_scene load_steps=12 format=3 uid="uid://76cc3p1lvffq"]
 
 [ext_resource type="Script" path="res://Scripts/bosque.gd" id="1_52jtc"]
 [ext_resource type="Texture2D" uid="uid://c4ljuuy56jopt" path="res://images/Bosque.jpg" id="1_anv7h"]
@@ -16,6 +16,12 @@ size = Vector2(51, 252)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_3e53c"]
 size = Vector2(27.5, 248.5)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_seefp"]
+size = Vector2(689, 54)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_idg8j"]
+size = Vector2(7.5, 220.5)
 
 [node name="Control" type="Control"]
 layout_mode = 3
@@ -71,6 +77,14 @@ texture = ExtResource("4_jyrlr")
 [node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D2"]
 position = Vector2(673.25, 519.25)
 shape = SubResource("RectangleShape2D_3e53c")
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="StaticBody2D2"]
+position = Vector2(344.5, 399)
+shape = SubResource("RectangleShape2D_seefp")
+
+[node name="CollisionShape2D3" type="CollisionShape2D" parent="StaticBody2D2"]
+position = Vector2(3.25, 536.25)
+shape = SubResource("RectangleShape2D_idg8j")
 
 [connection signal="body_entered" from="Area2D" to="Area2D" method="_on_body_entered"]
 [connection signal="draw" from="Area2D/HuayChivo" to="." method="_on_huay_chivo_draw"]

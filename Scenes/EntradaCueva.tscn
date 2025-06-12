@@ -1,9 +1,9 @@
-[gd_scene load_steps=10 format=3 uid="uid://cox8lum0ipe8t"]
+[gd_scene load_steps=12 format=3 uid="uid://cox8lum0ipe8t"]
 
 [ext_resource type="Texture2D" uid="uid://c4ljuuy56jopt" path="res://images/Bosque.jpg" id="1_dm15r"]
 [ext_resource type="Script" path="res://Scripts/entrada_cueva_control.gd" id="1_kevb2"]
 [ext_resource type="Texture2D" uid="uid://u7pgc4jgx8qf" path="res://images/cueva.png" id="2_m1ota"]
-[ext_resource type="Script" path="res://Scenes/entrada_cueva_area.gd" id="4_jnyy8"]
+[ext_resource type="Script" path="res://Scripts/entrada_cueva_area.gd" id="4_jnyy8"]
 [ext_resource type="PackedScene" uid="uid://cshqucsavs7df" path="res://Scenes/Murcielago_Volando.tscn" id="6_dakeb"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_foiys"]
@@ -16,6 +16,12 @@ size = Vector2(55, 345)
 size = Vector2(1040.5, 6.5)
 
 [sub_resource type="PlaceholderTexture2D" id="PlaceholderTexture2D_k2fqe"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_dbrtf"]
+size = Vector2(1031, 22)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_uat48"]
+size = Vector2(5.5, 249)
 
 [node name="Control" type="Control"]
 layout_mode = 3
@@ -72,6 +78,14 @@ visible = false
 position = Vector2(522.625, 644.125)
 scale = Vector2(1044.75, 6.24999)
 texture = SubResource("PlaceholderTexture2D_k2fqe")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D"]
+position = Vector2(513, 407)
+shape = SubResource("RectangleShape2D_dbrtf")
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="StaticBody2D"]
+position = Vector2(3.25, 520.5)
+shape = SubResource("RectangleShape2D_uat48")
 
 [node name="murcielago" parent="." instance=ExtResource("6_dakeb")]
 position = Vector2(1106, 170)

@@ -1,0 +1,16 @@
+[gd_resource type="Resource" script_class="QuizQuestion" load_steps=8 format=3 uid="uid://ckthsip83pnnk"]
+
+[ext_resource type="Script" path="res://Scripts/Juegos/AdivinaProducto/resources/questions.gd" id="1_2pf7g"]
+[ext_resource type="Texture2D" uid="uid://b4bxy7u4emg3o" path="res://images/Juegos/Adivina_el_Producto/Pitahaya.png" id="1_ideo0"]
+[ext_resource type="Texture2D" uid="uid://k8e0l1w2qhym" path="res://images/Platano.png" id="2_ho43l"]
+[ext_resource type="Texture2D" uid="uid://f2orkftgtpoo" path="res://images/Frijol.png" id="3_o271l"]
+[ext_resource type="Texture2D" uid="uid://dm7psrb3dxdb" path="res://images/Juegos/Adivina_el_Producto/Ciruela.png" id="4_k40n4"]
+[ext_resource type="Texture2D" uid="uid://7yfknnel5vb5" path="res://images/Juegos/Adivina_el_Producto/Naranja.png" id="5_xvbw3"]
+[ext_resource type="Texture2D" uid="uid://ci4fafnoofyfd" path="res://images/Juegos/Adivina_el_Producto/Guanábana.png" id="6_rx61i"]
+
+[resource]
+script = ExtResource("1_2pf7g")
+question_info = "¿Qué producto cuesta un tercio más de lo que cuesta la guanábana?"
+type = 0
+options = Array[Texture2D]([ExtResource("2_ho43l"), ExtResource("3_o271l"), ExtResource("4_k40n4"), ExtResource("5_xvbw3"), ExtResource("6_rx61i"), ExtResource("1_ideo0")])
+correct = ExtResource("1_ideo0")

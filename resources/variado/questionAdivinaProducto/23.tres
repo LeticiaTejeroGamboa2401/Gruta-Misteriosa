@@ -1,0 +1,16 @@
+[gd_resource type="Resource" script_class="QuizQuestion" load_steps=8 format=3 uid="uid://cytj8e1h2a8w6"]
+
+[ext_resource type="Texture2D" uid="uid://dm7psrb3dxdb" path="res://images/Juegos/Adivina_el_Producto/Ciruela.png" id="1_fp7ft"]
+[ext_resource type="Script" path="res://Scripts/Juegos/AdivinaProducto/resources/questions.gd" id="1_rlfbx"]
+[ext_resource type="Texture2D" uid="uid://k8e0l1w2qhym" path="res://images/Platano.png" id="2_t1wu6"]
+[ext_resource type="Texture2D" uid="uid://f2orkftgtpoo" path="res://images/Frijol.png" id="3_alh63"]
+[ext_resource type="Texture2D" uid="uid://7yfknnel5vb5" path="res://images/Juegos/Adivina_el_Producto/Naranja.png" id="4_qem7v"]
+[ext_resource type="Texture2D" uid="uid://ci4fafnoofyfd" path="res://images/Juegos/Adivina_el_Producto/Guanábana.png" id="5_38x75"]
+[ext_resource type="Texture2D" uid="uid://b4bxy7u4emg3o" path="res://images/Juegos/Adivina_el_Producto/Pitahaya.png" id="6_4hoj1"]
+
+[resource]
+script = ExtResource("1_rlfbx")
+question_info = "¿Qué producto cuesta exactamente la mitad de la pitahaya?"
+type = 0
+options = Array[Texture2D]([ExtResource("2_t1wu6"), ExtResource("3_alh63"), ExtResource("1_fp7ft"), ExtResource("4_qem7v"), ExtResource("5_38x75"), ExtResource("6_4hoj1")])
+correct = ExtResource("1_fp7ft")

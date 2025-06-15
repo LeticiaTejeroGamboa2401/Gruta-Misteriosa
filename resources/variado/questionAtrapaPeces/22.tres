@@ -1,0 +1,15 @@
+[gd_resource type="Resource" script_class="QuizQuestionPecesitos" load_steps=6 format=3 uid="uid://ck5luhgdr1y8i"]
+
+[ext_resource type="PackedScene" uid="uid://df4b43ke3dpqd" path="res://Scenes/Juegos/Atrapa_Peces/Peces/Pez32.tscn" id="1_m20lx"]
+[ext_resource type="Script" path="res://Scripts/Juegos/AtrapaPeces/question.gd" id="1_wws86"]
+[ext_resource type="PackedScene" uid="uid://c68nvp2ykppat" path="res://Scenes/Juegos/Atrapa_Peces/Peces/Pez30.tscn" id="2_fp88u"]
+[ext_resource type="PackedScene" uid="uid://cj4x0qqy5h77q" path="res://Scenes/Juegos/Atrapa_Peces/Peces/Pez25.tscn" id="3_j0l8p"]
+[ext_resource type="Texture2D" uid="uid://dh8mrmoue5p4t" path="res://images/Juegos/Atrapa_Peces/22.png" id="4_dmsky"]
+
+[resource]
+script = ExtResource("1_wws86")
+question_info = "Comí 8 uvas. Mi hermano comió el cuádruple. ¿Cuántas comió él?"
+question_img = ExtResource("4_dmsky")
+type = 0
+options = Array[PackedScene]([ExtResource("2_fp88u"), ExtResource("3_j0l8p"), ExtResource("1_m20lx")])
+correct = ExtResource("1_m20lx")

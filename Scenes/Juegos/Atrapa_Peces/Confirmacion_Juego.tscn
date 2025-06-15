@@ -1,0 +1,160 @@
+[gd_scene load_steps=20 format=3 uid="uid://d14trte3lxabb"]
+
+[ext_resource type="Script" path="res://Scripts/Juegos/AtrapaPeces/confirmacion_juego.gd" id="1_oiojo"]
+[ext_resource type="Texture2D" uid="uid://cfyed1mbxgntf" path="res://images/Juegos/Atrapa_Peces/fondo_confirmacion.png" id="1_r5owa"]
+[ext_resource type="FontFile" uid="uid://ex6sf638yhh5" path="res://font/Chonky Bunny.ttf" id="2_rcpgw"]
+[ext_resource type="FontFile" uid="uid://q4llc3uguqs2" path="res://font/KGCorneroftheSky.ttf" id="3_4oirs"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_biqjf"]
+bg_color = Color(1, 1, 1, 0.705882)
+border_width_left = 3
+border_width_top = 3
+border_width_right = 3
+border_width_bottom = 3
+border_color = Color(0, 0, 0, 1)
+corner_radius_top_left = 15
+corner_radius_top_right = 15
+corner_radius_bottom_right = 15
+corner_radius_bottom_left = 15
+
+[sub_resource type="LabelSettings" id="LabelSettings_ol52a"]
+font = ExtResource("2_rcpgw")
+font_size = 50
+font_color = Color(0, 0, 0, 1)
+
+[sub_resource type="FontVariation" id="FontVariation_olyw2"]
+base_font = ExtResource("3_4oirs")
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_4pg0n"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_xqkqq"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_4ubnn"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_uox8e"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_ptpp1"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_6rumc"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_66kcj"]
+bg_color = Color(1, 1, 1, 1)
+border_width_left = 5
+border_width_top = 5
+border_width_right = 5
+border_width_bottom = 5
+border_color = Color(0.54902, 0.835294, 0.411765, 1)
+corner_radius_top_left = 15
+corner_radius_top_right = 15
+corner_radius_bottom_right = 15
+corner_radius_bottom_left = 15
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_lg777"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_kqydd"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_o25mq"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_bfq5b"]
+bg_color = Color(1, 1, 1, 1)
+border_width_left = 3
+border_width_top = 3
+border_width_right = 3
+border_width_bottom = 3
+border_color = Color(0, 0, 0, 1)
+corner_radius_top_left = 15
+corner_radius_top_right = 15
+corner_radius_bottom_right = 15
+corner_radius_bottom_left = 15
+
+[sub_resource type="FontVariation" id="FontVariation_bu3lx"]
+base_font = ExtResource("3_4oirs")
+
+[node name="Control" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_oiojo")
+
+[node name="TextureRect" type="TextureRect" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("1_r5owa")
+
+[node name="Explicación" type="Panel" parent="."]
+layout_mode = 0
+offset_left = 85.0
+offset_top = 472.0
+offset_right = 775.0
+offset_bottom = 637.0
+theme_override_styles/panel = SubResource("StyleBoxFlat_biqjf")
+
+[node name="Label" type="Label" parent="Explicación"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 20.0
+grow_horizontal = 2
+grow_vertical = 2
+text = "Alux Gruñón:
+¿Te gustaría jugar \"Atrapa peces\"?"
+label_settings = SubResource("LabelSettings_ol52a")
+vertical_alignment = 1
+autowrap_mode = 2
+
+[node name="Jugar" type="Button" parent="."]
+layout_mode = 0
+offset_left = 799.0
+offset_top = 480.0
+offset_right = 984.0
+offset_bottom = 549.0
+theme_override_colors/font_hover_color = Color(0, 0, 0, 1)
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = SubResource("FontVariation_olyw2")
+theme_override_font_sizes/font_size = 30
+theme_override_styles/focus = SubResource("StyleBoxEmpty_4pg0n")
+theme_override_styles/disabled_mirrored = SubResource("StyleBoxEmpty_xqkqq")
+theme_override_styles/disabled = SubResource("StyleBoxEmpty_4ubnn")
+theme_override_styles/hover_pressed_mirrored = SubResource("StyleBoxEmpty_uox8e")
+theme_override_styles/hover_pressed = SubResource("StyleBoxEmpty_ptpp1")
+theme_override_styles/hover_mirrored = SubResource("StyleBoxEmpty_6rumc")
+theme_override_styles/hover = SubResource("StyleBoxFlat_66kcj")
+theme_override_styles/pressed_mirrored = SubResource("StyleBoxEmpty_lg777")
+theme_override_styles/pressed = SubResource("StyleBoxEmpty_kqydd")
+theme_override_styles/normal_mirrored = SubResource("StyleBoxEmpty_o25mq")
+theme_override_styles/normal = SubResource("StyleBoxFlat_bfq5b")
+text = "JUGAR"
+
+[node name="Salir" type="Button" parent="."]
+layout_mode = 0
+offset_left = 799.0
+offset_top = 560.0
+offset_right = 984.0
+offset_bottom = 629.0
+theme_override_colors/font_hover_color = Color(0, 0, 0, 1)
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = SubResource("FontVariation_bu3lx")
+theme_override_font_sizes/font_size = 30
+theme_override_styles/focus = SubResource("StyleBoxEmpty_4pg0n")
+theme_override_styles/disabled_mirrored = SubResource("StyleBoxEmpty_xqkqq")
+theme_override_styles/disabled = SubResource("StyleBoxEmpty_4ubnn")
+theme_override_styles/hover_pressed_mirrored = SubResource("StyleBoxEmpty_uox8e")
+theme_override_styles/hover_pressed = SubResource("StyleBoxEmpty_ptpp1")
+theme_override_styles/hover_mirrored = SubResource("StyleBoxEmpty_6rumc")
+theme_override_styles/hover = SubResource("StyleBoxFlat_66kcj")
+theme_override_styles/pressed_mirrored = SubResource("StyleBoxEmpty_lg777")
+theme_override_styles/pressed = SubResource("StyleBoxEmpty_kqydd")
+theme_override_styles/normal_mirrored = SubResource("StyleBoxEmpty_o25mq")
+theme_override_styles/normal = SubResource("StyleBoxFlat_bfq5b")
+text = "SALIR"
+
+[connection signal="pressed" from="Jugar" to="." method="_on_jugar_pressed"]
+[connection signal="pressed" from="Salir" to="." method="_on_salir_pressed"]

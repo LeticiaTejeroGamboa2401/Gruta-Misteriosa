@@ -14,6 +14,8 @@ var juegos_ganados = {
 	"juego_patito": false,
 	"juego_producto": false,
 	"juego_caballo": false,
+	"juego_peces": false,
+	"juego_dardos": false,
 }
 
 # Vidas en el juego del nahual

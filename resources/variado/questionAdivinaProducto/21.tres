@@ -1,0 +1,16 @@
+[gd_resource type="Resource" script_class="QuizQuestion" load_steps=8 format=3 uid="uid://dnmhfuhw1g5f3"]
+
+[ext_resource type="Script" path="res://Scripts/Juegos/AdivinaProducto/resources/questions.gd" id="1_1ijo7"]
+[ext_resource type="Texture2D" uid="uid://b308liwfy8dxw" path="res://images/Juegos/Adivina_el_Producto/Mango.png" id="1_f7d8m"]
+[ext_resource type="Texture2D" uid="uid://cum0rb755gfoy" path="res://images/Maiz.png" id="2_silgt"]
+[ext_resource type="Texture2D" uid="uid://c1utjlw02035i" path="res://images/Juegos/Adivina_el_Producto/Coco.png" id="3_hvr25"]
+[ext_resource type="Texture2D" uid="uid://coong2q6pse8x" path="res://images/Juegos/Adivina_el_Producto/Zapote.png" id="4_uhexd"]
+[ext_resource type="Texture2D" uid="uid://b4bxy7u4emg3o" path="res://images/Juegos/Adivina_el_Producto/Pitahaya.png" id="5_nbw7a"]
+[ext_resource type="Texture2D" uid="uid://6su11n7270kq" path="res://images/Juegos/Adivina_el_Producto/Jícama.png" id="6_in3en"]
+
+[resource]
+script = ExtResource("1_1ijo7")
+question_info = ""
+type = 0
+options = Array[Texture2D]([ExtResource("2_silgt"), ExtResource("3_hvr25"), ExtResource("4_uhexd"), ExtResource("1_f7d8m"), ExtResource("5_nbw7a"), ExtResource("6_in3en")])
+correct = ExtResource("1_f7d8m")

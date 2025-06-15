@@ -47,11 +47,7 @@ grow_horizontal = 2
 texture = ExtResource("1_dtdph")
 
 [node name="Aluxe" parent="." instance=ExtResource("2_uu2fq")]
-layout_mode = 1
-offset_left = 741.0
-offset_top = 300.0
-offset_right = -236.0
-offset_bottom = -188.0
+position = Vector2(810, 299)
 
 [node name="Label" type="Label" parent="."]
 layout_mode = 1

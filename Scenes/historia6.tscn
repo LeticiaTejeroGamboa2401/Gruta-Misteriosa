@@ -47,11 +47,7 @@ grow_horizontal = 2
 texture = ExtResource("2_s0nyl")
 
 [node name="Aluxe" parent="." instance=ExtResource("3_vw5n5")]
-layout_mode = 1
-offset_left = 741.0
-offset_top = 300.0
-offset_right = -236.0
-offset_bottom = -188.0
+position = Vector2(810, 300)
 
 [node name="Label" type="Label" parent="."]
 layout_mode = 1
@@ -66,8 +62,8 @@ offset_right = 182.0
 offset_bottom = -28.0
 grow_horizontal = 2
 grow_vertical = 0
-text = "Sígueme, te llevaré al pueblo de 
-los aluxes."
+text = "¡Sígueme! 
+Te llevaré al pueblo de los aluxes."
 label_settings = SubResource("LabelSettings_jhx6o")
 horizontal_alignment = 1
 

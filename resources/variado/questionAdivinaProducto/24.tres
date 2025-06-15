@@ -1,0 +1,16 @@
+[gd_resource type="Resource" script_class="QuizQuestion" load_steps=8 format=3 uid="uid://c7q3jodhykmtk"]
+
+[ext_resource type="Script" path="res://Scripts/Juegos/AdivinaProducto/resources/questions.gd" id="1_g6yxj"]
+[ext_resource type="Texture2D" uid="uid://k8e0l1w2qhym" path="res://images/Platano.png" id="1_tqlkh"]
+[ext_resource type="Texture2D" uid="uid://f2orkftgtpoo" path="res://images/Frijol.png" id="2_treev"]
+[ext_resource type="Texture2D" uid="uid://dm7psrb3dxdb" path="res://images/Juegos/Adivina_el_Producto/Ciruela.png" id="3_ajjyu"]
+[ext_resource type="Texture2D" uid="uid://7yfknnel5vb5" path="res://images/Juegos/Adivina_el_Producto/Naranja.png" id="4_xeuoe"]
+[ext_resource type="Texture2D" uid="uid://ci4fafnoofyfd" path="res://images/Juegos/Adivina_el_Producto/Guanábana.png" id="5_gj0n8"]
+[ext_resource type="Texture2D" uid="uid://b4bxy7u4emg3o" path="res://images/Juegos/Adivina_el_Producto/Pitahaya.png" id="6_wkftx"]
+
+[resource]
+script = ExtResource("1_g6yxj")
+question_info = "¿Qué producto de precio medio: plátano, ciruela o naranja?"
+type = 0
+options = Array[Texture2D]([ExtResource("1_tqlkh"), ExtResource("2_treev"), ExtResource("3_ajjyu"), ExtResource("4_xeuoe"), ExtResource("5_gj0n8"), ExtResource("6_wkftx")])
+correct = ExtResource("1_tqlkh")

@@ -1,10 +1,9 @@
-[gd_scene load_steps=12 format=3 uid="uid://mjqeihld7oa5"]
+[gd_scene load_steps=31 format=3 uid="uid://mjqeihld7oa5"]
 
 [ext_resource type="Texture2D" uid="uid://bngvmn4pxexsn" path="res://images/Juegos/Atinale_al_Puerquito/fondo_confirmacion.png" id="1_2iut6"]
 [ext_resource type="Script" path="res://Scripts/Juegos/AtinalePuerquito/confirmar_juego.gd" id="1_kebh3"]
 [ext_resource type="FontFile" uid="uid://ex6sf638yhh5" path="res://font/Chonky Bunny.ttf" id="2_a30ve"]
-[ext_resource type="Texture2D" uid="uid://ia7h51bd82fs" path="res://images/jugar.png" id="3_toymp"]
-[ext_resource type="Texture2D" uid="uid://c4w7uy881hqor" path="res://images/salir.png" id="4_cdvrl"]
+[ext_resource type="FontFile" uid="uid://q4llc3uguqs2" path="res://font/KGCorneroftheSky.ttf" id="4_o46rl"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_vmygt"]
 bg_color = Color(1, 1, 1, 0.54902)
@@ -23,13 +22,95 @@ font = ExtResource("2_a30ve")
 font_size = 45
 font_color = Color(0, 0, 0, 1)
 
-[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_6mm2i"]
+[sub_resource type="FontVariation" id="FontVariation_2ycap"]
+base_font = ExtResource("4_o46rl")
 
-[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_fsxel"]
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_dr13e"]
 
-[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_cg22t"]
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_sfoj2"]
 
-[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_lxebm"]
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_h4u76"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_brk7b"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_jh8ay"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_7rr1o"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_mohwa"]
+bg_color = Color(1, 1, 1, 1)
+border_width_left = 5
+border_width_top = 5
+border_width_right = 5
+border_width_bottom = 5
+border_color = Color(0.54902, 0.835294, 0.411765, 1)
+corner_radius_top_left = 15
+corner_radius_top_right = 15
+corner_radius_bottom_right = 15
+corner_radius_bottom_left = 15
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_4f8kq"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_xjli0"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_ftvv1"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_h1y2f"]
+bg_color = Color(1, 1, 1, 1)
+border_width_left = 3
+border_width_top = 3
+border_width_right = 3
+border_width_bottom = 3
+border_color = Color(0, 0, 0, 1)
+corner_radius_top_left = 15
+corner_radius_top_right = 15
+corner_radius_bottom_right = 15
+corner_radius_bottom_left = 15
+
+[sub_resource type="FontVariation" id="FontVariation_jhej4"]
+base_font = ExtResource("4_o46rl")
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_7jl7n"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_06mqj"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_2epal"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_lbkbw"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_imh22"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_l4ggd"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_l01ie"]
+bg_color = Color(1, 1, 1, 1)
+border_width_left = 5
+border_width_top = 5
+border_width_right = 5
+border_width_bottom = 5
+border_color = Color(1, 0, 0.2, 1)
+corner_radius_top_left = 15
+corner_radius_top_right = 15
+corner_radius_bottom_right = 15
+corner_radius_bottom_left = 15
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_vs2wr"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_hocfa"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_1odg5"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_eu7qp"]
+bg_color = Color(1, 1, 1, 1)
+border_width_left = 3
+border_width_top = 3
+border_width_right = 3
+border_width_bottom = 3
+border_color = Color(0, 0, 0, 1)
+corner_radius_top_left = 15
+corner_radius_top_right = 15
+corner_radius_bottom_right = 15
+corner_radius_bottom_left = 15
 
 [node name="Control" type="Control"]
 layout_mode = 3
@@ -75,23 +156,49 @@ vertical_alignment = 1
 
 [node name="Jugar" type="Button" parent="."]
 layout_mode = 0
-offset_left = 834.0
-offset_top = 481.0
-offset_right = 1027.0
-offset_bottom = 550.0
-theme_override_styles/hover = SubResource("StyleBoxTexture_6mm2i")
-theme_override_styles/normal = SubResource("StyleBoxTexture_fsxel")
-icon = ExtResource("3_toymp")
+offset_left = 820.0
+offset_top = 488.0
+offset_right = 1013.0
+offset_bottom = 555.0
+theme_override_colors/font_hover_color = Color(0, 0, 0, 1)
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = SubResource("FontVariation_2ycap")
+theme_override_font_sizes/font_size = 35
+theme_override_styles/focus = SubResource("StyleBoxEmpty_dr13e")
+theme_override_styles/disabled_mirrored = SubResource("StyleBoxEmpty_sfoj2")
+theme_override_styles/disabled = SubResource("StyleBoxEmpty_h4u76")
+theme_override_styles/hover_pressed_mirrored = SubResource("StyleBoxEmpty_brk7b")
+theme_override_styles/hover_pressed = SubResource("StyleBoxEmpty_jh8ay")
+theme_override_styles/hover_mirrored = SubResource("StyleBoxEmpty_7rr1o")
+theme_override_styles/hover = SubResource("StyleBoxFlat_mohwa")
+theme_override_styles/pressed_mirrored = SubResource("StyleBoxEmpty_4f8kq")
+theme_override_styles/pressed = SubResource("StyleBoxEmpty_xjli0")
+theme_override_styles/normal_mirrored = SubResource("StyleBoxEmpty_ftvv1")
+theme_override_styles/normal = SubResource("StyleBoxFlat_h1y2f")
+text = "JUGAR"
 
 [node name="Salir" type="Button" parent="."]
 layout_mode = 0
-offset_left = 829.0
+offset_left = 818.0
 offset_top = 563.0
-offset_right = 1018.0
-offset_bottom = 627.0
-theme_override_styles/hover = SubResource("StyleBoxTexture_cg22t")
-theme_override_styles/normal = SubResource("StyleBoxTexture_lxebm")
-icon = ExtResource("4_cdvrl")
+offset_right = 1014.0
+offset_bottom = 633.0
+theme_override_colors/font_hover_color = Color(0, 0, 0, 1)
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = SubResource("FontVariation_jhej4")
+theme_override_font_sizes/font_size = 35
+theme_override_styles/focus = SubResource("StyleBoxEmpty_7jl7n")
+theme_override_styles/disabled_mirrored = SubResource("StyleBoxEmpty_06mqj")
+theme_override_styles/disabled = SubResource("StyleBoxEmpty_2epal")
+theme_override_styles/hover_pressed_mirrored = SubResource("StyleBoxEmpty_lbkbw")
+theme_override_styles/hover_pressed = SubResource("StyleBoxEmpty_imh22")
+theme_override_styles/hover_mirrored = SubResource("StyleBoxEmpty_l4ggd")
+theme_override_styles/hover = SubResource("StyleBoxFlat_l01ie")
+theme_override_styles/pressed_mirrored = SubResource("StyleBoxEmpty_vs2wr")
+theme_override_styles/pressed = SubResource("StyleBoxEmpty_hocfa")
+theme_override_styles/normal_mirrored = SubResource("StyleBoxEmpty_1odg5")
+theme_override_styles/normal = SubResource("StyleBoxFlat_eu7qp")
+text = "SALIR"
 
 [connection signal="pressed" from="Jugar" to="." method="_on_jugar_pressed"]
 [connection signal="pressed" from="Salir" to="." method="_on_salir_pressed"]

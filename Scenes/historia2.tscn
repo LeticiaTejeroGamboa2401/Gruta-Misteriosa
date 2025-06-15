@@ -1,7 +1,7 @@
 [gd_scene load_steps=9 format=3 uid="uid://3kobp1qamf1p"]
 
 [ext_resource type="Script" path="res://Scripts/historia_2.gd" id="1_uyc4l"]
-[ext_resource type="Texture2D" uid="uid://p8s8vafhm5pj" path="res://images/Figura_Tenebrosa.png" id="2_pi3x7"]
+[ext_resource type="Texture2D" uid="uid://chd2l4ngf1wmy" path="res://images/Figura_Tenebrosa.png" id="2_pi3x7"]
 [ext_resource type="Texture2D" uid="uid://ci1roshk4clhe" path="res://images/Siguiente.png" id="3_60vm4"]
 [ext_resource type="FontFile" uid="uid://bd321yblpf1ew" path="res://font/Supermarket of Love.ttf" id="4_leybb"]
 
@@ -61,7 +61,7 @@ offset_left = 197.0
 offset_top = 480.0
 offset_right = 960.0
 offset_bottom = 533.0
-text = "Aparece frente a ti una figura tenebrosa"
+text = "Aparece frente a ti una figura tenebrosa."
 label_settings = SubResource("LabelSettings_67t38")
 
 [connection signal="pressed" from="Siguiente" to="." method="_on_siguiente_pressed"]

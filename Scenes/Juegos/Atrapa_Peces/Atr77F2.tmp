@@ -1,0 +1,174 @@
+[gd_scene load_steps=14 format=3 uid="uid://dh8a80lb0i56g"]
+
+[ext_resource type="Script" path="res://Scripts/Juegos/Controllers/game_controller_peces.gd" id="1_dwy8s"]
+[ext_resource type="Texture2D" uid="uid://bnggiecbse3nk" path="res://images/Juegos/Atrapa_Peces/Fondo.png" id="1_wkwfs"]
+[ext_resource type="Resource" uid="uid://1w8qxs8oa3lf" path="res://resources/variado/theme/theme_peces.tres" id="2_1gb3w"]
+[ext_resource type="Texture2D" uid="uid://c0p1a7kqkprgq" path="res://images/Juegos/Atrapa_Peces/Estanque.png" id="2_b73kn"]
+[ext_resource type="Texture2D" uid="uid://bpmcq0vhbsypq" path="res://images/Juegos/Atrapa_Peces/correcto.png" id="3_5i0nu"]
+[ext_resource type="Texture2D" uid="uid://c5quookrq6afa" path="res://images/Juegos/Atrapa_Peces/incorrecto.png" id="4_fl4th"]
+[ext_resource type="FontFile" uid="uid://ex6sf638yhh5" path="res://font/Chonky Bunny.ttf" id="7_xq78p"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_e68pq"]
+bg_color = Color(1, 1, 1, 0.705882)
+border_width_left = 3
+border_width_top = 3
+border_width_right = 3
+border_width_bottom = 3
+border_color = Color(1, 1, 1, 1)
+corner_radius_top_left = 15
+corner_radius_top_right = 15
+corner_radius_bottom_right = 15
+corner_radius_bottom_left = 15
+
+[sub_resource type="LabelSettings" id="LabelSettings_ehs0h"]
+font = ExtResource("7_xq78p")
+font_size = 35
+font_color = Color(0, 0, 0, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_17jw3"]
+bg_color = Color(0, 0, 0, 0.705882)
+border_width_left = 3
+border_width_top = 3
+border_width_right = 3
+border_width_bottom = 3
+border_color = Color(1, 1, 1, 1)
+corner_radius_top_left = 15
+corner_radius_top_right = 15
+corner_radius_bottom_right = 15
+corner_radius_bottom_left = 15
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_j7e2l"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_1biqp"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_p2a8g"]
+
+[node name="Main" type="CanvasLayer"]
+script = ExtResource("1_dwy8s")
+quiz = ExtResource("2_1gb3w")
+imgCorrecto = ExtResource("3_5i0nu")
+imgIncorrecto = ExtResource("4_fl4th")
+
+[node name="Control" type="Control" parent="."]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Fondo" type="TextureRect" parent="Control"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("1_wkwfs")
+
+[node name="Estanque" type="TextureRect" parent="Control"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -578.0
+offset_top = -320.0
+offset_right = 578.0
+offset_bottom = 324.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("2_b73kn")
+
+[node name="Pregunta" type="Panel" parent="Control"]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -378.0
+offset_top = 10.0
+offset_right = 378.0
+offset_bottom = 223.0
+grow_horizontal = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_e68pq")
+
+[node name="Texto" type="Label" parent="Control/Pregunta"]
+layout_mode = 0
+offset_left = 14.0
+offset_top = 13.0
+offset_right = 497.0
+offset_bottom = 201.0
+label_settings = SubResource("LabelSettings_ehs0h")
+horizontal_alignment = 1
+vertical_alignment = 1
+autowrap_mode = 2
+
+[node name="Imagen" type="TextureRect" parent="Control/Pregunta"]
+layout_mode = 0
+offset_left = 509.0
+offset_top = 13.0
+offset_right = 745.0
+offset_bottom = 201.0
+expand_mode = 1
+
+[node name="Correcto" type="Panel" parent="Control"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -79.0
+offset_top = -75.5
+offset_right = 79.0
+offset_bottom = 75.5
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_17jw3")
+
+[node name="FeedBackImage" type="TextureRect" parent="Control/Correcto"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+expand_mode = 1
+
+[node name="MenuButtons" type="MenuButton" parent="Control"]
+layout_mode = 0
+offset_top = 438.0
+offset_right = 1149.0
+offset_bottom = 643.0
+
+[node name="Button" type="Button" parent="Control/MenuButtons"]
+layout_mode = 0
+offset_left = 185.0
+offset_top = 7.0
+offset_right = 548.0
+offset_bottom = 103.0
+theme_override_styles/normal = SubResource("StyleBoxEmpty_j7e2l")
+
+[node name="Button2" type="Button" parent="Control/MenuButtons"]
+layout_mode = 0
+offset_left = 608.0
+offset_top = 6.0
+offset_right = 971.0
+offset_bottom = 102.0
+theme_override_styles/normal = SubResource("StyleBoxEmpty_1biqp")
+
+[node name="Button3" type="Button" parent="Control/MenuButtons"]
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = 388.5
+offset_top = 99.0
+offset_right = 751.5
+offset_bottom = 195.0
+grow_horizontal = 2
+grow_vertical = 0
+theme_override_styles/normal = SubResource("StyleBoxEmpty_p2a8g")

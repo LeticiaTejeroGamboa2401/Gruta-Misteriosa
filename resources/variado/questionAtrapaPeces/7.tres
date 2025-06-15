@@ -1,0 +1,15 @@
+[gd_resource type="Resource" script_class="QuizQuestionPecesitos" load_steps=6 format=3 uid="uid://bsxim815s1882"]
+
+[ext_resource type="PackedScene" uid="uid://cheeds4g8kebv" path="res://Scenes/Juegos/Atrapa_Peces/Peces/Pez150.tscn" id="1_60gmo"]
+[ext_resource type="Script" path="res://Scripts/Juegos/AtrapaPeces/question.gd" id="1_mxy2y"]
+[ext_resource type="PackedScene" uid="uid://beidnqo5l6prf" path="res://Scenes/Juegos/Atrapa_Peces/Peces/Pez100.tscn" id="2_x6kx1"]
+[ext_resource type="PackedScene" uid="uid://cdtjksf71e3m" path="res://Scenes/Juegos/Atrapa_Peces/Peces/Pez250.tscn" id="3_crmo6"]
+[ext_resource type="Texture2D" uid="uid://j2jfpwdx46hy" path="res://images/Juegos/Atrapa_Peces/7.png" id="4_gj6j8"]
+
+[resource]
+script = ExtResource("1_mxy2y")
+question_info = "Tengo 60 tazos. Si me regalan 90 más, ¿cuántos tazos tendré en total?"
+question_img = ExtResource("4_gj6j8")
+type = 0
+options = Array[PackedScene]([ExtResource("2_x6kx1"), ExtResource("3_crmo6"), ExtResource("1_60gmo")])
+correct = ExtResource("1_60gmo")

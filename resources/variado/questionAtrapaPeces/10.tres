@@ -1,0 +1,15 @@
+[gd_resource type="Resource" script_class="QuizQuestionPecesitos" load_steps=6 format=3 uid="uid://sfbifqtyyhpy"]
+
+[ext_resource type="Script" path="res://Scripts/Juegos/AtrapaPeces/question.gd" id="1_jqu1d"]
+[ext_resource type="PackedScene" uid="uid://c68nvp2ykppat" path="res://Scenes/Juegos/Atrapa_Peces/Peces/Pez30.tscn" id="1_lcyfb"]
+[ext_resource type="PackedScene" uid="uid://df4b43ke3dpqd" path="res://Scenes/Juegos/Atrapa_Peces/Peces/Pez32.tscn" id="2_psvtn"]
+[ext_resource type="PackedScene" uid="uid://cwqrk61pniaep" path="res://Scenes/Juegos/Atrapa_Peces/Peces/Pez40.tscn" id="3_0iir6"]
+[ext_resource type="Texture2D" uid="uid://dkie5u5sxj0hm" path="res://images/Juegos/Atrapa_Peces/10.png" id="4_vvriw"]
+
+[resource]
+script = ExtResource("1_jqu1d")
+question_info = "Mi hermana tiene 20 lápices. Yo tengo un medio más que ella. ¿Cuántos tengo?"
+question_img = ExtResource("4_vvriw")
+type = 0
+options = Array[PackedScene]([ExtResource("1_lcyfb"), ExtResource("2_psvtn"), ExtResource("3_0iir6")])
+correct = ExtResource("1_lcyfb")

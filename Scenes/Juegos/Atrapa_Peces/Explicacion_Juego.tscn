@@ -1,0 +1,217 @@
+[gd_scene load_steps=23 format=3 uid="uid://dg3o71audlkd7"]
+
+[ext_resource type="Texture2D" uid="uid://bnggiecbse3nk" path="res://images/Juegos/Atrapa_Peces/Fondo.png" id="1_0j00r"]
+[ext_resource type="Script" path="res://Scripts/Juegos/AtrapaPeces/explicacion_juego.gd" id="1_cvcem"]
+[ext_resource type="Texture2D" uid="uid://tcvfe40s1dvj" path="res://images/Juegos/Atrapa_Peces/red_pez.png" id="2_lhojv"]
+[ext_resource type="Texture2D" uid="uid://bpmcq0vhbsypq" path="res://images/Juegos/Atrapa_Peces/correcto.png" id="3_78a46"]
+[ext_resource type="Texture2D" uid="uid://c5quookrq6afa" path="res://images/Juegos/Atrapa_Peces/incorrecto.png" id="4_cp087"]
+[ext_resource type="FontFile" uid="uid://ex6sf638yhh5" path="res://font/Chonky Bunny.ttf" id="5_c1gup"]
+[ext_resource type="Texture2D" uid="uid://bwf8mkwr4gktp" path="res://images/siguiente_flecha.png" id="6_l3hvm"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_i057d"]
+bg_color = Color(1, 1, 1, 0.705882)
+border_width_left = 3
+border_width_top = 3
+border_width_right = 3
+border_width_bottom = 3
+border_color = Color(0, 0, 0, 1)
+corner_radius_top_left = 15
+corner_radius_top_right = 15
+corner_radius_bottom_right = 15
+corner_radius_bottom_left = 15
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_kc0br"]
+bg_color = Color(1, 1, 1, 0.705882)
+border_width_left = 3
+border_width_top = 3
+border_width_right = 3
+border_width_bottom = 3
+border_color = Color(0, 0, 0, 1)
+corner_radius_top_left = 15
+corner_radius_top_right = 15
+corner_radius_bottom_right = 15
+corner_radius_bottom_left = 15
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_benj5"]
+bg_color = Color(1, 1, 1, 0.705882)
+border_width_left = 3
+border_width_top = 3
+border_width_right = 3
+border_width_bottom = 3
+border_color = Color(0, 0, 0, 1)
+corner_radius_top_left = 15
+corner_radius_top_right = 15
+corner_radius_bottom_right = 15
+corner_radius_bottom_left = 15
+
+[sub_resource type="LabelSettings" id="LabelSettings_f6n30"]
+font = ExtResource("5_c1gup")
+font_size = 35
+font_color = Color(0, 0, 0, 1)
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_vbntx"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_g2g0q"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_u6fwa"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_1aoqt"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_ikrjq"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_sjerd"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_aip1q"]
+bg_color = Color(0, 0, 0, 0.235294)
+corner_radius_top_left = 15
+corner_radius_top_right = 15
+corner_radius_bottom_right = 15
+corner_radius_bottom_left = 15
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_p5le0"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_vmjab"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_xxuyp"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_joxnd"]
+
+[node name="Control" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_cvcem")
+
+[node name="Fondo" type="TextureRect" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("1_0j00r")
+metadata/_edit_lock_ = true
+
+[node name="Pez" type="TextureRect" parent="."]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -298.5
+offset_top = -288.5
+offset_right = 298.5
+offset_bottom = -83.5
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("2_lhojv")
+
+[node name="Correcto" type="Panel" parent="."]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -239.0
+offset_top = -74.5
+offset_right = -87.0
+offset_bottom = 74.5
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_i057d")
+
+[node name="TextureRect" type="TextureRect" parent="Correcto"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("3_78a46")
+expand_mode = 1
+
+[node name="Incorrecto" type="Panel" parent="."]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = 87.0
+offset_top = -74.5
+offset_right = 239.0
+offset_bottom = 74.5
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_kc0br")
+
+[node name="TextureRect" type="TextureRect" parent="Incorrecto"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("4_cp087")
+expand_mode = 1
+
+[node name="Explicación" type="Panel" parent="."]
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -446.0
+offset_top = -239.0
+offset_right = 446.0
+offset_bottom = -54.0
+grow_horizontal = 2
+grow_vertical = 0
+theme_override_styles/panel = SubResource("StyleBoxFlat_benj5")
+
+[node name="Label" type="Label" parent="Explicación"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+text = "Para jugar deberás leer detenidamente el acertijo y pescar el pez que tenga el número correcto. Si estás en lo correcto verás una palomita verde y si fallas una tachita roja."
+label_settings = SubResource("LabelSettings_f6n30")
+horizontal_alignment = 1
+vertical_alignment = 1
+autowrap_mode = 2
+
+[node name="Button" type="Button" parent="."]
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -30.0
+offset_top = -48.0
+offset_right = 30.0
+offset_bottom = -10.0
+grow_horizontal = 2
+grow_vertical = 0
+theme_override_styles/focus = SubResource("StyleBoxEmpty_vbntx")
+theme_override_styles/disabled_mirrored = SubResource("StyleBoxEmpty_g2g0q")
+theme_override_styles/disabled = SubResource("StyleBoxEmpty_u6fwa")
+theme_override_styles/hover_pressed_mirrored = SubResource("StyleBoxEmpty_1aoqt")
+theme_override_styles/hover_pressed = SubResource("StyleBoxEmpty_ikrjq")
+theme_override_styles/hover_mirrored = SubResource("StyleBoxEmpty_sjerd")
+theme_override_styles/hover = SubResource("StyleBoxFlat_aip1q")
+theme_override_styles/pressed_mirrored = SubResource("StyleBoxEmpty_p5le0")
+theme_override_styles/pressed = SubResource("StyleBoxEmpty_vmjab")
+theme_override_styles/normal_mirrored = SubResource("StyleBoxEmpty_xxuyp")
+theme_override_styles/normal = SubResource("StyleBoxEmpty_joxnd")
+icon = ExtResource("6_l3hvm")
+
+[connection signal="pressed" from="Button" to="." method="_on_button_pressed"]

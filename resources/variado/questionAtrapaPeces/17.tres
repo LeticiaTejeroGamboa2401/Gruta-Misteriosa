@@ -1,0 +1,15 @@
+[gd_resource type="Resource" script_class="QuizQuestionPecesitos" load_steps=6 format=3 uid="uid://c2gkr63ntyhih"]
+
+[ext_resource type="Script" path="res://Scripts/Juegos/AtrapaPeces/question.gd" id="1_0oogx"]
+[ext_resource type="PackedScene" uid="uid://cwqrk61pniaep" path="res://Scenes/Juegos/Atrapa_Peces/Peces/Pez40.tscn" id="1_bbnud"]
+[ext_resource type="PackedScene" uid="uid://cj4x0qqy5h77q" path="res://Scenes/Juegos/Atrapa_Peces/Peces/Pez25.tscn" id="2_vg86j"]
+[ext_resource type="PackedScene" uid="uid://c7rj4f4nv4ha6" path="res://Scenes/Juegos/Atrapa_Peces/Peces/Pez16.tscn" id="3_8ercl"]
+[ext_resource type="Texture2D" uid="uid://n3ctgu7bmmgy" path="res://images/Juegos/Atrapa_Peces/17.png" id="4_qcn3b"]
+
+[resource]
+script = ExtResource("1_0oogx")
+question_info = "Compramos 20 globos y después otros 20. ¿Cuántos compramos el total?"
+question_img = ExtResource("4_qcn3b")
+type = 0
+options = Array[PackedScene]([ExtResource("2_vg86j"), ExtResource("1_bbnud"), ExtResource("3_8ercl")])
+correct = ExtResource("1_bbnud")

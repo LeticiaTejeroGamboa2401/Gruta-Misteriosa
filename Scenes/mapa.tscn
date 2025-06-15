@@ -1,4 +1,4 @@
-[gd_scene load_steps=32 format=3 uid="uid://dy8eonorti10n"]
+[gd_scene load_steps=34 format=3 uid="uid://dy8eonorti10n"]
 
 [ext_resource type="Script" path="res://Scripts/mapa_1.gd" id="1_lbv64"]
 [ext_resource type="Texture2D" uid="uid://ch2faqyjs7kwt" path="res://images/mapa.png" id="1_tmcc6"]
@@ -8,6 +8,7 @@
 [ext_resource type="Script" path="res://Scripts/Juegos/CarreraCaballo/entradaMapa.gd" id="6_3amxl"]
 [ext_resource type="Texture2D" uid="uid://fpancvs688ep" path="res://images/Juegos/Juegos_Ganados.png" id="6_h1v58"]
 [ext_resource type="FontFile" uid="uid://ex6sf638yhh5" path="res://font/Chonky Bunny.ttf" id="7_f328p"]
+[ext_resource type="Script" path="res://Scripts/Juegos/AtrapaPeces/entrada_Mapa.gd" id="7_lahml"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_e46v1"]
 size = Vector2(218, 42.5)
@@ -73,7 +74,10 @@ size = Vector2(53, 94)
 size = Vector2(50, 67.5)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_l3wsq"]
-size = Vector2(81, 13)
+size = Vector2(134.25, 0)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_mq7k5"]
+size = Vector2(147.5, 85)
 
 [sub_resource type="LabelSettings" id="LabelSettings_1lgld"]
 font = ExtResource("7_f328p")
@@ -174,7 +178,6 @@ position = Vector2(270.125, 98.125)
 shape = SubResource("RectangleShape2D_hpqfl")
 
 [node name="AtinaleAlPuerquito" type="Area2D" parent="."]
-visible = false
 position = Vector2(58, 55)
 script = ExtResource("3_5bv8k")
 metadata/_edit_lock_ = true
@@ -184,7 +187,6 @@ position = Vector2(846.25, 168)
 shape = SubResource("RectangleShape2D_emxtt")
 
 [node name="AdivinaElProducto" type="Area2D" parent="."]
-visible = false
 script = ExtResource("4_dmg56")
 metadata/_edit_lock_ = true
 
@@ -193,7 +195,6 @@ position = Vector2(297.5, 477)
 shape = SubResource("RectangleShape2D_xmrhe")
 
 [node name="DerribaAlPato" type="Area2D" parent="."]
-visible = false
 script = ExtResource("5_42wqn")
 metadata/_edit_lock_ = true
 
@@ -202,13 +203,19 @@ position = Vector2(565, 138.25)
 shape = SubResource("RectangleShape2D_lkmk0")
 
 [node name="CarreraCaballo" type="Area2D" parent="."]
-visible = false
 script = ExtResource("6_3amxl")
 metadata/_edit_lock_ = true
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="CarreraCaballo"]
-position = Vector2(529, 322.5)
+position = Vector2(531.125, 318)
 shape = SubResource("RectangleShape2D_l3wsq")
+
+[node name="AtrapaPeces" type="Area2D" parent="."]
+script = ExtResource("7_lahml")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="AtrapaPeces"]
+position = Vector2(175.25, 361.5)
+shape = SubResource("RectangleShape2D_mq7k5")
 
 [node name="TextureRect" type="TextureRect" parent="."]
 layout_mode = 0
@@ -232,3 +239,4 @@ horizontal_alignment = 1
 [connection signal="body_entered" from="AdivinaElProducto" to="AdivinaElProducto" method="_on_body_entered"]
 [connection signal="body_entered" from="DerribaAlPato" to="DerribaAlPato" method="_on_body_entered"]
 [connection signal="body_entered" from="CarreraCaballo" to="CarreraCaballo" method="_on_body_entered"]
+[connection signal="body_entered" from="AtrapaPeces" to="AtrapaPeces" method="_on_body_entered"]

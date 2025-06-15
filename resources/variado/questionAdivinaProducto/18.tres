@@ -1,0 +1,16 @@
+[gd_resource type="Resource" script_class="QuizQuestion" load_steps=8 format=3 uid="uid://bqp44jt8o452a"]
+
+[ext_resource type="Script" path="res://Scripts/Juegos/AdivinaProducto/resources/questions.gd" id="1_xu43y"]
+[ext_resource type="Texture2D" uid="uid://6su11n7270kq" path="res://images/Juegos/Adivina_el_Producto/Jícama.png" id="1_y4cqi"]
+[ext_resource type="Texture2D" uid="uid://cum0rb755gfoy" path="res://images/Maiz.png" id="2_sceqr"]
+[ext_resource type="Texture2D" uid="uid://c1utjlw02035i" path="res://images/Juegos/Adivina_el_Producto/Coco.png" id="3_747gu"]
+[ext_resource type="Texture2D" uid="uid://coong2q6pse8x" path="res://images/Juegos/Adivina_el_Producto/Zapote.png" id="4_rqwfg"]
+[ext_resource type="Texture2D" uid="uid://b308liwfy8dxw" path="res://images/Juegos/Adivina_el_Producto/Mango.png" id="5_mav1w"]
+[ext_resource type="Texture2D" uid="uid://b4bxy7u4emg3o" path="res://images/Juegos/Adivina_el_Producto/Pitahaya.png" id="6_8846g"]
+
+[resource]
+script = ExtResource("1_xu43y")
+question_info = "¿Qué producto cuesta la mitad de lo que cuesta el coco?"
+type = 0
+options = Array[Texture2D]([ExtResource("2_sceqr"), ExtResource("3_747gu"), ExtResource("4_rqwfg"), ExtResource("5_mav1w"), ExtResource("6_8846g"), ExtResource("1_y4cqi")])
+correct = ExtResource("1_y4cqi")

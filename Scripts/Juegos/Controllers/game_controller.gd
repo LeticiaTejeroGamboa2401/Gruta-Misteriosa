@@ -10,7 +10,7 @@ var correct: int = 0                # contador de respuestas correctas
 var answered: bool = false          # indica si ya se respondió la pregunta
 var selected_questions: Array = []  # preguntas seleccionadas aleatoriamente
 
-@onready var question_texts: Label = $Control/Panel/Preguntas/PreguntaTexto
+@onready var question_texts: Label = $Control/Pregunta/Texto
 @onready var feedback_image: TextureRect = $Control/FeedBackImage
 
 func _ready() -> void:

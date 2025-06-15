@@ -1,4 +1,4 @@
-[gd_resource type="Resource" script_class="QuizTheme" load_steps=19 format=3 uid="uid://bsd62iacmqeje"]
+[gd_resource type="Resource" script_class="QuizTheme" load_steps=28 format=3 uid="uid://bsd62iacmqeje"]
 
 [ext_resource type="Script" path="res://Scripts/Juegos/AdivinaProducto/resources/theme.gd" id="1_djuse"]
 [ext_resource type="Script" path="res://Scripts/Juegos/AdivinaProducto/resources/questions.gd" id="2_3htld"]
@@ -18,7 +18,16 @@
 [ext_resource type="Resource" uid="uid://si4w1i5gsjw7" path="res://resources/variado/questionAdivinaProducto/14.tres" id="16_f1iww"]
 [ext_resource type="Resource" uid="uid://bl43le15tibv" path="res://resources/variado/questionAdivinaProducto/15.tres" id="17_o32fm"]
 [ext_resource type="Resource" uid="uid://cubpmrdatuevc" path="res://resources/variado/questionAdivinaProducto/16.tres" id="18_dofnc"]
+[ext_resource type="Resource" uid="uid://bsh8u7skjw3fy" path="res://resources/variado/questionAdivinaProducto/17.tres" id="19_6kuxc"]
+[ext_resource type="Resource" uid="uid://bqp44jt8o452a" path="res://resources/variado/questionAdivinaProducto/18.tres" id="20_6er56"]
+[ext_resource type="Resource" uid="uid://biqfy4kkld7jm" path="res://resources/variado/questionAdivinaProducto/19.tres" id="21_y1jcb"]
+[ext_resource type="Resource" uid="uid://b886uw6b181eh" path="res://resources/variado/questionAdivinaProducto/20.tres" id="22_thx36"]
+[ext_resource type="Resource" uid="uid://dnmhfuhw1g5f3" path="res://resources/variado/questionAdivinaProducto/21.tres" id="23_oxsdr"]
+[ext_resource type="Resource" uid="uid://ckthsip83pnnk" path="res://resources/variado/questionAdivinaProducto/22.tres" id="24_d5pjo"]
+[ext_resource type="Resource" uid="uid://cytj8e1h2a8w6" path="res://resources/variado/questionAdivinaProducto/23.tres" id="25_ik7pu"]
+[ext_resource type="Resource" uid="uid://c7q3jodhykmtk" path="res://resources/variado/questionAdivinaProducto/24.tres" id="26_a5qbm"]
+[ext_resource type="Resource" uid="uid://c60nvirik813s" path="res://resources/variado/questionAdivinaProducto/25.tres" id="27_5ta3q"]
 
 [resource]
 script = ExtResource("1_djuse")
-theme = Array[ExtResource("2_3htld")]([ExtResource("3_nvah2"), ExtResource("4_d71v8"), ExtResource("5_sjoiv"), ExtResource("6_t5fq5"), ExtResource("7_rh0ti"), ExtResource("8_ypu0s"), ExtResource("9_ud63t"), ExtResource("10_wg3id"), ExtResource("11_djinp"), ExtResource("12_shk3r"), ExtResource("13_r1o8k"), ExtResource("14_fpnid"), ExtResource("15_h6bsv"), ExtResource("16_f1iww"), ExtResource("17_o32fm"), ExtResource("18_dofnc")])
+theme = Array[ExtResource("2_3htld")]([ExtResource("3_nvah2"), ExtResource("4_d71v8"), ExtResource("5_sjoiv"), ExtResource("6_t5fq5"), ExtResource("7_rh0ti"), ExtResource("8_ypu0s"), ExtResource("9_ud63t"), ExtResource("10_wg3id"), ExtResource("11_djinp"), ExtResource("12_shk3r"), ExtResource("13_r1o8k"), ExtResource("14_fpnid"), ExtResource("15_h6bsv"), ExtResource("16_f1iww"), ExtResource("17_o32fm"), ExtResource("18_dofnc"), ExtResource("19_6kuxc"), ExtResource("20_6er56"), ExtResource("21_y1jcb"), ExtResource("22_thx36"), ExtResource("23_oxsdr"), ExtResource("24_d5pjo"), ExtResource("25_ik7pu"), ExtResource("26_a5qbm"), ExtResource("27_5ta3q")])

@@ -1,88 +1,78 @@
 [gd_scene load_steps=12 format=3 uid="uid://1kydvnjxixmp"]
 
 [ext_resource type="Script" path="res://Scripts/aluxe_personaje.gd" id="1_f6xoo"]
-[ext_resource type="Texture2D" uid="uid://buc16thqn2bvm" path="res://images/aluxe.png" id="1_wnbvk"]
+[ext_resource type="Texture2D" uid="uid://b56mum6rq5lxj" path="res://images/aluxe.png" id="1_wnbvk"]
 
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_04qq1"]
-size = Vector2(105, 162)
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_1kdp2"]
+size = Vector2(159, 238)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_pvc6j"]
+[sub_resource type="AtlasTexture" id="AtlasTexture_u7c6m"]
 atlas = ExtResource("1_wnbvk")
-region = Rect2(0, 0, 107, 200)
+region = Rect2(0, 0, 114, 200)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_kh6tn"]
+[sub_resource type="AtlasTexture" id="AtlasTexture_5pggx"]
 atlas = ExtResource("1_wnbvk")
-region = Rect2(107, 0, 107, 200)
+region = Rect2(114, 0, 114, 200)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_ldsin"]
+[sub_resource type="AtlasTexture" id="AtlasTexture_x7la3"]
 atlas = ExtResource("1_wnbvk")
-region = Rect2(200, 0, 100, 200)
+region = Rect2(228, 0, 114, 200)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_j6auw"]
+[sub_resource type="AtlasTexture" id="AtlasTexture_axt4a"]
 atlas = ExtResource("1_wnbvk")
-region = Rect2(300, 0, 100, 200)
+region = Rect2(342, 0, 114, 200)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_l1vux"]
+[sub_resource type="AtlasTexture" id="AtlasTexture_253b3"]
 atlas = ExtResource("1_wnbvk")
-region = Rect2(392, 0, 98, 200)
+region = Rect2(456, 0, 114, 200)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_lqk0v"]
+[sub_resource type="AtlasTexture" id="AtlasTexture_ytsej"]
 atlas = ExtResource("1_wnbvk")
-region = Rect2(490, 0, 98, 197)
+region = Rect2(570, 0, 114, 200)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_oq3ic"]
+[sub_resource type="AtlasTexture" id="AtlasTexture_yuuxo"]
 atlas = ExtResource("1_wnbvk")
-region = Rect2(582, 0, 97, 200)
+region = Rect2(684, 0, 114, 200)
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_68dj2"]
 animations = [{
 "frames": [{
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_pvc6j")
+"texture": SubResource("AtlasTexture_u7c6m")
 }, {
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_kh6tn")
+"texture": SubResource("AtlasTexture_5pggx")
 }, {
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_ldsin")
+"texture": SubResource("AtlasTexture_x7la3")
 }, {
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_j6auw")
+"texture": SubResource("AtlasTexture_axt4a")
 }, {
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_l1vux")
+"texture": SubResource("AtlasTexture_253b3")
 }, {
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_lqk0v")
+"texture": SubResource("AtlasTexture_ytsej")
 }, {
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_oq3ic")
+"texture": SubResource("AtlasTexture_yuuxo")
 }],
 "loop": true,
 "name": &"Levitar",
 "speed": 5.0
 }]
 
-[node name="Aluxe" type="Control"]
-layout_mode = 3
-anchors_preset = 15
-anchor_right = 1.0
-anchor_bottom = 1.0
-offset_left = 54.0
-offset_top = 108.0
-offset_right = -994.0
-offset_bottom = -416.0
-grow_horizontal = 2
-grow_vertical = 2
+[node name="Aluxe" type="CharacterBody2D"]
 script = ExtResource("1_f6xoo")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2(27.5, 46)
-shape = SubResource("RectangleShape2D_04qq1")
+position = Vector2(25.5, 45)
+shape = SubResource("RectangleShape2D_1kdp2")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 position = Vector2(17.25, 40.5)
 scale = Vector2(1.26289, 1.165)
 sprite_frames = SubResource("SpriteFrames_68dj2")
 animation = &"Levitar"
-frame_progress = 0.769712
+frame_progress = 0.842143

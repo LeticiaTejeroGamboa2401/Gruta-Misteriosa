@@ -54,7 +54,7 @@ corner_radius_bottom_left = 15
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_0jh0o"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_h38ow"]
-bg_color = Color(0, 0, 0, 0.231373)
+bg_color = Color(0, 0, 0, 0.235294)
 corner_radius_top_left = 15
 corner_radius_top_right = 15
 corner_radius_bottom_right = 15
@@ -93,9 +93,9 @@ anchor_top = 1.0
 anchor_right = 1.0
 anchor_bottom = 1.0
 offset_left = 31.0
-offset_top = -212.0
+offset_top = -235.0
 offset_right = -24.0
-offset_bottom = -19.0
+offset_bottom = -29.0
 grow_horizontal = 2
 grow_vertical = 0
 theme_override_styles/panel = SubResource("StyleBoxFlat_sg6ff")
@@ -113,7 +113,8 @@ offset_right = 524.0
 offset_bottom = 58.5
 grow_horizontal = 2
 grow_vertical = 2
-text = "Para jugar, el alux anciano te dará varias cantidades de monedas y billetes que contiene el cochinito, deberás presionar la cantidad de dinero en total que contiene el cochinito. Si aciertas el cochinito se romperá, pero si fallas se reirá."
+text = "Para jugar, el alux anciano te mostrará varias monedas y billetes que están guardados en una alcancía. Tu misión será presionar la opción con la cantidad total de dinero que hay dentro.
+Si aciertas, la alcancía se romperá revelando su contenido. Pero si te equivocas... se burlará de ti con una carcajada."
 label_settings = SubResource("LabelSettings_yt00c")
 horizontal_alignment = 1
 autowrap_mode = 2
@@ -187,9 +188,9 @@ anchor_top = 1.0
 anchor_right = 0.5
 anchor_bottom = 1.0
 offset_left = -30.0
-offset_top = -61.0
+offset_top = -40.0
 offset_right = 30.0
-offset_bottom = -23.0
+offset_bottom = -2.0
 grow_horizontal = 2
 grow_vertical = 0
 theme_override_styles/focus = SubResource("StyleBoxEmpty_x1bmt")

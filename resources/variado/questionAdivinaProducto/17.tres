@@ -1,0 +1,16 @@
+[gd_resource type="Resource" script_class="QuizQuestion" load_steps=8 format=3 uid="uid://bsh8u7skjw3fy"]
+
+[ext_resource type="Script" path="res://Scripts/Juegos/AdivinaProducto/resources/questions.gd" id="1_frjaa"]
+[ext_resource type="Texture2D" uid="uid://b4bxy7u4emg3o" path="res://images/Juegos/Adivina_el_Producto/Pitahaya.png" id="1_rc3b4"]
+[ext_resource type="Texture2D" uid="uid://cum0rb755gfoy" path="res://images/Maiz.png" id="2_yfq75"]
+[ext_resource type="Texture2D" uid="uid://c1utjlw02035i" path="res://images/Juegos/Adivina_el_Producto/Coco.png" id="3_6rg7w"]
+[ext_resource type="Texture2D" uid="uid://coong2q6pse8x" path="res://images/Juegos/Adivina_el_Producto/Zapote.png" id="4_k25j3"]
+[ext_resource type="Texture2D" uid="uid://b308liwfy8dxw" path="res://images/Juegos/Adivina_el_Producto/Mango.png" id="5_dmmkm"]
+[ext_resource type="Texture2D" uid="uid://6su11n7270kq" path="res://images/Juegos/Adivina_el_Producto/Jícama.png" id="6_2y0u2"]
+
+[resource]
+script = ExtResource("1_frjaa")
+question_info = "¿Qué producto cuesta una tercera parte más de lo que cuesta el maíz?"
+type = 0
+options = Array[Texture2D]([ExtResource("2_yfq75"), ExtResource("3_6rg7w"), ExtResource("4_k25j3"), ExtResource("5_dmmkm"), ExtResource("1_rc3b4"), ExtResource("6_2y0u2")])
+correct = ExtResource("1_rc3b4")

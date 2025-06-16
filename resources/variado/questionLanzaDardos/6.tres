@@ -1,0 +1,21 @@
+[gd_resource type="Resource" script_class="QuizQuestionDarditos" load_steps=13 format=3 uid="uid://dug74nkm1rmre"]
+
+[ext_resource type="Script" path="res://Scripts/Juegos/LanzaDardos/question.gd" id="1_aqn6c"]
+[ext_resource type="PackedScene" uid="uid://ngx1kreb7jme" path="res://Scenes/Juegos/Lanza_Dardos/Globos/Globo32.tscn" id="1_ih3si"]
+[ext_resource type="PackedScene" uid="uid://btrgc6jv4ngin" path="res://Scenes/Juegos/Lanza_Dardos/Globos/Globo54.tscn" id="2_etvc5"]
+[ext_resource type="PackedScene" uid="uid://clny6j5mg0qfl" path="res://Scenes/Juegos/Lanza_Dardos/Globos/Globo45.tscn" id="3_o03h6"]
+[ext_resource type="PackedScene" uid="uid://rqo63y37eqf" path="res://Scenes/Juegos/Lanza_Dardos/Globos/Globo14.tscn" id="4_nrn2q"]
+[ext_resource type="PackedScene" uid="uid://c7ej264otvoov" path="res://Scenes/Juegos/Lanza_Dardos/Globos/Globo12.tscn" id="5_g6oqu"]
+[ext_resource type="PackedScene" uid="uid://b706qsowtxnx" path="res://Scenes/Juegos/Lanza_Dardos/Globos/Globo35.tscn" id="6_i6a1i"]
+[ext_resource type="PackedScene" uid="uid://bo215x56tr6kn" path="res://Scenes/Juegos/Lanza_Dardos/Globos/Globo4.tscn" id="7_sja71"]
+[ext_resource type="PackedScene" uid="uid://dxauhlej3k8pg" path="res://Scenes/Juegos/Lanza_Dardos/Globos/Globo1.tscn" id="8_t2ejk"]
+[ext_resource type="PackedScene" uid="uid://bxnrp35qbglcq" path="res://Scenes/Juegos/Lanza_Dardos/Globos/Globo25.tscn" id="9_r0v23"]
+[ext_resource type="PackedScene" uid="uid://qehca4oargnu" path="res://Scenes/Juegos/Lanza_Dardos/Globos/Globo10.tscn" id="10_44m8c"]
+[ext_resource type="PackedScene" uid="uid://cxux2b3hcxret" path="res://Scenes/Juegos/Lanza_Dardos/Globos/Globo9.tscn" id="11_kc8fa"]
+
+[resource]
+script = ExtResource("1_aqn6c")
+question_info = "El costo para subirse a la rueda de la fortuna es de $8 por persona. ¿Cuánto pagó don alux por 4 boletos?"
+type = 0
+options = Array[PackedScene]([ExtResource("2_etvc5"), ExtResource("3_o03h6"), ExtResource("4_nrn2q"), ExtResource("5_g6oqu"), ExtResource("6_i6a1i"), ExtResource("7_sja71"), ExtResource("5_g6oqu"), ExtResource("8_t2ejk"), ExtResource("9_r0v23"), ExtResource("1_ih3si"), ExtResource("10_44m8c"), ExtResource("11_kc8fa")])
+correct = ExtResource("1_ih3si")

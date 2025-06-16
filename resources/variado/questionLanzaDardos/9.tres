@@ -1,0 +1,21 @@
+[gd_resource type="Resource" script_class="QuizQuestionDarditos" load_steps=13 format=3 uid="uid://days6nmvkjn7r"]
+
+[ext_resource type="PackedScene" uid="uid://1sq456vh855w" path="res://Scenes/Juegos/Lanza_Dardos/Globos/Globo52.tscn" id="1_2mrwy"]
+[ext_resource type="Script" path="res://Scripts/Juegos/LanzaDardos/question.gd" id="1_yn4a8"]
+[ext_resource type="PackedScene" uid="uid://c7ej264otvoov" path="res://Scenes/Juegos/Lanza_Dardos/Globos/Globo12.tscn" id="2_lsx04"]
+[ext_resource type="PackedScene" uid="uid://bo215x56tr6kn" path="res://Scenes/Juegos/Lanza_Dardos/Globos/Globo4.tscn" id="3_nd4sf"]
+[ext_resource type="PackedScene" uid="uid://bxnrp35qbglcq" path="res://Scenes/Juegos/Lanza_Dardos/Globos/Globo25.tscn" id="4_g6eel"]
+[ext_resource type="PackedScene" uid="uid://c717kh42b16sc" path="res://Scenes/Juegos/Lanza_Dardos/Globos/Globo18.tscn" id="5_bcbhv"]
+[ext_resource type="PackedScene" uid="uid://rqo63y37eqf" path="res://Scenes/Juegos/Lanza_Dardos/Globos/Globo14.tscn" id="6_haw67"]
+[ext_resource type="PackedScene" uid="uid://bulj3hw3s31ri" path="res://Scenes/Juegos/Lanza_Dardos/Globos/Globo20.tscn" id="7_d8lt7"]
+[ext_resource type="PackedScene" uid="uid://btrgc6jv4ngin" path="res://Scenes/Juegos/Lanza_Dardos/Globos/Globo54.tscn" id="8_inits"]
+[ext_resource type="PackedScene" uid="uid://b416biqkafxue" path="res://Scenes/Juegos/Lanza_Dardos/Globos/Globo8.tscn" id="9_ae8w8"]
+[ext_resource type="PackedScene" uid="uid://dxauhlej3k8pg" path="res://Scenes/Juegos/Lanza_Dardos/Globos/Globo1.tscn" id="10_3nwap"]
+[ext_resource type="PackedScene" uid="uid://cxux2b3hcxret" path="res://Scenes/Juegos/Lanza_Dardos/Globos/Globo9.tscn" id="11_tnimj"]
+
+[resource]
+script = ExtResource("1_yn4a8")
+question_info = "Don alux compró 2 boletos para la casa del terror a $26 pesos cada uno. ¿Cuánto pagó?"
+type = 0
+options = Array[PackedScene]([ExtResource("2_lsx04"), ExtResource("3_nd4sf"), ExtResource("4_g6eel"), ExtResource("5_bcbhv"), ExtResource("1_2mrwy"), ExtResource("6_haw67"), ExtResource("7_d8lt7"), ExtResource("8_inits"), ExtResource("9_ae8w8"), ExtResource("10_3nwap"), ExtResource("11_tnimj"), ExtResource("3_nd4sf")])
+correct = ExtResource("1_2mrwy")

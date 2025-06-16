@@ -1,0 +1,371 @@
+[gd_scene load_steps=24 format=3 uid="uid://bdodtf2l5pmbj"]
+
+[ext_resource type="Script" path="res://Scripts/Juegos/Controllers/game_controller_dardos.gd" id="1_b4lg5"]
+[ext_resource type="Texture2D" uid="uid://bp7ce3v2tdd4y" path="res://images/Juegos/Lanza_Dardos/Fondo.png" id="1_vqpbw"]
+[ext_resource type="FontFile" uid="uid://ex6sf638yhh5" path="res://font/Chonky Bunny.ttf" id="2_agg8h"]
+[ext_resource type="Resource" uid="uid://dmx2drp2gmmm0" path="res://resources/variado/theme/theme_dardos.tres" id="2_y6ufi"]
+[ext_resource type="Texture2D" uid="uid://d2xfhg0fx3jol" path="res://images/Juegos/Lanza_Dardos/correcto.png" id="3_xtpow"]
+[ext_resource type="Texture2D" uid="uid://cfa2lwg0r7f22" path="res://images/Juegos/Lanza_Dardos/incorrecto.png" id="4_2ca0r"]
+[ext_resource type="Texture2D" uid="uid://vyh8qv625m7m" path="res://images/Juegos/Lanza_Dardos/Dardos.png" id="7_axe6u"]
+[ext_resource type="FontFile" uid="uid://q4llc3uguqs2" path="res://font/KGCorneroftheSky.ttf" id="8_n8q6a"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_7h7i1"]
+bg_color = Color(1, 1, 1, 0.627451)
+border_width_left = 3
+border_width_top = 3
+border_width_right = 3
+border_width_bottom = 3
+border_color = Color(0, 0, 0, 1)
+corner_radius_top_left = 15
+corner_radius_top_right = 15
+corner_radius_bottom_right = 15
+corner_radius_bottom_left = 15
+
+[sub_resource type="LabelSettings" id="LabelSettings_m1hce"]
+font = ExtResource("2_agg8h")
+font_size = 30
+font_color = Color(0, 0, 0, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_848me"]
+bg_color = Color(1, 1, 1, 0.627451)
+border_width_left = 3
+border_width_top = 3
+border_width_right = 3
+border_width_bottom = 3
+border_color = Color(0, 0, 0, 1)
+corner_radius_top_left = 15
+corner_radius_top_right = 15
+corner_radius_bottom_right = 15
+corner_radius_bottom_left = 15
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_glp1k"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_tpqut"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_h0dhl"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_ur7xs"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_xduu2"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_opmae"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_kwgnl"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_lgbds"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_jio0l"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_5bpc4"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_odrfk"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_m5llk"]
+font = ExtResource("8_n8q6a")
+font_size = 30
+font_color = Color(0, 0, 0, 1)
+
+[node name="Main" type="CanvasLayer"]
+script = ExtResource("1_b4lg5")
+quiz = ExtResource("2_y6ufi")
+imgCorrecto = ExtResource("3_xtpow")
+imgIncorrecto = ExtResource("4_2ca0r")
+
+[node name="Control" type="Control" parent="."]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="TextureRect" type="TextureRect" parent="Control"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("1_vqpbw")
+
+[node name="Pregunta" type="Panel" parent="Control"]
+layout_mode = 0
+offset_left = 105.0
+offset_top = 457.0
+offset_right = 783.0
+offset_bottom = 635.0
+theme_override_styles/panel = SubResource("StyleBoxFlat_7h7i1")
+
+[node name="Texto" type="Label" parent="Control/Pregunta"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 9.0
+offset_top = 6.0
+offset_right = -10.0
+offset_bottom = -5.0
+grow_horizontal = 2
+grow_vertical = 2
+text = "Pregunta"
+label_settings = SubResource("LabelSettings_m1hce")
+horizontal_alignment = 1
+vertical_alignment = 1
+autowrap_mode = 2
+
+[node name="Acierto" type="Panel" parent="Control"]
+layout_mode = 0
+offset_left = 814.0
+offset_top = 457.0
+offset_right = 1008.0
+offset_bottom = 635.0
+theme_override_styles/panel = SubResource("StyleBoxFlat_848me")
+
+[node name="FeedBack" type="TextureRect" parent="Control/Acierto"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+expand_mode = 1
+
+[node name="MenuButton" type="MenuButton" parent="Control"]
+layout_mode = 0
+offset_left = 128.0
+offset_top = 75.0
+offset_right = 1013.0
+offset_bottom = 395.0
+
+[node name="Button" type="Button" parent="Control/MenuButton"]
+layout_mode = 0
+offset_left = 25.0
+offset_top = 18.0
+offset_right = 142.0
+offset_bottom = 154.0
+theme_override_styles/focus = SubResource("StyleBoxEmpty_glp1k")
+theme_override_styles/disabled_mirrored = SubResource("StyleBoxEmpty_tpqut")
+theme_override_styles/disabled = SubResource("StyleBoxEmpty_h0dhl")
+theme_override_styles/hover_pressed_mirrored = SubResource("StyleBoxEmpty_ur7xs")
+theme_override_styles/hover_pressed = SubResource("StyleBoxEmpty_xduu2")
+theme_override_styles/hover_mirrored = SubResource("StyleBoxEmpty_opmae")
+theme_override_styles/hover = SubResource("StyleBoxEmpty_kwgnl")
+theme_override_styles/pressed_mirrored = SubResource("StyleBoxEmpty_lgbds")
+theme_override_styles/pressed = SubResource("StyleBoxEmpty_jio0l")
+theme_override_styles/normal_mirrored = SubResource("StyleBoxEmpty_5bpc4")
+theme_override_styles/normal = SubResource("StyleBoxEmpty_odrfk")
+
+[node name="Button2" type="Button" parent="Control/MenuButton"]
+layout_mode = 0
+offset_left = 172.0
+offset_top = 18.0
+offset_right = 289.0
+offset_bottom = 154.0
+theme_override_styles/focus = SubResource("StyleBoxEmpty_glp1k")
+theme_override_styles/disabled_mirrored = SubResource("StyleBoxEmpty_tpqut")
+theme_override_styles/disabled = SubResource("StyleBoxEmpty_h0dhl")
+theme_override_styles/hover_pressed_mirrored = SubResource("StyleBoxEmpty_ur7xs")
+theme_override_styles/hover_pressed = SubResource("StyleBoxEmpty_xduu2")
+theme_override_styles/hover_mirrored = SubResource("StyleBoxEmpty_opmae")
+theme_override_styles/hover = SubResource("StyleBoxEmpty_kwgnl")
+theme_override_styles/pressed_mirrored = SubResource("StyleBoxEmpty_lgbds")
+theme_override_styles/pressed = SubResource("StyleBoxEmpty_jio0l")
+theme_override_styles/normal_mirrored = SubResource("StyleBoxEmpty_5bpc4")
+theme_override_styles/normal = SubResource("StyleBoxEmpty_odrfk")
+
+[node name="Button3" type="Button" parent="Control/MenuButton"]
+layout_mode = 0
+offset_left = 316.0
+offset_top = 18.0
+offset_right = 433.0
+offset_bottom = 154.0
+theme_override_styles/focus = SubResource("StyleBoxEmpty_glp1k")
+theme_override_styles/disabled_mirrored = SubResource("StyleBoxEmpty_tpqut")
+theme_override_styles/disabled = SubResource("StyleBoxEmpty_h0dhl")
+theme_override_styles/hover_pressed_mirrored = SubResource("StyleBoxEmpty_ur7xs")
+theme_override_styles/hover_pressed = SubResource("StyleBoxEmpty_xduu2")
+theme_override_styles/hover_mirrored = SubResource("StyleBoxEmpty_opmae")
+theme_override_styles/hover = SubResource("StyleBoxEmpty_kwgnl")
+theme_override_styles/pressed_mirrored = SubResource("StyleBoxEmpty_lgbds")
+theme_override_styles/pressed = SubResource("StyleBoxEmpty_jio0l")
+theme_override_styles/normal_mirrored = SubResource("StyleBoxEmpty_5bpc4")
+theme_override_styles/normal = SubResource("StyleBoxEmpty_odrfk")
+
+[node name="Button4" type="Button" parent="Control/MenuButton"]
+layout_mode = 0
+offset_left = 461.0
+offset_top = 18.0
+offset_right = 578.0
+offset_bottom = 154.0
+theme_override_styles/focus = SubResource("StyleBoxEmpty_glp1k")
+theme_override_styles/disabled_mirrored = SubResource("StyleBoxEmpty_tpqut")
+theme_override_styles/disabled = SubResource("StyleBoxEmpty_h0dhl")
+theme_override_styles/hover_pressed_mirrored = SubResource("StyleBoxEmpty_ur7xs")
+theme_override_styles/hover_pressed = SubResource("StyleBoxEmpty_xduu2")
+theme_override_styles/hover_mirrored = SubResource("StyleBoxEmpty_opmae")
+theme_override_styles/hover = SubResource("StyleBoxEmpty_kwgnl")
+theme_override_styles/pressed_mirrored = SubResource("StyleBoxEmpty_lgbds")
+theme_override_styles/pressed = SubResource("StyleBoxEmpty_jio0l")
+theme_override_styles/normal_mirrored = SubResource("StyleBoxEmpty_5bpc4")
+theme_override_styles/normal = SubResource("StyleBoxEmpty_odrfk")
+
+[node name="Button5" type="Button" parent="Control/MenuButton"]
+layout_mode = 0
+offset_left = 606.0
+offset_top = 18.0
+offset_right = 723.0
+offset_bottom = 154.0
+theme_override_styles/focus = SubResource("StyleBoxEmpty_glp1k")
+theme_override_styles/disabled_mirrored = SubResource("StyleBoxEmpty_tpqut")
+theme_override_styles/disabled = SubResource("StyleBoxEmpty_h0dhl")
+theme_override_styles/hover_pressed_mirrored = SubResource("StyleBoxEmpty_ur7xs")
+theme_override_styles/hover_pressed = SubResource("StyleBoxEmpty_xduu2")
+theme_override_styles/hover_mirrored = SubResource("StyleBoxEmpty_opmae")
+theme_override_styles/hover = SubResource("StyleBoxEmpty_kwgnl")
+theme_override_styles/pressed_mirrored = SubResource("StyleBoxEmpty_lgbds")
+theme_override_styles/pressed = SubResource("StyleBoxEmpty_jio0l")
+theme_override_styles/normal_mirrored = SubResource("StyleBoxEmpty_5bpc4")
+theme_override_styles/normal = SubResource("StyleBoxEmpty_odrfk")
+
+[node name="Button6" type="Button" parent="Control/MenuButton"]
+layout_mode = 0
+offset_left = 748.0
+offset_top = 18.0
+offset_right = 865.0
+offset_bottom = 154.0
+theme_override_styles/focus = SubResource("StyleBoxEmpty_glp1k")
+theme_override_styles/disabled_mirrored = SubResource("StyleBoxEmpty_tpqut")
+theme_override_styles/disabled = SubResource("StyleBoxEmpty_h0dhl")
+theme_override_styles/hover_pressed_mirrored = SubResource("StyleBoxEmpty_ur7xs")
+theme_override_styles/hover_pressed = SubResource("StyleBoxEmpty_xduu2")
+theme_override_styles/hover_mirrored = SubResource("StyleBoxEmpty_opmae")
+theme_override_styles/hover = SubResource("StyleBoxEmpty_kwgnl")
+theme_override_styles/pressed_mirrored = SubResource("StyleBoxEmpty_lgbds")
+theme_override_styles/pressed = SubResource("StyleBoxEmpty_jio0l")
+theme_override_styles/normal_mirrored = SubResource("StyleBoxEmpty_5bpc4")
+theme_override_styles/normal = SubResource("StyleBoxEmpty_odrfk")
+
+[node name="Button7" type="Button" parent="Control/MenuButton"]
+layout_mode = 0
+offset_left = 25.0
+offset_top = 170.0
+offset_right = 142.0
+offset_bottom = 306.0
+theme_override_styles/focus = SubResource("StyleBoxEmpty_glp1k")
+theme_override_styles/disabled_mirrored = SubResource("StyleBoxEmpty_tpqut")
+theme_override_styles/disabled = SubResource("StyleBoxEmpty_h0dhl")
+theme_override_styles/hover_pressed_mirrored = SubResource("StyleBoxEmpty_ur7xs")
+theme_override_styles/hover_pressed = SubResource("StyleBoxEmpty_xduu2")
+theme_override_styles/hover_mirrored = SubResource("StyleBoxEmpty_opmae")
+theme_override_styles/hover = SubResource("StyleBoxEmpty_kwgnl")
+theme_override_styles/pressed_mirrored = SubResource("StyleBoxEmpty_lgbds")
+theme_override_styles/pressed = SubResource("StyleBoxEmpty_jio0l")
+theme_override_styles/normal_mirrored = SubResource("StyleBoxEmpty_5bpc4")
+theme_override_styles/normal = SubResource("StyleBoxEmpty_odrfk")
+
+[node name="Button8" type="Button" parent="Control/MenuButton"]
+layout_mode = 0
+offset_left = 172.0
+offset_top = 170.0
+offset_right = 289.0
+offset_bottom = 306.0
+theme_override_styles/focus = SubResource("StyleBoxEmpty_glp1k")
+theme_override_styles/disabled_mirrored = SubResource("StyleBoxEmpty_tpqut")
+theme_override_styles/disabled = SubResource("StyleBoxEmpty_h0dhl")
+theme_override_styles/hover_pressed_mirrored = SubResource("StyleBoxEmpty_ur7xs")
+theme_override_styles/hover_pressed = SubResource("StyleBoxEmpty_xduu2")
+theme_override_styles/hover_mirrored = SubResource("StyleBoxEmpty_opmae")
+theme_override_styles/hover = SubResource("StyleBoxEmpty_kwgnl")
+theme_override_styles/pressed_mirrored = SubResource("StyleBoxEmpty_lgbds")
+theme_override_styles/pressed = SubResource("StyleBoxEmpty_jio0l")
+theme_override_styles/normal_mirrored = SubResource("StyleBoxEmpty_5bpc4")
+theme_override_styles/normal = SubResource("StyleBoxEmpty_odrfk")
+
+[node name="Button9" type="Button" parent="Control/MenuButton"]
+layout_mode = 0
+offset_left = 316.0
+offset_top = 170.0
+offset_right = 433.0
+offset_bottom = 306.0
+theme_override_styles/focus = SubResource("StyleBoxEmpty_glp1k")
+theme_override_styles/disabled_mirrored = SubResource("StyleBoxEmpty_tpqut")
+theme_override_styles/disabled = SubResource("StyleBoxEmpty_h0dhl")
+theme_override_styles/hover_pressed_mirrored = SubResource("StyleBoxEmpty_ur7xs")
+theme_override_styles/hover_pressed = SubResource("StyleBoxEmpty_xduu2")
+theme_override_styles/hover_mirrored = SubResource("StyleBoxEmpty_opmae")
+theme_override_styles/hover = SubResource("StyleBoxEmpty_kwgnl")
+theme_override_styles/pressed_mirrored = SubResource("StyleBoxEmpty_lgbds")
+theme_override_styles/pressed = SubResource("StyleBoxEmpty_jio0l")
+theme_override_styles/normal_mirrored = SubResource("StyleBoxEmpty_5bpc4")
+theme_override_styles/normal = SubResource("StyleBoxEmpty_odrfk")
+
+[node name="Button10" type="Button" parent="Control/MenuButton"]
+layout_mode = 0
+offset_left = 461.0
+offset_top = 170.0
+offset_right = 578.0
+offset_bottom = 306.0
+theme_override_styles/focus = SubResource("StyleBoxEmpty_glp1k")
+theme_override_styles/disabled_mirrored = SubResource("StyleBoxEmpty_tpqut")
+theme_override_styles/disabled = SubResource("StyleBoxEmpty_h0dhl")
+theme_override_styles/hover_pressed_mirrored = SubResource("StyleBoxEmpty_ur7xs")
+theme_override_styles/hover_pressed = SubResource("StyleBoxEmpty_xduu2")
+theme_override_styles/hover_mirrored = SubResource("StyleBoxEmpty_opmae")
+theme_override_styles/hover = SubResource("StyleBoxEmpty_kwgnl")
+theme_override_styles/pressed_mirrored = SubResource("StyleBoxEmpty_lgbds")
+theme_override_styles/pressed = SubResource("StyleBoxEmpty_jio0l")
+theme_override_styles/normal_mirrored = SubResource("StyleBoxEmpty_5bpc4")
+theme_override_styles/normal = SubResource("StyleBoxEmpty_odrfk")
+
+[node name="Button11" type="Button" parent="Control/MenuButton"]
+layout_mode = 0
+offset_left = 606.0
+offset_top = 170.0
+offset_right = 723.0
+offset_bottom = 306.0
+theme_override_styles/focus = SubResource("StyleBoxEmpty_glp1k")
+theme_override_styles/disabled_mirrored = SubResource("StyleBoxEmpty_tpqut")
+theme_override_styles/disabled = SubResource("StyleBoxEmpty_h0dhl")
+theme_override_styles/hover_pressed_mirrored = SubResource("StyleBoxEmpty_ur7xs")
+theme_override_styles/hover_pressed = SubResource("StyleBoxEmpty_xduu2")
+theme_override_styles/hover_mirrored = SubResource("StyleBoxEmpty_opmae")
+theme_override_styles/hover = SubResource("StyleBoxEmpty_kwgnl")
+theme_override_styles/pressed_mirrored = SubResource("StyleBoxEmpty_lgbds")
+theme_override_styles/pressed = SubResource("StyleBoxEmpty_jio0l")
+theme_override_styles/normal_mirrored = SubResource("StyleBoxEmpty_5bpc4")
+theme_override_styles/normal = SubResource("StyleBoxEmpty_odrfk")
+
+[node name="Button12" type="Button" parent="Control/MenuButton"]
+layout_mode = 0
+offset_left = 748.0
+offset_top = 170.0
+offset_right = 865.0
+offset_bottom = 306.0
+theme_override_styles/focus = SubResource("StyleBoxEmpty_glp1k")
+theme_override_styles/disabled_mirrored = SubResource("StyleBoxEmpty_tpqut")
+theme_override_styles/disabled = SubResource("StyleBoxEmpty_h0dhl")
+theme_override_styles/hover_pressed_mirrored = SubResource("StyleBoxEmpty_ur7xs")
+theme_override_styles/hover_pressed = SubResource("StyleBoxEmpty_xduu2")
+theme_override_styles/hover_mirrored = SubResource("StyleBoxEmpty_opmae")
+theme_override_styles/hover = SubResource("StyleBoxEmpty_kwgnl")
+theme_override_styles/pressed_mirrored = SubResource("StyleBoxEmpty_lgbds")
+theme_override_styles/pressed = SubResource("StyleBoxEmpty_jio0l")
+theme_override_styles/normal_mirrored = SubResource("StyleBoxEmpty_5bpc4")
+theme_override_styles/normal = SubResource("StyleBoxEmpty_odrfk")
+
+[node name="Dardos" type="TextureRect" parent="Control"]
+layout_mode = 0
+offset_left = 1033.0
+offset_top = 7.0
+offset_right = 1147.0
+offset_bottom = 123.0
+texture = ExtResource("7_axe6u")
+expand_mode = 1
+
+[node name="dardos_vida" type="Label" parent="Control"]
+layout_mode = 0
+offset_left = 1080.0
+offset_top = 67.0
+offset_right = 1136.0
+offset_bottom = 113.0
+label_settings = SubResource("LabelSettings_m5llk")

@@ -1,0 +1,22 @@
+[gd_resource type="Resource" script_class="QuizQuestionDarditos" load_steps=14 format=3 uid="uid://lpukmqqcqtl5"]
+
+[ext_resource type="Script" path="res://Scripts/Juegos/LanzaDardos/question.gd" id="1_24y03"]
+[ext_resource type="PackedScene" uid="uid://btrgc6jv4ngin" path="res://Scenes/Juegos/Lanza_Dardos/Globos/Globo54.tscn" id="1_cdbm7"]
+[ext_resource type="PackedScene" uid="uid://1sq456vh855w" path="res://Scenes/Juegos/Lanza_Dardos/Globos/Globo52.tscn" id="2_typpl"]
+[ext_resource type="PackedScene" uid="uid://dl0hbxbfunnqh" path="res://Scenes/Juegos/Lanza_Dardos/Globos/Globo30.tscn" id="3_i58s1"]
+[ext_resource type="PackedScene" uid="uid://dxauhlej3k8pg" path="res://Scenes/Juegos/Lanza_Dardos/Globos/Globo1.tscn" id="4_bfifo"]
+[ext_resource type="PackedScene" uid="uid://cxux2b3hcxret" path="res://Scenes/Juegos/Lanza_Dardos/Globos/Globo9.tscn" id="5_m7tl3"]
+[ext_resource type="PackedScene" uid="uid://bxnrp35qbglcq" path="res://Scenes/Juegos/Lanza_Dardos/Globos/Globo25.tscn" id="6_dqhb3"]
+[ext_resource type="PackedScene" uid="uid://b706qsowtxnx" path="res://Scenes/Juegos/Lanza_Dardos/Globos/Globo35.tscn" id="7_i84dt"]
+[ext_resource type="PackedScene" uid="uid://c717kh42b16sc" path="res://Scenes/Juegos/Lanza_Dardos/Globos/Globo18.tscn" id="8_0rmd3"]
+[ext_resource type="PackedScene" uid="uid://rqo63y37eqf" path="res://Scenes/Juegos/Lanza_Dardos/Globos/Globo14.tscn" id="9_h1gb3"]
+[ext_resource type="PackedScene" uid="uid://bo215x56tr6kn" path="res://Scenes/Juegos/Lanza_Dardos/Globos/Globo4.tscn" id="10_yg3cb"]
+[ext_resource type="PackedScene" uid="uid://ngx1kreb7jme" path="res://Scenes/Juegos/Lanza_Dardos/Globos/Globo32.tscn" id="11_5sj7v"]
+[ext_resource type="PackedScene" uid="uid://b416biqkafxue" path="res://Scenes/Juegos/Lanza_Dardos/Globos/Globo8.tscn" id="12_5mfai"]
+
+[resource]
+script = ExtResource("1_24y03")
+question_info = "Don alux, su esposa y su hija menor se subieron a la montaña rusa. El costo del boleto es de $18 pesos. ¿Cuánto pagaron por disfrutar el paseo?"
+type = 0
+options = Array[PackedScene]([ExtResource("2_typpl"), ExtResource("3_i58s1"), ExtResource("4_bfifo"), ExtResource("5_m7tl3"), ExtResource("6_dqhb3"), ExtResource("7_i84dt"), ExtResource("8_0rmd3"), ExtResource("1_cdbm7"), ExtResource("9_h1gb3"), ExtResource("10_yg3cb"), ExtResource("11_5sj7v"), ExtResource("12_5mfai")])
+correct = ExtResource("1_cdbm7")

@@ -1,0 +1,21 @@
+[gd_resource type="Resource" script_class="QuizQuestionDarditos" load_steps=13 format=3 uid="uid://br1jb6cxdrqd8"]
+
+[ext_resource type="PackedScene" uid="uid://bulj3hw3s31ri" path="res://Scenes/Juegos/Lanza_Dardos/Globos/Globo20.tscn" id="1_gpkb3"]
+[ext_resource type="Script" path="res://Scripts/Juegos/LanzaDardos/question.gd" id="1_x2738"]
+[ext_resource type="PackedScene" uid="uid://c7ej264otvoov" path="res://Scenes/Juegos/Lanza_Dardos/Globos/Globo12.tscn" id="2_jpjb5"]
+[ext_resource type="PackedScene" uid="uid://dl0hbxbfunnqh" path="res://Scenes/Juegos/Lanza_Dardos/Globos/Globo30.tscn" id="3_d1h7e"]
+[ext_resource type="PackedScene" uid="uid://clny6j5mg0qfl" path="res://Scenes/Juegos/Lanza_Dardos/Globos/Globo45.tscn" id="4_fgq66"]
+[ext_resource type="PackedScene" uid="uid://dxauhlej3k8pg" path="res://Scenes/Juegos/Lanza_Dardos/Globos/Globo1.tscn" id="5_7et2q"]
+[ext_resource type="PackedScene" uid="uid://b706qsowtxnx" path="res://Scenes/Juegos/Lanza_Dardos/Globos/Globo35.tscn" id="6_js1sh"]
+[ext_resource type="PackedScene" uid="uid://bxnrp35qbglcq" path="res://Scenes/Juegos/Lanza_Dardos/Globos/Globo25.tscn" id="7_etn23"]
+[ext_resource type="PackedScene" uid="uid://btrgc6jv4ngin" path="res://Scenes/Juegos/Lanza_Dardos/Globos/Globo54.tscn" id="8_wuk62"]
+[ext_resource type="PackedScene" uid="uid://rqo63y37eqf" path="res://Scenes/Juegos/Lanza_Dardos/Globos/Globo14.tscn" id="9_qdue6"]
+[ext_resource type="PackedScene" uid="uid://bo215x56tr6kn" path="res://Scenes/Juegos/Lanza_Dardos/Globos/Globo4.tscn" id="10_wvp3k"]
+[ext_resource type="PackedScene" uid="uid://b416biqkafxue" path="res://Scenes/Juegos/Lanza_Dardos/Globos/Globo8.tscn" id="11_u32h6"]
+
+[resource]
+script = ExtResource("1_x2738")
+question_info = "Don alux compró 5 boletos para la tómbola a $4 pesos cada uno. ¿Cuánto pagó?"
+type = 0
+options = Array[PackedScene]([ExtResource("2_jpjb5"), ExtResource("3_d1h7e"), ExtResource("4_fgq66"), ExtResource("5_7et2q"), ExtResource("6_js1sh"), ExtResource("7_etn23"), ExtResource("1_gpkb3"), ExtResource("8_wuk62"), ExtResource("9_qdue6"), ExtResource("10_wvp3k"), ExtResource("1_gpkb3"), ExtResource("11_u32h6")])
+correct = ExtResource("1_gpkb3")

@@ -1,0 +1,22 @@
+[gd_resource type="Resource" script_class="QuizQuestionDarditos" load_steps=14 format=3 uid="uid://ctrtxiodelpx3"]
+
+[ext_resource type="Script" path="res://Scripts/Juegos/LanzaDardos/question.gd" id="1_x1h4o"]
+[ext_resource type="PackedScene" uid="uid://c7ej264otvoov" path="res://Scenes/Juegos/Lanza_Dardos/Globos/Globo12.tscn" id="1_x25n0"]
+[ext_resource type="PackedScene" uid="uid://cnlp8n882ce84" path="res://Scenes/Juegos/Lanza_Dardos/Globos/Globo3.tscn" id="2_byq2r"]
+[ext_resource type="PackedScene" uid="uid://bxnrp35qbglcq" path="res://Scenes/Juegos/Lanza_Dardos/Globos/Globo25.tscn" id="3_tjbjj"]
+[ext_resource type="PackedScene" uid="uid://c717kh42b16sc" path="res://Scenes/Juegos/Lanza_Dardos/Globos/Globo18.tscn" id="4_gwm4m"]
+[ext_resource type="PackedScene" uid="uid://b706qsowtxnx" path="res://Scenes/Juegos/Lanza_Dardos/Globos/Globo35.tscn" id="5_co7o8"]
+[ext_resource type="PackedScene" uid="uid://rqo63y37eqf" path="res://Scenes/Juegos/Lanza_Dardos/Globos/Globo14.tscn" id="6_bjcag"]
+[ext_resource type="PackedScene" uid="uid://bulj3hw3s31ri" path="res://Scenes/Juegos/Lanza_Dardos/Globos/Globo20.tscn" id="7_mgpjd"]
+[ext_resource type="PackedScene" uid="uid://ngx1kreb7jme" path="res://Scenes/Juegos/Lanza_Dardos/Globos/Globo32.tscn" id="8_we2a4"]
+[ext_resource type="PackedScene" uid="uid://b416biqkafxue" path="res://Scenes/Juegos/Lanza_Dardos/Globos/Globo8.tscn" id="9_e3wrc"]
+[ext_resource type="PackedScene" uid="uid://dxauhlej3k8pg" path="res://Scenes/Juegos/Lanza_Dardos/Globos/Globo1.tscn" id="10_bt24s"]
+[ext_resource type="PackedScene" uid="uid://cxux2b3hcxret" path="res://Scenes/Juegos/Lanza_Dardos/Globos/Globo9.tscn" id="11_qwc88"]
+[ext_resource type="PackedScene" uid="uid://bo215x56tr6kn" path="res://Scenes/Juegos/Lanza_Dardos/Globos/Globo4.tscn" id="12_v1voa"]
+
+[resource]
+script = ExtResource("1_x1h4o")
+question_info = "El costo para el carrusel es $8 pesos por persona. Don alux pagó $24. ¿Cuántas personas subieron?"
+type = 0
+options = Array[PackedScene]([ExtResource("1_x25n0"), ExtResource("2_byq2r"), ExtResource("3_tjbjj"), ExtResource("4_gwm4m"), ExtResource("5_co7o8"), ExtResource("6_bjcag"), ExtResource("7_mgpjd"), ExtResource("8_we2a4"), ExtResource("9_e3wrc"), ExtResource("10_bt24s"), ExtResource("11_qwc88"), ExtResource("12_v1voa")])
+correct = ExtResource("2_byq2r")

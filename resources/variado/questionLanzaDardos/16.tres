@@ -1,0 +1,22 @@
+[gd_resource type="Resource" script_class="QuizQuestionDarditos" load_steps=14 format=3 uid="uid://du3x5pv4840d0"]
+
+[ext_resource type="PackedScene" uid="uid://i3bnqubwujjc" path="res://Scenes/Juegos/Lanza_Dardos/Globos/Globo5.tscn" id="1_egi61"]
+[ext_resource type="Script" path="res://Scripts/Juegos/LanzaDardos/question.gd" id="1_qi23e"]
+[ext_resource type="PackedScene" uid="uid://cnlp8n882ce84" path="res://Scenes/Juegos/Lanza_Dardos/Globos/Globo3.tscn" id="2_xddye"]
+[ext_resource type="PackedScene" uid="uid://qehca4oargnu" path="res://Scenes/Juegos/Lanza_Dardos/Globos/Globo10.tscn" id="3_vn38f"]
+[ext_resource type="PackedScene" uid="uid://btrgc6jv4ngin" path="res://Scenes/Juegos/Lanza_Dardos/Globos/Globo54.tscn" id="4_6arig"]
+[ext_resource type="PackedScene" uid="uid://b416biqkafxue" path="res://Scenes/Juegos/Lanza_Dardos/Globos/Globo8.tscn" id="5_r8kcw"]
+[ext_resource type="PackedScene" uid="uid://rqo63y37eqf" path="res://Scenes/Juegos/Lanza_Dardos/Globos/Globo14.tscn" id="6_q04v7"]
+[ext_resource type="PackedScene" uid="uid://cxux2b3hcxret" path="res://Scenes/Juegos/Lanza_Dardos/Globos/Globo9.tscn" id="7_3wcwa"]
+[ext_resource type="PackedScene" uid="uid://dxauhlej3k8pg" path="res://Scenes/Juegos/Lanza_Dardos/Globos/Globo1.tscn" id="8_i7n5n"]
+[ext_resource type="PackedScene" uid="uid://bxnrp35qbglcq" path="res://Scenes/Juegos/Lanza_Dardos/Globos/Globo25.tscn" id="9_43n2v"]
+[ext_resource type="PackedScene" uid="uid://b706qsowtxnx" path="res://Scenes/Juegos/Lanza_Dardos/Globos/Globo35.tscn" id="10_es6l1"]
+[ext_resource type="PackedScene" uid="uid://c7ej264otvoov" path="res://Scenes/Juegos/Lanza_Dardos/Globos/Globo12.tscn" id="11_waoj4"]
+[ext_resource type="PackedScene" uid="uid://bo215x56tr6kn" path="res://Scenes/Juegos/Lanza_Dardos/Globos/Globo4.tscn" id="12_nwben"]
+
+[resource]
+script = ExtResource("1_qi23e")
+question_info = "Don Alux pagó $90 pesos para 18 boletos de un juego. ¿Cuánto cuesta cada boleto?"
+type = 0
+options = Array[PackedScene]([ExtResource("2_xddye"), ExtResource("3_vn38f"), ExtResource("4_6arig"), ExtResource("1_egi61"), ExtResource("5_r8kcw"), ExtResource("6_q04v7"), ExtResource("7_3wcwa"), ExtResource("8_i7n5n"), ExtResource("9_43n2v"), ExtResource("10_es6l1"), ExtResource("11_waoj4"), ExtResource("12_nwben")])
+correct = ExtResource("1_egi61")

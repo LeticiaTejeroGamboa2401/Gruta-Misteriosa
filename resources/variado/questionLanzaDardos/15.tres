@@ -1,0 +1,22 @@
+[gd_resource type="Resource" script_class="QuizQuestionDarditos" load_steps=14 format=3 uid="uid://cuwqlw505oaqk"]
+
+[ext_resource type="PackedScene" uid="uid://c717kh42b16sc" path="res://Scenes/Juegos/Lanza_Dardos/Globos/Globo18.tscn" id="1_jjdva"]
+[ext_resource type="Script" path="res://Scripts/Juegos/LanzaDardos/question.gd" id="1_o14gl"]
+[ext_resource type="PackedScene" uid="uid://b706qsowtxnx" path="res://Scenes/Juegos/Lanza_Dardos/Globos/Globo35.tscn" id="2_wwj01"]
+[ext_resource type="PackedScene" uid="uid://clny6j5mg0qfl" path="res://Scenes/Juegos/Lanza_Dardos/Globos/Globo45.tscn" id="3_wloja"]
+[ext_resource type="PackedScene" uid="uid://cxux2b3hcxret" path="res://Scenes/Juegos/Lanza_Dardos/Globos/Globo9.tscn" id="4_jlcp2"]
+[ext_resource type="PackedScene" uid="uid://bulj3hw3s31ri" path="res://Scenes/Juegos/Lanza_Dardos/Globos/Globo20.tscn" id="5_c8ved"]
+[ext_resource type="PackedScene" uid="uid://bxnrp35qbglcq" path="res://Scenes/Juegos/Lanza_Dardos/Globos/Globo25.tscn" id="6_q2ngr"]
+[ext_resource type="PackedScene" uid="uid://c7ej264otvoov" path="res://Scenes/Juegos/Lanza_Dardos/Globos/Globo12.tscn" id="7_xcjmn"]
+[ext_resource type="PackedScene" uid="uid://dxauhlej3k8pg" path="res://Scenes/Juegos/Lanza_Dardos/Globos/Globo1.tscn" id="8_ujjl2"]
+[ext_resource type="PackedScene" uid="uid://1sq456vh855w" path="res://Scenes/Juegos/Lanza_Dardos/Globos/Globo52.tscn" id="9_p3cxf"]
+[ext_resource type="PackedScene" uid="uid://bo215x56tr6kn" path="res://Scenes/Juegos/Lanza_Dardos/Globos/Globo4.tscn" id="10_1to14"]
+[ext_resource type="PackedScene" uid="uid://qehca4oargnu" path="res://Scenes/Juegos/Lanza_Dardos/Globos/Globo10.tscn" id="11_d4435"]
+[ext_resource type="PackedScene" uid="uid://b416biqkafxue" path="res://Scenes/Juegos/Lanza_Dardos/Globos/Globo8.tscn" id="12_ytv8c"]
+
+[resource]
+script = ExtResource("1_o14gl")
+question_info = "El boleto para la tómbola cuesta $2 pesos. Si don alux pagó 9, ¿cuántos pagó?"
+type = 0
+options = Array[PackedScene]([ExtResource("2_wwj01"), ExtResource("3_wloja"), ExtResource("1_jjdva"), ExtResource("4_jlcp2"), ExtResource("5_c8ved"), ExtResource("6_q2ngr"), ExtResource("7_xcjmn"), ExtResource("8_ujjl2"), ExtResource("9_p3cxf"), ExtResource("10_1to14"), ExtResource("11_d4435"), ExtResource("12_ytv8c")])
+correct = ExtResource("1_jjdva")

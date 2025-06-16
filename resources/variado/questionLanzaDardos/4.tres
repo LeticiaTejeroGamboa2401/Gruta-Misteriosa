@@ -1,0 +1,22 @@
+[gd_resource type="Resource" script_class="QuizQuestionDarditos" load_steps=14 format=3 uid="uid://dkov4q2u77ey3"]
+
+[ext_resource type="PackedScene" uid="uid://clny6j5mg0qfl" path="res://Scenes/Juegos/Lanza_Dardos/Globos/Globo45.tscn" id="1_h41ie"]
+[ext_resource type="Script" path="res://Scripts/Juegos/LanzaDardos/question.gd" id="1_ku5mi"]
+[ext_resource type="PackedScene" uid="uid://c7ej264otvoov" path="res://Scenes/Juegos/Lanza_Dardos/Globos/Globo12.tscn" id="2_rcvio"]
+[ext_resource type="PackedScene" uid="uid://dl0hbxbfunnqh" path="res://Scenes/Juegos/Lanza_Dardos/Globos/Globo30.tscn" id="3_lnyho"]
+[ext_resource type="PackedScene" uid="uid://dxauhlej3k8pg" path="res://Scenes/Juegos/Lanza_Dardos/Globos/Globo1.tscn" id="4_2roni"]
+[ext_resource type="PackedScene" uid="uid://b706qsowtxnx" path="res://Scenes/Juegos/Lanza_Dardos/Globos/Globo35.tscn" id="5_vw6tj"]
+[ext_resource type="PackedScene" uid="uid://bxnrp35qbglcq" path="res://Scenes/Juegos/Lanza_Dardos/Globos/Globo25.tscn" id="6_dgbn5"]
+[ext_resource type="PackedScene" uid="uid://c717kh42b16sc" path="res://Scenes/Juegos/Lanza_Dardos/Globos/Globo18.tscn" id="7_mo3k8"]
+[ext_resource type="PackedScene" uid="uid://btrgc6jv4ngin" path="res://Scenes/Juegos/Lanza_Dardos/Globos/Globo54.tscn" id="8_l52b6"]
+[ext_resource type="PackedScene" uid="uid://rqo63y37eqf" path="res://Scenes/Juegos/Lanza_Dardos/Globos/Globo14.tscn" id="9_inirn"]
+[ext_resource type="PackedScene" uid="uid://qehca4oargnu" path="res://Scenes/Juegos/Lanza_Dardos/Globos/Globo10.tscn" id="10_3crip"]
+[ext_resource type="PackedScene" uid="uid://bulj3hw3s31ri" path="res://Scenes/Juegos/Lanza_Dardos/Globos/Globo20.tscn" id="11_whi42"]
+[ext_resource type="PackedScene" uid="uid://b416biqkafxue" path="res://Scenes/Juegos/Lanza_Dardos/Globos/Globo8.tscn" id="12_avwgq"]
+
+[resource]
+script = ExtResource("1_ku5mi")
+question_info = "Don alux compró 3 manzanas a $15 pesos cada una para sus hijos."
+type = 0
+options = Array[PackedScene]([ExtResource("2_rcvio"), ExtResource("3_lnyho"), ExtResource("1_h41ie"), ExtResource("4_2roni"), ExtResource("5_vw6tj"), ExtResource("6_dgbn5"), ExtResource("7_mo3k8"), ExtResource("8_l52b6"), ExtResource("9_inirn"), ExtResource("10_3crip"), ExtResource("11_whi42"), ExtResource("12_avwgq")])
+correct = ExtResource("1_h41ie")

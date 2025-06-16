@@ -1,0 +1,22 @@
+[gd_resource type="Resource" script_class="QuizQuestionDarditos" load_steps=14 format=3 uid="uid://c1iw6tt5u6yaj"]
+
+[ext_resource type="Script" path="res://Scripts/Juegos/LanzaDardos/question.gd" id="1_k7dtx"]
+[ext_resource type="PackedScene" uid="uid://b416biqkafxue" path="res://Scenes/Juegos/Lanza_Dardos/Globos/Globo8.tscn" id="1_yp7ah"]
+[ext_resource type="PackedScene" uid="uid://ngx1kreb7jme" path="res://Scenes/Juegos/Lanza_Dardos/Globos/Globo32.tscn" id="2_hm2mg"]
+[ext_resource type="PackedScene" uid="uid://qehca4oargnu" path="res://Scenes/Juegos/Lanza_Dardos/Globos/Globo10.tscn" id="3_r0tb7"]
+[ext_resource type="PackedScene" uid="uid://btrgc6jv4ngin" path="res://Scenes/Juegos/Lanza_Dardos/Globos/Globo54.tscn" id="4_ofu6v"]
+[ext_resource type="PackedScene" uid="uid://clny6j5mg0qfl" path="res://Scenes/Juegos/Lanza_Dardos/Globos/Globo45.tscn" id="5_ndqd7"]
+[ext_resource type="PackedScene" uid="uid://rqo63y37eqf" path="res://Scenes/Juegos/Lanza_Dardos/Globos/Globo14.tscn" id="6_lgmaf"]
+[ext_resource type="PackedScene" uid="uid://cxux2b3hcxret" path="res://Scenes/Juegos/Lanza_Dardos/Globos/Globo9.tscn" id="7_hrjmp"]
+[ext_resource type="PackedScene" uid="uid://dxauhlej3k8pg" path="res://Scenes/Juegos/Lanza_Dardos/Globos/Globo1.tscn" id="8_8vcb0"]
+[ext_resource type="PackedScene" uid="uid://bxnrp35qbglcq" path="res://Scenes/Juegos/Lanza_Dardos/Globos/Globo25.tscn" id="9_sg61y"]
+[ext_resource type="PackedScene" uid="uid://b706qsowtxnx" path="res://Scenes/Juegos/Lanza_Dardos/Globos/Globo35.tscn" id="10_nalb3"]
+[ext_resource type="PackedScene" uid="uid://c7ej264otvoov" path="res://Scenes/Juegos/Lanza_Dardos/Globos/Globo12.tscn" id="11_hqjtd"]
+[ext_resource type="PackedScene" uid="uid://bo215x56tr6kn" path="res://Scenes/Juegos/Lanza_Dardos/Globos/Globo4.tscn" id="12_5wfu4"]
+
+[resource]
+script = ExtResource("1_k7dtx")
+question_info = "Don alux pagó $32 pesos por 4 boletos para la casa de los espejos. ¿Cuánto cuesta cada boleto?"
+type = 0
+options = Array[PackedScene]([ExtResource("2_hm2mg"), ExtResource("3_r0tb7"), ExtResource("4_ofu6v"), ExtResource("5_ndqd7"), ExtResource("6_lgmaf"), ExtResource("1_yp7ah"), ExtResource("7_hrjmp"), ExtResource("8_8vcb0"), ExtResource("9_sg61y"), ExtResource("10_nalb3"), ExtResource("11_hqjtd"), ExtResource("12_5wfu4")])
+correct = ExtResource("1_yp7ah")

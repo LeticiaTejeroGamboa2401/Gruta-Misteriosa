@@ -1,0 +1,22 @@
+[gd_resource type="Resource" script_class="QuizQuestionDarditos" load_steps=14 format=3 uid="uid://bijtjgjrsrrmn"]
+
+[ext_resource type="Script" path="res://Scripts/Juegos/LanzaDardos/question.gd" id="1_f0sta"]
+[ext_resource type="PackedScene" uid="uid://c717kh42b16sc" path="res://Scenes/Juegos/Lanza_Dardos/Globos/Globo18.tscn" id="1_q0a40"]
+[ext_resource type="PackedScene" uid="uid://b706qsowtxnx" path="res://Scenes/Juegos/Lanza_Dardos/Globos/Globo35.tscn" id="2_37dg6"]
+[ext_resource type="PackedScene" uid="uid://bulj3hw3s31ri" path="res://Scenes/Juegos/Lanza_Dardos/Globos/Globo20.tscn" id="3_opx7m"]
+[ext_resource type="PackedScene" uid="uid://clny6j5mg0qfl" path="res://Scenes/Juegos/Lanza_Dardos/Globos/Globo45.tscn" id="4_6chjf"]
+[ext_resource type="PackedScene" uid="uid://cxux2b3hcxret" path="res://Scenes/Juegos/Lanza_Dardos/Globos/Globo9.tscn" id="5_5m4mi"]
+[ext_resource type="PackedScene" uid="uid://bxnrp35qbglcq" path="res://Scenes/Juegos/Lanza_Dardos/Globos/Globo25.tscn" id="6_25jt4"]
+[ext_resource type="PackedScene" uid="uid://c7ej264otvoov" path="res://Scenes/Juegos/Lanza_Dardos/Globos/Globo12.tscn" id="7_838sm"]
+[ext_resource type="PackedScene" uid="uid://dxauhlej3k8pg" path="res://Scenes/Juegos/Lanza_Dardos/Globos/Globo1.tscn" id="8_io08p"]
+[ext_resource type="PackedScene" uid="uid://1sq456vh855w" path="res://Scenes/Juegos/Lanza_Dardos/Globos/Globo52.tscn" id="9_bxv2r"]
+[ext_resource type="PackedScene" uid="uid://bo215x56tr6kn" path="res://Scenes/Juegos/Lanza_Dardos/Globos/Globo4.tscn" id="10_dw6uh"]
+[ext_resource type="PackedScene" uid="uid://qehca4oargnu" path="res://Scenes/Juegos/Lanza_Dardos/Globos/Globo10.tscn" id="11_1sopi"]
+[ext_resource type="PackedScene" uid="uid://b416biqkafxue" path="res://Scenes/Juegos/Lanza_Dardos/Globos/Globo8.tscn" id="12_xmaq7"]
+
+[resource]
+script = ExtResource("1_f0sta")
+question_info = "Para el juego de tiro al blanco, el boleto cuesta $9 pesos por persona. Si don alux y su esposa juegan, ¿cuánto pagaron?"
+type = 0
+options = Array[PackedScene]([ExtResource("2_37dg6"), ExtResource("3_opx7m"), ExtResource("4_6chjf"), ExtResource("5_5m4mi"), ExtResource("1_q0a40"), ExtResource("6_25jt4"), ExtResource("7_838sm"), ExtResource("8_io08p"), ExtResource("9_bxv2r"), ExtResource("10_dw6uh"), ExtResource("11_1sopi"), ExtResource("12_xmaq7")])
+correct = ExtResource("1_q0a40")

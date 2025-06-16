@@ -1,4 +1,4 @@
-[gd_scene load_steps=20 format=3 uid="uid://d14trte3lxabb"]
+[gd_scene load_steps=30 format=3 uid="uid://d14trte3lxabb"]
 
 [ext_resource type="Script" path="res://Scripts/Juegos/AtrapaPeces/confirmacion_juego.gd" id="1_oiojo"]
 [ext_resource type="Texture2D" uid="uid://cfyed1mbxgntf" path="res://images/Juegos/Atrapa_Peces/fondo_confirmacion.png" id="1_r5owa"]
@@ -67,8 +67,47 @@ corner_radius_top_right = 15
 corner_radius_bottom_right = 15
 corner_radius_bottom_left = 15
 
-[sub_resource type="FontVariation" id="FontVariation_bu3lx"]
-base_font = ExtResource("3_4oirs")
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_c14jg"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_k23ea"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_y6u6x"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_hfbe0"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_c7h36"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_nhg2r"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_xbefo"]
+bg_color = Color(1, 1, 1, 1)
+border_width_left = 5
+border_width_top = 5
+border_width_right = 5
+border_width_bottom = 5
+border_color = Color(1, 0, 0.2, 1)
+corner_radius_top_left = 15
+corner_radius_top_right = 15
+corner_radius_bottom_right = 15
+corner_radius_bottom_left = 15
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_d15j5"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_jpl02"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_fkcir"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_43hji"]
+bg_color = Color(1, 1, 1, 1)
+border_width_left = 3
+border_width_top = 3
+border_width_right = 3
+border_width_bottom = 3
+border_color = Color(0, 0, 0, 1)
+corner_radius_top_left = 15
+corner_radius_top_right = 15
+corner_radius_bottom_right = 15
+corner_radius_bottom_left = 15
 
 [node name="Control" type="Control"]
 layout_mode = 3
@@ -119,7 +158,7 @@ offset_bottom = 549.0
 theme_override_colors/font_hover_color = Color(0, 0, 0, 1)
 theme_override_colors/font_color = Color(0, 0, 0, 1)
 theme_override_fonts/font = SubResource("FontVariation_olyw2")
-theme_override_font_sizes/font_size = 30
+theme_override_font_sizes/font_size = 35
 theme_override_styles/focus = SubResource("StyleBoxEmpty_4pg0n")
 theme_override_styles/disabled_mirrored = SubResource("StyleBoxEmpty_xqkqq")
 theme_override_styles/disabled = SubResource("StyleBoxEmpty_4ubnn")
@@ -137,23 +176,23 @@ text = "JUGAR"
 layout_mode = 0
 offset_left = 799.0
 offset_top = 560.0
-offset_right = 984.0
+offset_right = 985.0
 offset_bottom = 629.0
 theme_override_colors/font_hover_color = Color(0, 0, 0, 1)
 theme_override_colors/font_color = Color(0, 0, 0, 1)
-theme_override_fonts/font = SubResource("FontVariation_bu3lx")
-theme_override_font_sizes/font_size = 30
-theme_override_styles/focus = SubResource("StyleBoxEmpty_4pg0n")
-theme_override_styles/disabled_mirrored = SubResource("StyleBoxEmpty_xqkqq")
-theme_override_styles/disabled = SubResource("StyleBoxEmpty_4ubnn")
-theme_override_styles/hover_pressed_mirrored = SubResource("StyleBoxEmpty_uox8e")
-theme_override_styles/hover_pressed = SubResource("StyleBoxEmpty_ptpp1")
-theme_override_styles/hover_mirrored = SubResource("StyleBoxEmpty_6rumc")
-theme_override_styles/hover = SubResource("StyleBoxFlat_66kcj")
-theme_override_styles/pressed_mirrored = SubResource("StyleBoxEmpty_lg777")
-theme_override_styles/pressed = SubResource("StyleBoxEmpty_kqydd")
-theme_override_styles/normal_mirrored = SubResource("StyleBoxEmpty_o25mq")
-theme_override_styles/normal = SubResource("StyleBoxFlat_bfq5b")
+theme_override_fonts/font = ExtResource("3_4oirs")
+theme_override_font_sizes/font_size = 35
+theme_override_styles/focus = SubResource("StyleBoxEmpty_c14jg")
+theme_override_styles/disabled_mirrored = SubResource("StyleBoxEmpty_k23ea")
+theme_override_styles/disabled = SubResource("StyleBoxEmpty_y6u6x")
+theme_override_styles/hover_pressed_mirrored = SubResource("StyleBoxEmpty_hfbe0")
+theme_override_styles/hover_pressed = SubResource("StyleBoxEmpty_c7h36")
+theme_override_styles/hover_mirrored = SubResource("StyleBoxEmpty_nhg2r")
+theme_override_styles/hover = SubResource("StyleBoxFlat_xbefo")
+theme_override_styles/pressed_mirrored = SubResource("StyleBoxEmpty_d15j5")
+theme_override_styles/pressed = SubResource("StyleBoxEmpty_jpl02")
+theme_override_styles/normal_mirrored = SubResource("StyleBoxEmpty_fkcir")
+theme_override_styles/normal = SubResource("StyleBoxFlat_43hji")
 text = "SALIR"
 
 [connection signal="pressed" from="Jugar" to="." method="_on_jugar_pressed"]

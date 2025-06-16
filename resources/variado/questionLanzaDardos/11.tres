@@ -1,0 +1,22 @@
+[gd_resource type="Resource" script_class="QuizQuestionDarditos" load_steps=14 format=3 uid="uid://cdmkh1ygvd11x"]
+
+[ext_resource type="Script" path="res://Scripts/Juegos/LanzaDardos/question.gd" id="1_5ye55"]
+[ext_resource type="PackedScene" uid="uid://i3bnqubwujjc" path="res://Scenes/Juegos/Lanza_Dardos/Globos/Globo5.tscn" id="1_g2n7r"]
+[ext_resource type="PackedScene" uid="uid://bulj3hw3s31ri" path="res://Scenes/Juegos/Lanza_Dardos/Globos/Globo20.tscn" id="2_j65ad"]
+[ext_resource type="PackedScene" uid="uid://clny6j5mg0qfl" path="res://Scenes/Juegos/Lanza_Dardos/Globos/Globo45.tscn" id="3_5d0vh"]
+[ext_resource type="PackedScene" uid="uid://cxux2b3hcxret" path="res://Scenes/Juegos/Lanza_Dardos/Globos/Globo9.tscn" id="4_85pqc"]
+[ext_resource type="PackedScene" uid="uid://b706qsowtxnx" path="res://Scenes/Juegos/Lanza_Dardos/Globos/Globo35.tscn" id="5_e0dn0"]
+[ext_resource type="PackedScene" uid="uid://rqo63y37eqf" path="res://Scenes/Juegos/Lanza_Dardos/Globos/Globo14.tscn" id="6_5hj5g"]
+[ext_resource type="PackedScene" uid="uid://qehca4oargnu" path="res://Scenes/Juegos/Lanza_Dardos/Globos/Globo10.tscn" id="7_accxb"]
+[ext_resource type="PackedScene" uid="uid://b416biqkafxue" path="res://Scenes/Juegos/Lanza_Dardos/Globos/Globo8.tscn" id="8_e4061"]
+[ext_resource type="PackedScene" uid="uid://bo215x56tr6kn" path="res://Scenes/Juegos/Lanza_Dardos/Globos/Globo4.tscn" id="9_glott"]
+[ext_resource type="PackedScene" uid="uid://dxauhlej3k8pg" path="res://Scenes/Juegos/Lanza_Dardos/Globos/Globo1.tscn" id="10_i266k"]
+[ext_resource type="PackedScene" uid="uid://dl0hbxbfunnqh" path="res://Scenes/Juegos/Lanza_Dardos/Globos/Globo30.tscn" id="11_q4q2i"]
+[ext_resource type="PackedScene" uid="uid://c7ej264otvoov" path="res://Scenes/Juegos/Lanza_Dardos/Globos/Globo12.tscn" id="12_53oe3"]
+
+[resource]
+script = ExtResource("1_5ye55")
+question_info = "Don alux gastó $45 pesos en boletos para el teatro de marionetas. Si cada boleto cuesta $9, ¿cuántos boletos compró?"
+type = 0
+options = Array[PackedScene]([ExtResource("1_g2n7r"), ExtResource("2_j65ad"), ExtResource("3_5d0vh"), ExtResource("4_85pqc"), ExtResource("5_e0dn0"), ExtResource("6_5hj5g"), ExtResource("7_accxb"), ExtResource("8_e4061"), ExtResource("9_glott"), ExtResource("10_i266k"), ExtResource("11_q4q2i"), ExtResource("12_53oe3")])
+correct = ExtResource("1_g2n7r")

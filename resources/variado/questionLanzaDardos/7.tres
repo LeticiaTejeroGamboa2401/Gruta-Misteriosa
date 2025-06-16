@@ -1,0 +1,22 @@
+[gd_resource type="Resource" script_class="QuizQuestionDarditos" load_steps=14 format=3 uid="uid://cawhkagacj2cl"]
+
+[ext_resource type="Script" path="res://Scripts/Juegos/LanzaDardos/question.gd" id="1_2dnai"]
+[ext_resource type="PackedScene" uid="uid://bo215x56tr6kn" path="res://Scenes/Juegos/Lanza_Dardos/Globos/Globo4.tscn" id="1_y8qkb"]
+[ext_resource type="PackedScene" uid="uid://ngx1kreb7jme" path="res://Scenes/Juegos/Lanza_Dardos/Globos/Globo32.tscn" id="2_j36u5"]
+[ext_resource type="PackedScene" uid="uid://qehca4oargnu" path="res://Scenes/Juegos/Lanza_Dardos/Globos/Globo10.tscn" id="3_dd33j"]
+[ext_resource type="PackedScene" uid="uid://btrgc6jv4ngin" path="res://Scenes/Juegos/Lanza_Dardos/Globos/Globo54.tscn" id="4_pgj73"]
+[ext_resource type="PackedScene" uid="uid://clny6j5mg0qfl" path="res://Scenes/Juegos/Lanza_Dardos/Globos/Globo45.tscn" id="5_7ff6n"]
+[ext_resource type="PackedScene" uid="uid://b416biqkafxue" path="res://Scenes/Juegos/Lanza_Dardos/Globos/Globo8.tscn" id="6_y5x2r"]
+[ext_resource type="PackedScene" uid="uid://rqo63y37eqf" path="res://Scenes/Juegos/Lanza_Dardos/Globos/Globo14.tscn" id="7_jnyye"]
+[ext_resource type="PackedScene" uid="uid://cxux2b3hcxret" path="res://Scenes/Juegos/Lanza_Dardos/Globos/Globo9.tscn" id="8_whvft"]
+[ext_resource type="PackedScene" uid="uid://dxauhlej3k8pg" path="res://Scenes/Juegos/Lanza_Dardos/Globos/Globo1.tscn" id="9_glj8r"]
+[ext_resource type="PackedScene" uid="uid://bxnrp35qbglcq" path="res://Scenes/Juegos/Lanza_Dardos/Globos/Globo25.tscn" id="10_igrpp"]
+[ext_resource type="PackedScene" uid="uid://b706qsowtxnx" path="res://Scenes/Juegos/Lanza_Dardos/Globos/Globo35.tscn" id="11_xedeo"]
+[ext_resource type="PackedScene" uid="uid://c7ej264otvoov" path="res://Scenes/Juegos/Lanza_Dardos/Globos/Globo12.tscn" id="12_jd4bc"]
+
+[resource]
+script = ExtResource("1_2dnai")
+question_info = "Don alux le dio $72 pesos a sus hijos para que compren boletos. Si cada boleto está cuesta $18 pesos. ¿Cuántos boletos compraron?"
+type = 0
+options = Array[PackedScene]([ExtResource("2_j36u5"), ExtResource("3_dd33j"), ExtResource("4_pgj73"), ExtResource("5_7ff6n"), ExtResource("6_y5x2r"), ExtResource("7_jnyye"), ExtResource("8_whvft"), ExtResource("9_glj8r"), ExtResource("10_igrpp"), ExtResource("11_xedeo"), ExtResource("12_jd4bc"), ExtResource("1_y8qkb")])
+correct = ExtResource("1_y8qkb")

@@ -1,0 +1,198 @@
+[gd_scene load_steps=29 format=3 uid="uid://obbnxx5pxwja"]
+
+[ext_resource type="Script" path="res://Scripts/Juegos/LanzaDardos/confirmacion_juego.gd" id="1_axomc"]
+[ext_resource type="Texture2D" uid="uid://c2ty7q7d8oqkf" path="res://images/Juegos/Lanza_Dardos/Fondo_Confirmacion.png" id="1_fkwpr"]
+[ext_resource type="FontFile" uid="uid://ex6sf638yhh5" path="res://font/Chonky Bunny.ttf" id="2_wvjaw"]
+[ext_resource type="FontFile" uid="uid://q4llc3uguqs2" path="res://font/KGCorneroftheSky.ttf" id="3_7oago"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_hgekh"]
+bg_color = Color(1, 1, 1, 0.705882)
+border_width_left = 3
+border_width_top = 3
+border_width_right = 3
+border_width_bottom = 3
+border_color = Color(0, 0, 0, 1)
+corner_radius_top_left = 15
+corner_radius_top_right = 15
+corner_radius_bottom_right = 15
+corner_radius_bottom_left = 15
+
+[sub_resource type="LabelSettings" id="LabelSettings_fqk71"]
+font = ExtResource("2_wvjaw")
+font_size = 50
+font_color = Color(0, 0, 0, 1)
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_mu68g"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_8f6gk"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_aibu8"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_e3c81"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_3tokb"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_jntkx"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_4utmn"]
+bg_color = Color(1, 1, 1, 1)
+border_width_left = 5
+border_width_top = 5
+border_width_right = 5
+border_width_bottom = 5
+border_color = Color(0.54902, 0.835294, 0.411765, 1)
+corner_radius_top_left = 15
+corner_radius_top_right = 15
+corner_radius_bottom_right = 15
+corner_radius_bottom_left = 15
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_rwh1j"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_mws07"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_vwpyc"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_qcg51"]
+bg_color = Color(1, 1, 1, 1)
+border_width_left = 3
+border_width_top = 3
+border_width_right = 3
+border_width_bottom = 3
+border_color = Color(0, 0, 0, 1)
+corner_radius_top_left = 15
+corner_radius_top_right = 15
+corner_radius_bottom_right = 15
+corner_radius_bottom_left = 15
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_tv7r7"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_2iwjj"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_qjo66"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_6dv44"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_a0l2q"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_4wcoo"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_o377f"]
+bg_color = Color(1, 1, 1, 1)
+border_width_left = 5
+border_width_top = 5
+border_width_right = 5
+border_width_bottom = 5
+border_color = Color(1, 0, 0.2, 1)
+corner_radius_top_left = 15
+corner_radius_top_right = 15
+corner_radius_bottom_right = 15
+corner_radius_bottom_left = 15
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_m2l4w"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_bvh3e"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_jjo58"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_uvrpq"]
+bg_color = Color(1, 1, 1, 1)
+border_width_left = 3
+border_width_top = 3
+border_width_right = 3
+border_width_bottom = 3
+border_color = Color(0, 0, 0, 1)
+corner_radius_top_left = 15
+corner_radius_top_right = 15
+corner_radius_bottom_right = 15
+corner_radius_bottom_left = 15
+
+[node name="Control" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_axomc")
+
+[node name="TextureRect" type="TextureRect" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("1_fkwpr")
+
+[node name="Panel" type="Panel" parent="."]
+layout_mode = 0
+offset_left = 50.0
+offset_top = 472.0
+offset_right = 770.0
+offset_bottom = 640.0
+theme_override_styles/panel = SubResource("StyleBoxFlat_hgekh")
+
+[node name="Label" type="Label" parent="Panel"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 9.0
+offset_top = 9.0
+offset_right = -8.0
+offset_bottom = -9.0
+grow_horizontal = 2
+grow_vertical = 2
+text = "Alux Dormilón:
+¿Te gustaría jugar \"Lanza dardos\"?"
+label_settings = SubResource("LabelSettings_fqk71")
+vertical_alignment = 1
+
+[node name="Jugar" type="Button" parent="."]
+layout_mode = 0
+offset_left = 792.0
+offset_top = 486.0
+offset_right = 1008.0
+offset_bottom = 552.0
+theme_override_colors/font_hover_color = Color(0, 0, 0, 1)
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("3_7oago")
+theme_override_font_sizes/font_size = 35
+theme_override_styles/focus = SubResource("StyleBoxEmpty_mu68g")
+theme_override_styles/disabled_mirrored = SubResource("StyleBoxEmpty_8f6gk")
+theme_override_styles/disabled = SubResource("StyleBoxEmpty_aibu8")
+theme_override_styles/hover_pressed_mirrored = SubResource("StyleBoxEmpty_e3c81")
+theme_override_styles/hover_pressed = SubResource("StyleBoxEmpty_3tokb")
+theme_override_styles/hover_mirrored = SubResource("StyleBoxEmpty_jntkx")
+theme_override_styles/hover = SubResource("StyleBoxFlat_4utmn")
+theme_override_styles/pressed_mirrored = SubResource("StyleBoxEmpty_rwh1j")
+theme_override_styles/pressed = SubResource("StyleBoxEmpty_mws07")
+theme_override_styles/normal_mirrored = SubResource("StyleBoxEmpty_vwpyc")
+theme_override_styles/normal = SubResource("StyleBoxFlat_qcg51")
+text = "JUGAR"
+
+[node name="Salir" type="Button" parent="."]
+layout_mode = 0
+offset_left = 792.0
+offset_top = 561.0
+offset_right = 1008.0
+offset_bottom = 627.0
+theme_override_colors/font_hover_color = Color(0, 0, 0, 1)
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("3_7oago")
+theme_override_font_sizes/font_size = 35
+theme_override_styles/focus = SubResource("StyleBoxEmpty_tv7r7")
+theme_override_styles/disabled_mirrored = SubResource("StyleBoxEmpty_2iwjj")
+theme_override_styles/disabled = SubResource("StyleBoxEmpty_qjo66")
+theme_override_styles/hover_pressed_mirrored = SubResource("StyleBoxEmpty_6dv44")
+theme_override_styles/hover_pressed = SubResource("StyleBoxEmpty_a0l2q")
+theme_override_styles/hover_mirrored = SubResource("StyleBoxEmpty_4wcoo")
+theme_override_styles/hover = SubResource("StyleBoxFlat_o377f")
+theme_override_styles/pressed_mirrored = SubResource("StyleBoxEmpty_m2l4w")
+theme_override_styles/pressed = SubResource("StyleBoxEmpty_bvh3e")
+theme_override_styles/normal_mirrored = SubResource("StyleBoxEmpty_jjo58")
+theme_override_styles/normal = SubResource("StyleBoxFlat_uvrpq")
+text = "SALIR"
+
+[connection signal="pressed" from="Jugar" to="." method="_on_jugar_pressed"]
+[connection signal="pressed" from="Salir" to="." method="_on_salir_pressed"]

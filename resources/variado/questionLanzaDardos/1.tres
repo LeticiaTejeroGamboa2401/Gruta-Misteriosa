@@ -1,0 +1,22 @@
+[gd_resource type="Resource" script_class="QuizQuestionDarditos" load_steps=14 format=3 uid="uid://crwd2yxf1qog3"]
+
+[ext_resource type="PackedScene" uid="uid://dl0hbxbfunnqh" path="res://Scenes/Juegos/Lanza_Dardos/Globos/Globo30.tscn" id="1_2f73d"]
+[ext_resource type="PackedScene" uid="uid://dxauhlej3k8pg" path="res://Scenes/Juegos/Lanza_Dardos/Globos/Globo1.tscn" id="2_r51if"]
+[ext_resource type="PackedScene" uid="uid://cxux2b3hcxret" path="res://Scenes/Juegos/Lanza_Dardos/Globos/Globo9.tscn" id="3_e15ji"]
+[ext_resource type="PackedScene" uid="uid://bxnrp35qbglcq" path="res://Scenes/Juegos/Lanza_Dardos/Globos/Globo25.tscn" id="4_vec54"]
+[ext_resource type="PackedScene" uid="uid://c7ej264otvoov" path="res://Scenes/Juegos/Lanza_Dardos/Globos/Globo12.tscn" id="5_b0cra"]
+[ext_resource type="PackedScene" uid="uid://b706qsowtxnx" path="res://Scenes/Juegos/Lanza_Dardos/Globos/Globo35.tscn" id="6_2pogx"]
+[ext_resource type="PackedScene" uid="uid://c717kh42b16sc" path="res://Scenes/Juegos/Lanza_Dardos/Globos/Globo18.tscn" id="7_87jqs"]
+[ext_resource type="PackedScene" uid="uid://1sq456vh855w" path="res://Scenes/Juegos/Lanza_Dardos/Globos/Globo52.tscn" id="8_r4nlj"]
+[ext_resource type="PackedScene" uid="uid://rqo63y37eqf" path="res://Scenes/Juegos/Lanza_Dardos/Globos/Globo14.tscn" id="9_bpbpe"]
+[ext_resource type="PackedScene" uid="uid://bo215x56tr6kn" path="res://Scenes/Juegos/Lanza_Dardos/Globos/Globo4.tscn" id="10_caw0m"]
+[ext_resource type="PackedScene" uid="uid://bulj3hw3s31ri" path="res://Scenes/Juegos/Lanza_Dardos/Globos/Globo20.tscn" id="11_n4ux2"]
+[ext_resource type="PackedScene" uid="uid://b416biqkafxue" path="res://Scenes/Juegos/Lanza_Dardos/Globos/Globo8.tscn" id="12_xjap4"]
+[ext_resource type="Script" path="res://Scripts/Juegos/LanzaDardos/question.gd" id="13_bxqbi"]
+
+[resource]
+script = ExtResource("13_bxqbi")
+question_info = "Don alux, su esposa y sus 4 hijos se subieron a un camión para ir a la feria del pueblo. ¿Cuánto pagó don alux si el pasaje cuesta $5 pesos?"
+type = 0
+options = Array[PackedScene]([ExtResource("1_2f73d"), ExtResource("2_r51if"), ExtResource("3_e15ji"), ExtResource("4_vec54"), ExtResource("5_b0cra"), ExtResource("6_2pogx"), ExtResource("7_87jqs"), ExtResource("8_r4nlj"), ExtResource("9_bpbpe"), ExtResource("10_caw0m"), ExtResource("11_n4ux2"), ExtResource("12_xjap4")])
+correct = ExtResource("1_2f73d")

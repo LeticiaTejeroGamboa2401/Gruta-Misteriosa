@@ -1,0 +1,42 @@
+[gd_scene load_steps=7 format=3 uid="uid://1sq456vh855w"]
+
+[ext_resource type="Script" path="res://Scripts/Juegos/LanzaDardos/Globos/globo52.gd" id="1_3gby7"]
+[ext_resource type="Texture2D" uid="uid://dx62tvg61xtyh" path="res://images/Juegos/Lanza_Dardos/Globos/52.png" id="1_t4ymq"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_tu5xs"]
+size = Vector2(59, 124)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_8qjhg"]
+atlas = ExtResource("1_t4ymq")
+region = Rect2(0, 0, 68, 130)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_0ih3n"]
+atlas = ExtResource("1_t4ymq")
+region = Rect2(68, 0, 68, 130)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_yfjy5"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_8qjhg")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_0ih3n")
+}],
+"loop": false,
+"name": &"click",
+"speed": 5.0
+}]
+
+[node name="Area2D" type="Area2D"]
+script = ExtResource("1_3gby7")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(59, 63)
+shape = SubResource("RectangleShape2D_tu5xs")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+position = Vector2(62, 64)
+scale = Vector2(1.13235, 1.16923)
+sprite_frames = SubResource("SpriteFrames_yfjy5")
+animation = &"click"

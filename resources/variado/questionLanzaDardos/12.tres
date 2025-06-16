@@ -1,0 +1,22 @@
+[gd_resource type="Resource" script_class="QuizQuestionDarditos" load_steps=14 format=3 uid="uid://l2b3brqq8mo3"]
+
+[ext_resource type="PackedScene" uid="uid://bo215x56tr6kn" path="res://Scenes/Juegos/Lanza_Dardos/Globos/Globo4.tscn" id="1_4yiln"]
+[ext_resource type="Script" path="res://Scripts/Juegos/LanzaDardos/question.gd" id="1_m7oxh"]
+[ext_resource type="PackedScene" uid="uid://qehca4oargnu" path="res://Scenes/Juegos/Lanza_Dardos/Globos/Globo10.tscn" id="2_82hf2"]
+[ext_resource type="PackedScene" uid="uid://b706qsowtxnx" path="res://Scenes/Juegos/Lanza_Dardos/Globos/Globo35.tscn" id="3_duix5"]
+[ext_resource type="PackedScene" uid="uid://bxnrp35qbglcq" path="res://Scenes/Juegos/Lanza_Dardos/Globos/Globo25.tscn" id="4_q3fp5"]
+[ext_resource type="PackedScene" uid="uid://bulj3hw3s31ri" path="res://Scenes/Juegos/Lanza_Dardos/Globos/Globo20.tscn" id="5_puoxp"]
+[ext_resource type="PackedScene" uid="uid://cnlp8n882ce84" path="res://Scenes/Juegos/Lanza_Dardos/Globos/Globo3.tscn" id="6_0sfmy"]
+[ext_resource type="PackedScene" uid="uid://dxauhlej3k8pg" path="res://Scenes/Juegos/Lanza_Dardos/Globos/Globo1.tscn" id="7_rq171"]
+[ext_resource type="PackedScene" uid="uid://c717kh42b16sc" path="res://Scenes/Juegos/Lanza_Dardos/Globos/Globo18.tscn" id="8_0ouwk"]
+[ext_resource type="PackedScene" uid="uid://ngx1kreb7jme" path="res://Scenes/Juegos/Lanza_Dardos/Globos/Globo32.tscn" id="9_if5qp"]
+[ext_resource type="PackedScene" uid="uid://b416biqkafxue" path="res://Scenes/Juegos/Lanza_Dardos/Globos/Globo8.tscn" id="10_41lxu"]
+[ext_resource type="PackedScene" uid="uid://clny6j5mg0qfl" path="res://Scenes/Juegos/Lanza_Dardos/Globos/Globo45.tscn" id="11_qik68"]
+[ext_resource type="PackedScene" uid="uid://c7ej264otvoov" path="res://Scenes/Juegos/Lanza_Dardos/Globos/Globo12.tscn" id="12_e2qnp"]
+
+[resource]
+script = ExtResource("1_m7oxh")
+question_info = "La entrada para la feria cuesta $25 por persona. Si don alux pagó $100, ¿cuántas personas entraron con él?"
+type = 0
+options = Array[PackedScene]([ExtResource("2_82hf2"), ExtResource("3_duix5"), ExtResource("4_q3fp5"), ExtResource("5_puoxp"), ExtResource("6_0sfmy"), ExtResource("7_rq171"), ExtResource("8_0ouwk"), ExtResource("1_4yiln"), ExtResource("9_if5qp"), ExtResource("10_41lxu"), ExtResource("11_qik68"), ExtResource("12_e2qnp")])
+correct = ExtResource("6_0sfmy")

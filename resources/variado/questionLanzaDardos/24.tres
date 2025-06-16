@@ -1,0 +1,22 @@
+[gd_resource type="Resource" script_class="QuizQuestionDarditos" load_steps=14 format=3 uid="uid://b10ysh3jw8q0s"]
+
+[ext_resource type="Script" path="res://Scripts/Juegos/LanzaDardos/question.gd" id="1_d828e"]
+[ext_resource type="PackedScene" uid="uid://i3bnqubwujjc" path="res://Scenes/Juegos/Lanza_Dardos/Globos/Globo5.tscn" id="1_lhl5v"]
+[ext_resource type="PackedScene" uid="uid://qehca4oargnu" path="res://Scenes/Juegos/Lanza_Dardos/Globos/Globo10.tscn" id="2_ssvr3"]
+[ext_resource type="PackedScene" uid="uid://b706qsowtxnx" path="res://Scenes/Juegos/Lanza_Dardos/Globos/Globo35.tscn" id="3_7m635"]
+[ext_resource type="PackedScene" uid="uid://c717kh42b16sc" path="res://Scenes/Juegos/Lanza_Dardos/Globos/Globo18.tscn" id="4_nuiy4"]
+[ext_resource type="PackedScene" uid="uid://btrgc6jv4ngin" path="res://Scenes/Juegos/Lanza_Dardos/Globos/Globo54.tscn" id="5_fnumh"]
+[ext_resource type="PackedScene" uid="uid://rqo63y37eqf" path="res://Scenes/Juegos/Lanza_Dardos/Globos/Globo14.tscn" id="6_nmffl"]
+[ext_resource type="PackedScene" uid="uid://bulj3hw3s31ri" path="res://Scenes/Juegos/Lanza_Dardos/Globos/Globo20.tscn" id="7_dojsc"]
+[ext_resource type="PackedScene" uid="uid://ngx1kreb7jme" path="res://Scenes/Juegos/Lanza_Dardos/Globos/Globo32.tscn" id="8_vluso"]
+[ext_resource type="PackedScene" uid="uid://b416biqkafxue" path="res://Scenes/Juegos/Lanza_Dardos/Globos/Globo8.tscn" id="9_elhvd"]
+[ext_resource type="PackedScene" uid="uid://dxauhlej3k8pg" path="res://Scenes/Juegos/Lanza_Dardos/Globos/Globo1.tscn" id="10_tmfad"]
+[ext_resource type="PackedScene" uid="uid://cxux2b3hcxret" path="res://Scenes/Juegos/Lanza_Dardos/Globos/Globo9.tscn" id="11_387vl"]
+[ext_resource type="PackedScene" uid="uid://bo215x56tr6kn" path="res://Scenes/Juegos/Lanza_Dardos/Globos/Globo4.tscn" id="12_armgm"]
+
+[resource]
+script = ExtResource("1_d828e")
+question_info = "Don alux pagó $10 pesos para un boleto al parque de diversiones. ¿Cuántos boletos pudo comprar con $50 pesos?"
+type = 0
+options = Array[PackedScene]([ExtResource("2_ssvr3"), ExtResource("3_7m635"), ExtResource("1_lhl5v"), ExtResource("4_nuiy4"), ExtResource("5_fnumh"), ExtResource("6_nmffl"), ExtResource("7_dojsc"), ExtResource("8_vluso"), ExtResource("9_elhvd"), ExtResource("10_tmfad"), ExtResource("11_387vl"), ExtResource("12_armgm")])
+correct = ExtResource("1_lhl5v")

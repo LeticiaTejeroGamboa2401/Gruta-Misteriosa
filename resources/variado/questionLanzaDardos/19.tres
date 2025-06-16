@@ -1,0 +1,22 @@
+[gd_resource type="Resource" script_class="QuizQuestionDarditos" load_steps=14 format=3 uid="uid://cthg63786u2cs"]
+
+[ext_resource type="Script" path="res://Scripts/Juegos/LanzaDardos/question.gd" id="1_r4y60"]
+[ext_resource type="PackedScene" uid="uid://cnlp8n882ce84" path="res://Scenes/Juegos/Lanza_Dardos/Globos/Globo3.tscn" id="1_tjprh"]
+[ext_resource type="PackedScene" uid="uid://bxnrp35qbglcq" path="res://Scenes/Juegos/Lanza_Dardos/Globos/Globo25.tscn" id="2_ccng4"]
+[ext_resource type="PackedScene" uid="uid://bulj3hw3s31ri" path="res://Scenes/Juegos/Lanza_Dardos/Globos/Globo20.tscn" id="3_6y772"]
+[ext_resource type="PackedScene" uid="uid://clny6j5mg0qfl" path="res://Scenes/Juegos/Lanza_Dardos/Globos/Globo45.tscn" id="4_i8y10"]
+[ext_resource type="PackedScene" uid="uid://cxux2b3hcxret" path="res://Scenes/Juegos/Lanza_Dardos/Globos/Globo9.tscn" id="5_xlpcf"]
+[ext_resource type="PackedScene" uid="uid://rqo63y37eqf" path="res://Scenes/Juegos/Lanza_Dardos/Globos/Globo14.tscn" id="6_k7ag5"]
+[ext_resource type="PackedScene" uid="uid://qehca4oargnu" path="res://Scenes/Juegos/Lanza_Dardos/Globos/Globo10.tscn" id="7_7abhh"]
+[ext_resource type="PackedScene" uid="uid://b416biqkafxue" path="res://Scenes/Juegos/Lanza_Dardos/Globos/Globo8.tscn" id="8_l4w0b"]
+[ext_resource type="PackedScene" uid="uid://bo215x56tr6kn" path="res://Scenes/Juegos/Lanza_Dardos/Globos/Globo4.tscn" id="9_flfr1"]
+[ext_resource type="PackedScene" uid="uid://dxauhlej3k8pg" path="res://Scenes/Juegos/Lanza_Dardos/Globos/Globo1.tscn" id="10_4q0xu"]
+[ext_resource type="PackedScene" uid="uid://dl0hbxbfunnqh" path="res://Scenes/Juegos/Lanza_Dardos/Globos/Globo30.tscn" id="11_xjh02"]
+[ext_resource type="PackedScene" uid="uid://c7ej264otvoov" path="res://Scenes/Juegos/Lanza_Dardos/Globos/Globo12.tscn" id="12_uehh0"]
+
+[resource]
+script = ExtResource("1_r4y60")
+question_info = "El boleto para el laberinto cuesta $25 pesos. Don alux pagó $75. ¿Cuántos boletos compró?"
+type = 0
+options = Array[PackedScene]([ExtResource("2_ccng4"), ExtResource("3_6y772"), ExtResource("4_i8y10"), ExtResource("5_xlpcf"), ExtResource("1_tjprh"), ExtResource("6_k7ag5"), ExtResource("7_7abhh"), ExtResource("8_l4w0b"), ExtResource("9_flfr1"), ExtResource("10_4q0xu"), ExtResource("11_xjh02"), ExtResource("12_uehh0")])
+correct = ExtResource("1_tjprh")

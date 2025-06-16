@@ -1,4 +1,4 @@
-[gd_scene load_steps=34 format=3 uid="uid://dy8eonorti10n"]
+[gd_scene load_steps=36 format=3 uid="uid://dy8eonorti10n"]
 
 [ext_resource type="Script" path="res://Scripts/mapa_1.gd" id="1_lbv64"]
 [ext_resource type="Texture2D" uid="uid://ch2faqyjs7kwt" path="res://images/mapa.png" id="1_tmcc6"]
@@ -9,18 +9,19 @@
 [ext_resource type="Texture2D" uid="uid://fpancvs688ep" path="res://images/Juegos/Juegos_Ganados.png" id="6_h1v58"]
 [ext_resource type="FontFile" uid="uid://ex6sf638yhh5" path="res://font/Chonky Bunny.ttf" id="7_f328p"]
 [ext_resource type="Script" path="res://Scripts/Juegos/AtrapaPeces/entrada_Mapa.gd" id="7_lahml"]
+[ext_resource type="Script" path="res://Scripts/Juegos/LanzaDardos/entrada_mapa.gd" id="8_s2qtb"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_e46v1"]
-size = Vector2(218, 42.5)
+size = Vector2(218, 39.5)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_hk2gk"]
 size = Vector2(45.5, 98)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_6xxv5"]
-size = Vector2(39, 34)
+size = Vector2(48, 34)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_ri5fm"]
-size = Vector2(83, 17)
+size = Vector2(83, 70)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_wauax"]
 size = Vector2(113, 79)
@@ -38,7 +39,7 @@ size = Vector2(586, 35)
 size = Vector2(199, 30)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_4oesh"]
-size = Vector2(215.5, 315)
+size = Vector2(218, 312)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_gk38n"]
 size = Vector2(325, 186.5)
@@ -50,16 +51,16 @@ size = Vector2(52, 101.5)
 size = Vector2(235, 194.5)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_88s0q"]
-size = Vector2(353.5, 57)
+size = Vector2(353.5, 55)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_4dwiq"]
-size = Vector2(195.5, 122.5)
+size = Vector2(197, 124)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_la8tx"]
-size = Vector2(168, 243.5)
+size = Vector2(168, 241.5)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_m4i0i"]
-size = Vector2(102, 393)
+size = Vector2(102, 395)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_hpqfl"]
 size = Vector2(537.75, 195.75)
@@ -74,10 +75,13 @@ size = Vector2(53, 94)
 size = Vector2(50, 67.5)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_l3wsq"]
-size = Vector2(134.25, 0)
+size = Vector2(79.25, 5)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_mq7k5"]
 size = Vector2(147.5, 85)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_btxcb"]
+size = Vector2(111.5, 11)
 
 [sub_resource type="LabelSettings" id="LabelSettings_1lgld"]
 font = ExtResource("7_f328p")
@@ -106,7 +110,7 @@ metadata/_edit_lock_ = true
 [node name="AreaNoPasar" type="StaticBody2D" parent="."]
 
 [node name="Area18" type="CollisionShape2D" parent="AreaNoPasar"]
-position = Vector2(929, 628.75)
+position = Vector2(930, 627.25)
 shape = SubResource("RectangleShape2D_e46v1")
 
 [node name="Area17" type="CollisionShape2D" parent="AreaNoPasar"]
@@ -114,11 +118,11 @@ position = Vector2(579.75, 444)
 shape = SubResource("RectangleShape2D_hk2gk")
 
 [node name="Area16" type="CollisionShape2D" parent="AreaNoPasar"]
-position = Vector2(742.5, 463)
+position = Vector2(747, 463)
 shape = SubResource("RectangleShape2D_6xxv5")
 
 [node name="Area15" type="CollisionShape2D" parent="AreaNoPasar"]
-position = Vector2(784.5, 253.5)
+position = Vector2(784.5, 227)
 shape = SubResource("RectangleShape2D_ri5fm")
 
 [node name="Area14" type="CollisionShape2D" parent="AreaNoPasar"]
@@ -142,7 +146,7 @@ position = Vector2(941.5, 483)
 shape = SubResource("RectangleShape2D_10wtq")
 
 [node name="Area9" type="CollisionShape2D" parent="AreaNoPasar"]
-position = Vector2(1041.75, 339.5)
+position = Vector2(1043, 341)
 shape = SubResource("RectangleShape2D_4oesh")
 
 [node name="Area8" type="CollisionShape2D" parent="AreaNoPasar"]
@@ -150,7 +154,7 @@ position = Vector2(988.5, 91.75)
 shape = SubResource("RectangleShape2D_gk38n")
 
 [node name="Area7" type="CollisionShape2D" parent="AreaNoPasar"]
-position = Vector2(564, 52.25)
+position = Vector2(565, 52.25)
 shape = SubResource("RectangleShape2D_3823v")
 
 [node name="Area6" type="CollisionShape2D" parent="AreaNoPasar"]
@@ -158,19 +162,19 @@ position = Vector2(708.5, 95.75)
 shape = SubResource("RectangleShape2D_tnula")
 
 [node name="Area5" type="CollisionShape2D" parent="AreaNoPasar"]
-position = Vector2(644.25, 621.5)
+position = Vector2(644.25, 620.5)
 shape = SubResource("RectangleShape2D_88s0q")
 
 [node name="Area4" type="CollisionShape2D" parent="AreaNoPasar"]
-position = Vector2(369.25, 585.25)
+position = Vector2(368.5, 586)
 shape = SubResource("RectangleShape2D_4dwiq")
 
 [node name="Area3" type="CollisionShape2D" parent="AreaNoPasar"]
-position = Vector2(186, 527.25)
+position = Vector2(186, 526.25)
 shape = SubResource("RectangleShape2D_la8tx")
 
 [node name="Area2" type="CollisionShape2D" parent="AreaNoPasar"]
-position = Vector2(50, 449.5)
+position = Vector2(50, 450.5)
 shape = SubResource("RectangleShape2D_m4i0i")
 
 [node name="Area1" type="CollisionShape2D" parent="AreaNoPasar"]
@@ -207,17 +211,26 @@ script = ExtResource("6_3amxl")
 metadata/_edit_lock_ = true
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="CarreraCaballo"]
-position = Vector2(531.125, 318)
+position = Vector2(558.625, 320.5)
 shape = SubResource("RectangleShape2D_l3wsq")
 
 [node name="AtrapaPeces" type="Area2D" parent="."]
 script = ExtResource("7_lahml")
+metadata/_edit_lock_ = true
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="AtrapaPeces"]
 position = Vector2(175.25, 361.5)
 shape = SubResource("RectangleShape2D_mq7k5")
 
-[node name="TextureRect" type="TextureRect" parent="."]
+[node name="LanzaDardos" type="Area2D" parent="."]
+script = ExtResource("8_s2qtb")
+metadata/_edit_lock_ = true
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="LanzaDardos"]
+position = Vector2(660.25, 458.5)
+shape = SubResource("RectangleShape2D_btxcb")
+
+[node name="Talisman" type="TextureRect" parent="."]
 layout_mode = 0
 offset_left = 963.0
 offset_top = 5.0
@@ -240,3 +253,4 @@ horizontal_alignment = 1
 [connection signal="body_entered" from="DerribaAlPato" to="DerribaAlPato" method="_on_body_entered"]
 [connection signal="body_entered" from="CarreraCaballo" to="CarreraCaballo" method="_on_body_entered"]
 [connection signal="body_entered" from="AtrapaPeces" to="AtrapaPeces" method="_on_body_entered"]
+[connection signal="body_entered" from="LanzaDardos" to="LanzaDardos" method="_on_body_entered"]

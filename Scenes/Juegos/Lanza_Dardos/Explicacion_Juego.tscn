@@ -1,0 +1,355 @@
+[gd_scene load_steps=29 format=3 uid="uid://38eqv1iibyet"]
+
+[ext_resource type="Texture2D" uid="uid://bp7ce3v2tdd4y" path="res://images/Juegos/Lanza_Dardos/Fondo.png" id="1_214yu"]
+[ext_resource type="Script" path="res://Scripts/Juegos/LanzaDardos/explicacion_juego.gd" id="1_yyi32"]
+[ext_resource type="Texture2D" uid="uid://vyh8qv625m7m" path="res://images/Juegos/Lanza_Dardos/Dardos.png" id="2_yfqdr"]
+[ext_resource type="FontFile" uid="uid://ex6sf638yhh5" path="res://font/Chonky Bunny.ttf" id="3_3kdut"]
+[ext_resource type="Texture2D" uid="uid://c1l3qd7qbervq" path="res://images/Juegos/Lanza_Dardos/Amarillo.png" id="4_rxhbr"]
+[ext_resource type="Texture2D" uid="uid://duan26tp1yu4t" path="res://images/Juegos/Lanza_Dardos/Verde.png" id="5_dx26c"]
+[ext_resource type="Texture2D" uid="uid://bykjq16cbx5rg" path="res://images/Juegos/Lanza_Dardos/Morado.png" id="6_htycl"]
+[ext_resource type="Texture2D" uid="uid://b55ijbw2821ds" path="res://images/Juegos/Lanza_Dardos/Melón.png" id="7_7rudi"]
+[ext_resource type="Texture2D" uid="uid://b7uvl1lqissjo" path="res://images/Juegos/Lanza_Dardos/Rosa.png" id="8_rilx1"]
+[ext_resource type="Texture2D" uid="uid://d2xfhg0fx3jol" path="res://images/Juegos/Lanza_Dardos/correcto.png" id="9_4kxbd"]
+[ext_resource type="Texture2D" uid="uid://cfa2lwg0r7f22" path="res://images/Juegos/Lanza_Dardos/incorrecto.png" id="10_056be"]
+[ext_resource type="Texture2D" uid="uid://bwf8mkwr4gktp" path="res://images/siguiente_flecha.png" id="11_qagwy"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_p754y"]
+font = ExtResource("3_3kdut")
+font_size = 35
+font_color = Color(0, 0, 0, 1)
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_lm7vw"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_poy6y"]
+bg_color = Color(1, 1, 1, 1)
+border_width_left = 3
+border_width_top = 3
+border_width_right = 3
+border_width_bottom = 3
+border_color = Color(0, 0, 0, 1)
+corner_radius_top_left = 15
+corner_radius_top_right = 15
+corner_radius_bottom_right = 15
+corner_radius_bottom_left = 15
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_wyb3c"]
+bg_color = Color(1, 1, 1, 0.705882)
+border_width_left = 3
+border_width_top = 3
+border_width_right = 3
+border_width_bottom = 3
+border_color = Color(0, 0, 0, 1)
+corner_radius_top_left = 15
+corner_radius_top_right = 15
+corner_radius_bottom_right = 15
+corner_radius_bottom_left = 15
+
+[sub_resource type="LabelSettings" id="LabelSettings_aaduj"]
+font = ExtResource("3_3kdut")
+font_size = 35
+font_color = Color(0, 0, 0, 1)
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_p0i0y"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_fqb21"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_bvjt6"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_uafyv"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_jgr2n"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_70j5l"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_0gis6"]
+bg_color = Color(0, 0, 0, 0.235294)
+corner_radius_top_left = 15
+corner_radius_top_right = 15
+corner_radius_bottom_right = 15
+corner_radius_bottom_left = 15
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_de2ar"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_375e4"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_vpwc7"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_qfxml"]
+
+[node name="Control" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_yyi32")
+
+[node name="Fondo" type="TextureRect" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("1_214yu")
+
+[node name="Dardos_vidas" type="TextureRect" parent="."]
+layout_mode = 0
+offset_left = 1039.0
+offset_top = 5.0
+offset_right = 1148.0
+offset_bottom = 117.0
+texture = ExtResource("2_yfqdr")
+expand_mode = 1
+
+[node name="Label" type="Label" parent="."]
+layout_mode = 0
+offset_left = 1094.0
+offset_top = 64.0
+offset_right = 1134.0
+offset_bottom = 101.0
+text = "x 3"
+label_settings = SubResource("LabelSettings_p754y")
+
+[node name="Globos" type="Panel" parent="."]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -390.0
+offset_top = -236.5
+offset_right = 374.0
+offset_bottom = -67.5
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/panel = SubResource("StyleBoxEmpty_lm7vw")
+
+[node name="GloboAmarillo" type="TextureRect" parent="Globos"]
+layout_mode = 0
+offset_left = 14.0
+offset_right = 106.0
+offset_bottom = 169.0
+texture = ExtResource("4_rxhbr")
+
+[node name="GloboVerde" type="TextureRect" parent="Globos"]
+layout_mode = 0
+offset_left = 167.0
+offset_right = 259.0
+offset_bottom = 169.0
+texture = ExtResource("5_dx26c")
+
+[node name="GloboMorado" type="TextureRect" parent="Globos"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -46.0
+offset_top = -84.5
+offset_right = 46.0
+offset_bottom = 84.5
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("6_htycl")
+
+[node name="GloboMelon" type="TextureRect" parent="Globos"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = 110.0
+offset_top = -84.5
+offset_right = 202.0
+offset_bottom = 84.5
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("7_7rudi")
+
+[node name="GloboRosa" type="TextureRect" parent="Globos"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = 271.0
+offset_top = -84.5
+offset_right = 363.0
+offset_bottom = 84.5
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("8_rilx1")
+
+[node name="Globos2" type="Panel" parent="."]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -308.0
+offset_top = -186.5
+offset_right = 456.0
+offset_bottom = -17.5
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/panel = SubResource("StyleBoxEmpty_lm7vw")
+
+[node name="GloboAmarillo" type="TextureRect" parent="Globos2"]
+layout_mode = 0
+offset_left = 14.0
+offset_right = 106.0
+offset_bottom = 169.0
+texture = ExtResource("6_htycl")
+
+[node name="GloboVerde" type="TextureRect" parent="Globos2"]
+layout_mode = 0
+offset_left = 167.0
+offset_right = 259.0
+offset_bottom = 169.0
+texture = ExtResource("7_7rudi")
+
+[node name="GloboMorado" type="TextureRect" parent="Globos2"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -46.0
+offset_top = -84.5
+offset_right = 46.0
+offset_bottom = 84.5
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("5_dx26c")
+
+[node name="GloboMelon" type="TextureRect" parent="Globos2"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = 110.0
+offset_top = -78.5
+offset_right = 202.0
+offset_bottom = 90.5
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("4_rxhbr")
+
+[node name="Correcto" type="Panel" parent="."]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -203.5
+offset_top = -10.0
+offset_right = -74.5
+offset_bottom = 124.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_poy6y")
+
+[node name="TextureRect" type="TextureRect" parent="Correcto"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("9_4kxbd")
+expand_mode = 1
+
+[node name="Incorrecto" type="Panel" parent="."]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = 74.5
+offset_top = -10.0
+offset_right = 203.5
+offset_bottom = 124.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_poy6y")
+
+[node name="TextureRect" type="TextureRect" parent="Incorrecto"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("10_056be")
+expand_mode = 1
+
+[node name="Información" type="Panel" parent="."]
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -513.0
+offset_top = -195.0
+offset_right = 513.0
+offset_bottom = -36.0
+grow_horizontal = 2
+grow_vertical = 0
+theme_override_styles/panel = SubResource("StyleBoxFlat_wyb3c")
+
+[node name="Label" type="Label" parent="Información"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 9.0
+offset_top = 5.0
+offset_right = -10.0
+offset_bottom = -6.0
+grow_horizontal = 2
+grow_vertical = 2
+text = "Para jugar tendrás 3 dardos por acertijo, deberás leer detenidamente el acertijo y encontrar el globo que contenga la respuesta correcta. Si aciertas verás una palomita verde y si fallas una tachita roja. Si te quedas sin dardos se dará por fallido el acertijo."
+label_settings = SubResource("LabelSettings_aaduj")
+horizontal_alignment = 1
+vertical_alignment = 1
+autowrap_mode = 2
+
+[node name="Button" type="Button" parent="."]
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -30.0
+offset_top = -38.0
+offset_right = 30.0
+grow_horizontal = 2
+grow_vertical = 0
+theme_override_styles/focus = SubResource("StyleBoxEmpty_p0i0y")
+theme_override_styles/disabled_mirrored = SubResource("StyleBoxEmpty_fqb21")
+theme_override_styles/disabled = SubResource("StyleBoxEmpty_bvjt6")
+theme_override_styles/hover_pressed_mirrored = SubResource("StyleBoxEmpty_uafyv")
+theme_override_styles/hover_pressed = SubResource("StyleBoxEmpty_jgr2n")
+theme_override_styles/hover_mirrored = SubResource("StyleBoxEmpty_70j5l")
+theme_override_styles/hover = SubResource("StyleBoxFlat_0gis6")
+theme_override_styles/pressed_mirrored = SubResource("StyleBoxEmpty_de2ar")
+theme_override_styles/pressed = SubResource("StyleBoxEmpty_375e4")
+theme_override_styles/normal_mirrored = SubResource("StyleBoxEmpty_vpwc7")
+theme_override_styles/normal = SubResource("StyleBoxEmpty_qfxml")
+icon = ExtResource("11_qagwy")
+
+[connection signal="pressed" from="Button" to="." method="_on_button_pressed"]

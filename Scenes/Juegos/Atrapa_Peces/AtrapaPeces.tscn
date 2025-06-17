@@ -2,7 +2,7 @@
 
 [ext_resource type="Script" path="res://Scripts/Juegos/Controllers/game_controller_peces.gd" id="1_dwy8s"]
 [ext_resource type="Texture2D" uid="uid://bnggiecbse3nk" path="res://images/Juegos/Atrapa_Peces/Fondo.png" id="1_wkwfs"]
-[ext_resource type="Resource" uid="uid://1w8qxs8oa3lf" path="res://resources/variado/theme/theme_peces.tres" id="2_1gb3w"]
+[ext_resource type="Resource" uid="uid://1w8qxs8oa3lf" path="res://resources/theme/theme_peces.tres" id="2_1gb3w"]
 [ext_resource type="Texture2D" uid="uid://c0p1a7kqkprgq" path="res://images/Juegos/Atrapa_Peces/Estanque.png" id="2_b73kn"]
 [ext_resource type="Texture2D" uid="uid://bpmcq0vhbsypq" path="res://images/Juegos/Atrapa_Peces/correcto.png" id="3_5i0nu"]
 [ext_resource type="Texture2D" uid="uid://c5quookrq6afa" path="res://images/Juegos/Atrapa_Peces/incorrecto.png" id="4_fl4th"]

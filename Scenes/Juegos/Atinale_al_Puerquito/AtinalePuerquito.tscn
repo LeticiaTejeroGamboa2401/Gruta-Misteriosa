@@ -3,7 +3,7 @@
 [ext_resource type="Texture2D" uid="uid://dkus0r5unvohb" path="res://images/Juegos/Atinale_al_Puerquito/fondo.png" id="1_25d5w"]
 [ext_resource type="Script" path="res://Scripts/Juegos/Controllers/game_controller_puerquito.gd" id="1_hqy58"]
 [ext_resource type="Texture2D" uid="uid://cik2d7yixadem" path="res://images/Juegos/Atinale_al_Puerquito/taburete.png" id="2_4enek"]
-[ext_resource type="Resource" uid="uid://b0f24i5te2ads" path="res://resources/variado/theme/theme_puerquito.tres" id="2_5w431"]
+[ext_resource type="Resource" uid="uid://b0f24i5te2ads" path="res://resources/theme/theme_puerquito.tres" id="2_5w431"]
 [ext_resource type="Texture2D" uid="uid://do3jpide6k7os" path="res://images/Juegos/Atinale_al_Puerquito/puerquito.png" id="3_ckxom"]
 [ext_resource type="FontFile" uid="uid://ex6sf638yhh5" path="res://font/Chonky Bunny.ttf" id="4_bvi87"]
 [ext_resource type="Texture2D" uid="uid://ch81viu3aj55i" path="res://images/Juegos/Atinale_al_Puerquito/imgCorrecto.png" id="4_wg2fi"]

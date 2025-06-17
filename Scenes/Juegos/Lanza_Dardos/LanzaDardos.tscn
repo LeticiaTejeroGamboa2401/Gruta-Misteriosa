@@ -3,7 +3,7 @@
 [ext_resource type="Script" path="res://Scripts/Juegos/Controllers/game_controller_dardos.gd" id="1_b4lg5"]
 [ext_resource type="Texture2D" uid="uid://bp7ce3v2tdd4y" path="res://images/Juegos/Lanza_Dardos/Fondo.png" id="1_vqpbw"]
 [ext_resource type="FontFile" uid="uid://ex6sf638yhh5" path="res://font/Chonky Bunny.ttf" id="2_agg8h"]
-[ext_resource type="Resource" uid="uid://dmx2drp2gmmm0" path="res://resources/variado/theme/theme_dardos.tres" id="2_y6ufi"]
+[ext_resource type="Resource" uid="uid://dmx2drp2gmmm0" path="res://resources/theme/theme_dardos.tres" id="2_y6ufi"]
 [ext_resource type="Texture2D" uid="uid://d2xfhg0fx3jol" path="res://images/Juegos/Lanza_Dardos/correcto.png" id="3_xtpow"]
 [ext_resource type="Texture2D" uid="uid://cfa2lwg0r7f22" path="res://images/Juegos/Lanza_Dardos/incorrecto.png" id="4_2ca0r"]
 [ext_resource type="Texture2D" uid="uid://vyh8qv625m7m" path="res://images/Juegos/Lanza_Dardos/Dardos.png" id="7_axe6u"]

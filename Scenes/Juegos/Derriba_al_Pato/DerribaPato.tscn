@@ -2,7 +2,7 @@
 
 [ext_resource type="Texture2D" uid="uid://is538sjidm1k" path="res://images/Juegos/Derriba_al_Pato/Fondo.png" id="1_fjxex"]
 [ext_resource type="Script" path="res://Scripts/Juegos/Controllers/game_controller_patito.gd" id="1_hldf4"]
-[ext_resource type="Resource" uid="uid://cd05h172tnqeo" path="res://resources/variado/theme/theme_patito.tres" id="2_0fd0c"]
+[ext_resource type="Resource" uid="uid://cd05h172tnqeo" path="res://resources/theme/theme_patito.tres" id="2_0fd0c"]
 [ext_resource type="FontFile" uid="uid://ex6sf638yhh5" path="res://font/Chonky Bunny.ttf" id="2_v072q"]
 [ext_resource type="Texture2D" uid="uid://cgtmk0ygac04k" path="res://images/Juegos/Derriba_al_Pato/correcto.png" id="3_dhruy"]
 [ext_resource type="Texture2D" uid="uid://cc4pdettce2ln" path="res://images/Juegos/Derriba_al_Pato/incorrecto.png" id="4_fryu5"]

@@ -21,3 +21,10 @@ func _on_material_da_pressed() -> void:
 
 func _on_herramientas_pressed() -> void:
 	get_tree().change_scene_to_file("res://Scenes/Creditos/HYT.tscn")
+
+
+@onready var boton_atras = $Regreso
+
+func _unhandled_input(event):
+	if event is InputEventKey and event.pressed and event.keycode == KEY_LEFT:
+		boton_atras.emit_signal("pressed")

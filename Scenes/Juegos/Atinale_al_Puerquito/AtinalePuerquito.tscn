@@ -1,4 +1,4 @@
-[gd_scene load_steps=59 format=3 uid="uid://btpr74bawfy3o"]
+[gd_scene load_steps=60 format=3 uid="uid://btpr74bawfy3o"]
 
 [ext_resource type="Texture2D" uid="uid://dkus0r5unvohb" path="res://images/Juegos/Atinale_al_Puerquito/fondo.png" id="1_25d5w"]
 [ext_resource type="Script" path="res://Scripts/Juegos/Controllers/game_controller_puerquito.gd" id="1_hqy58"]
@@ -27,6 +27,8 @@ expand_margin_bottom = 5.0
 [sub_resource type="LabelSettings" id="LabelSettings_q6acn"]
 font = ExtResource("4_bvi87")
 font_size = 38
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_ysux6"]
 
 [sub_resource type="FontVariation" id="FontVariation_b0gil"]
 base_font = ExtResource("4_bvi87")
@@ -63,11 +65,11 @@ corner_radius_bottom_left = 15
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_8om0s"]
 bg_color = Color(1, 1, 1, 1)
-border_width_left = 2
-border_width_top = 2
-border_width_right = 2
-border_width_bottom = 2
-border_color = Color(0.866667, 0.415686, 0.352941, 1)
+border_width_left = 3
+border_width_top = 3
+border_width_right = 3
+border_width_bottom = 3
+border_color = Color(0, 0, 0, 1)
 corner_radius_top_left = 15
 corner_radius_top_right = 15
 corner_radius_bottom_right = 15
@@ -108,11 +110,11 @@ corner_radius_bottom_left = 15
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_jje0d"]
 bg_color = Color(1, 1, 1, 1)
-border_width_left = 2
-border_width_top = 2
-border_width_right = 2
-border_width_bottom = 2
-border_color = Color(0.866667, 0.415686, 0.352941, 1)
+border_width_left = 3
+border_width_top = 3
+border_width_right = 3
+border_width_bottom = 3
+border_color = Color(0, 0, 0, 1)
 corner_radius_top_left = 15
 corner_radius_top_right = 15
 corner_radius_bottom_right = 15
@@ -153,11 +155,11 @@ corner_radius_bottom_left = 15
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_pyfh6"]
 bg_color = Color(1, 1, 1, 1)
-border_width_left = 2
-border_width_top = 2
-border_width_right = 2
-border_width_bottom = 2
-border_color = Color(0.865829, 0.414337, 0.352279, 1)
+border_width_left = 3
+border_width_top = 3
+border_width_right = 3
+border_width_bottom = 3
+border_color = Color(0, 0, 0, 1)
 corner_radius_top_left = 15
 corner_radius_top_right = 15
 corner_radius_bottom_right = 15
@@ -198,11 +200,11 @@ corner_radius_bottom_left = 15
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_3l7cr"]
 bg_color = Color(1, 1, 1, 1)
-border_width_left = 2
-border_width_top = 2
-border_width_right = 2
-border_width_bottom = 2
-border_color = Color(0.866667, 0.415686, 0.352941, 1)
+border_width_left = 3
+border_width_top = 3
+border_width_right = 3
+border_width_bottom = 3
+border_color = Color(0, 0, 0, 1)
 corner_radius_top_left = 15
 corner_radius_top_right = 15
 corner_radius_bottom_right = 15
@@ -293,6 +295,7 @@ offset_left = 692.0
 offset_top = 466.0
 offset_right = 1097.0
 offset_bottom = 643.0
+theme_override_styles/panel = SubResource("StyleBoxEmpty_ysux6")
 
 [node name="MenuButton" type="MenuButton" parent="Control/Botones"]
 layout_mode = 1

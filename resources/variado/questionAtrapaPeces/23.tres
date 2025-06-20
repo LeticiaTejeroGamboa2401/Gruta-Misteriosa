@@ -1,15 +1,16 @@
-[gd_resource type="Resource" script_class="QuizQuestionPecesitos" load_steps=6 format=3 uid="uid://dr0t3kvjag3y7"]
+[gd_resource type="Resource" script_class="QuizQuestionPecesitos" load_steps=7 format=3 uid="uid://dr0t3kvjag3y7"]
 
 [ext_resource type="Script" path="res://Scripts/Juegos/AtrapaPeces/question.gd" id="1_1qxbm"]
 [ext_resource type="PackedScene" uid="uid://ba4m6k85cjwia" path="res://Scenes/Juegos/Atrapa_Peces/Peces/Pez300.tscn" id="1_airsg"]
 [ext_resource type="PackedScene" uid="uid://cdtjksf71e3m" path="res://Scenes/Juegos/Atrapa_Peces/Peces/Pez250.tscn" id="2_dmr82"]
-[ext_resource type="PackedScene" uid="uid://b32s7vpyuww50" path="res://Scenes/Juegos/Atrapa_Peces/Peces/Pez240.tscn" id="3_ljfho"]
+[ext_resource type="PackedScene" uid="uid://cheeds4g8kebv" path="res://Scenes/Juegos/Atrapa_Peces/Peces/Pez150.tscn" id="2_ild54"]
 [ext_resource type="Texture2D" uid="uid://dgria54bar86l" path="res://images/Juegos/Atrapa_Peces/23.png" id="4_dexfj"]
+[ext_resource type="PackedScene" uid="uid://mjeovc5e2in2" path="res://Scenes/Juegos/Atrapa_Peces/Peces/Pez180.tscn" id="4_xdfxt"]
 
 [resource]
 script = ExtResource("1_1qxbm")
 question_info = "Llené un tanque con 150 litros. Al siguiente día, el doble. ¿Cuántos litros llené al día siguiente?"
 question_img = ExtResource("4_dexfj")
 type = 0
-options = Array[PackedScene]([ExtResource("2_dmr82"), ExtResource("1_airsg"), ExtResource("3_ljfho")])
+options = Array[PackedScene]([ExtResource("1_airsg"), ExtResource("2_ild54"), ExtResource("2_dmr82"), ExtResource("4_xdfxt")])
 correct = ExtResource("1_airsg")

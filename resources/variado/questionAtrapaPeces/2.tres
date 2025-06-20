@@ -1,7 +1,8 @@
-[gd_resource type="Resource" script_class="QuizQuestionPecesitos" load_steps=6 format=3 uid="uid://ctwdwvpaunpgl"]
+[gd_resource type="Resource" script_class="QuizQuestionPecesitos" load_steps=7 format=3 uid="uid://ctwdwvpaunpgl"]
 
-[ext_resource type="PackedScene" uid="uid://c7rj4f4nv4ha6" path="res://Scenes/Juegos/Atrapa_Peces/Peces/Pez16.tscn" id="1_htx6l"]
+[ext_resource type="PackedScene" uid="uid://0ws3dtt0hgik" path="res://Scenes/Juegos/Atrapa_Peces/Peces/Pez16-1.tscn" id="1_fc02x"]
 [ext_resource type="Script" path="res://Scripts/Juegos/AtrapaPeces/question.gd" id="1_y6nsn"]
+[ext_resource type="PackedScene" uid="uid://df4b43ke3dpqd" path="res://Scenes/Juegos/Atrapa_Peces/Peces/Pez32.tscn" id="2_j0rg7"]
 [ext_resource type="PackedScene" uid="uid://c68nvp2ykppat" path="res://Scenes/Juegos/Atrapa_Peces/Peces/Pez30.tscn" id="2_r3wcf"]
 [ext_resource type="PackedScene" uid="uid://cwqrk61pniaep" path="res://Scenes/Juegos/Atrapa_Peces/Peces/Pez40.tscn" id="3_lhx12"]
 [ext_resource type="Texture2D" uid="uid://be52dh8j8tpti" path="res://images/Juegos/Atrapa_Peces/2.png" id="4_bdnht"]
@@ -11,5 +12,5 @@ script = ExtResource("1_y6nsn")
 question_info = "Mi primo tiene el doble de mi edad, ¿cuántos años tiene??"
 question_img = ExtResource("4_bdnht")
 type = 0
-options = Array[PackedScene]([ExtResource("2_r3wcf"), ExtResource("3_lhx12"), ExtResource("1_htx6l")])
-correct = ExtResource("1_htx6l")
+options = Array[PackedScene]([ExtResource("1_fc02x"), ExtResource("2_j0rg7"), ExtResource("2_r3wcf"), ExtResource("3_lhx12")])
+correct = ExtResource("1_fc02x")

@@ -1,9 +1,10 @@
-[gd_resource type="Resource" script_class="QuizQuestionPecesitos" load_steps=6 format=3 uid="uid://hwqetapyic6l"]
+[gd_resource type="Resource" script_class="QuizQuestionPecesitos" load_steps=7 format=3 uid="uid://hwqetapyic6l"]
 
 [ext_resource type="PackedScene" uid="uid://b32s7vpyuww50" path="res://Scenes/Juegos/Atrapa_Peces/Peces/Pez240.tscn" id="1_38i8o"]
 [ext_resource type="Script" path="res://Scripts/Juegos/AtrapaPeces/question.gd" id="1_xwne0"]
-[ext_resource type="PackedScene" uid="uid://cheeds4g8kebv" path="res://Scenes/Juegos/Atrapa_Peces/Peces/Pez150.tscn" id="2_nt34n"]
-[ext_resource type="PackedScene" uid="uid://cdtjksf71e3m" path="res://Scenes/Juegos/Atrapa_Peces/Peces/Pez250.tscn" id="3_hnj0q"]
+[ext_resource type="PackedScene" uid="uid://mjeovc5e2in2" path="res://Scenes/Juegos/Atrapa_Peces/Peces/Pez180.tscn" id="2_tm1l4"]
+[ext_resource type="PackedScene" uid="uid://beidnqo5l6prf" path="res://Scenes/Juegos/Atrapa_Peces/Peces/Pez100.tscn" id="3_aqb06"]
+[ext_resource type="PackedScene" uid="uid://ba4m6k85cjwia" path="res://Scenes/Juegos/Atrapa_Peces/Peces/Pez300.tscn" id="3_mnnue"]
 [ext_resource type="Texture2D" uid="uid://csj1kmihj28py" path="res://images/Juegos/Atrapa_Peces/4.png" id="4_occf4"]
 
 [resource]
@@ -11,5 +12,5 @@ script = ExtResource("1_xwne0")
 question_info = "Mi hermano mide el doble que yo. ¿Cuánto mide mi hermano?"
 question_img = ExtResource("4_occf4")
 type = 0
-options = Array[PackedScene]([ExtResource("1_38i8o"), ExtResource("2_nt34n"), ExtResource("3_hnj0q")])
+options = Array[PackedScene]([ExtResource("2_tm1l4"), ExtResource("3_aqb06"), ExtResource("3_mnnue"), ExtResource("1_38i8o")])
 correct = ExtResource("1_38i8o")

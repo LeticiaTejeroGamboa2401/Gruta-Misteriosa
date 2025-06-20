@@ -1,9 +1,10 @@
-[gd_resource type="Resource" script_class="QuizQuestionPecesitos" load_steps=6 format=3 uid="uid://soaf4bnd3isd"]
+[gd_resource type="Resource" script_class="QuizQuestionPecesitos" load_steps=7 format=3 uid="uid://soaf4bnd3isd"]
 
 [ext_resource type="PackedScene" uid="uid://cdtjksf71e3m" path="res://Scenes/Juegos/Atrapa_Peces/Peces/Pez250.tscn" id="1_e3f3g"]
 [ext_resource type="Script" path="res://Scripts/Juegos/AtrapaPeces/question.gd" id="1_hli1k"]
 [ext_resource type="PackedScene" uid="uid://ba4m6k85cjwia" path="res://Scenes/Juegos/Atrapa_Peces/Peces/Pez300.tscn" id="2_130tn"]
 [ext_resource type="PackedScene" uid="uid://cheeds4g8kebv" path="res://Scenes/Juegos/Atrapa_Peces/Peces/Pez150.tscn" id="3_b44c5"]
+[ext_resource type="PackedScene" uid="uid://5linqapveg5q" path="res://Scenes/Juegos/Atrapa_Peces/Peces/Pez240-1.tscn" id="3_rls7f"]
 [ext_resource type="Texture2D" uid="uid://jukxcjedt2m6" path="res://images/Juegos/Atrapa_Peces/20.png" id="4_r0dpa"]
 
 [resource]
@@ -11,5 +12,5 @@ script = ExtResource("1_hli1k")
 question_info = "Tengo 200 pesos y me dieron un cuarto más. ¿Cuánto tengo en total?"
 question_img = ExtResource("4_r0dpa")
 type = 0
-options = Array[PackedScene]([ExtResource("2_130tn"), ExtResource("3_b44c5"), ExtResource("1_e3f3g")])
+options = Array[PackedScene]([ExtResource("2_130tn"), ExtResource("3_rls7f"), ExtResource("3_b44c5"), ExtResource("1_e3f3g")])
 correct = ExtResource("1_e3f3g")

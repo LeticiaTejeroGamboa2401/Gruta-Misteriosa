@@ -1,15 +1,16 @@
-[gd_resource type="Resource" script_class="QuizQuestionPecesitos" load_steps=6 format=3 uid="uid://bf6bl5wnwydfk"]
+[gd_resource type="Resource" script_class="QuizQuestionPecesitos" load_steps=7 format=3 uid="uid://bf6bl5wnwydfk"]
 
 [ext_resource type="Script" path="res://Scripts/Juegos/AtrapaPeces/question.gd" id="1_2xck8"]
 [ext_resource type="PackedScene" uid="uid://cj4x0qqy5h77q" path="res://Scenes/Juegos/Atrapa_Peces/Peces/Pez25.tscn" id="1_swkmb"]
-[ext_resource type="PackedScene" uid="uid://c7rj4f4nv4ha6" path="res://Scenes/Juegos/Atrapa_Peces/Peces/Pez16.tscn" id="2_g2abh"]
+[ext_resource type="PackedScene" uid="uid://0ws3dtt0hgik" path="res://Scenes/Juegos/Atrapa_Peces/Peces/Pez16-1.tscn" id="2_h4p1b"]
 [ext_resource type="PackedScene" uid="uid://c68nvp2ykppat" path="res://Scenes/Juegos/Atrapa_Peces/Peces/Pez30.tscn" id="3_bghtg"]
 [ext_resource type="Texture2D" uid="uid://ciqqndvegcbnw" path="res://images/Juegos/Atrapa_Peces/24.png" id="4_dbf74"]
+[ext_resource type="PackedScene" uid="uid://df4b43ke3dpqd" path="res://Scenes/Juegos/Atrapa_Peces/Peces/Pez32.tscn" id="4_ey2pc"]
 
 [resource]
 script = ExtResource("1_2xck8")
 question_info = "Me comí 10 galletas. Mi primo comió 15 más que yo. ¿Cuántas galletas comió mi primo?"
 question_img = ExtResource("4_dbf74")
 type = 0
-options = Array[PackedScene]([ExtResource("2_g2abh"), ExtResource("3_bghtg"), ExtResource("1_swkmb")])
+options = Array[PackedScene]([ExtResource("2_h4p1b"), ExtResource("3_bghtg"), ExtResource("1_swkmb"), ExtResource("4_ey2pc")])
 correct = ExtResource("1_swkmb")

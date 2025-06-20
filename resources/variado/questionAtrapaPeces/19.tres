@@ -1,15 +1,16 @@
-[gd_resource type="Resource" script_class="QuizQuestionPecesitos" load_steps=6 format=3 uid="uid://dksqlpu6pqvmk"]
+[gd_resource type="Resource" script_class="QuizQuestionPecesitos" load_steps=7 format=3 uid="uid://dksqlpu6pqvmk"]
 
 [ext_resource type="Script" path="res://Scripts/Juegos/AtrapaPeces/question.gd" id="1_12p58"]
 [ext_resource type="PackedScene" uid="uid://df4b43ke3dpqd" path="res://Scenes/Juegos/Atrapa_Peces/Peces/Pez32.tscn" id="1_p0fpr"]
+[ext_resource type="PackedScene" uid="uid://0ws3dtt0hgik" path="res://Scenes/Juegos/Atrapa_Peces/Peces/Pez16-1.tscn" id="2_3u16x"]
 [ext_resource type="PackedScene" uid="uid://cj4x0qqy5h77q" path="res://Scenes/Juegos/Atrapa_Peces/Peces/Pez25.tscn" id="2_p8tho"]
-[ext_resource type="PackedScene" uid="uid://cwqrk61pniaep" path="res://Scenes/Juegos/Atrapa_Peces/Peces/Pez40.tscn" id="3_lohyh"]
 [ext_resource type="Texture2D" uid="uid://0mhgyfgxqb8r" path="res://images/Juegos/Atrapa_Peces/19.png" id="4_701kx"]
+[ext_resource type="PackedScene" uid="uid://jpkqdayqbwb6" path="res://Scenes/Juegos/Atrapa_Peces/Peces/Pez24.tscn" id="4_dwg73"]
 
 [resource]
 script = ExtResource("1_12p58")
 question_info = "Mi papá tiene 65 años, mi hermana tiene poco menos de la mitad. ¿Cuántos tiene mi hermana?"
 question_img = ExtResource("4_701kx")
 type = 0
-options = Array[PackedScene]([ExtResource("2_p8tho"), ExtResource("1_p0fpr"), ExtResource("3_lohyh")])
+options = Array[PackedScene]([ExtResource("2_3u16x"), ExtResource("2_p8tho"), ExtResource("1_p0fpr"), ExtResource("4_dwg73")])
 correct = ExtResource("1_p0fpr")

@@ -1,15 +1,16 @@
-[gd_resource type="Resource" script_class="QuizQuestionPecesitos" load_steps=6 format=3 uid="uid://bc804gx0ove4v"]
+[gd_resource type="Resource" script_class="QuizQuestionPecesitos" load_steps=7 format=3 uid="uid://bc804gx0ove4v"]
 
 [ext_resource type="Script" path="res://Scripts/Juegos/AtrapaPeces/question.gd" id="1_m4vj6"]
 [ext_resource type="PackedScene" uid="uid://cwqrk61pniaep" path="res://Scenes/Juegos/Atrapa_Peces/Peces/Pez40.tscn" id="1_v0x1p"]
 [ext_resource type="PackedScene" uid="uid://c68nvp2ykppat" path="res://Scenes/Juegos/Atrapa_Peces/Peces/Pez30.tscn" id="2_tosau"]
 [ext_resource type="PackedScene" uid="uid://cj4x0qqy5h77q" path="res://Scenes/Juegos/Atrapa_Peces/Peces/Pez25.tscn" id="3_xbjki"]
 [ext_resource type="Texture2D" uid="uid://bhx7rtvbf7mbg" path="res://images/Juegos/Atrapa_Peces/21.png" id="4_3j56x"]
+[ext_resource type="PackedScene" uid="uid://c7rj4f4nv4ha6" path="res://Scenes/Juegos/Atrapa_Peces/Peces/Pez16.tscn" id="4_a33wk"]
 
 [resource]
 script = ExtResource("1_m4vj6")
-question_info = "En casa tenemos 20 libros. Comrpamos el doble. ¿Cuántos libros compramos?"
+question_info = "En casa tenemos 20 libros. Compramos el doble. ¿Cuántos libros compramos?"
 question_img = ExtResource("4_3j56x")
 type = 0
-options = Array[PackedScene]([ExtResource("2_tosau"), ExtResource("3_xbjki"), ExtResource("1_v0x1p")])
+options = Array[PackedScene]([ExtResource("2_tosau"), ExtResource("3_xbjki"), ExtResource("4_a33wk"), ExtResource("1_v0x1p")])
 correct = ExtResource("1_v0x1p")

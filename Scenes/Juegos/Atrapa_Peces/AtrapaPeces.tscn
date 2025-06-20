@@ -1,4 +1,4 @@
-[gd_scene load_steps=44 format=3 uid="uid://dh8a80lb0i56g"]
+[gd_scene load_steps=45 format=3 uid="uid://dh8a80lb0i56g"]
 
 [ext_resource type="Script" path="res://Scripts/Juegos/Controllers/game_controller_peces.gd" id="1_dwy8s"]
 [ext_resource type="Texture2D" uid="uid://bnggiecbse3nk" path="res://images/Juegos/Atrapa_Peces/Fondo.png" id="1_wkwfs"]
@@ -57,7 +57,7 @@ corner_radius_bottom_left = 15
 
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_w1ueb"]
 
-[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_xmgw1"]
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_evh80"]
 
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_cxfdq"]
 
@@ -79,7 +79,7 @@ corner_radius_bottom_left = 15
 
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_2igt3"]
 
-[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_xu4ju"]
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_xikc3"]
 
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_1gyjn"]
 
@@ -101,7 +101,9 @@ corner_radius_bottom_left = 15
 
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_uixtr"]
 
-[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_uhvld"]
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_kxedo"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_f7my4"]
 
 [node name="Main" type="CanvasLayer"]
 script = ExtResource("1_dwy8s")
@@ -218,7 +220,7 @@ theme_override_styles/hover = SubResource("StyleBoxEmpty_f75no")
 theme_override_styles/pressed_mirrored = SubResource("StyleBoxEmpty_0gatq")
 theme_override_styles/pressed = SubResource("StyleBoxEmpty_bnorm")
 theme_override_styles/normal_mirrored = SubResource("StyleBoxEmpty_w1ueb")
-theme_override_styles/normal = SubResource("StyleBoxEmpty_xmgw1")
+theme_override_styles/normal = SubResource("StyleBoxEmpty_evh80")
 
 [node name="Button2" type="Button" parent="Control/MenuButtons"]
 layout_mode = 0
@@ -236,7 +238,7 @@ theme_override_styles/hover = SubResource("StyleBoxEmpty_u8mpn")
 theme_override_styles/pressed_mirrored = SubResource("StyleBoxEmpty_j81cu")
 theme_override_styles/pressed = SubResource("StyleBoxEmpty_fiqdt")
 theme_override_styles/normal_mirrored = SubResource("StyleBoxEmpty_2igt3")
-theme_override_styles/normal = SubResource("StyleBoxEmpty_xu4ju")
+theme_override_styles/normal = SubResource("StyleBoxEmpty_xikc3")
 
 [node name="Button3" type="Button" parent="Control/MenuButtons"]
 layout_mode = 1
@@ -245,9 +247,10 @@ anchor_left = 0.5
 anchor_top = 1.0
 anchor_right = 0.5
 anchor_bottom = 1.0
-offset_left = -164.5
-offset_top = -96.0
-offset_right = 164.5
+offset_left = -335.5
+offset_top = -101.0
+offset_right = -6.5
+offset_bottom = -5.0
 grow_horizontal = 2
 grow_vertical = 0
 theme_override_styles/focus = SubResource("StyleBoxEmpty_1gyjn")
@@ -260,4 +263,29 @@ theme_override_styles/hover = SubResource("StyleBoxEmpty_yivm8")
 theme_override_styles/pressed_mirrored = SubResource("StyleBoxEmpty_xndic")
 theme_override_styles/pressed = SubResource("StyleBoxEmpty_6spmu")
 theme_override_styles/normal_mirrored = SubResource("StyleBoxEmpty_uixtr")
-theme_override_styles/normal = SubResource("StyleBoxEmpty_uhvld")
+theme_override_styles/normal = SubResource("StyleBoxEmpty_kxedo")
+
+[node name="Button4" type="Button" parent="Control/MenuButtons"]
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = 17.5
+offset_top = -101.0
+offset_right = 346.5
+offset_bottom = -5.0
+grow_horizontal = 2
+grow_vertical = 0
+theme_override_styles/focus = SubResource("StyleBoxEmpty_1gyjn")
+theme_override_styles/disabled_mirrored = SubResource("StyleBoxEmpty_tsiil")
+theme_override_styles/disabled = SubResource("StyleBoxEmpty_4riyd")
+theme_override_styles/hover_pressed_mirrored = SubResource("StyleBoxEmpty_2vkx6")
+theme_override_styles/hover_pressed = SubResource("StyleBoxEmpty_dsnej")
+theme_override_styles/hover_mirrored = SubResource("StyleBoxEmpty_4uuy7")
+theme_override_styles/hover = SubResource("StyleBoxEmpty_yivm8")
+theme_override_styles/pressed_mirrored = SubResource("StyleBoxEmpty_xndic")
+theme_override_styles/pressed = SubResource("StyleBoxEmpty_6spmu")
+theme_override_styles/normal_mirrored = SubResource("StyleBoxEmpty_uixtr")
+theme_override_styles/normal = SubResource("StyleBoxEmpty_f7my4")

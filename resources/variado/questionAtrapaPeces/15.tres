@@ -1,7 +1,8 @@
-[gd_resource type="Resource" script_class="QuizQuestionPecesitos" load_steps=6 format=3 uid="uid://2dw0y1wh63v2"]
+[gd_resource type="Resource" script_class="QuizQuestionPecesitos" load_steps=7 format=3 uid="uid://2dw0y1wh63v2"]
 
-[ext_resource type="PackedScene" uid="uid://b32s7vpyuww50" path="res://Scenes/Juegos/Atrapa_Peces/Peces/Pez240.tscn" id="1_0ta0o"]
 [ext_resource type="Script" path="res://Scripts/Juegos/AtrapaPeces/question.gd" id="1_8bgpe"]
+[ext_resource type="PackedScene" uid="uid://5linqapveg5q" path="res://Scenes/Juegos/Atrapa_Peces/Peces/Pez240-1.tscn" id="1_ickwv"]
+[ext_resource type="PackedScene" uid="uid://beidnqo5l6prf" path="res://Scenes/Juegos/Atrapa_Peces/Peces/Pez100.tscn" id="2_7octq"]
 [ext_resource type="PackedScene" uid="uid://cdtjksf71e3m" path="res://Scenes/Juegos/Atrapa_Peces/Peces/Pez250.tscn" id="2_cvabe"]
 [ext_resource type="PackedScene" uid="uid://cheeds4g8kebv" path="res://Scenes/Juegos/Atrapa_Peces/Peces/Pez150.tscn" id="3_yi2sk"]
 [ext_resource type="Texture2D" uid="uid://ygmwkpyunmlo" path="res://images/Juegos/Atrapa_Peces/15.png" id="4_tv6s3"]
@@ -11,5 +12,5 @@ script = ExtResource("1_8bgpe")
 question_info = "Ayer gané 120 monedas. Hoy gané el doble. ¿Cuántas gané hoy?"
 question_img = ExtResource("4_tv6s3")
 type = 0
-options = Array[PackedScene]([ExtResource("2_cvabe"), ExtResource("3_yi2sk"), ExtResource("1_0ta0o")])
-correct = ExtResource("1_0ta0o")
+options = Array[PackedScene]([ExtResource("2_7octq"), ExtResource("1_ickwv"), ExtResource("2_cvabe"), ExtResource("3_yi2sk")])
+correct = ExtResource("1_ickwv")

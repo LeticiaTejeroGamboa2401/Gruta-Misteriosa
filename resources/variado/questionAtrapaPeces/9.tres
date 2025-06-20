@@ -2,9 +2,9 @@
 
 [ext_resource type="PackedScene" uid="uid://cheeds4g8kebv" path="res://Scenes/Juegos/Atrapa_Peces/Peces/Pez150.tscn" id="1_ded2y"]
 [ext_resource type="Script" path="res://Scripts/Juegos/AtrapaPeces/question.gd" id="1_w5cuk"]
-[ext_resource type="PackedScene" uid="uid://ba4m6k85cjwia" path="res://Scenes/Juegos/Atrapa_Peces/Peces/Pez300.tscn" id="2_q8n23"]
 [ext_resource type="PackedScene" uid="uid://b32s7vpyuww50" path="res://Scenes/Juegos/Atrapa_Peces/Peces/Pez240.tscn" id="2_sh4sn"]
-[ext_resource type="PackedScene" uid="uid://beidnqo5l6prf" path="res://Scenes/Juegos/Atrapa_Peces/Peces/Pez100.tscn" id="3_4s7v3"]
+[ext_resource type="PackedScene" uid="uid://ba4m6k85cjwia" path="res://Scenes/Juegos/Atrapa_Peces/Peces/Pez300.tscn" id="3_ikn5s"]
+[ext_resource type="PackedScene" uid="uid://cdiagdakhbosa" path="res://Scenes/Juegos/Atrapa_Peces/Peces/Pez100-1.tscn" id="4_c7fj7"]
 [ext_resource type="Texture2D" uid="uid://qnsmveoax6ra" path="res://images/Juegos/Atrapa_Peces/9.png" id="4_icu33"]
 
 [resource]
@@ -12,5 +12,5 @@ script = ExtResource("1_w5cuk")
 question_info = "Tengo 75 estampillas. Mi amiga me dio el doble. ¿Cuántas me dio?"
 question_img = ExtResource("4_icu33")
 type = 0
-options = Array[PackedScene]([ExtResource("2_sh4sn"), ExtResource("2_q8n23"), ExtResource("1_ded2y"), ExtResource("3_4s7v3")])
+options = Array[PackedScene]([ExtResource("2_sh4sn"), ExtResource("3_ikn5s"), ExtResource("1_ded2y"), ExtResource("4_c7fj7")])
 correct = ExtResource("1_ded2y")

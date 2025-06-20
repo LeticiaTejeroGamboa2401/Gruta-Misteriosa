@@ -1,7 +1,7 @@
 [gd_resource type="Resource" script_class="QuizQuestionPecesitos" load_steps=7 format=3 uid="uid://dl5i10igjb1sw"]
 
 [ext_resource type="Script" path="res://Scripts/Juegos/AtrapaPeces/question.gd" id="1_cdcbw"]
-[ext_resource type="PackedScene" uid="uid://df4b43ke3dpqd" path="res://Scenes/Juegos/Atrapa_Peces/Peces/Pez32.tscn" id="1_h4dj3"]
+[ext_resource type="PackedScene" uid="uid://cw3ti25j5s7mi" path="res://Scenes/Juegos/Atrapa_Peces/Peces/Pez32-1.tscn" id="1_jkjnn"]
 [ext_resource type="PackedScene" uid="uid://cj4x0qqy5h77q" path="res://Scenes/Juegos/Atrapa_Peces/Peces/Pez25.tscn" id="2_bbep5"]
 [ext_resource type="PackedScene" uid="uid://781ya4adfqao" path="res://Scenes/Juegos/Atrapa_Peces/Peces/Pez52.tscn" id="3_3atq0"]
 [ext_resource type="PackedScene" uid="uid://c68nvp2ykppat" path="res://Scenes/Juegos/Atrapa_Peces/Peces/Pez30.tscn" id="3_aoclm"]
@@ -12,5 +12,5 @@ script = ExtResource("1_cdcbw")
 question_info = "Hoy caminé 16 cuadras y ayer el doble. ¿Cuántas caminé ayer?"
 question_img = ExtResource("4_ehi0m")
 type = 0
-options = Array[PackedScene]([ExtResource("2_bbep5"), ExtResource("1_h4dj3"), ExtResource("3_aoclm"), ExtResource("3_3atq0")])
-correct = ExtResource("1_h4dj3")
+options = Array[PackedScene]([ExtResource("2_bbep5"), ExtResource("1_jkjnn"), ExtResource("3_aoclm"), ExtResource("3_3atq0")])
+correct = ExtResource("1_jkjnn")

@@ -1,10 +1,10 @@
 [gd_resource type="Resource" script_class="QuizQuestionPecesitos" load_steps=7 format=3 uid="uid://xj6ghk14pxtw"]
 
-[ext_resource type="PackedScene" uid="uid://cheeds4g8kebv" path="res://Scenes/Juegos/Atrapa_Peces/Peces/Pez150.tscn" id="1_kpbrj"]
 [ext_resource type="Script" path="res://Scripts/Juegos/AtrapaPeces/question.gd" id="1_v0uq3"]
-[ext_resource type="PackedScene" uid="uid://beidnqo5l6prf" path="res://Scenes/Juegos/Atrapa_Peces/Peces/Pez100.tscn" id="2_61c8w"]
 [ext_resource type="PackedScene" uid="uid://mjeovc5e2in2" path="res://Scenes/Juegos/Atrapa_Peces/Peces/Pez180.tscn" id="2_qca15"]
 [ext_resource type="PackedScene" uid="uid://cdtjksf71e3m" path="res://Scenes/Juegos/Atrapa_Peces/Peces/Pez250.tscn" id="3_ki1c1"]
+[ext_resource type="PackedScene" uid="uid://cdiagdakhbosa" path="res://Scenes/Juegos/Atrapa_Peces/Peces/Pez100-1.tscn" id="3_rbeg8"]
+[ext_resource type="PackedScene" uid="uid://bjv8fo0vupmov" path="res://Scenes/Juegos/Atrapa_Peces/Peces/Pez150-1.tscn" id="4_mp3a3"]
 [ext_resource type="Texture2D" uid="uid://bn6rpsw15aq60" path="res://images/Juegos/Atrapa_Peces/25.png" id="4_mwg2r"]
 
 [resource]
@@ -12,5 +12,5 @@ script = ExtResource("1_v0uq3")
 question_info = "Tengo 75 cm. de cinta, necesito el doble. ¿Cuántos cm. de cinta necesito??"
 question_img = ExtResource("4_mwg2r")
 type = 0
-options = Array[PackedScene]([ExtResource("2_qca15"), ExtResource("2_61c8w"), ExtResource("1_kpbrj"), ExtResource("3_ki1c1")])
-correct = ExtResource("1_kpbrj")
+options = Array[PackedScene]([ExtResource("2_qca15"), ExtResource("3_rbeg8"), ExtResource("4_mp3a3"), ExtResource("3_ki1c1")])
+correct = ExtResource("4_mp3a3")

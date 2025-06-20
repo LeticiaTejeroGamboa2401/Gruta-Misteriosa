@@ -2,8 +2,8 @@
 
 [ext_resource type="PackedScene" uid="uid://cheeds4g8kebv" path="res://Scenes/Juegos/Atrapa_Peces/Peces/Pez150.tscn" id="1_7f76b"]
 [ext_resource type="Script" path="res://Scripts/Juegos/AtrapaPeces/question.gd" id="1_k6t1w"]
-[ext_resource type="PackedScene" uid="uid://beidnqo5l6prf" path="res://Scenes/Juegos/Atrapa_Peces/Peces/Pez100.tscn" id="2_hvlum"]
 [ext_resource type="PackedScene" uid="uid://cdtjksf71e3m" path="res://Scenes/Juegos/Atrapa_Peces/Peces/Pez250.tscn" id="2_nun0p"]
+[ext_resource type="PackedScene" uid="uid://cdiagdakhbosa" path="res://Scenes/Juegos/Atrapa_Peces/Peces/Pez100-1.tscn" id="3_rqiw8"]
 [ext_resource type="Texture2D" uid="uid://bivmvvqjl32qv" path="res://images/Juegos/Atrapa_Peces/16.png" id="4_gqfwk"]
 [ext_resource type="PackedScene" uid="uid://5linqapveg5q" path="res://Scenes/Juegos/Atrapa_Peces/Peces/Pez240-1.tscn" id="4_jmb4n"]
 
@@ -12,5 +12,5 @@ script = ExtResource("1_k6t1w")
 question_info = "Leo 15 páginas al día. ¿Cuántos he leído en 10 días?"
 question_img = ExtResource("4_gqfwk")
 type = 0
-options = Array[PackedScene]([ExtResource("2_nun0p"), ExtResource("2_hvlum"), ExtResource("1_7f76b"), ExtResource("4_jmb4n")])
+options = Array[PackedScene]([ExtResource("2_nun0p"), ExtResource("3_rqiw8"), ExtResource("1_7f76b"), ExtResource("4_jmb4n")])
 correct = ExtResource("1_7f76b")

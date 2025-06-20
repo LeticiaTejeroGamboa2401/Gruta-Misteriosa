@@ -4,13 +4,13 @@
 [ext_resource type="PackedScene" uid="uid://cwqrk61pniaep" path="res://Scenes/Juegos/Atrapa_Peces/Peces/Pez40.tscn" id="1_bbnud"]
 [ext_resource type="PackedScene" uid="uid://jpkqdayqbwb6" path="res://Scenes/Juegos/Atrapa_Peces/Peces/Pez24.tscn" id="2_jb3vf"]
 [ext_resource type="PackedScene" uid="uid://df4b43ke3dpqd" path="res://Scenes/Juegos/Atrapa_Peces/Peces/Pez32.tscn" id="3_r6ehh"]
+[ext_resource type="PackedScene" uid="uid://cjswr1k43pe07" path="res://Scenes/Juegos/Atrapa_Peces/Peces/Pez16-2.tscn" id="4_ihkr7"]
 [ext_resource type="Texture2D" uid="uid://n3ctgu7bmmgy" path="res://images/Juegos/Atrapa_Peces/17.png" id="4_qcn3b"]
-[ext_resource type="PackedScene" uid="uid://0ws3dtt0hgik" path="res://Scenes/Juegos/Atrapa_Peces/Peces/Pez16-1.tscn" id="4_ubevb"]
 
 [resource]
 script = ExtResource("1_0oogx")
 question_info = "Compramos 20 globos y después otros 20. ¿Cuántos compramos el total?"
 question_img = ExtResource("4_qcn3b")
 type = 0
-options = Array[PackedScene]([ExtResource("2_jb3vf"), ExtResource("3_r6ehh"), ExtResource("1_bbnud"), ExtResource("4_ubevb")])
+options = Array[PackedScene]([ExtResource("2_jb3vf"), ExtResource("3_r6ehh"), ExtResource("1_bbnud"), ExtResource("4_ihkr7")])
 correct = ExtResource("1_bbnud")

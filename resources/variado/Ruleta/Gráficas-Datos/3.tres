@@ -1,0 +1,12 @@
+[gd_resource type="Resource" script_class="QuizQuestionRuletitaGraficos" load_steps=3 format=3 uid="uid://xvxcw70jqvl3"]
+
+[ext_resource type="Script" path="res://Scripts/Juegos/Ruleta/items/Gráfica-Datos/question.gd" id="1_vv5ig"]
+[ext_resource type="Texture2D" uid="uid://bhe41ctyxhv1b" path="res://images/Juegos/Ruleta/3.png" id="1_wsi64"]
+
+[resource]
+script = ExtResource("1_vv5ig")
+question_info = "Si en total le vendieron 200 paletas, ¿cuántas se vendieron el martes?"
+question_img = ExtResource("1_wsi64")
+type = 0
+options = Array[String](["65 paletas", "55 paletas", "70 paletas", "75 paletas"])
+correct = "70 paletas"

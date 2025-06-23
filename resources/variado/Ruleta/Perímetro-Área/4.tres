@@ -1,0 +1,10 @@
+[gd_resource type="Resource" script_class="QuizQuestionRuletitaArea" load_steps=2 format=3 uid="uid://u355bvmds3pd"]
+
+[ext_resource type="Script" path="res://Scripts/Juegos/Ruleta/items/Perímetro-Área/question.gd" id="1_b03xk"]
+
+[resource]
+script = ExtResource("1_b03xk")
+question_info = "Un jardín rectangular mide 10 m. de largo y 3 m. de ancho. ¿Cuál es su área?"
+type = 0
+options = Array[String](["12 m^2", "26 m^2", "20 m^2", "30 m^2"])
+correct = "30 m^2"

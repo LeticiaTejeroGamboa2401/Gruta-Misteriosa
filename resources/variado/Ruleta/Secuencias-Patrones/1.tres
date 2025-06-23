@@ -1,0 +1,10 @@
+[gd_resource type="Resource" script_class="QuizQuestionRuletitaSecuencia" load_steps=2 format=3 uid="uid://bg2fl81gr4l14"]
+
+[ext_resource type="Script" path="res://Scripts/Juegos/Ruleta/items/Secuencia/question.gd" id="1_u2n2d"]
+
+[resource]
+script = ExtResource("1_u2n2d")
+question_info = "¿Cuál es el siguiente número? 2, 4, 6, 8, ___"
+type = 0
+options = Array[String](["10", "12", "9", "11"])
+correct = "10"

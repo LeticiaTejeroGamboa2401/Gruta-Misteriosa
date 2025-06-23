@@ -1,0 +1,10 @@
+[gd_resource type="Resource" script_class="QuizQuestionRuletitaMultDiv" load_steps=2 format=3 uid="uid://cgbnm46md3yic"]
+
+[ext_resource type="Script" path="res://Scripts/Juegos/Ruleta/items/Multiplicación-División/question.gd" id="1_ogkll"]
+
+[resource]
+script = ExtResource("1_ogkll")
+question_info = "¿Qué número es múltiplo de 3 y de 5 al mismo tiempo?"
+type = 0
+options = Array[String](["12", "10", "15", "20"])
+correct = "15"

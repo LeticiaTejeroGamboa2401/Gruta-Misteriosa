@@ -1,4 +1,4 @@
-[gd_scene load_steps=36 format=3 uid="uid://dy8eonorti10n"]
+[gd_scene load_steps=38 format=3 uid="uid://dy8eonorti10n"]
 
 [ext_resource type="Script" path="res://Scripts/mapa_1.gd" id="1_lbv64"]
 [ext_resource type="Texture2D" uid="uid://ch2faqyjs7kwt" path="res://images/mapa.png" id="1_tmcc6"]
@@ -10,6 +10,7 @@
 [ext_resource type="FontFile" uid="uid://ex6sf638yhh5" path="res://font/Chonky Bunny.ttf" id="7_f328p"]
 [ext_resource type="Script" path="res://Scripts/Juegos/AtrapaPeces/entrada_Mapa.gd" id="7_lahml"]
 [ext_resource type="Script" path="res://Scripts/Juegos/LanzaDardos/entrada_mapa.gd" id="8_s2qtb"]
+[ext_resource type="Script" path="res://Scripts/Juegos/Ruleta/entrada_Mapa.gd" id="9_te4dn"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_e46v1"]
 size = Vector2(218, 39.5)
@@ -82,6 +83,9 @@ size = Vector2(147.5, 85)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_btxcb"]
 size = Vector2(111.5, 11)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_calbc"]
+size = Vector2(103, 2)
 
 [sub_resource type="LabelSettings" id="LabelSettings_1lgld"]
 font = ExtResource("7_f328p")
@@ -230,6 +234,15 @@ metadata/_edit_lock_ = true
 position = Vector2(660.25, 458.5)
 shape = SubResource("RectangleShape2D_btxcb")
 
+[node name="Ruleta" type="Area2D" parent="."]
+script = ExtResource("9_te4dn")
+metadata/_edit_lock_ = true
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Ruleta"]
+position = Vector2(405.5, 319)
+shape = SubResource("RectangleShape2D_calbc")
+metadata/_edit_lock_ = true
+
 [node name="Talisman" type="TextureRect" parent="."]
 layout_mode = 0
 offset_left = 963.0
@@ -254,3 +267,4 @@ horizontal_alignment = 1
 [connection signal="body_entered" from="CarreraCaballo" to="CarreraCaballo" method="_on_body_entered"]
 [connection signal="body_entered" from="AtrapaPeces" to="AtrapaPeces" method="_on_body_entered"]
 [connection signal="body_entered" from="LanzaDardos" to="LanzaDardos" method="_on_body_entered"]
+[connection signal="body_entered" from="Ruleta" to="Ruleta" method="_on_body_entered"]

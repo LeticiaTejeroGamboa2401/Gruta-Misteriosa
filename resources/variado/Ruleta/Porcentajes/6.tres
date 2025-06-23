@@ -1,0 +1,10 @@
+[gd_resource type="Resource" script_class="QuizQuestionRuletitaPorcentaje" load_steps=2 format=3 uid="uid://3nlb3hj4cvnb"]
+
+[ext_resource type="Script" path="res://Scripts/Juegos/Ruleta/items/Porcentaje/question.gd" id="1_cjjwm"]
+
+[resource]
+script = ExtResource("1_cjjwm")
+question_info = "Un dulce costaba $30 y ahora cuesta $24. ¿Qué porcentaje de descuento se aplicó?"
+type = 0
+options = Array[String](["25%", "20%", "15%", "30%"])
+correct = "20%"

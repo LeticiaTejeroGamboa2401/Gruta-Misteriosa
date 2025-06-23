@@ -1,0 +1,10 @@
+[gd_resource type="Resource" script_class="QuizQuestionRuletitaSecuencia" load_steps=2 format=3 uid="uid://vef4o7ovv5bu"]
+
+[ext_resource type="Script" path="res://Scripts/Juegos/Ruleta/items/Secuencia/question.gd" id="1_a2ymx"]
+
+[resource]
+script = ExtResource("1_a2ymx")
+question_info = "En un patrón se multiplica por 2: 1, 2, 4, 8, ___"
+type = 0
+options = Array[String](["14", "16", "32", "22"])
+correct = "16"

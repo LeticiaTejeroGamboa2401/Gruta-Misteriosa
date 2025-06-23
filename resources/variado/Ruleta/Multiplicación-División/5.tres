@@ -1,0 +1,10 @@
+[gd_resource type="Resource" script_class="QuizQuestionRuletitaMultDiv" load_steps=2 format=3 uid="uid://cl5uvdn78ppf4"]
+
+[ext_resource type="Script" path="res://Scripts/Juegos/Ruleta/items/Multiplicación-División/question.gd" id="1_a0yvw"]
+
+[resource]
+script = ExtResource("1_a0yvw")
+question_info = "¿Cuál de estos números no es múltiplo de 7?"
+type = 0
+options = Array[String](["30", "35", "49", "28"])
+correct = "30"

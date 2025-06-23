@@ -1,0 +1,10 @@
+[gd_resource type="Resource" script_class="QuizQuestionRuletitaAngulos" load_steps=2 format=3 uid="uid://dkv1f5celoy6i"]
+
+[ext_resource type="Script" path="res://Scripts/Juegos/Ruleta/items/Angulos-Geometría/question.gd" id="1_nexl6"]
+
+[resource]
+script = ExtResource("1_nexl6")
+question_info = "¿Qué figura tiene todos sus lados iguales y 4 ángulos rectos?"
+type = 0
+options = Array[String](["Hexágono", "Heptágono", "Cuadrado", "Octágono"])
+correct = "Cuadrado"

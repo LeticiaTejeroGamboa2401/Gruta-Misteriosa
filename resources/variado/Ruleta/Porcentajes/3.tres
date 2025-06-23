@@ -1,0 +1,10 @@
+[gd_resource type="Resource" script_class="QuizQuestionRuletitaPorcentaje" load_steps=2 format=3 uid="uid://c41ws5tueoir5"]
+
+[ext_resource type="Script" path="res://Scripts/Juegos/Ruleta/items/Porcentaje/question.gd" id="1_f8lpx"]
+
+[resource]
+script = ExtResource("1_f8lpx")
+question_info = "Lucy compró algo con 50% de descuento. Si pagó $120, ¿cuál era su precio original?"
+type = 0
+options = Array[String](["$120", "$60", "$240", "$245"])
+correct = "$240"

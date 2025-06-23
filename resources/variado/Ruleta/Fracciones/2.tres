@@ -1,0 +1,10 @@
+[gd_resource type="Resource" script_class="QuizQuestionRuletitaFracciones" load_steps=2 format=3 uid="uid://cn2wp8vibjqkd"]
+
+[ext_resource type="Script" path="res://Scripts/Juegos/Ruleta/items/Fracciones/question.gd" id="1_yjpou"]
+
+[resource]
+script = ExtResource("1_yjpou")
+question_info = "Si un pastel se divide en 8 partes y ya se comieron 5, ¿qué fracción queda?"
+type = 0
+options = Array[String](["5/8", "3/8", "4/16", "1/2"])
+correct = "3/8"

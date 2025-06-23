@@ -1,0 +1,10 @@
+[gd_resource type="Resource" script_class="QuizQuestionRuletitaEcuaciones" load_steps=2 format=3 uid="uid://cvkyvm54kxgv"]
+
+[ext_resource type="Script" path="res://Scripts/Juegos/Ruleta/items/Ecuaciones/question.gd" id="1_gva31"]
+
+[resource]
+script = ExtResource("1_gva31")
+question_info = "x / 4 = 3. ¿Cuánto vale x?"
+type = 0
+options = Array[String](["7", "9", "15", "12"])
+correct = "12"

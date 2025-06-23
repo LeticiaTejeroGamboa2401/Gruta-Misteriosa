@@ -1,0 +1,10 @@
+[gd_resource type="Resource" script_class="QuizQuestionRuletitaDecimales" load_steps=2 format=3 uid="uid://c4jy2bnc6ovwy"]
+
+[ext_resource type="Script" path="res://Scripts/Juegos/Ruleta/items/Números-Decimales/question.gd" id="1_ppefl"]
+
+[resource]
+script = ExtResource("1_ppefl")
+question_info = "Lucy pesa 43.3 kg. y Lele 42.8 kg. ¿Quién pesa más y cuánto más?"
+type = 0
+options = Array[String](["Lele, 0.5 kg.", "Lucy, 0.5 kg.", "Lucy, 1.5 kg.", "Lele, 1.5 kg."])
+correct = "Lucy, 0.5 kg."

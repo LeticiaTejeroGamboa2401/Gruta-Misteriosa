@@ -1,0 +1,10 @@
+[gd_resource type="Resource" script_class="QuizQuestionRuletitaMultDiv" load_steps=2 format=3 uid="uid://dpi82icagspkp"]
+
+[ext_resource type="Script" path="res://Scripts/Juegos/Ruleta/items/Multiplicación-División/question.gd" id="1_65u8p"]
+
+[resource]
+script = ExtResource("1_65u8p")
+question_info = "Si Lele tiene 24 canicas y quiere repartirlas en partes iguales entre 6 amigos, ¿cuántas recibe cada uno?"
+type = 0
+options = Array[String](["4", "5", "3", "6"])
+correct = "4"

@@ -1,0 +1,10 @@
+[gd_resource type="Resource" script_class="QuizQuestionRuletitaSecuencia" load_steps=2 format=3 uid="uid://djtikfyxs6b1o"]
+
+[ext_resource type="Script" path="res://Scripts/Juegos/Ruleta/items/Secuencia/question.gd" id="1_fc36b"]
+
+[resource]
+script = ExtResource("1_fc36b")
+question_info = "Si el patrón es: +2, +4, ..., y empieza en 3, ¿qué número está en la posición 5?"
+type = 0
+options = Array[String](["17", "19", "15", "21"])
+correct = "15"

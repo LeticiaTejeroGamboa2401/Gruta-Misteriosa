@@ -1,0 +1,10 @@
+[gd_resource type="Resource" script_class="QuizQuestionRuletitaArea" load_steps=2 format=3 uid="uid://cqykn8e005bda"]
+
+[ext_resource type="Script" path="res://Scripts/Juegos/Ruleta/items/Perímetro-Área/question.gd" id="1_81gcc"]
+
+[resource]
+script = ExtResource("1_81gcc")
+question_info = "¿Cuál es el área de un rectángulo de 6 m. de largo y 4 m. de ancho?"
+type = 0
+options = Array[String](["24 m^2", "20 m^2", "22 m^2", "28 m^2"])
+correct = "24 m^2"

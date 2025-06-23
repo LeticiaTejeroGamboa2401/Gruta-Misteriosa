@@ -1,0 +1,10 @@
+[gd_resource type="Resource" script_class="QuizQuestionRuletitaDecimales" load_steps=2 format=3 uid="uid://cprxhl4pk4py8"]
+
+[ext_resource type="Script" path="res://Scripts/Juegos/Ruleta/items/Números-Decimales/question.gd" id="1_g6n1x"]
+
+[resource]
+script = ExtResource("1_g6n1x")
+question_info = "Don alux llenó un tanque con 5.5 litros y luego agregó 2.3 litros más. ¿Cuánto hay en total?"
+type = 0
+options = Array[String](["8.0 litros", "7.5 litros", "8.2 litros", "7.8 litros"])
+correct = "7.8 litros"

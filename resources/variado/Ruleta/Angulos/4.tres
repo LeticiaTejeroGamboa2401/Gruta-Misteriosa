@@ -1,0 +1,10 @@
+[gd_resource type="Resource" script_class="QuizQuestionRuletitaAngulos" load_steps=2 format=3 uid="uid://bglcjna75ejl6"]
+
+[ext_resource type="Script" path="res://Scripts/Juegos/Ruleta/items/Angulos-Geometría/question.gd" id="1_40di8"]
+
+[resource]
+script = ExtResource("1_40di8")
+question_info = "Un triángulo tiene un lado de 60º y otro 90º. ¿Cuánto mide el tercero?"
+type = 0
+options = Array[String](["30º", "40º", "90º", "60º"])
+correct = "30º"

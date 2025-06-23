@@ -1,0 +1,10 @@
+[gd_resource type="Resource" script_class="QuizQuestionRuletitaMultDiv" load_steps=2 format=3 uid="uid://c2f7fj16p5wuk"]
+
+[ext_resource type="Script" path="res://Scripts/Juegos/Ruleta/items/Multiplicación-División/question.gd" id="1_etb6m"]
+
+[resource]
+script = ExtResource("1_etb6m")
+question_info = "Si un número es divisible entre 9, ¿cuál de estos lo podría ser?"
+type = 0
+options = Array[String](["85", "81", "45", "100"])
+correct = "81"

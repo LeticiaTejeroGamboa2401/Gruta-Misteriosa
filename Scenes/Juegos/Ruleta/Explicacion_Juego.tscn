@@ -1,0 +1,146 @@
+[gd_scene load_steps=21 format=3 uid="uid://do7o5wo4k4uwn"]
+
+[ext_resource type="Texture2D" uid="uid://dowi2bp7v8vir" path="res://images/Juegos/Ruleta/Fondo_Explicacion.png" id="1_34ifa"]
+[ext_resource type="Script" path="res://Scripts/Juegos/Ruleta/explicacion_juego.gd" id="1_50smn"]
+[ext_resource type="Texture2D" uid="uid://bj7kr4vnsvxxb" path="res://images/Juegos/Ruleta/ruleta.png" id="2_gg5gn"]
+[ext_resource type="Texture2D" uid="uid://ba4qftiyc6p7n" path="res://images/Juegos/Ruleta/Manilla.png" id="3_kuk14"]
+[ext_resource type="Texture2D" uid="uid://bget8l3pb6isp" path="res://images/Juegos/Ruleta/Alux.png" id="4_4vj6x"]
+[ext_resource type="FontFile" uid="uid://ex6sf638yhh5" path="res://font/Chonky Bunny.ttf" id="5_72562"]
+[ext_resource type="Texture2D" uid="uid://bwf8mkwr4gktp" path="res://images/siguiente_flecha.png" id="6_1653n"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_wxbku"]
+bg_color = Color(0, 0, 0, 0.54902)
+border_width_left = 3
+border_width_top = 3
+border_width_right = 3
+border_width_bottom = 3
+border_color = Color(1, 1, 1, 1)
+corner_radius_top_left = 15
+corner_radius_top_right = 15
+corner_radius_bottom_right = 15
+corner_radius_bottom_left = 15
+
+[sub_resource type="LabelSettings" id="LabelSettings_6aj2t"]
+font = ExtResource("5_72562")
+font_size = 35
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_imbm0"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_vowpu"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_7mvn8"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_8fl6u"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_vri0m"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_falvi"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_6t5bq"]
+bg_color = Color(0, 0, 0, 0.54902)
+corner_radius_top_left = 15
+corner_radius_top_right = 15
+corner_radius_bottom_right = 15
+corner_radius_bottom_left = 15
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_rmv7w"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_5dcij"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_5sisx"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_kyjq2"]
+
+[node name="Control" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_50smn")
+metadata/_edit_lock_ = true
+
+[node name="Fondo" type="TextureRect" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("1_34ifa")
+expand_mode = 1
+metadata/_edit_lock_ = true
+
+[node name="Ruleta" type="TextureRect" parent="."]
+layout_mode = 0
+offset_left = 83.0
+offset_top = 100.0
+offset_right = 419.0
+offset_bottom = 451.0
+texture = ExtResource("2_gg5gn")
+expand_mode = 1
+
+[node name="Manija" type="TextureRect" parent="."]
+layout_mode = 0
+offset_left = 233.0
+offset_top = 100.0
+offset_right = 269.0
+offset_bottom = 214.0
+texture = ExtResource("3_kuk14")
+expand_mode = 1
+
+[node name="Alux" type="Sprite2D" parent="."]
+position = Vector2(846, 295)
+scale = Vector2(0.885, 0.9)
+texture = ExtResource("4_4vj6x")
+
+[node name="Panel" type="Panel" parent="."]
+layout_mode = 0
+offset_left = 46.0
+offset_top = 486.0
+offset_right = 1099.0
+offset_bottom = 617.0
+theme_override_styles/panel = SubResource("StyleBoxFlat_wxbku")
+
+[node name="Label" type="Label" parent="Panel"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 11.0
+offset_right = -14.0
+grow_horizontal = 2
+grow_vertical = 2
+text = "Verás una ruleta mágica en el tablero. Cada vez que la gires, te llevará a un nuevo reto con una sola pregunta. Si contestas bien seguirás avanzando. Si fallas una, ¡no te preocupes! Puedes volver a intentarlo."
+label_settings = SubResource("LabelSettings_6aj2t")
+horizontal_alignment = 1
+vertical_alignment = 1
+autowrap_mode = 2
+
+[node name="Siguiente" type="Button" parent="."]
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -30.0
+offset_top = -38.0
+offset_right = 30.0
+grow_horizontal = 2
+grow_vertical = 0
+theme_override_styles/focus = SubResource("StyleBoxEmpty_imbm0")
+theme_override_styles/disabled_mirrored = SubResource("StyleBoxEmpty_vowpu")
+theme_override_styles/disabled = SubResource("StyleBoxEmpty_7mvn8")
+theme_override_styles/hover_pressed_mirrored = SubResource("StyleBoxEmpty_8fl6u")
+theme_override_styles/hover_pressed = SubResource("StyleBoxEmpty_vri0m")
+theme_override_styles/hover_mirrored = SubResource("StyleBoxEmpty_falvi")
+theme_override_styles/hover = SubResource("StyleBoxFlat_6t5bq")
+theme_override_styles/pressed_mirrored = SubResource("StyleBoxEmpty_rmv7w")
+theme_override_styles/pressed = SubResource("StyleBoxEmpty_5dcij")
+theme_override_styles/normal_mirrored = SubResource("StyleBoxEmpty_5sisx")
+theme_override_styles/normal = SubResource("StyleBoxEmpty_kyjq2")
+icon = ExtResource("6_1653n")
+
+[connection signal="pressed" from="Siguiente" to="." method="_on_siguiente_pressed"]

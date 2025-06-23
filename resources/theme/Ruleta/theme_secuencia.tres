@@ -1,0 +1,14 @@
+[gd_resource type="Resource" script_class="QuizThemeRuletaSecuencia" load_steps=9 format=3 uid="uid://qtsanry1ncmg"]
+
+[ext_resource type="Script" path="res://Scripts/Juegos/Ruleta/items/Secuencia/theme.gd" id="1_6e5si"]
+[ext_resource type="Script" path="res://Scripts/Juegos/Ruleta/items/Secuencia/question.gd" id="2_fqmhb"]
+[ext_resource type="Resource" uid="uid://bg2fl81gr4l14" path="res://resources/variado/Ruleta/Secuencias-Patrones/1.tres" id="3_oj27k"]
+[ext_resource type="Resource" uid="uid://d0k206jiau7pp" path="res://resources/variado/Ruleta/Secuencias-Patrones/2.tres" id="4_bq72k"]
+[ext_resource type="Resource" uid="uid://djtikfyxs6b1o" path="res://resources/variado/Ruleta/Secuencias-Patrones/3.tres" id="5_535s6"]
+[ext_resource type="Resource" uid="uid://b5xn4d22ke5hs" path="res://resources/variado/Ruleta/Secuencias-Patrones/4.tres" id="6_twl5t"]
+[ext_resource type="Resource" uid="uid://15pedx3q8u8v" path="res://resources/variado/Ruleta/Secuencias-Patrones/5.tres" id="7_lgwep"]
+[ext_resource type="Resource" uid="uid://vef4o7ovv5bu" path="res://resources/variado/Ruleta/Secuencias-Patrones/6.tres" id="8_8u5we"]
+
+[resource]
+script = ExtResource("1_6e5si")
+theme = Array[ExtResource("2_fqmhb")]([ExtResource("3_oj27k"), ExtResource("4_bq72k"), ExtResource("5_535s6"), ExtResource("6_twl5t"), ExtResource("7_lgwep"), ExtResource("8_8u5we")])

@@ -1,0 +1,12 @@
+[gd_resource type="Resource" script_class="QuizQuestionRuletitaGraficos" load_steps=3 format=3 uid="uid://x68sni6qbk0k"]
+
+[ext_resource type="Script" path="res://Scripts/Juegos/Ruleta/items/Gráfica-Datos/question.gd" id="1_d7xfi"]
+[ext_resource type="Texture2D" uid="uid://clwpy0mtkvyan" path="res://images/Juegos/Ruleta/4.png" id="1_ul8f3"]
+
+[resource]
+script = ExtResource("1_d7xfi")
+question_info = "¿Cuál es el promedio de la calificación de estas materias?"
+question_img = ExtResource("1_ul8f3")
+type = 0
+options = Array[String](["7.5", "8.8", "8", "8.5"])
+correct = "8.5"

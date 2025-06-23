@@ -1,0 +1,10 @@
+[gd_resource type="Resource" script_class="QuizQuestionRuletitaPorcentaje" load_steps=2 format=3 uid="uid://cq4fmlfsr2pt0"]
+
+[ext_resource type="Script" path="res://Scripts/Juegos/Ruleta/items/Porcentaje/question.gd" id="1_0vo5p"]
+
+[resource]
+script = ExtResource("1_0vo5p")
+question_info = "Un juguete costaba $200 y tiene un 25% de descuento. ¿Cuánto cuesta ahora?"
+type = 0
+options = Array[String](["$150", "$175", "$180", "$160"])
+correct = "$150"

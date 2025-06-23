@@ -1,0 +1,10 @@
+[gd_resource type="Resource" script_class="QuizQuestionRuletitaFracciones" load_steps=2 format=3 uid="uid://dpyoggci7gqnw"]
+
+[ext_resource type="Script" path="res://Scripts/Juegos/Ruleta/items/Fracciones/question.gd" id="1_vc4dj"]
+
+[resource]
+script = ExtResource("1_vc4dj")
+question_info = "En una receta se usa 3/4 de taza de azúcar. Si solo tienes 1/4, ¿cuánto te falta?"
+type = 0
+options = Array[String](["2/2", "3/4", "4/8", "1/4"])
+correct = "4/8"

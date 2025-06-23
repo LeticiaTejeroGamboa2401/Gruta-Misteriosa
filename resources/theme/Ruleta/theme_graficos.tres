@@ -1,0 +1,13 @@
+[gd_resource type="Resource" script_class="QuizThemeRuletaGraficos" load_steps=8 format=3 uid="uid://cjs8chq0pymj5"]
+
+[ext_resource type="Script" path="res://Scripts/Juegos/Ruleta/items/Gráfica-Datos/theme.gd" id="1_u4pr1"]
+[ext_resource type="Script" path="res://Scripts/Juegos/Ruleta/items/Gráfica-Datos/question.gd" id="2_ttrfm"]
+[ext_resource type="Resource" uid="uid://boqhvmy2ldbxh" path="res://resources/variado/Ruleta/Gráficas-Datos/1.tres" id="3_qlu43"]
+[ext_resource type="Resource" uid="uid://d0js8selhdbl0" path="res://resources/variado/Ruleta/Gráficas-Datos/2.tres" id="4_yc4le"]
+[ext_resource type="Resource" uid="uid://xvxcw70jqvl3" path="res://resources/variado/Ruleta/Gráficas-Datos/3.tres" id="5_jt5xc"]
+[ext_resource type="Resource" uid="uid://x68sni6qbk0k" path="res://resources/variado/Ruleta/Gráficas-Datos/4.tres" id="6_ilqrw"]
+[ext_resource type="Resource" uid="uid://bk4hi6coixyn5" path="res://resources/variado/Ruleta/Gráficas-Datos/5.tres" id="7_chr3p"]
+
+[resource]
+script = ExtResource("1_u4pr1")
+theme = Array[ExtResource("2_ttrfm")]([ExtResource("3_qlu43"), ExtResource("4_yc4le"), ExtResource("5_jt5xc"), ExtResource("6_ilqrw"), ExtResource("7_chr3p")])

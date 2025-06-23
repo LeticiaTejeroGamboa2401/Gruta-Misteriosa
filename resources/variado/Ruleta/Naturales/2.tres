@@ -1,0 +1,10 @@
+[gd_resource type="Resource" script_class="QuizQuestionRuletitaNumNat" load_steps=2 format=3 uid="uid://chlcyv48bchkm"]
+
+[ext_resource type="Script" path="res://Scripts/Juegos/Ruleta/items/Operaciones-Numeros-Naturales/question.gd" id="1_pky2m"]
+
+[resource]
+script = ExtResource("1_pky2m")
+question_info = "Una feria vendió 245 boletos el lunes y 189 el martes. ¿Cuántos boletos se vendieron en los dos días?"
+type = 0
+options = Array[String](["435", "434", "433", "430"])
+correct = "434"

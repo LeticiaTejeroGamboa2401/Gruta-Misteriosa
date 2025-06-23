@@ -1,0 +1,15 @@
+[gd_resource type="Resource" script_class="QuizThemeRuletaNumNat" load_steps=10 format=3 uid="uid://7rvovs2ysc0t"]
+
+[ext_resource type="Script" path="res://Scripts/Juegos/Ruleta/items/Operaciones-Numeros-Naturales/theme.gd" id="1_4mqmh"]
+[ext_resource type="Script" path="res://Scripts/Juegos/Ruleta/items/Operaciones-Numeros-Naturales/question.gd" id="2_waj0t"]
+[ext_resource type="Resource" uid="uid://bvfvsnyb14per" path="res://resources/variado/Ruleta/Naturales/1.tres" id="3_ukns2"]
+[ext_resource type="Resource" uid="uid://chlcyv48bchkm" path="res://resources/variado/Ruleta/Naturales/2.tres" id="4_s3tsf"]
+[ext_resource type="Resource" uid="uid://b23woq06h4adw" path="res://resources/variado/Ruleta/Naturales/3.tres" id="5_fant6"]
+[ext_resource type="Resource" uid="uid://b5s7eivvdkiq8" path="res://resources/variado/Ruleta/Naturales/4.tres" id="6_f6sp6"]
+[ext_resource type="Resource" uid="uid://dnj6f1gvxe13v" path="res://resources/variado/Ruleta/Naturales/5.tres" id="7_alnjh"]
+[ext_resource type="Resource" uid="uid://cpm8oeii3grwp" path="res://resources/variado/Ruleta/Naturales/6.tres" id="8_ss7qe"]
+[ext_resource type="Resource" uid="uid://ts0nmmcikfru" path="res://resources/variado/Ruleta/Naturales/7.tres" id="9_silh3"]
+
+[resource]
+script = ExtResource("1_4mqmh")
+theme = Array[ExtResource("2_waj0t")]([ExtResource("3_ukns2"), ExtResource("4_s3tsf"), ExtResource("5_fant6"), ExtResource("6_f6sp6"), ExtResource("7_alnjh"), ExtResource("8_ss7qe"), ExtResource("9_silh3")])

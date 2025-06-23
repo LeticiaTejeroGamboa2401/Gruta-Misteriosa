@@ -1,0 +1,10 @@
+[gd_resource type="Resource" script_class="QuizQuestionRuletitaProbabilidad" load_steps=2 format=3 uid="uid://6gmp1g0jlnvk"]
+
+[ext_resource type="Script" path="res://Scripts/Juegos/Ruleta/items/Probabilidad-Básica/question.gd" id="1_8e340"]
+
+[resource]
+script = ExtResource("1_8e340")
+question_info = "En una bolsa hay 5 dulces: 2 de fresa, 2 de limón y 1 de mango. ¿Cuál tiene menos probabilidad?"
+type = 0
+options = Array[String](["Fresa", "Limón", "Todos igual", "Mango"])
+correct = "Mango"

@@ -1,0 +1,10 @@
+[gd_resource type="Resource" script_class="QuizQuestionRuletitaUnidades" load_steps=2 format=3 uid="uid://dwv5jmakkgdbi"]
+
+[ext_resource type="Script" path="res://Scripts/Juegos/Ruleta/items/Medición-Unidades/question.gd" id="1_clpwi"]
+
+[resource]
+script = ExtResource("1_clpwi")
+question_info = "Lele llenó un recipiente con 750 ml. de agua. ¿Cuántos litros son?"
+type = 0
+options = Array[String](["1.75 litros", "0.85 litros", "1.5 litros", "0.75 litros"])
+correct = "0.75 litros"

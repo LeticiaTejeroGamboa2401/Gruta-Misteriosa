@@ -1,0 +1,10 @@
+[gd_resource type="Resource" script_class="QuizQuestionRuletitaUnidades" load_steps=2 format=3 uid="uid://dydy03r1eorwo"]
+
+[ext_resource type="Script" path="res://Scripts/Juegos/Ruleta/items/Medición-Unidades/question.gd" id="1_4k88n"]
+
+[resource]
+script = ExtResource("1_4k88n")
+question_info = "Si una cuerda mide 2.5 m. ¿cuántos cm. mide?"
+type = 0
+options = Array[String](["25 cm.", "200 cm.", "250 cm.", "2,500 cm."])
+correct = "250 cm."

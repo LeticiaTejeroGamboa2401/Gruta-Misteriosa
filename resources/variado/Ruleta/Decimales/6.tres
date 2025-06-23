@@ -1,0 +1,10 @@
+[gd_resource type="Resource" script_class="QuizQuestionRuletitaDecimales" load_steps=2 format=3 uid="uid://by3jbdn7yb127"]
+
+[ext_resource type="Script" path="res://Scripts/Juegos/Ruleta/items/Números-Decimales/question.gd" id="1_2jkt1"]
+
+[resource]
+script = ExtResource("1_2jkt1")
+question_info = "Si una botella tiene 2.5 litros y se usaron 1.75, ¿cuánto queda?"
+type = 0
+options = Array[String](["1.25 litros", "0.75 litros", "0.55 litros", "0.65 litros"])
+correct = "0.75 litros"

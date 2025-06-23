@@ -1,0 +1,10 @@
+[gd_resource type="Resource" script_class="QuizQuestionRuletitaProbabilidad" load_steps=2 format=3 uid="uid://ckl4nfhygmdmp"]
+
+[ext_resource type="Script" path="res://Scripts/Juegos/Ruleta/items/Probabilidad-Básica/question.gd" id="1_6jvyo"]
+
+[resource]
+script = ExtResource("1_6jvyo")
+question_info = "Si hay 6 cartas numeradas del 1 al 6, ¿qué probabilidad hay de sacar un número par?"
+type = 0
+options = Array[String](["3 de 6", "2 de 6", "1 de 6", "6 de 6"])
+correct = "3 de 6"

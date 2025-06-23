@@ -1,0 +1,10 @@
+[gd_resource type="Resource" script_class="QuizQuestionRuletitaProbabilidad" load_steps=2 format=3 uid="uid://deany1diclt6h"]
+
+[ext_resource type="Script" path="res://Scripts/Juegos/Ruleta/items/Probabilidad-Básica/question.gd" id="1_5rm1s"]
+
+[resource]
+script = ExtResource("1_5rm1s")
+question_info = "En una caja hay 5 bolas: 1 roja, 1 azul, 1 verde, 1 amarilla y 1 blanca. Si sacas una sin mirar, ¿cuál es la probabilidad de que sea azul?"
+type = 0
+options = Array[String](["2 de 5", "1 de 5", "1 de 4", "5 de 5"])
+correct = "1 de 5"

@@ -1,0 +1,14 @@
+[gd_resource type="Resource" script_class="QuizThemeRuletaEcuaciones" load_steps=9 format=3 uid="uid://bjsucxw0dujq2"]
+
+[ext_resource type="Script" path="res://Scripts/Juegos/Ruleta/items/Ecuaciones/theme.gd" id="1_b8rig"]
+[ext_resource type="Script" path="res://Scripts/Juegos/Ruleta/items/Ecuaciones/question.gd" id="2_4nfif"]
+[ext_resource type="Resource" uid="uid://k8mjx55oet52" path="res://resources/variado/Ruleta/Ecuaciones-Básicas/1.tres" id="3_joq84"]
+[ext_resource type="Resource" uid="uid://c4oac7d6hpdqm" path="res://resources/variado/Ruleta/Ecuaciones-Básicas/2.tres" id="4_07q5l"]
+[ext_resource type="Resource" uid="uid://dtlw7eumj6ic0" path="res://resources/variado/Ruleta/Ecuaciones-Básicas/3.tres" id="5_q47o6"]
+[ext_resource type="Resource" uid="uid://cvkyvm54kxgv" path="res://resources/variado/Ruleta/Ecuaciones-Básicas/4.tres" id="6_k5fnl"]
+[ext_resource type="Resource" uid="uid://26j06kybdwh" path="res://resources/variado/Ruleta/Ecuaciones-Básicas/5.tres" id="7_xd26o"]
+[ext_resource type="Resource" uid="uid://djcxxoj8blxs2" path="res://resources/variado/Ruleta/Ecuaciones-Básicas/6.tres" id="8_su2ua"]
+
+[resource]
+script = ExtResource("1_b8rig")
+theme = Array[ExtResource("2_4nfif")]([ExtResource("3_joq84"), ExtResource("4_07q5l"), ExtResource("5_q47o6"), ExtResource("6_k5fnl"), ExtResource("7_xd26o"), ExtResource("8_su2ua")])

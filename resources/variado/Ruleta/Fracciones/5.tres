@@ -1,0 +1,10 @@
+[gd_resource type="Resource" script_class="QuizQuestionRuletitaFracciones" load_steps=2 format=3 uid="uid://beycbi117kjov"]
+
+[ext_resource type="Script" path="res://Scripts/Juegos/Ruleta/items/Fracciones/question.gd" id="1_7c7di"]
+
+[resource]
+script = ExtResource("1_7c7di")
+question_info = "Lele bebió 3/8 de litro de jugo en la mañana y 1/4 en la tarde. ¿Cuánto bebió en total?"
+type = 0
+options = Array[String](["5/8", "3/4", "1/2", "3/8"])
+correct = "5/8"

@@ -1,0 +1,10 @@
+[gd_resource type="Resource" script_class="QuizQuestionRuletitaEcuaciones" load_steps=2 format=3 uid="uid://djcxxoj8blxs2"]
+
+[ext_resource type="Script" path="res://Scripts/Juegos/Ruleta/items/Ecuaciones/question.gd" id="1_hftgc"]
+
+[resource]
+script = ExtResource("1_hftgc")
+question_info = "x - 7 = 0. ¿Cuál es el valor de x?"
+type = 0
+options = Array[String](["0", "7", "6", "-7"])
+correct = "7"

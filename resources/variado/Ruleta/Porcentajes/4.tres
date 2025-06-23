@@ -1,0 +1,10 @@
+[gd_resource type="Resource" script_class="QuizQuestionRuletitaPorcentaje" load_steps=2 format=3 uid="uid://fb7uru243xwv"]
+
+[ext_resource type="Script" path="res://Scripts/Juegos/Ruleta/items/Porcentaje/question.gd" id="1_u4gup"]
+
+[resource]
+script = ExtResource("1_u4gup")
+question_info = "Un artículo de $250 baja un 20% ¿Cuál es el nuevo precio?"
+type = 0
+options = Array[String](["$210", "$220", "$230", "$200"])
+correct = "$200"

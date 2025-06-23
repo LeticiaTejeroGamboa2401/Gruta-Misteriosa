@@ -1,0 +1,10 @@
+[gd_resource type="Resource" script_class="QuizQuestionRuletitaFracciones" load_steps=2 format=3 uid="uid://tyedmjnxeq12"]
+
+[ext_resource type="Script" path="res://Scripts/Juegos/Ruleta/items/Fracciones/question.gd" id="1_w1af7"]
+
+[resource]
+script = ExtResource("1_w1af7")
+question_info = "Si Lucy caminó 2/3 de un kilómetro, ¿le falta más o menos de la mitad?"
+type = 0
+options = Array[String](["Más de la mitad", "La mitad exacta", "Nada", "Menos de la mitad"])
+correct = "Menos de la mitad"

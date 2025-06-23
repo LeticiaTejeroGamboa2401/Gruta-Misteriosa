@@ -1,0 +1,10 @@
+[gd_resource type="Resource" script_class="QuizQuestionRuletitaNumNat" load_steps=2 format=3 uid="uid://dnj6f1gvxe13v"]
+
+[ext_resource type="Script" path="res://Scripts/Juegos/Ruleta/items/Operaciones-Numeros-Naturales/question.gd" id="1_qibjf"]
+
+[resource]
+script = ExtResource("1_qibjf")
+question_info = "Una caja contiene 24 chocolates y se compraron 5 cajas. ¿Cuántos chocolates hay?"
+type = 0
+options = Array[String](["120", "125", "115", "130"])
+correct = "120"

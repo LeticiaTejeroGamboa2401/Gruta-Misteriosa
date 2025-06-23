@@ -1,0 +1,10 @@
+[gd_resource type="Resource" script_class="QuizQuestionRuletitaNumNat" load_steps=2 format=3 uid="uid://b23woq06h4adw"]
+
+[ext_resource type="Script" path="res://Scripts/Juegos/Ruleta/items/Operaciones-Numeros-Naturales/question.gd" id="1_3v31n"]
+
+[resource]
+script = ExtResource("1_3v31n")
+question_info = "Si hay 12 filas de 15 sillas, ¿cuántas sillas hay en total?"
+type = 0
+options = Array[String](["175", "160", "180", "185"])
+correct = "180"

@@ -1,0 +1,15 @@
+[gd_resource type="Resource" script_class="QuizThemeRuletaAngulos" load_steps=10 format=3 uid="uid://c4sba73816o7o"]
+
+[ext_resource type="Script" path="res://Scripts/Juegos/Ruleta/items/Angulos-Geometría/theme.gd" id="1_u5ufh"]
+[ext_resource type="Script" path="res://Scripts/Juegos/Ruleta/items/Angulos-Geometría/question.gd" id="2_ko50j"]
+[ext_resource type="Resource" uid="uid://bpy7bjfq75b2h" path="res://resources/variado/Ruleta/Angulos/1.tres" id="3_erqi6"]
+[ext_resource type="Resource" uid="uid://cmywxdw0wo1uk" path="res://resources/variado/Ruleta/Angulos/2.tres" id="4_r6gv4"]
+[ext_resource type="Resource" uid="uid://di3v3j160june" path="res://resources/variado/Ruleta/Angulos/3.tres" id="5_oxfp4"]
+[ext_resource type="Resource" uid="uid://bglcjna75ejl6" path="res://resources/variado/Ruleta/Angulos/4.tres" id="6_5gi1t"]
+[ext_resource type="Resource" uid="uid://du7hoft78bs1l" path="res://resources/variado/Ruleta/Angulos/5.tres" id="7_sf2nv"]
+[ext_resource type="Resource" uid="uid://dkv1f5celoy6i" path="res://resources/variado/Ruleta/Angulos/6.tres" id="8_0r8db"]
+[ext_resource type="Resource" uid="uid://dv5phyuy7i1aw" path="res://resources/variado/Ruleta/Angulos/7.tres" id="9_u6ifw"]
+
+[resource]
+script = ExtResource("1_u5ufh")
+theme = Array[ExtResource("2_ko50j")]([ExtResource("3_erqi6"), ExtResource("4_r6gv4"), ExtResource("5_oxfp4"), ExtResource("6_5gi1t"), ExtResource("7_sf2nv"), ExtResource("8_0r8db"), ExtResource("9_u6ifw")])

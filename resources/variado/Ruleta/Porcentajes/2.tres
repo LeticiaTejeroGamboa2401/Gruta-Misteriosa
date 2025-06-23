@@ -1,0 +1,10 @@
+[gd_resource type="Resource" script_class="QuizQuestionRuletitaPorcentaje" load_steps=2 format=3 uid="uid://ccsxdam51wxiy"]
+
+[ext_resource type="Script" path="res://Scripts/Juegos/Ruleta/items/Porcentaje/question.gd" id="1_h7jsc"]
+
+[resource]
+script = ExtResource("1_h7jsc")
+question_info = "Si una playera cuesta $80 y se descuentan un 10%, ¿cuánto se paga?"
+type = 0
+options = Array[String](["$75", "$72", "$70", "$68"])
+correct = "$72"

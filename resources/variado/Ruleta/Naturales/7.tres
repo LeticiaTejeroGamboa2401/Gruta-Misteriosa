@@ -1,0 +1,10 @@
+[gd_resource type="Resource" script_class="QuizQuestionRuletitaNumNat" load_steps=2 format=3 uid="uid://ts0nmmcikfru"]
+
+[ext_resource type="Script" path="res://Scripts/Juegos/Ruleta/items/Operaciones-Numeros-Naturales/question.gd" id="1_k1ar8"]
+
+[resource]
+script = ExtResource("1_k1ar8")
+question_info = "Don alux compró 4 cajas con 36 frutas cada una. Si vendió 78 frutas, ¿cuántas le quedan?"
+type = 0
+options = Array[String](["42", "58", "66", "144"])
+correct = "66"

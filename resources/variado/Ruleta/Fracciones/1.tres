@@ -1,0 +1,10 @@
+[gd_resource type="Resource" script_class="QuizQuestionRuletitaFracciones" load_steps=2 format=3 uid="uid://byesa7xsx03s8"]
+
+[ext_resource type="Script" path="res://Scripts/Juegos/Ruleta/items/Fracciones/question.gd" id="1_ioui5"]
+
+[resource]
+script = ExtResource("1_ioui5")
+question_info = "Lucy se comió 3/8 de una pizza y Lele 1/4. ¿Qué fracción comieron entre los dos? ¿Quién comió más?"
+type = 0
+options = Array[String](["2/4, Lele", "5/8, Lucy", "3/4, Lucy", "5/8, Lele"])
+correct = "5/8, Lucy"

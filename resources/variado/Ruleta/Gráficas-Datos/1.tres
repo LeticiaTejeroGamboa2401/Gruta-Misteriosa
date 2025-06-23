@@ -1,0 +1,12 @@
+[gd_resource type="Resource" script_class="QuizQuestionRuletitaGraficos" load_steps=3 format=3 uid="uid://boqhvmy2ldbxh"]
+
+[ext_resource type="Texture2D" uid="uid://uoubuor2rjsh" path="res://images/Juegos/Ruleta/1.png" id="1_7iqym"]
+[ext_resource type="Script" path="res://Scripts/Juegos/Ruleta/items/Gráfica-Datos/question.gd" id="1_yex2b"]
+
+[resource]
+script = ExtResource("1_yex2b")
+question_info = "Según los datos de la gráfica. ¿Qué día se vendieron más? ¿Cuántas más que el lunes?"
+question_img = ExtResource("1_7iqym")
+type = 0
+options = Array[String](["Martes, 15 más", "Miércoles, 10 más", "Martes, 10 más", "Lunes, 0"])
+correct = "Martes, 15 más"

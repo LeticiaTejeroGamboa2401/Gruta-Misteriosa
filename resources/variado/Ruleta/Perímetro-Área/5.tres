@@ -1,0 +1,10 @@
+[gd_resource type="Resource" script_class="QuizQuestionRuletitaArea" load_steps=2 format=3 uid="uid://c84c12noa7oee"]
+
+[ext_resource type="Script" path="res://Scripts/Juegos/Ruleta/items/Perímetro-Área/question.gd" id="1_j17kh"]
+
+[resource]
+script = ExtResource("1_j17kh")
+question_info = "¿Cuál es el perímetro de un rectángulo que mide 8 cm. por 3 cm.?"
+type = 0
+options = Array[String](["22 cm.", "24 cm.", "20 cm.", "18 cm."])
+correct = "24 cm."

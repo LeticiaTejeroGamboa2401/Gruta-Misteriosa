@@ -1,0 +1,10 @@
+[gd_resource type="Resource" script_class="QuizQuestionRuletitaNumNat" load_steps=2 format=3 uid="uid://b5s7eivvdkiq8"]
+
+[ext_resource type="Script" path="res://Scripts/Juegos/Ruleta/items/Operaciones-Numeros-Naturales/question.gd" id="1_1ontc"]
+
+[resource]
+script = ExtResource("1_1ontc")
+question_info = "Don alux cosechó 324 mazorcas y vendió 179. ¿Cuántas le quedan?"
+type = 0
+options = Array[String](["144", "146", "150", "145"])
+correct = "145"

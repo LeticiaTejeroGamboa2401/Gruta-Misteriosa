@@ -1,0 +1,10 @@
+[gd_resource type="Resource" script_class="QuizQuestionRuletitaAngulos" load_steps=2 format=3 uid="uid://dv5phyuy7i1aw"]
+
+[ext_resource type="Script" path="res://Scripts/Juegos/Ruleta/items/Angulos-Geometría/question.gd" id="1_mjoij"]
+
+[resource]
+script = ExtResource("1_mjoij")
+question_info = "Un triángulo tiene un ángulo de 90º, uno de 45º y otro desconocido. ¿Cuánto mide el ángulo que falta?"
+type = 0
+options = Array[String](["35º", "45º", "55º", "65º"])
+correct = "45º"

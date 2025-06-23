@@ -1,0 +1,10 @@
+[gd_resource type="Resource" script_class="QuizQuestionRuletitaProbabilidad" load_steps=2 format=3 uid="uid://bx2p5y7px2rcd"]
+
+[ext_resource type="Script" path="res://Scripts/Juegos/Ruleta/items/Probabilidad-Básica/question.gd" id="1_ailo6"]
+
+[resource]
+script = ExtResource("1_ailo6")
+question_info = "En una ruleta con 4 partes iguales: 1 azul, 1 roja y 2 verdes. ¿Qué color es más probable?"
+type = 0
+options = Array[String](["Roja", "Verde", "Azul", "Todos igual"])
+correct = "Verde"

@@ -1,0 +1,10 @@
+[gd_resource type="Resource" script_class="QuizQuestionRuletitaEcuaciones" load_steps=2 format=3 uid="uid://26j06kybdwh"]
+
+[ext_resource type="Script" path="res://Scripts/Juegos/Ruleta/items/Ecuaciones/question.gd" id="1_dewov"]
+
+[resource]
+script = ExtResource("1_dewov")
+question_info = "Si 5x = 25, entonces x es:"
+type = 0
+options = Array[String](["5", "6", "4", "3"])
+correct = "5"

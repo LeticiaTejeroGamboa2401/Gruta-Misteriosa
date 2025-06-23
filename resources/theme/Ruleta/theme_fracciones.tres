@@ -1,0 +1,14 @@
+[gd_resource type="Resource" script_class="QuizThemeRuletaFracciones" load_steps=9 format=3 uid="uid://bsw3yvp5a0grw"]
+
+[ext_resource type="Script" path="res://Scripts/Juegos/Ruleta/items/Fracciones/theme.gd" id="1_edodl"]
+[ext_resource type="Script" path="res://Scripts/Juegos/Ruleta/items/Fracciones/question.gd" id="2_ttby8"]
+[ext_resource type="Resource" uid="uid://byesa7xsx03s8" path="res://resources/variado/Ruleta/Fracciones/1.tres" id="3_djocb"]
+[ext_resource type="Resource" uid="uid://cn2wp8vibjqkd" path="res://resources/variado/Ruleta/Fracciones/2.tres" id="4_uslg2"]
+[ext_resource type="Resource" uid="uid://dpyoggci7gqnw" path="res://resources/variado/Ruleta/Fracciones/3.tres" id="5_l2a0e"]
+[ext_resource type="Resource" uid="uid://tyedmjnxeq12" path="res://resources/variado/Ruleta/Fracciones/4.tres" id="6_5jwvy"]
+[ext_resource type="Resource" uid="uid://beycbi117kjov" path="res://resources/variado/Ruleta/Fracciones/5.tres" id="7_xaa6h"]
+[ext_resource type="Resource" uid="uid://dw7pauvoob7oo" path="res://resources/variado/Ruleta/Fracciones/6.tres" id="8_gt772"]
+
+[resource]
+script = ExtResource("1_edodl")
+theme = Array[ExtResource("2_ttby8")]([ExtResource("3_djocb"), ExtResource("4_uslg2"), ExtResource("5_l2a0e"), ExtResource("6_5jwvy"), ExtResource("7_xaa6h"), ExtResource("8_gt772")])

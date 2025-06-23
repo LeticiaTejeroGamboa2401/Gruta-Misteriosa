@@ -1,0 +1,14 @@
+[gd_resource type="Resource" script_class="QuizThemeRuletaPorcentaje" load_steps=9 format=3 uid="uid://c56yaohvxvtg4"]
+
+[ext_resource type="Script" path="res://Scripts/Juegos/Ruleta/items/Porcentaje/theme.gd" id="1_nmq4c"]
+[ext_resource type="Script" path="res://Scripts/Juegos/Ruleta/items/Porcentaje/question.gd" id="2_i4hxi"]
+[ext_resource type="Resource" uid="uid://cq4fmlfsr2pt0" path="res://resources/variado/Ruleta/Porcentajes/1.tres" id="3_m4vqf"]
+[ext_resource type="Resource" uid="uid://ccsxdam51wxiy" path="res://resources/variado/Ruleta/Porcentajes/2.tres" id="4_1noh4"]
+[ext_resource type="Resource" uid="uid://c41ws5tueoir5" path="res://resources/variado/Ruleta/Porcentajes/3.tres" id="5_mc674"]
+[ext_resource type="Resource" uid="uid://fb7uru243xwv" path="res://resources/variado/Ruleta/Porcentajes/4.tres" id="6_bcdjk"]
+[ext_resource type="Resource" uid="uid://kbfpkgpacmk2" path="res://resources/variado/Ruleta/Porcentajes/5.tres" id="7_44x2l"]
+[ext_resource type="Resource" uid="uid://3nlb3hj4cvnb" path="res://resources/variado/Ruleta/Porcentajes/6.tres" id="8_be3dt"]
+
+[resource]
+script = ExtResource("1_nmq4c")
+theme = Array[ExtResource("2_i4hxi")]([ExtResource("3_m4vqf"), ExtResource("4_1noh4"), ExtResource("5_mc674"), ExtResource("6_bcdjk"), ExtResource("7_44x2l"), ExtResource("8_be3dt")])

@@ -1,0 +1,10 @@
+[gd_resource type="Resource" script_class="QuizQuestionRuletitaDecimales" load_steps=2 format=3 uid="uid://ktjyqhwm7otx"]
+
+[ext_resource type="Script" path="res://Scripts/Juegos/Ruleta/items/Números-Decimales/question.gd" id="1_6o0k3"]
+
+[resource]
+script = ExtResource("1_6o0k3")
+question_info = "Si un libro mide 1.25 cm. de grosor, ¿cuánto miden 4 libros?"
+type = 0
+options = Array[String](["4.5 cm.", "6.0 cm.", "5.0 cm.", "4.0 cm."])
+correct = "5.0 cm."

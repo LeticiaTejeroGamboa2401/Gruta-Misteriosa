@@ -1,0 +1,10 @@
+[gd_resource type="Resource" script_class="QuizQuestionRuletitaUnidades" load_steps=2 format=3 uid="uid://b4fq7ebhpt346"]
+
+[ext_resource type="Script" path="res://Scripts/Juegos/Ruleta/items/Medición-Unidades/question.gd" id="1_7xcs7"]
+
+[resource]
+script = ExtResource("1_7xcs7")
+question_info = "Lucy caminó 2 km. y Lele 1,500 m. ¿Quién caminó más?"
+type = 0
+options = Array[String](["Lucy", "Lele", "Caminaron igual", "No se puede saber"])
+correct = "Lucy"

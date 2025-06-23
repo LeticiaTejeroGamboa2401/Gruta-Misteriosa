@@ -1,0 +1,10 @@
+[gd_resource type="Resource" script_class="QuizQuestionRuletitaDecimales" load_steps=2 format=3 uid="uid://dly2qf118movy"]
+
+[ext_resource type="Script" path="res://Scripts/Juegos/Ruleta/items/Números-Decimales/question.gd" id="1_cg8i4"]
+
+[resource]
+script = ExtResource("1_cg8i4")
+question_info = "Un refresco cuesta $12.50 y otro $9.75. ¿Cuánto cuestan juntos?"
+type = 0
+options = Array[String](["$22.25", "$22.15", "$21.75", "$23.00"])
+correct = "$22.25"

@@ -1,0 +1,10 @@
+[gd_resource type="Resource" script_class="QuizQuestionRuletitaSecuencia" load_steps=2 format=3 uid="uid://15pedx3q8u8v"]
+
+[ext_resource type="Script" path="res://Scripts/Juegos/Ruleta/items/Secuencia/question.gd" id="1_75ixk"]
+
+[resource]
+script = ExtResource("1_75ixk")
+question_info = "Completa: 81, 72, 63, ___"
+type = 0
+options = Array[String](["54", "55", "56", "57"])
+correct = "54"

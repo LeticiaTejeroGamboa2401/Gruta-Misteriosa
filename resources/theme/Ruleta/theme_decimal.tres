@@ -1,0 +1,14 @@
+[gd_resource type="Resource" script_class="QuizThemeRuletaDecimales" load_steps=9 format=3 uid="uid://di78enfod7vcm"]
+
+[ext_resource type="Script" path="res://Scripts/Juegos/Ruleta/items/Números-Decimales/question.gd" id="1_ra5k3"]
+[ext_resource type="Script" path="res://Scripts/Juegos/Ruleta/items/Números-Decimales/theme.gd" id="1_rn3em"]
+[ext_resource type="Resource" uid="uid://dly2qf118movy" path="res://resources/variado/Ruleta/Decimales/1.tres" id="3_5xj4b"]
+[ext_resource type="Resource" uid="uid://c4jy2bnc6ovwy" path="res://resources/variado/Ruleta/Decimales/2.tres" id="4_rq8pg"]
+[ext_resource type="Resource" uid="uid://ktjyqhwm7otx" path="res://resources/variado/Ruleta/Decimales/3.tres" id="5_h6tvh"]
+[ext_resource type="Resource" uid="uid://cprxhl4pk4py8" path="res://resources/variado/Ruleta/Decimales/4.tres" id="6_cfhl2"]
+[ext_resource type="Resource" uid="uid://b84kt6a73yqwr" path="res://resources/variado/Ruleta/Decimales/5.tres" id="7_so8ym"]
+[ext_resource type="Resource" uid="uid://by3jbdn7yb127" path="res://resources/variado/Ruleta/Decimales/6.tres" id="8_0hvfj"]
+
+[resource]
+script = ExtResource("1_rn3em")
+theme = Array[ExtResource("1_ra5k3")]([ExtResource("3_5xj4b"), ExtResource("4_rq8pg"), ExtResource("5_h6tvh"), ExtResource("6_cfhl2"), ExtResource("7_so8ym"), ExtResource("8_0hvfj")])

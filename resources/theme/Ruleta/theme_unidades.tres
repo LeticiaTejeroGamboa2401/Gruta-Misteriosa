@@ -1,0 +1,14 @@
+[gd_resource type="Resource" script_class="QuizThemeRuletaUnidades" load_steps=9 format=3 uid="uid://le8a8stww4ye"]
+
+[ext_resource type="Script" path="res://Scripts/Juegos/Ruleta/items/Medición-Unidades/theme.gd" id="1_m32nf"]
+[ext_resource type="Script" path="res://Scripts/Juegos/Ruleta/items/Medición-Unidades/question.gd" id="1_xoqv7"]
+[ext_resource type="Resource" uid="uid://b4fq7ebhpt346" path="res://resources/variado/Ruleta/Medición-Unidades/1.tres" id="3_y4567"]
+[ext_resource type="Resource" uid="uid://br02v6w3fcgjg" path="res://resources/variado/Ruleta/Medición-Unidades/2.tres" id="4_etmv4"]
+[ext_resource type="Resource" uid="uid://dydy03r1eorwo" path="res://resources/variado/Ruleta/Medición-Unidades/3.tres" id="5_6sxn8"]
+[ext_resource type="Resource" uid="uid://dwv5jmakkgdbi" path="res://resources/variado/Ruleta/Medición-Unidades/4.tres" id="6_blw27"]
+[ext_resource type="Resource" uid="uid://1l65sd6dv3f1" path="res://resources/variado/Ruleta/Medición-Unidades/5.tres" id="7_287mp"]
+[ext_resource type="Resource" uid="uid://chwe4abuu68p2" path="res://resources/variado/Ruleta/Medición-Unidades/6.tres" id="8_ljqw6"]
+
+[resource]
+script = ExtResource("1_m32nf")
+theme = Array[ExtResource("1_xoqv7")]([ExtResource("3_y4567"), ExtResource("4_etmv4"), ExtResource("5_6sxn8"), ExtResource("6_blw27"), ExtResource("7_287mp"), ExtResource("8_ljqw6")])

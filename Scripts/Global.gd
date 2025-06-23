@@ -16,7 +16,14 @@ var juegos_ganados = {
 	"juego_caballo": false,
 	"juego_peces": false,
 	"juego_dardos": false,
+	"juego_ruleta": false,
 }
 
 # Vidas en el juego del nahual
 var lives: int =3
+
+var ruleta_rotation := 0.0
+var area_seleccionada := ""
+var total_rondas: int = 5
+var ronda_actual: int = 0
+var respuestas_correctas: int = 0

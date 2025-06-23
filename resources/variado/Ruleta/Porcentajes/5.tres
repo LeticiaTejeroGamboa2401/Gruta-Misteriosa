@@ -1,0 +1,10 @@
+[gd_resource type="Resource" script_class="QuizQuestionRuletitaPorcentaje" load_steps=2 format=3 uid="uid://kbfpkgpacmk2"]
+
+[ext_resource type="Script" path="res://Scripts/Juegos/Ruleta/items/Porcentaje/question.gd" id="1_mgys2"]
+
+[resource]
+script = ExtResource("1_mgys2")
+question_info = "Una feria ofrece 15% de descuento en entradas de $100. ¿Cuánto cuesta ahora?"
+type = 0
+options = Array[String](["$85", "$90", "$80", "$95"])
+correct = "$85"

@@ -1,0 +1,12 @@
+[gd_resource type="Resource" script_class="QuizQuestionRuletitaGraficos" load_steps=3 format=3 uid="uid://d0js8selhdbl0"]
+
+[ext_resource type="Script" path="res://Scripts/Juegos/Ruleta/items/Gráfica-Datos/question.gd" id="1_55akp"]
+[ext_resource type="Texture2D" uid="uid://dohp237p7f1a1" path="res://images/Juegos/Ruleta/2.png" id="1_84ix6"]
+
+[resource]
+script = ExtResource("1_55akp")
+question_info = "¿Cuál es el color más vendido?"
+question_img = ExtResource("1_84ix6")
+type = 0
+options = Array[String](["Azul", "Rojo", "Verde", "Naranja"])
+correct = "Rojo"

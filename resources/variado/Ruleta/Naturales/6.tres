@@ -1,0 +1,10 @@
+[gd_resource type="Resource" script_class="QuizQuestionRuletitaNumNat" load_steps=2 format=3 uid="uid://cpm8oeii3grwp"]
+
+[ext_resource type="Script" path="res://Scripts/Juegos/Ruleta/items/Operaciones-Numeros-Naturales/question.gd" id="1_ntgu1"]
+
+[resource]
+script = ExtResource("1_ntgu1")
+question_info = "En una excursión fueron 3 camiones con 52 niños cada uno. ¿Cuántos niños fueron en total?"
+type = 0
+options = Array[String](["150", "156", "162", "158"])
+correct = "156"

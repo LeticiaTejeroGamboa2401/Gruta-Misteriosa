@@ -1,0 +1,10 @@
+[gd_resource type="Resource" script_class="QuizQuestionRuletitaMultDiv" load_steps=2 format=3 uid="uid://biirho8s8306r"]
+
+[ext_resource type="Script" path="res://Scripts/Juegos/Ruleta/items/Multiplicación-División/question.gd" id="1_qbosd"]
+
+[resource]
+script = ExtResource("1_qbosd")
+question_info = "¿Cuál es el mínimo común múltiplo (mcm) de 4 y 6?"
+type = 0
+options = Array[String](["12", "8", "24", "18"])
+correct = "12"

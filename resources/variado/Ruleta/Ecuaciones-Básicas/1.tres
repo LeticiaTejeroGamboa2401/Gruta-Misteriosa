@@ -1,0 +1,10 @@
+[gd_resource type="Resource" script_class="QuizQuestionRuletitaEcuaciones" load_steps=2 format=3 uid="uid://k8mjx55oet52"]
+
+[ext_resource type="Script" path="res://Scripts/Juegos/Ruleta/items/Ecuaciones/question.gd" id="1_0t3md"]
+
+[resource]
+script = ExtResource("1_0t3md")
+question_info = "¿Qué valor de \"x\" hace verdaderamente la ecuación: x + 5 = 12?"
+type = 0
+options = Array[String](["7", "6", "8", "9"])
+correct = "7"

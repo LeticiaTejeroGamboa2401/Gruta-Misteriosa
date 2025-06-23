@@ -1,0 +1,14 @@
+[gd_resource type="Resource" script_class="QuizThemeRuletaMultDiv" load_steps=9 format=3 uid="uid://bg17r0a3pei3u"]
+
+[ext_resource type="Script" path="res://Scripts/Juegos/Ruleta/items/Multiplicación-División/theme.gd" id="1_nc6d3"]
+[ext_resource type="Script" path="res://Scripts/Juegos/Ruleta/items/Multiplicación-División/question.gd" id="2_ygpfr"]
+[ext_resource type="Resource" uid="uid://biirho8s8306r" path="res://resources/variado/Ruleta/Multiplicación-División/1.tres" id="3_ggldl"]
+[ext_resource type="Resource" uid="uid://dcq2vhtus6wri" path="res://resources/variado/Ruleta/Multiplicación-División/2.tres" id="4_culeh"]
+[ext_resource type="Resource" uid="uid://cgbnm46md3yic" path="res://resources/variado/Ruleta/Multiplicación-División/3.tres" id="5_6oewy"]
+[ext_resource type="Resource" uid="uid://dpi82icagspkp" path="res://resources/variado/Ruleta/Multiplicación-División/4.tres" id="6_yvhca"]
+[ext_resource type="Resource" uid="uid://cl5uvdn78ppf4" path="res://resources/variado/Ruleta/Multiplicación-División/5.tres" id="7_v0bw7"]
+[ext_resource type="Resource" uid="uid://c2f7fj16p5wuk" path="res://resources/variado/Ruleta/Multiplicación-División/6.tres" id="8_xivi0"]
+
+[resource]
+script = ExtResource("1_nc6d3")
+theme = Array[ExtResource("2_ygpfr")]([ExtResource("3_ggldl"), ExtResource("4_culeh"), ExtResource("5_6oewy"), ExtResource("6_yvhca"), ExtResource("7_v0bw7"), ExtResource("8_xivi0")])

@@ -1,0 +1,10 @@
+[gd_resource type="Resource" script_class="QuizQuestionRuletitaArea" load_steps=2 format=3 uid="uid://b37f4pjxutq4"]
+
+[ext_resource type="Script" path="res://Scripts/Juegos/Ruleta/items/Perímetro-Área/question.gd" id="1_hkpoe"]
+
+[resource]
+script = ExtResource("1_hkpoe")
+question_info = "Una figura tiene un área de 12 m^2 y otra de 8 m^2. ¿Cuál es el área total?"
+type = 0
+options = Array[String](["18 m^2", "20 m^2", "22 m^2", "19 m^2"])
+correct = "20 m^2"

@@ -1,0 +1,10 @@
+[gd_resource type="Resource" script_class="QuizQuestionRuletitaAngulos" load_steps=2 format=3 uid="uid://bpy7bjfq75b2h"]
+
+[ext_resource type="Script" path="res://Scripts/Juegos/Ruleta/items/Angulos-Geometría/question.gd" id="1_jvh84"]
+
+[resource]
+script = ExtResource("1_jvh84")
+question_info = "¿Cuántos grados suma un triángulo?"
+type = 0
+options = Array[String](["90º", "180º", "270º", "360º"])
+correct = "180º"

@@ -1,0 +1,356 @@
+[gd_scene load_steps=16 format=3 uid="uid://db5edwl1b6gqq"]
+
+[ext_resource type="Script" path="res://Scenes/weapon_selection.gd" id="1_nh8ak"]
+[ext_resource type="Texture2D" uid="uid://3hqd2syyrgry" path="res://images/HistoriaCompa.jpg" id="2_eedlv"]
+[ext_resource type="FontFile" uid="uid://bd321yblpf1ew" path="res://font/Supermarket of Love.ttf" id="3_51dip"]
+[ext_resource type="Texture2D" uid="uid://bwf8mkwr4gktp" path="res://images/siguiente_flecha.png" id="4_h1xwn"]
+[ext_resource type="Texture2D" uid="uid://4w0ugse17nmx" path="res://assets/lanza.png" id="4_yeakg"]
+[ext_resource type="Texture2D" uid="uid://so77a6nnvylc" path="res://assets/Amulet.png" id="5_hv7js"]
+[ext_resource type="FontFile" uid="uid://ex6sf638yhh5" path="res://font/Chonky Bunny.ttf" id="6_owu1s"]
+
+[sub_resource type="Animation" id="Animation_r4jw5"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("AmuletSprite:scale")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(0.227539, 0.227539)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("AmuletSprite:modulate")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 1)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("AmuletSprite:rotation")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [0.0]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("GlowEffect:scale")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(0.242188, 0.242188)]
+}
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("GlowEffect:modulate")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 1)]
+}
+tracks/5/type = "value"
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/path = NodePath("GlowEffect:rotation")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [0.0]
+}
+
+[sub_resource type="Animation" id="Animation_ht2k5"]
+resource_name = "amulet_glow"
+length = 3.0
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("AmuletSprite:scale")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 1.5, 3),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [Vector2(0.227539, 0.227539), Vector2(0.33, 0.33), Vector2(0.22, 0.22)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("AmuletSprite:modulate")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 3),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 1)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("AmuletSprite:rotation")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0, 1.5, 3),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [0.0, 3.14159, 6.28319]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("GlowEffect:scale")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0, 0.5, 1.5, 2.03333, 2.5, 3),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1),
+"update": 0,
+"values": [Vector2(0.2, 0.2), Vector2(0.271345, 0.271345), Vector2(0.33, 0.33), Vector2(0.35, 0.35), Vector2(0.34, 0.34), Vector2(0.26, 0.26)]
+}
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("GlowEffect:modulate")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(0, 1.1, 1.86667, 2.43333, 3),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 0.8), Color(1, 1, 1, 1), Color(1, 1, 1, 0.6), Color(1, 1, 1, 0)]
+}
+tracks/5/type = "value"
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/path = NodePath("GlowEffect:rotation")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/keys = {
+"times": PackedFloat32Array(0, 1.5, 3),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [6.28319, 3.14159, 6.28319]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_8kje7"]
+_data = {
+"RESET": SubResource("Animation_r4jw5"),
+"amulet_glow": SubResource("Animation_ht2k5")
+}
+
+[sub_resource type="LabelSettings" id="LabelSettings_e34b4"]
+font = ExtResource("3_51dip")
+font_size = 30
+
+[sub_resource type="Theme" id="Theme_favq2"]
+default_font = ExtResource("6_owu1s")
+default_font_size = 18
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_3xuhi"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_lb26t"]
+font = ExtResource("6_owu1s")
+font_size = 20
+
+[sub_resource type="Theme" id="Theme_kkoys"]
+default_font = ExtResource("6_owu1s")
+default_font_size = 19
+
+[node name="weapon_selection" type="Node2D"]
+script = ExtResource("1_nh8ak")
+
+[node name="ColorRect" type="ColorRect" parent="."]
+offset_right = 1152.0
+offset_bottom = 648.0
+color = Color(0, 0, 0, 1)
+metadata/_edit_lock_ = true
+
+[node name="TextureRect" type="TextureRect" parent="."]
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = 223.0
+offset_top = -1.0
+offset_right = 901.0
+offset_bottom = 479.0
+grow_horizontal = 2
+texture = ExtResource("2_eedlv")
+metadata/_edit_lock_ = true
+
+[node name="AmuletComplete" type="Node2D" parent="."]
+metadata/_edit_lock_ = true
+
+[node name="GlowEffect" type="Sprite2D" parent="AmuletComplete"]
+visible = false
+position = Vector2(547, 174)
+scale = Vector2(0.242188, 0.242188)
+texture = ExtResource("5_hv7js")
+metadata/_edit_lock_ = true
+
+[node name="AmuletSprite" type="Sprite2D" parent="AmuletComplete"]
+position = Vector2(539, 220)
+scale = Vector2(0.227539, 0.227539)
+texture = ExtResource("5_hv7js")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="AmuletComplete"]
+libraries = {
+"": SubResource("AnimationLibrary_8kje7")
+}
+autoplay = "amulet_glow"
+
+[node name="WeaponOptions" type="Control" parent="."]
+layout_mode = 3
+anchors_preset = 0
+offset_left = 211.0
+offset_top = 32.0
+offset_right = 251.0
+offset_bottom = 72.0
+metadata/_edit_lock_ = true
+
+[node name="WeaponA" type="TextureButton" parent="WeaponOptions"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 2.725
+anchor_top = 5.075
+anchor_right = 2.725
+anchor_bottom = 5.075
+offset_left = -46.0
+offset_top = -45.0
+offset_right = 44.0
+offset_bottom = 45.0
+metadata/_edit_lock_ = true
+
+[node name="Lanza" type="Sprite2D" parent="WeaponOptions/WeaponA"]
+position = Vector2(7, 15)
+scale = Vector2(0.0832031, 0.0588672)
+texture = ExtResource("4_yeakg")
+metadata/_edit_lock_ = true
+
+[node name="WeaponB" type="TextureButton" parent="WeaponOptions"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 8.225
+anchor_top = 0.675
+anchor_right = 8.225
+anchor_bottom = 0.675
+offset_left = -45.0
+offset_top = -45.0
+offset_right = 45.0
+offset_bottom = 45.0
+
+[node name="Lanza2" type="Sprite2D" parent="WeaponOptions/WeaponB"]
+position = Vector2(42, 39)
+scale = Vector2(0.0832031, 0.0588672)
+texture = ExtResource("4_yeakg")
+metadata/_edit_lock_ = true
+
+[node name="WeaponC" type="TextureButton" parent="WeaponOptions"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 14.85
+anchor_top = 5.225
+anchor_right = 14.85
+anchor_bottom = 5.225
+offset_left = -50.0
+offset_top = -51.0
+offset_right = 40.0
+offset_bottom = 39.0
+
+[node name="Lanza3" type="Sprite2D" parent="WeaponOptions/WeaponC"]
+position = Vector2(58, 24)
+scale = Vector2(0.0832031, 0.0588672)
+texture = ExtResource("4_yeakg")
+metadata/_edit_lock_ = true
+
+[node name="UI" type="CanvasLayer" parent="."]
+
+[node name="DialogPopup" type="Panel" parent="UI"]
+offset_left = 590.0
+offset_top = 694.0
+offset_right = 630.0
+offset_bottom = 734.0
+metadata/_edit_lock_ = true
+
+[node name="DialogLabel" type="Label" parent="UI/DialogPopup"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = -0.537
+anchor_top = -3.525
+anchor_right = -0.537
+anchor_bottom = -3.525
+offset_left = -568.52
+offset_top = -56.0
+offset_right = 583.48
+offset_bottom = 80.0
+label_settings = SubResource("LabelSettings_e34b4")
+horizontal_alignment = 1
+vertical_alignment = 1
+autowrap_mode = 3
+
+[node name="NextButton" type="Button" parent="UI/DialogPopup"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = -1.275
+anchor_top = -5.925
+anchor_right = -1.275
+anchor_bottom = -5.925
+offset_left = -36.0
+offset_top = -23.0
+offset_right = 36.0
+offset_bottom = 23.0
+text = "
+"
+icon = ExtResource("4_h1xwn")
+flat = true
+metadata/_edit_lock_ = true
+
+[node name="WeaponInfoPopup" type="Panel" parent="UI"]
+offset_left = 370.0
+offset_top = 344.0
+offset_right = 711.0
+offset_bottom = 430.0
+theme = SubResource("Theme_favq2")
+theme_override_styles/panel = SubResource("StyleBoxEmpty_3xuhi")
+
+[node name="WeaponTitle" type="Label" parent="UI/WeaponInfoPopup"]
+layout_mode = 0
+offset_right = 341.0
+offset_bottom = 27.0
+label_settings = SubResource("LabelSettings_lb26t")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="WeaponDescription" type="RichTextLabel" parent="UI/WeaponInfoPopup"]
+layout_mode = 0
+offset_left = 44.0
+offset_top = 27.0
+offset_right = 385.0
+offset_bottom = 86.0
+theme = SubResource("Theme_kkoys")

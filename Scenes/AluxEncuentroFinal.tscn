@@ -1,0 +1,361 @@
+[gd_scene load_steps=19 format=3 uid="uid://bibebft18idp2"]
+
+[ext_resource type="Script" path="res://Scenes/alux_encuentro_final.gd" id="1_dj3yf"]
+[ext_resource type="Texture2D" uid="uid://3hqd2syyrgry" path="res://images/HistoriaCompa.jpg" id="2_6qju3"]
+[ext_resource type="PackedScene" uid="uid://1kydvnjxixmp" path="res://Scenes/Aluxe_Personaje.tscn" id="2_ecajx"]
+[ext_resource type="Texture2D" uid="uid://b1ckv3yhn4dwv" path="res://images/background.png" id="4_aodgo"]
+[ext_resource type="FontFile" uid="uid://q4llc3uguqs2" path="res://font/KGCorneroftheSky.ttf" id="5_7bjss"]
+[ext_resource type="Script" path="res://Scenes/question_label.gd" id="6_hoqg8"]
+[ext_resource type="FontFile" uid="uid://bd321yblpf1ew" path="res://font/Supermarket of Love.ttf" id="7_8p7qp"]
+[ext_resource type="Texture2D" uid="uid://bwf8mkwr4gktp" path="res://images/siguiente_flecha.png" id="8_of8xo"]
+[ext_resource type="FontFile" uid="uid://ex6sf638yhh5" path="res://font/Chonky Bunny.ttf" id="9_4dwhh"]
+[ext_resource type="Texture2D" uid="uid://so77a6nnvylc" path="res://assets/Amulet.png" id="10_btf4k"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_ef12v"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_4fh3p"]
+font = ExtResource("5_7bjss")
+font_size = 15
+shadow_size = 2
+shadow_color = Color(0.0382144, 0.0224192, 0.0111756, 0)
+
+[sub_resource type="LabelSettings" id="LabelSettings_dyuei"]
+font = ExtResource("7_8p7qp")
+font_size = 30
+
+[sub_resource type="LabelSettings" id="LabelSettings_mv38f"]
+font = ExtResource("9_4dwhh")
+font_size = 25
+shadow_size = 5
+shadow_color = Color(0.054514, 0.0454279, 0.0422048, 0)
+
+[sub_resource type="Animation" id="Animation_r4jw5"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("AmuletSprite:scale")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(0.227539, 0.227539)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("AmuletSprite:modulate")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 1)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("AmuletSprite:rotation")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [0.0]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("GlowEffect:scale")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(0.242188, 0.242188)]
+}
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("GlowEffect:modulate")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 1)]
+}
+tracks/5/type = "value"
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/path = NodePath("GlowEffect:rotation")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [0.0]
+}
+
+[sub_resource type="Animation" id="Animation_ht2k5"]
+resource_name = "amulet_glow"
+length = 3.0
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("AmuletSprite:scale")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 1.5, 3),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [Vector2(0.227539, 0.227539), Vector2(0.33, 0.33), Vector2(0.22, 0.22)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("AmuletSprite:modulate")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 3),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 1)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("AmuletSprite:rotation")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0, 1.5, 3),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [0.0, 3.14159, 6.28319]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("GlowEffect:scale")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0, 0.5, 1.5, 2.03333, 2.5, 3),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1),
+"update": 0,
+"values": [Vector2(0.2, 0.2), Vector2(0.271345, 0.271345), Vector2(0.33, 0.33), Vector2(0.35, 0.35), Vector2(0.34, 0.34), Vector2(0.26, 0.26)]
+}
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("GlowEffect:modulate")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(0, 1.1, 1.86667, 2.43333, 3),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 0.8), Color(1, 1, 1, 1), Color(1, 1, 1, 0.6), Color(1, 1, 1, 0)]
+}
+tracks/5/type = "value"
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/path = NodePath("GlowEffect:rotation")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/keys = {
+"times": PackedFloat32Array(0, 1.5, 3),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [6.28319, 3.14159, 6.28319]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_8kje7"]
+_data = {
+"RESET": SubResource("Animation_r4jw5"),
+"amulet_glow": SubResource("Animation_ht2k5")
+}
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_272dm"]
+size = Vector2(155.5, 42.5)
+
+[node name="ReencuentroAlux" type="Node2D"]
+script = ExtResource("1_dj3yf")
+
+[node name="ColorRect" type="ColorRect" parent="."]
+offset_right = 1152.0
+offset_bottom = 648.0
+color = Color(0, 0, 0, 1)
+metadata/_edit_lock_ = true
+
+[node name="TextureRect" type="TextureRect" parent="."]
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = 223.0
+offset_top = -1.0
+offset_right = 901.0
+offset_bottom = 479.0
+grow_horizontal = 2
+texture = ExtResource("2_6qju3")
+metadata/_edit_lock_ = true
+
+[node name="Alux" parent="." instance=ExtResource("2_ecajx")]
+position = Vector2(702, 289)
+metadata/_edit_lock_ = true
+
+[node name="UI" type="CanvasLayer" parent="."]
+
+[node name="Feedback" type="Sprite2D" parent="UI"]
+position = Vector2(809, 147)
+metadata/_edit_lock_ = true
+
+[node name="ProblemPopup" type="Panel" parent="UI"]
+offset_left = 391.0
+offset_top = 32.0
+offset_right = 710.0
+offset_bottom = 283.0
+theme_override_styles/panel = SubResource("StyleBoxEmpty_ef12v")
+metadata/_edit_lock_ = true
+
+[node name="Background" type="Sprite2D" parent="UI/ProblemPopup"]
+position = Vector2(161, 48)
+scale = Vector2(0.722433, 0.378981)
+texture = ExtResource("4_aodgo")
+
+[node name="QuestionLabel" type="Label" parent="UI/ProblemPopup"]
+layout_mode = 0
+offset_right = 319.0
+offset_bottom = 97.0
+label_settings = SubResource("LabelSettings_4fh3p")
+horizontal_alignment = 1
+vertical_alignment = 1
+autowrap_mode = 3
+script = ExtResource("6_hoqg8")
+metadata/_edit_lock_ = true
+
+[node name="OptionButtons" type="VBoxContainer" parent="UI/ProblemPopup"]
+layout_mode = 0
+offset_left = 40.0
+offset_top = 118.0
+offset_right = 290.0
+offset_bottom = 168.0
+metadata/_edit_lock_ = true
+
+[node name="Option1" type="Button" parent="UI/ProblemPopup/OptionButtons"]
+layout_mode = 2
+
+[node name="Option2" type="Button" parent="UI/ProblemPopup/OptionButtons"]
+layout_mode = 2
+
+[node name="Option3" type="Button" parent="UI/ProblemPopup/OptionButtons"]
+layout_mode = 2
+
+[node name="DialogPopup" type="Panel" parent="UI"]
+offset_left = 590.0
+offset_top = 694.0
+offset_right = 630.0
+offset_bottom = 734.0
+metadata/_edit_lock_ = true
+
+[node name="DialogLabel" type="Label" parent="UI/DialogPopup"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = -0.537
+anchor_top = -3.525
+anchor_right = -0.537
+anchor_bottom = -3.525
+offset_left = -333.52
+offset_top = -56.0
+offset_right = 333.48
+offset_bottom = 56.0
+label_settings = SubResource("LabelSettings_dyuei")
+horizontal_alignment = 1
+vertical_alignment = 1
+autowrap_mode = 3
+
+[node name="NextButton" type="Button" parent="UI/DialogPopup"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = -1.275
+anchor_top = -6.475
+anchor_right = -1.275
+anchor_bottom = -6.475
+offset_left = -36.0
+offset_top = -23.0
+offset_right = 36.0
+offset_bottom = 23.0
+text = "
+"
+icon = ExtResource("8_of8xo")
+flat = true
+
+[node name="CounterLabel" type="Label" parent="UI"]
+anchors_preset = -1
+anchor_left = 0.677
+anchor_top = 0.074
+anchor_right = 0.677
+anchor_bottom = 0.074
+offset_left = -19.9041
+offset_top = -4.952
+offset_right = 20.0959
+offset_bottom = 18.048
+label_settings = SubResource("LabelSettings_mv38f")
+metadata/_edit_lock_ = true
+
+[node name="PlayerSpawnPoint" type="Marker2D" parent="."]
+position = Vector2(295, 365)
+
+[node name="AmuletComplete" type="Node2D" parent="."]
+
+[node name="GlowEffect" type="Sprite2D" parent="AmuletComplete"]
+position = Vector2(547, 174)
+scale = Vector2(0.242188, 0.242188)
+texture = ExtResource("10_btf4k")
+metadata/_edit_lock_ = true
+
+[node name="AmuletSprite" type="Sprite2D" parent="AmuletComplete"]
+position = Vector2(547, 174)
+scale = Vector2(0.227539, 0.227539)
+texture = ExtResource("10_btf4k")
+metadata/_edit_lock_ = true
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="AmuletComplete"]
+libraries = {
+"": SubResource("AnimationLibrary_8kje7")
+}
+autoplay = "amulet_glow"
+
+[node name="StaticBody2D2" type="StaticBody2D" parent="."]
+
+[node name="CollisionShape2D4" type="CollisionShape2D" parent="StaticBody2D2"]
+position = Vector2(482, 352)
+shape = SubResource("RectangleShape2D_272dm")
+
+[node name="CollisionShape2D3" type="CollisionShape2D" parent="StaticBody2D2"]
+position = Vector2(153, 352)
+shape = SubResource("RectangleShape2D_272dm")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D2"]
+position = Vector2(320.25, 235)
+shape = SubResource("RectangleShape2D_272dm")
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="StaticBody2D2"]
+position = Vector2(308, 497)
+shape = SubResource("RectangleShape2D_272dm")
+
+[node name="FadeRect" type="ColorRect" parent="."]
+modulate = Color(1, 1, 1, 0)
+offset_right = 1152.0
+offset_bottom = 648.0
+color = Color(0, 0, 0, 1)

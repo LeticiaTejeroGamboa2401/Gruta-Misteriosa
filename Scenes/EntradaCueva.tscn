@@ -1,10 +1,14 @@
-[gd_scene load_steps=12 format=3 uid="uid://cox8lum0ipe8t"]
+[gd_scene load_steps=16 format=3 uid="uid://cox8lum0ipe8t"]
 
 [ext_resource type="Texture2D" uid="uid://c4ljuuy56jopt" path="res://images/Bosque.jpg" id="1_dm15r"]
 [ext_resource type="Script" path="res://Scripts/entrada_cueva_control.gd" id="1_kevb2"]
 [ext_resource type="Texture2D" uid="uid://u7pgc4jgx8qf" path="res://images/cueva.png" id="2_m1ota"]
 [ext_resource type="Script" path="res://Scripts/entrada_cueva_area.gd" id="4_jnyy8"]
+[ext_resource type="Texture2D" uid="uid://c64tcfaah1dkt" path="res://images/Direcciones-Android/left.png" id="6_2wj0o"]
 [ext_resource type="PackedScene" uid="uid://cshqucsavs7df" path="res://Scenes/Murcielago_Volando.tscn" id="6_dakeb"]
+[ext_resource type="Texture2D" uid="uid://bgwc6fqxo72lo" path="res://images/Direcciones-Android/right.png" id="7_6hc3h"]
+[ext_resource type="Texture2D" uid="uid://c2hke2eotm53t" path="res://images/Direcciones-Android/up.png" id="8_s6kp1"]
+[ext_resource type="Texture2D" uid="uid://dul4eebxupnh0" path="res://images/Direcciones-Android/down.png" id="9_hdxg5"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_foiys"]
 size = Vector2(89.75, 239.5)
@@ -90,4 +94,42 @@ shape = SubResource("RectangleShape2D_uat48")
 [node name="murcielago" parent="." instance=ExtResource("6_dakeb")]
 position = Vector2(1106, 170)
 
+[node name="TouchControls" type="CanvasLayer" parent="."]
+
+[node name="left" type="TextureButton" parent="TouchControls"]
+offset_left = 917.0
+offset_top = 558.0
+offset_right = 982.0
+offset_bottom = 623.0
+texture_normal = ExtResource("6_2wj0o")
+
+[node name="right" type="TextureButton" parent="TouchControls"]
+offset_left = 1061.0
+offset_top = 558.0
+offset_right = 1126.0
+offset_bottom = 623.0
+texture_normal = ExtResource("7_6hc3h")
+
+[node name="up" type="TextureButton" parent="TouchControls"]
+offset_left = 990.0
+offset_top = 489.0
+offset_right = 1055.0
+offset_bottom = 554.0
+texture_normal = ExtResource("8_s6kp1")
+
+[node name="down" type="TextureButton" parent="TouchControls"]
+offset_left = 990.0
+offset_top = 558.0
+offset_right = 1055.0
+offset_bottom = 623.0
+texture_normal = ExtResource("9_hdxg5")
+
 [connection signal="body_entered" from="EntradaCueva" to="EntradaCueva" method="_on_body_entered"]
+[connection signal="button_down" from="TouchControls/left" to="." method="_on_left_button_down"]
+[connection signal="button_up" from="TouchControls/left" to="." method="_on_left_button_up"]
+[connection signal="button_down" from="TouchControls/right" to="." method="_on_right_button_down"]
+[connection signal="button_up" from="TouchControls/right" to="." method="_on_right_button_up"]
+[connection signal="button_down" from="TouchControls/up" to="." method="_on_up_button_down"]
+[connection signal="button_up" from="TouchControls/up" to="." method="_on_up_button_up"]
+[connection signal="button_down" from="TouchControls/down" to="." method="_on_down_button_down"]
+[connection signal="button_up" from="TouchControls/down" to="." method="_on_down_button_up"]

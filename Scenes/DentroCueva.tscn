@@ -1,9 +1,13 @@
-[gd_scene load_steps=11 format=3 uid="uid://biucq7vgway8p"]
+[gd_scene load_steps=15 format=3 uid="uid://biucq7vgway8p"]
 
 [ext_resource type="Script" path="res://Scripts/dentro_cueva1.gd" id="1_3emvn"]
 [ext_resource type="Texture2D" uid="uid://brecquw82vupe" path="res://images/DentroCueva.jpg" id="1_ljuwf"]
 [ext_resource type="Script" path="res://Scripts/dentro_cueva.gd" id="1_p6typ"]
 [ext_resource type="Texture2D" uid="uid://dgii1lhdjxf24" path="res://images/compi.png" id="2_llvct"]
+[ext_resource type="Texture2D" uid="uid://c64tcfaah1dkt" path="res://images/Direcciones-Android/left.png" id="5_wbu7f"]
+[ext_resource type="Texture2D" uid="uid://bgwc6fqxo72lo" path="res://images/Direcciones-Android/right.png" id="6_p7024"]
+[ext_resource type="Texture2D" uid="uid://c2hke2eotm53t" path="res://images/Direcciones-Android/up.png" id="7_yelky"]
+[ext_resource type="Texture2D" uid="uid://dul4eebxupnh0" path="res://images/Direcciones-Android/down.png" id="8_8abh4"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_g748c"]
 size = Vector2(916, 12.5)
@@ -77,5 +81,43 @@ position = Vector2(1035, 489)
 scale = Vector2(0.659875, 0.612565)
 texture = ExtResource("2_llvct")
 
+[node name="TouchControls" type="CanvasLayer" parent="."]
+
+[node name="left" type="TextureButton" parent="TouchControls"]
+offset_left = 917.0
+offset_top = 558.0
+offset_right = 982.0
+offset_bottom = 623.0
+texture_normal = ExtResource("5_wbu7f")
+
+[node name="right" type="TextureButton" parent="TouchControls"]
+offset_left = 1061.0
+offset_top = 558.0
+offset_right = 1126.0
+offset_bottom = 623.0
+texture_normal = ExtResource("6_p7024")
+
+[node name="up" type="TextureButton" parent="TouchControls"]
+offset_left = 990.0
+offset_top = 489.0
+offset_right = 1055.0
+offset_bottom = 554.0
+texture_normal = ExtResource("7_yelky")
+
+[node name="down" type="TextureButton" parent="TouchControls"]
+offset_left = 990.0
+offset_top = 558.0
+offset_right = 1055.0
+offset_bottom = 623.0
+texture_normal = ExtResource("8_8abh4")
+
 [connection signal="body_entered" from="Area2D" to="Area2D" method="_on_body_entered"]
 [connection signal="draw" from="Area2D/sombra" to="." method="_on_sombra_draw"]
+[connection signal="button_down" from="TouchControls/left" to="." method="_on_left_button_down"]
+[connection signal="button_up" from="TouchControls/left" to="." method="_on_left_button_up"]
+[connection signal="button_down" from="TouchControls/right" to="." method="_on_right_button_down"]
+[connection signal="button_up" from="TouchControls/right" to="." method="_on_right_button_up"]
+[connection signal="button_down" from="TouchControls/up" to="." method="_on_up_button_down"]
+[connection signal="button_up" from="TouchControls/up" to="." method="_on_up_button_up"]
+[connection signal="button_down" from="TouchControls/down" to="." method="_on_down_button_down"]
+[connection signal="button_up" from="TouchControls/down" to="." method="_on_down_button_up"]

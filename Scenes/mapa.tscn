@@ -1,4 +1,4 @@
-[gd_scene load_steps=40 format=3 uid="uid://dy8eonorti10n"]
+[gd_scene load_steps=44 format=3 uid="uid://dy8eonorti10n"]
 
 [ext_resource type="Script" path="res://Scripts/mapa_1.gd" id="1_lbv64"]
 [ext_resource type="Texture2D" uid="uid://ch2faqyjs7kwt" path="res://images/mapa.png" id="1_tmcc6"]
@@ -12,6 +12,10 @@
 [ext_resource type="Script" path="res://Scripts/Juegos/LanzaDardos/entrada_mapa.gd" id="8_s2qtb"]
 [ext_resource type="Script" path="res://Scripts/Juegos/Ruleta/entrada_Mapa.gd" id="9_te4dn"]
 [ext_resource type="Script" path="res://Scenes/salida.gd" id="12_jlhji"]
+[ext_resource type="Texture2D" uid="uid://c64tcfaah1dkt" path="res://images/Direcciones-Android/left.png" id="13_rqq5h"]
+[ext_resource type="Texture2D" uid="uid://bgwc6fqxo72lo" path="res://images/Direcciones-Android/right.png" id="14_k2rp3"]
+[ext_resource type="Texture2D" uid="uid://c2hke2eotm53t" path="res://images/Direcciones-Android/up.png" id="15_75o1h"]
+[ext_resource type="Texture2D" uid="uid://dul4eebxupnh0" path="res://images/Direcciones-Android/down.png" id="16_cf44r"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_e46v1"]
 size = Vector2(218, 39.5)
@@ -116,6 +120,7 @@ texture = ExtResource("1_tmcc6")
 metadata/_edit_lock_ = true
 
 [node name="AreaNoPasar" type="StaticBody2D" parent="."]
+visible = false
 
 [node name="Area18" type="CollisionShape2D" parent="AreaNoPasar"]
 position = Vector2(930, 627.25)
@@ -273,6 +278,36 @@ metadata/_edit_lock_ = true
 position = Vector2(1081, 585)
 shape = SubResource("RectangleShape2D_2kxx3")
 
+[node name="TouchControls" type="CanvasLayer" parent="."]
+
+[node name="left" type="TextureButton" parent="TouchControls"]
+offset_left = 42.0
+offset_top = 560.0
+offset_right = 107.0
+offset_bottom = 625.0
+texture_normal = ExtResource("13_rqq5h")
+
+[node name="right" type="TextureButton" parent="TouchControls"]
+offset_left = 192.0
+offset_top = 559.0
+offset_right = 257.0
+offset_bottom = 624.0
+texture_normal = ExtResource("14_k2rp3")
+
+[node name="up" type="TextureButton" parent="TouchControls"]
+offset_left = 115.0
+offset_top = 487.0
+offset_right = 180.0
+offset_bottom = 552.0
+texture_normal = ExtResource("15_75o1h")
+
+[node name="down" type="TextureButton" parent="TouchControls"]
+offset_left = 116.0
+offset_top = 559.0
+offset_right = 181.0
+offset_bottom = 624.0
+texture_normal = ExtResource("16_cf44r")
+
 [connection signal="body_entered" from="AtinaleAlPuerquito" to="AtinaleAlPuerquito" method="_on_body_entered"]
 [connection signal="body_entered" from="AdivinaElProducto" to="AdivinaElProducto" method="_on_body_entered"]
 [connection signal="body_entered" from="DerribaAlPato" to="DerribaAlPato" method="_on_body_entered"]
@@ -281,3 +316,11 @@ shape = SubResource("RectangleShape2D_2kxx3")
 [connection signal="body_entered" from="LanzaDardos" to="LanzaDardos" method="_on_body_entered"]
 [connection signal="body_entered" from="Ruleta" to="Ruleta" method="_on_body_entered"]
 [connection signal="body_entered" from="Salida" to="Salida" method="_on_body_entered"]
+[connection signal="button_down" from="TouchControls/left" to="." method="_on_left_button_down"]
+[connection signal="button_up" from="TouchControls/left" to="." method="_on_left_button_up"]
+[connection signal="button_down" from="TouchControls/right" to="." method="_on_right_button_down"]
+[connection signal="button_up" from="TouchControls/right" to="." method="_on_right_button_up"]
+[connection signal="button_down" from="TouchControls/up" to="." method="_on_up_button_down"]
+[connection signal="button_up" from="TouchControls/up" to="." method="_on_up_button_up"]
+[connection signal="button_down" from="TouchControls/down" to="." method="_on_down_button_down"]
+[connection signal="button_up" from="TouchControls/down" to="." method="_on_down_button_up"]

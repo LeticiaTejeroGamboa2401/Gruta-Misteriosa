@@ -1,6 +1,6 @@
 [gd_scene load_steps=32 format=3 uid="uid://dfoifcypnt7aj"]
 
-[ext_resource type="Script" path="res://Scripts/Juegos/Ruleta/items/Fracciones/fracciones.gd" id="1_h4ptr"]
+[ext_resource type="Script" uid="uid://oarjvrwpboma" path="res://Scripts/Juegos/Ruleta/items/Fracciones/fracciones.gd" id="1_h4ptr"]
 [ext_resource type="Texture2D" uid="uid://b4icwsejgesow" path="res://images/Juegos/Ruleta/Fondo.png" id="2_d6agf"]
 [ext_resource type="FontFile" uid="uid://ex6sf638yhh5" path="res://font/Chonky Bunny.ttf" id="2_o1p38"]
 [ext_resource type="Resource" uid="uid://bsw3yvp5a0grw" path="res://resources/theme/Ruleta/theme_fracciones.tres" id="2_vvsj4"]

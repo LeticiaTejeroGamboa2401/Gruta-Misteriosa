@@ -1,6 +1,6 @@
 [gd_resource type="Resource" script_class="QuizQuestionRuletitaMultDiv" load_steps=2 format=3 uid="uid://c2f7fj16p5wuk"]
 
-[ext_resource type="Script" path="res://Scripts/Juegos/Ruleta/items/Multiplicación-División/question.gd" id="1_etb6m"]
+[ext_resource type="Script" uid="uid://b2iuop4mkiuwl" path="res://Scripts/Juegos/Ruleta/items/Multiplicación-División/question.gd" id="1_etb6m"]
 
 [resource]
 script = ExtResource("1_etb6m")

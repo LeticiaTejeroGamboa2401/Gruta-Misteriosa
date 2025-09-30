@@ -1,6 +1,6 @@
 [gd_resource type="Resource" script_class="QuizQuestionRuletitaSecuencia" load_steps=2 format=3 uid="uid://djtikfyxs6b1o"]
 
-[ext_resource type="Script" path="res://Scripts/Juegos/Ruleta/items/Secuencia/question.gd" id="1_fc36b"]
+[ext_resource type="Script" uid="uid://ci4clq3eij5v2" path="res://Scripts/Juegos/Ruleta/items/Secuencia/question.gd" id="1_fc36b"]
 
 [resource]
 script = ExtResource("1_fc36b")

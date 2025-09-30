@@ -1,7 +1,7 @@
 [gd_scene load_steps=26 format=3 uid="uid://7e8sby14esr1"]
 
 [ext_resource type="Texture2D" uid="uid://c0oy83uovjplo" path="res://images/Juegos/Carrera_de_Caballos/fondos.png" id="1_0wigb"]
-[ext_resource type="Script" path="res://Scripts/Juegos/Controllers/game_controller_caballo.gd" id="1_v1scf"]
+[ext_resource type="Script" uid="uid://b41p0uih27qvp" path="res://Scripts/Juegos/Controllers/game_controller_caballo.gd" id="1_v1scf"]
 [ext_resource type="FontFile" uid="uid://ex6sf638yhh5" path="res://font/Chonky Bunny.ttf" id="2_hy0ce"]
 [ext_resource type="Resource" uid="uid://mj0jnlwgx8rd" path="res://resources/theme/theme_caballo.tres" id="2_lelfk"]
 [ext_resource type="Texture2D" uid="uid://cefe6tdbcqu1i" path="res://images/Juegos/Carrera_de_Caballos/correcto.png" id="3_u0udx"]

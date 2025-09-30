@@ -1,6 +1,6 @@
 [gd_resource type="Resource" script_class="QuizQuestionRuletitaAngulos" load_steps=2 format=3 uid="uid://bpy7bjfq75b2h"]
 
-[ext_resource type="Script" path="res://Scripts/Juegos/Ruleta/items/Angulos-Geometría/question.gd" id="1_jvh84"]
+[ext_resource type="Script" uid="uid://sw8ymqksip6r" path="res://Scripts/Juegos/Ruleta/items/Angulos-Geometría/question.gd" id="1_jvh84"]
 
 [resource]
 script = ExtResource("1_jvh84")

@@ -1,6 +1,6 @@
 [gd_resource type="Resource" script_class="QuizQuestionDarditos" load_steps=14 format=3 uid="uid://dkjog40j5ysjw"]
 
-[ext_resource type="Script" path="res://Scripts/Juegos/LanzaDardos/question.gd" id="1_kk8xh"]
+[ext_resource type="Script" uid="uid://cgq8qvoafs5j7" path="res://Scripts/Juegos/LanzaDardos/question.gd" id="1_kk8xh"]
 [ext_resource type="PackedScene" uid="uid://d1kroxn114dlv" path="res://Scenes/Juegos/Lanza_Dardos/Globos/Globo2.tscn" id="1_kl2qy"]
 [ext_resource type="PackedScene" uid="uid://b416biqkafxue" path="res://Scenes/Juegos/Lanza_Dardos/Globos/Globo8.tscn" id="2_wn65d"]
 [ext_resource type="PackedScene" uid="uid://b706qsowtxnx" path="res://Scenes/Juegos/Lanza_Dardos/Globos/Globo35.tscn" id="3_spmkf"]

@@ -1,6 +1,6 @@
 [gd_scene load_steps=30 format=3 uid="uid://d14trte3lxabb"]
 
-[ext_resource type="Script" path="res://Scripts/Juegos/AtrapaPeces/confirmacion_juego.gd" id="1_oiojo"]
+[ext_resource type="Script" uid="uid://cpcvt4bdbfstr" path="res://Scripts/Juegos/AtrapaPeces/confirmacion_juego.gd" id="1_oiojo"]
 [ext_resource type="Texture2D" uid="uid://cfyed1mbxgntf" path="res://images/Juegos/Atrapa_Peces/fondo_confirmacion.png" id="1_r5owa"]
 [ext_resource type="FontFile" uid="uid://ex6sf638yhh5" path="res://font/Chonky Bunny.ttf" id="2_rcpgw"]
 [ext_resource type="FontFile" uid="uid://q4llc3uguqs2" path="res://font/KGCorneroftheSky.ttf" id="3_4oirs"]

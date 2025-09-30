@@ -1,7 +1,7 @@
 [gd_resource type="Resource" script_class="QuizThemeDardos" load_steps=28 format=3 uid="uid://dmx2drp2gmmm0"]
 
-[ext_resource type="Script" path="res://Scripts/Juegos/LanzaDardos/theme.gd" id="1_47pvk"]
-[ext_resource type="Script" path="res://Scripts/Juegos/LanzaDardos/question.gd" id="2_i5v7v"]
+[ext_resource type="Script" uid="uid://b77tyjfg51sun" path="res://Scripts/Juegos/LanzaDardos/theme.gd" id="1_47pvk"]
+[ext_resource type="Script" uid="uid://cgq8qvoafs5j7" path="res://Scripts/Juegos/LanzaDardos/question.gd" id="2_i5v7v"]
 [ext_resource type="Resource" uid="uid://crwd2yxf1qog3" path="res://resources/variado/questionLanzaDardos/1.tres" id="3_g5o0v"]
 [ext_resource type="Resource" uid="uid://dt6l8o5xjap3y" path="res://resources/variado/questionLanzaDardos/2.tres" id="4_ll71m"]
 [ext_resource type="Resource" uid="uid://lpukmqqcqtl5" path="res://resources/variado/questionLanzaDardos/3.tres" id="5_guuk7"]

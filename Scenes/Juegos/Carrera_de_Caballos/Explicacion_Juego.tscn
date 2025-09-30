@@ -1,6 +1,6 @@
 [gd_scene load_steps=23 format=3 uid="uid://bnn871qoyt1w0"]
 
-[ext_resource type="Script" path="res://Scripts/Juegos/CarreraCaballo/explicacion_juego.gd" id="1_h52r4"]
+[ext_resource type="Script" uid="uid://deb4q4tmprcay" path="res://Scripts/Juegos/CarreraCaballo/explicacion_juego.gd" id="1_h52r4"]
 [ext_resource type="Texture2D" uid="uid://c0oy83uovjplo" path="res://images/Juegos/Carrera_de_Caballos/fondos.png" id="1_scnkj"]
 [ext_resource type="Texture2D" uid="uid://g03nsepo5pce" path="res://images/Juegos/Carrera_de_Caballos/CaballoBlanco.png" id="2_0gc2d"]
 [ext_resource type="Texture2D" uid="uid://cl6g2pujgh5kv" path="res://images/Juegos/Carrera_de_Caballos/CaballoNegro.png" id="3_0s21b"]

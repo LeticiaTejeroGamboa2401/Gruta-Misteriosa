@@ -1,7 +1,7 @@
 [gd_resource type="Resource" script_class="QuizThemeRuletaSecuencia" load_steps=9 format=3 uid="uid://qtsanry1ncmg"]
 
-[ext_resource type="Script" path="res://Scripts/Juegos/Ruleta/items/Secuencia/theme.gd" id="1_6e5si"]
-[ext_resource type="Script" path="res://Scripts/Juegos/Ruleta/items/Secuencia/question.gd" id="2_fqmhb"]
+[ext_resource type="Script" uid="uid://ctcdrfdwq0mrm" path="res://Scripts/Juegos/Ruleta/items/Secuencia/theme.gd" id="1_6e5si"]
+[ext_resource type="Script" uid="uid://ci4clq3eij5v2" path="res://Scripts/Juegos/Ruleta/items/Secuencia/question.gd" id="2_fqmhb"]
 [ext_resource type="Resource" uid="uid://bg2fl81gr4l14" path="res://resources/variado/Ruleta/Secuencias-Patrones/1.tres" id="3_oj27k"]
 [ext_resource type="Resource" uid="uid://d0k206jiau7pp" path="res://resources/variado/Ruleta/Secuencias-Patrones/2.tres" id="4_bq72k"]
 [ext_resource type="Resource" uid="uid://djtikfyxs6b1o" path="res://resources/variado/Ruleta/Secuencias-Patrones/3.tres" id="5_535s6"]

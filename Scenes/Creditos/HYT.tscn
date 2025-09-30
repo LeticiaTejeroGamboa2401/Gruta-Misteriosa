@@ -1,7 +1,7 @@
 [gd_scene load_steps=15 format=3 uid="uid://biu4uccsbamgq"]
 
 [ext_resource type="FontFile" uid="uid://ex6sf638yhh5" path="res://font/Chonky Bunny.ttf" id="1_8rsbj"]
-[ext_resource type="Script" path="res://Scripts/hyt.gd" id="1_cxidb"]
+[ext_resource type="Script" uid="uid://bx4qsp3bcaxi0" path="res://Scripts/hyt.gd" id="1_cxidb"]
 [ext_resource type="Texture2D" uid="uid://2bq0ibxdgxao" path="res://images/return.png" id="2_maql6"]
 [ext_resource type="Texture2D" uid="uid://bdvcq05wjdtkr" path="res://images/Stencyl.png" id="3_rcrkf"]
 [ext_resource type="Texture2D" uid="uid://dc2adgoqn2oux" path="res://images/Godot.png" id="4_uf70o"]

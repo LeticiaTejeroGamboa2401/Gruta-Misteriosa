@@ -1,6 +1,6 @@
 [gd_scene load_steps=12 format=3 uid="uid://cshqucsavs7df"]
 
-[ext_resource type="Script" path="res://Scripts/murcielago_volando.gd" id="1_ad4de"]
+[ext_resource type="Script" uid="uid://blrhtu2iukhes" path="res://Scripts/murcielago_volando.gd" id="1_ad4de"]
 [ext_resource type="Texture2D" uid="uid://cead2kxuc2gnd" path="res://images/murcielago.png" id="1_gh75v"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_udjv5"]

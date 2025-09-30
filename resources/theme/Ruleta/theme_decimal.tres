@@ -1,7 +1,7 @@
 [gd_resource type="Resource" script_class="QuizThemeRuletaDecimales" load_steps=9 format=3 uid="uid://di78enfod7vcm"]
 
-[ext_resource type="Script" path="res://Scripts/Juegos/Ruleta/items/Números-Decimales/question.gd" id="1_ra5k3"]
-[ext_resource type="Script" path="res://Scripts/Juegos/Ruleta/items/Números-Decimales/theme.gd" id="1_rn3em"]
+[ext_resource type="Script" uid="uid://bc6rur8v33imj" path="res://Scripts/Juegos/Ruleta/items/Números-Decimales/question.gd" id="1_ra5k3"]
+[ext_resource type="Script" uid="uid://cucw3mlyt2il3" path="res://Scripts/Juegos/Ruleta/items/Números-Decimales/theme.gd" id="1_rn3em"]
 [ext_resource type="Resource" uid="uid://dly2qf118movy" path="res://resources/variado/Ruleta/Decimales/1.tres" id="3_5xj4b"]
 [ext_resource type="Resource" uid="uid://c4jy2bnc6ovwy" path="res://resources/variado/Ruleta/Decimales/2.tres" id="4_rq8pg"]
 [ext_resource type="Resource" uid="uid://ktjyqhwm7otx" path="res://resources/variado/Ruleta/Decimales/3.tres" id="5_h6tvh"]

@@ -1,6 +1,6 @@
 [gd_scene load_steps=11 format=3 uid="uid://tyqwor5jwt0m"]
 
-[ext_resource type="Script" path="res://Scripts/lele_sale_casa.gd" id="1_cxp1w"]
+[ext_resource type="Script" uid="uid://0uflhx5lcd4c" path="res://Scripts/lele_sale_casa.gd" id="1_cxp1w"]
 [ext_resource type="Texture2D" uid="uid://lf3o1vcrcbsy" path="res://images/Lele_camina_bosque.png" id="1_iude8"]
 [ext_resource type="Texture2D" uid="uid://dlmspgti705ed" path="res://images/omitirBoton.png" id="3_oql5u"]
 [ext_resource type="Texture2D" uid="uid://ci1roshk4clhe" path="res://images/Siguiente.png" id="4_g3f0f"]

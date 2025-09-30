@@ -1,7 +1,7 @@
 [gd_scene load_steps=25 format=3 uid="uid://clrqwf3kuksop"]
 
 [ext_resource type="Texture2D" uid="uid://c0oy83uovjplo" path="res://images/Juegos/Carrera_de_Caballos/fondos.png" id="1_hu1kp"]
-[ext_resource type="Script" path="res://Scripts/Juegos/CarreraCaballo/explicacion_puntuacion.gd" id="1_xaclo"]
+[ext_resource type="Script" uid="uid://cdu41qvb2clvm" path="res://Scripts/Juegos/CarreraCaballo/explicacion_puntuacion.gd" id="1_xaclo"]
 [ext_resource type="Texture2D" uid="uid://g03nsepo5pce" path="res://images/Juegos/Carrera_de_Caballos/CaballoBlanco.png" id="2_01jkf"]
 [ext_resource type="Texture2D" uid="uid://cl6g2pujgh5kv" path="res://images/Juegos/Carrera_de_Caballos/CaballoNegro.png" id="3_77hga"]
 [ext_resource type="FontFile" uid="uid://ex6sf638yhh5" path="res://font/Chonky Bunny.ttf" id="4_mm1mf"]

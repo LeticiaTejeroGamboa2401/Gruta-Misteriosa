@@ -1,6 +1,6 @@
 [gd_resource type="Resource" script_class="QuizQuestionPatito" load_steps=10 format=3 uid="uid://p1bmrbhyltbs"]
 
-[ext_resource type="Script" path="res://Scripts/Juegos/DerribaPato/question.gd" id="1_cwvjo"]
+[ext_resource type="Script" uid="uid://bxh2nq4gv8nr1" path="res://Scripts/Juegos/DerribaPato/question.gd" id="1_cwvjo"]
 [ext_resource type="PackedScene" uid="uid://5yscailg1tp7" path="res://Scenes/Juegos/Derriba_al_Pato/Patos/Pato6.tscn" id="1_vp4pm"]
 [ext_resource type="PackedScene" uid="uid://b624q6wut6ubb" path="res://Scenes/Juegos/Derriba_al_Pato/Patos/Pato9.tscn" id="2_eupxc"]
 [ext_resource type="PackedScene" uid="uid://eyq736gkhx0r" path="res://Scenes/Juegos/Derriba_al_Pato/Patos/Pato5.tscn" id="3_gxw4e"]

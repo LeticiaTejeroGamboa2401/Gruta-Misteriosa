@@ -1,6 +1,6 @@
 [gd_scene load_steps=32 format=3 uid="uid://dfoifcypnt7aj"]
 
-[ext_resource type="Script" path="res://Scripts/Juegos/Ruleta/items/Secuencia/secuencia.gd" id="1_dtvwu"]
+[ext_resource type="Script" uid="uid://bvnxi15v6tbd" path="res://Scripts/Juegos/Ruleta/items/Secuencia/secuencia.gd" id="1_dtvwu"]
 [ext_resource type="Resource" uid="uid://qtsanry1ncmg" path="res://resources/theme/Ruleta/theme_secuencia.tres" id="2_m6no3"]
 [ext_resource type="FontFile" uid="uid://ex6sf638yhh5" path="res://font/Chonky Bunny.ttf" id="2_o1p38"]
 [ext_resource type="Texture2D" uid="uid://b4icwsejgesow" path="res://images/Juegos/Ruleta/Fondo.png" id="2_ofwm6"]

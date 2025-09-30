@@ -1,7 +1,7 @@
 [gd_scene load_steps=9 format=3 uid="uid://bl8tto2aq7grr"]
 
 [ext_resource type="Texture2D" uid="uid://chd2l4ngf1wmy" path="res://images/Figura_Tenebrosa.png" id="1_61hnu"]
-[ext_resource type="Script" path="res://Scripts/historia_3.gd" id="1_x4m4k"]
+[ext_resource type="Script" uid="uid://bkaiixehti0us" path="res://Scripts/historia_3.gd" id="1_x4m4k"]
 [ext_resource type="Texture2D" uid="uid://ci1roshk4clhe" path="res://images/Siguiente.png" id="3_tqelf"]
 [ext_resource type="FontFile" uid="uid://bd321yblpf1ew" path="res://font/Supermarket of Love.ttf" id="4_jclol"]
 

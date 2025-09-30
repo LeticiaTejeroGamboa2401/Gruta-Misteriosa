@@ -1,6 +1,6 @@
 [gd_scene load_steps=16 format=3 uid="uid://db5edwl1b6gqq"]
 
-[ext_resource type="Script" path="res://Scenes/weapon_selection.gd" id="1_nh8ak"]
+[ext_resource type="Script" uid="uid://c4x38eeblyd33" path="res://Scenes/weapon_selection.gd" id="1_nh8ak"]
 [ext_resource type="Texture2D" uid="uid://3hqd2syyrgry" path="res://images/HistoriaCompa.jpg" id="2_eedlv"]
 [ext_resource type="FontFile" uid="uid://bd321yblpf1ew" path="res://font/Supermarket of Love.ttf" id="3_51dip"]
 [ext_resource type="Texture2D" uid="uid://bwf8mkwr4gktp" path="res://images/siguiente_flecha.png" id="4_h1xwn"]
@@ -161,8 +161,8 @@ tracks/5/keys = {
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_8kje7"]
 _data = {
-"RESET": SubResource("Animation_r4jw5"),
-"amulet_glow": SubResource("Animation_ht2k5")
+&"RESET": SubResource("Animation_r4jw5"),
+&"amulet_glow": SubResource("Animation_ht2k5")
 }
 
 [sub_resource type="LabelSettings" id="LabelSettings_e34b4"]
@@ -221,7 +221,7 @@ texture = ExtResource("5_hv7js")
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="AmuletComplete"]
 libraries = {
-"": SubResource("AnimationLibrary_8kje7")
+&"": SubResource("AnimationLibrary_8kje7")
 }
 autoplay = "amulet_glow"
 

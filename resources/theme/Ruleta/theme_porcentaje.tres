@@ -1,7 +1,7 @@
 [gd_resource type="Resource" script_class="QuizThemeRuletaPorcentaje" load_steps=9 format=3 uid="uid://c56yaohvxvtg4"]
 
-[ext_resource type="Script" path="res://Scripts/Juegos/Ruleta/items/Porcentaje/theme.gd" id="1_nmq4c"]
-[ext_resource type="Script" path="res://Scripts/Juegos/Ruleta/items/Porcentaje/question.gd" id="2_i4hxi"]
+[ext_resource type="Script" uid="uid://ct52nhnmpyw12" path="res://Scripts/Juegos/Ruleta/items/Porcentaje/theme.gd" id="1_nmq4c"]
+[ext_resource type="Script" uid="uid://dlq8hii4nl0f7" path="res://Scripts/Juegos/Ruleta/items/Porcentaje/question.gd" id="2_i4hxi"]
 [ext_resource type="Resource" uid="uid://cq4fmlfsr2pt0" path="res://resources/variado/Ruleta/Porcentajes/1.tres" id="3_m4vqf"]
 [ext_resource type="Resource" uid="uid://ccsxdam51wxiy" path="res://resources/variado/Ruleta/Porcentajes/2.tres" id="4_1noh4"]
 [ext_resource type="Resource" uid="uid://c41ws5tueoir5" path="res://resources/variado/Ruleta/Porcentajes/3.tres" id="5_mc674"]

@@ -1,6 +1,6 @@
 [gd_resource type="Resource" script_class="QuizQuestionCaballo" load_steps=2 format=3 uid="uid://c7c3h8doylrrn"]
 
-[ext_resource type="Script" path="res://Scripts/Juegos/CarreraCaballo/question.gd" id="1_fgbly"]
+[ext_resource type="Script" uid="uid://ckxtxcrxn00ed" path="res://Scripts/Juegos/CarreraCaballo/question.gd" id="1_fgbly"]
 
 [resource]
 script = ExtResource("1_fgbly")

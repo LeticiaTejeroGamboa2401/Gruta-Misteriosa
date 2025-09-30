@@ -1,6 +1,6 @@
 [gd_scene load_steps=54 format=3 uid="uid://ba4m6k85cjwia"]
 
-[ext_resource type="Script" path="res://Scripts/Juegos/AtrapaPeces/Peces/pez300.gd" id="1_5ij1v"]
+[ext_resource type="Script" uid="uid://cj264v1alk5l2" path="res://Scripts/Juegos/AtrapaPeces/Peces/pez300.gd" id="1_5ij1v"]
 [ext_resource type="Texture2D" uid="uid://6qxo1seispnl" path="res://images/Juegos/Atrapa_Peces/Peces/300/1.png" id="2_pvdcn"]
 [ext_resource type="Texture2D" uid="uid://4rhn3xrhm8s1" path="res://images/Juegos/Atrapa_Peces/Peces/300/2.png" id="3_4f7qe"]
 [ext_resource type="Texture2D" uid="uid://i5g7xkb06r5m" path="res://images/Juegos/Atrapa_Peces/Peces/300/3.png" id="4_wj4sc"]

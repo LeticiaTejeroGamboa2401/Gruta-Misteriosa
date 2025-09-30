@@ -1,6 +1,6 @@
 [gd_scene load_steps=19 format=3 uid="uid://bd81t3ywtdynk"]
 
-[ext_resource type="Script" path="res://Scripts/Juegos/Controllers/game_controller_ruleta.gd" id="1_6d8p0"]
+[ext_resource type="Script" uid="uid://br45yr7onlft2" path="res://Scripts/Juegos/Controllers/game_controller_ruleta.gd" id="1_6d8p0"]
 [ext_resource type="Texture2D" uid="uid://bj7kr4vnsvxxb" path="res://images/Juegos/Ruleta/ruleta.png" id="1_45eqn"]
 [ext_resource type="Texture2D" uid="uid://b4icwsejgesow" path="res://images/Juegos/Ruleta/Fondo.png" id="2_hkxan"]
 [ext_resource type="FontFile" uid="uid://ex6sf638yhh5" path="res://font/Chonky Bunny.ttf" id="4_8j8vm"]

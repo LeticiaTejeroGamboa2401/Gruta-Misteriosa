@@ -1,7 +1,7 @@
 [gd_resource type="Resource" script_class="QuizThemeRuletaArea" load_steps=9 format=3 uid="uid://dsnhbrgkqlfub"]
 
-[ext_resource type="Script" path="res://Scripts/Juegos/Ruleta/items/Perímetro-Área/theme.gd" id="1_wpvdf"]
-[ext_resource type="Script" path="res://Scripts/Juegos/Ruleta/items/Perímetro-Área/question.gd" id="2_665pp"]
+[ext_resource type="Script" uid="uid://c2siw4hcyp3ox" path="res://Scripts/Juegos/Ruleta/items/Perímetro-Área/theme.gd" id="1_wpvdf"]
+[ext_resource type="Script" uid="uid://c8712hvk34uhj" path="res://Scripts/Juegos/Ruleta/items/Perímetro-Área/question.gd" id="2_665pp"]
 [ext_resource type="Resource" uid="uid://cqykn8e005bda" path="res://resources/variado/Ruleta/Perímetro-Área/1.tres" id="3_eibyi"]
 [ext_resource type="Resource" uid="uid://cqb3v1rkunwew" path="res://resources/variado/Ruleta/Perímetro-Área/2.tres" id="4_qg51j"]
 [ext_resource type="Resource" uid="uid://dq7jy20fqgdoj" path="res://resources/variado/Ruleta/Perímetro-Área/3.tres" id="5_lv8dq"]

@@ -1,6 +1,6 @@
 [gd_scene load_steps=29 format=3 uid="uid://obbnxx5pxwja"]
 
-[ext_resource type="Script" path="res://Scripts/Juegos/LanzaDardos/confirmacion_juego.gd" id="1_axomc"]
+[ext_resource type="Script" uid="uid://4wnm1sv8emvs" path="res://Scripts/Juegos/LanzaDardos/confirmacion_juego.gd" id="1_axomc"]
 [ext_resource type="Texture2D" uid="uid://c2ty7q7d8oqkf" path="res://images/Juegos/Lanza_Dardos/Fondo_Confirmacion.png" id="1_fkwpr"]
 [ext_resource type="FontFile" uid="uid://ex6sf638yhh5" path="res://font/Chonky Bunny.ttf" id="2_wvjaw"]
 [ext_resource type="FontFile" uid="uid://q4llc3uguqs2" path="res://font/KGCorneroftheSky.ttf" id="3_7oago"]

@@ -1,7 +1,7 @@
 [gd_resource type="Resource" script_class="QuizQuestion" load_steps=8 format=3 uid="uid://cytj8e1h2a8w6"]
 
 [ext_resource type="Texture2D" uid="uid://dm7psrb3dxdb" path="res://images/Juegos/Adivina_el_Producto/Ciruela.png" id="1_fp7ft"]
-[ext_resource type="Script" path="res://Scripts/Juegos/AdivinaProducto/resources/questions.gd" id="1_rlfbx"]
+[ext_resource type="Script" uid="uid://1o6c2qiutkaj" path="res://Scripts/Juegos/AdivinaProducto/resources/questions.gd" id="1_rlfbx"]
 [ext_resource type="Texture2D" uid="uid://k8e0l1w2qhym" path="res://images/Platano.png" id="2_t1wu6"]
 [ext_resource type="Texture2D" uid="uid://f2orkftgtpoo" path="res://images/Frijol.png" id="3_alh63"]
 [ext_resource type="Texture2D" uid="uid://7yfknnel5vb5" path="res://images/Juegos/Adivina_el_Producto/Naranja.png" id="4_qem7v"]

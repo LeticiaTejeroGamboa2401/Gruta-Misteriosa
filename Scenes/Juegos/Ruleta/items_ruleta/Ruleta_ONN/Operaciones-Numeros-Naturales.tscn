@@ -1,6 +1,6 @@
 [gd_scene load_steps=32 format=3 uid="uid://dfoifcypnt7aj"]
 
-[ext_resource type="Script" path="res://Scripts/Juegos/Ruleta/items/Operaciones-Numeros-Naturales/operaciones_numeros_naturales.gd" id="1_jj831"]
+[ext_resource type="Script" uid="uid://bb6nc1lafa0fk" path="res://Scripts/Juegos/Ruleta/items/Operaciones-Numeros-Naturales/operaciones_numeros_naturales.gd" id="1_jj831"]
 [ext_resource type="Texture2D" uid="uid://b4icwsejgesow" path="res://images/Juegos/Ruleta/Fondo.png" id="2_fel67"]
 [ext_resource type="Resource" uid="uid://7rvovs2ysc0t" path="res://resources/theme/Ruleta/theme_naturales.tres" id="2_kmmad"]
 [ext_resource type="FontFile" uid="uid://ex6sf638yhh5" path="res://font/Chonky Bunny.ttf" id="2_o1p38"]

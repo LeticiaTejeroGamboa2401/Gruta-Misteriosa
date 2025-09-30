@@ -1,6 +1,6 @@
 [gd_resource type="Resource" script_class="QuizQuestionRuletitaUnidades" load_steps=2 format=3 uid="uid://dwv5jmakkgdbi"]
 
-[ext_resource type="Script" path="res://Scripts/Juegos/Ruleta/items/Medición-Unidades/question.gd" id="1_clpwi"]
+[ext_resource type="Script" uid="uid://c0ki45hk3gpag" path="res://Scripts/Juegos/Ruleta/items/Medición-Unidades/question.gd" id="1_clpwi"]
 
 [resource]
 script = ExtResource("1_clpwi")

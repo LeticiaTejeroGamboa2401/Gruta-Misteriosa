@@ -1,6 +1,6 @@
 [gd_scene load_steps=9 format=3 uid="uid://bcgnpj0w4ihk6"]
 
-[ext_resource type="Script" path="res://Scripts/historia_5.gd" id="1_01a0j"]
+[ext_resource type="Script" uid="uid://ddjw8e20gcti5" path="res://Scripts/historia_5.gd" id="1_01a0j"]
 [ext_resource type="Texture2D" uid="uid://3hqd2syyrgry" path="res://images/HistoriaCompa.jpg" id="1_deejx"]
 [ext_resource type="PackedScene" uid="uid://1kydvnjxixmp" path="res://Scenes/Aluxe_Personaje.tscn" id="2_wusra"]
 [ext_resource type="FontFile" uid="uid://bd321yblpf1ew" path="res://font/Supermarket of Love.ttf" id="3_ibrml"]

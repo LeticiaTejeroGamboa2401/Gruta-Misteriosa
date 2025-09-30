@@ -1,7 +1,7 @@
 [gd_scene load_steps=5 format=3 uid="uid://ciu83tti1vnwg"]
 
-[ext_resource type="Script" path="res://Scripts/efecto_1.gd" id="1_mtnne"]
-[ext_resource type="VideoStream" path="res://images/efecto3.ogv" id="2_v720o"]
+[ext_resource type="Script" uid="uid://bvv424a1qpw1m" path="res://Scripts/efecto_1.gd" id="1_mtnne"]
+[ext_resource type="VideoStream" uid="uid://dx2lobbcm60k5" path="res://images/efecto3.ogv" id="2_v720o"]
 [ext_resource type="FontFile" uid="uid://dqema7q2csftl" path="res://font/The Amazing Spider-Man.ttf" id="3_66g22"]
 
 [sub_resource type="LabelSettings" id="LabelSettings_o7m6a"]

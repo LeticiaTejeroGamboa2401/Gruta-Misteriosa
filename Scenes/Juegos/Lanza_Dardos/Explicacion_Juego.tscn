@@ -1,7 +1,7 @@
 [gd_scene load_steps=29 format=3 uid="uid://38eqv1iibyet"]
 
 [ext_resource type="Texture2D" uid="uid://bp7ce3v2tdd4y" path="res://images/Juegos/Lanza_Dardos/Fondo.png" id="1_214yu"]
-[ext_resource type="Script" path="res://Scripts/Juegos/LanzaDardos/explicacion_juego.gd" id="1_yyi32"]
+[ext_resource type="Script" uid="uid://b2wue7v6i41qa" path="res://Scripts/Juegos/LanzaDardos/explicacion_juego.gd" id="1_yyi32"]
 [ext_resource type="Texture2D" uid="uid://vyh8qv625m7m" path="res://images/Juegos/Lanza_Dardos/Dardos.png" id="2_yfqdr"]
 [ext_resource type="FontFile" uid="uid://ex6sf638yhh5" path="res://font/Chonky Bunny.ttf" id="3_3kdut"]
 [ext_resource type="Texture2D" uid="uid://c1l3qd7qbervq" path="res://images/Juegos/Lanza_Dardos/Amarillo.png" id="4_rxhbr"]

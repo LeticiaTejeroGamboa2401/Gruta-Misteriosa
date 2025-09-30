@@ -1,7 +1,7 @@
 [gd_resource type="Resource" script_class="QuizThemeCaballo" load_steps=28 format=3 uid="uid://mj0jnlwgx8rd"]
 
-[ext_resource type="Script" path="res://Scripts/Juegos/CarreraCaballo/theme.gd" id="1_2fo6c"]
-[ext_resource type="Script" path="res://Scripts/Juegos/CarreraCaballo/question.gd" id="2_y1fre"]
+[ext_resource type="Script" uid="uid://c4ulei1efg6q5" path="res://Scripts/Juegos/CarreraCaballo/theme.gd" id="1_2fo6c"]
+[ext_resource type="Script" uid="uid://ckxtxcrxn00ed" path="res://Scripts/Juegos/CarreraCaballo/question.gd" id="2_y1fre"]
 [ext_resource type="Resource" uid="uid://dc7t6bk12xeoa" path="res://resources/variado/questionCarreraCaballo/1.tres" id="3_4hui7"]
 [ext_resource type="Resource" uid="uid://dq3ovroxktvep" path="res://resources/variado/questionCarreraCaballo/2.tres" id="4_ypgy3"]
 [ext_resource type="Resource" uid="uid://bu1cbtlmh78up" path="res://resources/variado/questionCarreraCaballo/3.tres" id="5_1ct7c"]

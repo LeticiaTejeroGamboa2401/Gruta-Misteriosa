@@ -1,7 +1,7 @@
 [gd_scene load_steps=15 format=3 uid="uid://cv70cmywwro32"]
 
 [ext_resource type="FontFile" uid="uid://ex6sf638yhh5" path="res://font/Chonky Bunny.ttf" id="1_2bh0v"]
-[ext_resource type="Script" path="res://Scripts/devs_responsables.gd" id="1_ffypl"]
+[ext_resource type="Script" uid="uid://w3sb4ibvfg4i" path="res://Scripts/devs_responsables.gd" id="1_ffypl"]
 [ext_resource type="FontFile" uid="uid://q4llc3uguqs2" path="res://font/KGCorneroftheSky.ttf" id="2_piwji"]
 [ext_resource type="Texture2D" uid="uid://2bq0ibxdgxao" path="res://images/return.png" id="4_ic8js"]
 [ext_resource type="Texture2D" uid="uid://bwwoheq101ax2" path="res://images/lics.png" id="5_uuhgu"]

@@ -1,6 +1,6 @@
 [gd_resource type="Resource" script_class="QuizQuestion" load_steps=8 format=3 uid="uid://ckthsip83pnnk"]
 
-[ext_resource type="Script" path="res://Scripts/Juegos/AdivinaProducto/resources/questions.gd" id="1_2pf7g"]
+[ext_resource type="Script" uid="uid://1o6c2qiutkaj" path="res://Scripts/Juegos/AdivinaProducto/resources/questions.gd" id="1_2pf7g"]
 [ext_resource type="Texture2D" uid="uid://b4bxy7u4emg3o" path="res://images/Juegos/Adivina_el_Producto/Pitahaya.png" id="1_ideo0"]
 [ext_resource type="Texture2D" uid="uid://k8e0l1w2qhym" path="res://images/Platano.png" id="2_ho43l"]
 [ext_resource type="Texture2D" uid="uid://f2orkftgtpoo" path="res://images/Frijol.png" id="3_o271l"]

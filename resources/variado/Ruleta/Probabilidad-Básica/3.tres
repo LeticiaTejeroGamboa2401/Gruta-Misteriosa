@@ -1,6 +1,6 @@
 [gd_resource type="Resource" script_class="QuizQuestionRuletitaProbabilidad" load_steps=2 format=3 uid="uid://3mhuc6mom267"]
 
-[ext_resource type="Script" path="res://Scripts/Juegos/Ruleta/items/Probabilidad-Básica/question.gd" id="1_dltpq"]
+[ext_resource type="Script" uid="uid://bmw8n1fyj4e6e" path="res://Scripts/Juegos/Ruleta/items/Probabilidad-Básica/question.gd" id="1_dltpq"]
 
 [resource]
 script = ExtResource("1_dltpq")

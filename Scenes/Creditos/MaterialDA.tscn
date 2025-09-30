@@ -1,6 +1,6 @@
 [gd_scene load_steps=7 format=3 uid="uid://cp5b7qhfu7x3r"]
 
-[ext_resource type="Script" path="res://Scripts/control.gd" id="1_owfmq"]
+[ext_resource type="Script" uid="uid://bllmugfubdsrt" path="res://Scripts/control.gd" id="1_owfmq"]
 [ext_resource type="FontFile" uid="uid://ex6sf638yhh5" path="res://font/Chonky Bunny.ttf" id="2_t2qcw"]
 [ext_resource type="Texture2D" uid="uid://2bq0ibxdgxao" path="res://images/return.png" id="3_f14uw"]
 

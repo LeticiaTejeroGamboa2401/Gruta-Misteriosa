@@ -1,6 +1,6 @@
 [gd_resource type="Resource" script_class="QuizQuestionPecesitos" load_steps=7 format=3 uid="uid://c2gkr63ntyhih"]
 
-[ext_resource type="Script" path="res://Scripts/Juegos/AtrapaPeces/question.gd" id="1_0oogx"]
+[ext_resource type="Script" uid="uid://dw515hyxrn6d" path="res://Scripts/Juegos/AtrapaPeces/question.gd" id="1_0oogx"]
 [ext_resource type="PackedScene" uid="uid://cwqrk61pniaep" path="res://Scenes/Juegos/Atrapa_Peces/Peces/Pez40.tscn" id="1_bbnud"]
 [ext_resource type="PackedScene" uid="uid://jpkqdayqbwb6" path="res://Scenes/Juegos/Atrapa_Peces/Peces/Pez24.tscn" id="2_jb3vf"]
 [ext_resource type="PackedScene" uid="uid://df4b43ke3dpqd" path="res://Scenes/Juegos/Atrapa_Peces/Peces/Pez32.tscn" id="3_r6ehh"]

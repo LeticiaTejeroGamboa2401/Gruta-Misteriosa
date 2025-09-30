@@ -1,6 +1,6 @@
 [gd_resource type="Resource" script_class="QuizQuestionRuletitaNumNat" load_steps=2 format=3 uid="uid://chlcyv48bchkm"]
 
-[ext_resource type="Script" path="res://Scripts/Juegos/Ruleta/items/Operaciones-Numeros-Naturales/question.gd" id="1_pky2m"]
+[ext_resource type="Script" uid="uid://btbsslfjnpbp5" path="res://Scripts/Juegos/Ruleta/items/Operaciones-Numeros-Naturales/question.gd" id="1_pky2m"]
 
 [resource]
 script = ExtResource("1_pky2m")

@@ -1,7 +1,7 @@
 [gd_scene load_steps=7 format=3 uid="uid://ngx1kreb7jme"]
 
 [ext_resource type="Texture2D" uid="uid://clkyl0c2bex7u" path="res://images/Juegos/Lanza_Dardos/Globos/32.png" id="1_r4gid"]
-[ext_resource type="Script" path="res://Scripts/Juegos/LanzaDardos/Globos/globo32.gd" id="1_v1aos"]
+[ext_resource type="Script" uid="uid://dv8vjyrmu61t4" path="res://Scripts/Juegos/LanzaDardos/Globos/globo32.gd" id="1_v1aos"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_85a07"]
 size = Vector2(71, 122)

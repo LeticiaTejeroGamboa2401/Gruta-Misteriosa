@@ -1,6 +1,6 @@
 [gd_scene load_steps=21 format=3 uid="uid://dg33ycaiampji"]
 
-[ext_resource type="Script" path="res://Scripts/Juegos/AdivinaProducto/explicacion_puntuacion.gd" id="1_esqyj"]
+[ext_resource type="Script" uid="uid://wnjapgeqnrt8" path="res://Scripts/Juegos/AdivinaProducto/explicacion_puntuacion.gd" id="1_esqyj"]
 [ext_resource type="Texture2D" uid="uid://ce5ueoos67bfl" path="res://images/fondo_juego_adiv_el_prod.png" id="2_odwms"]
 [ext_resource type="Texture2D" uid="uid://2hrlki10uwee" path="res://images/aluxe_vendedor.png" id="3_ienh2"]
 [ext_resource type="Texture2D" uid="uid://bwf8mkwr4gktp" path="res://images/siguiente_flecha.png" id="4_wi6tq"]

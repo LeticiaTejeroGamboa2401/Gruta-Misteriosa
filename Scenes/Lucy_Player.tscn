@@ -1,6 +1,6 @@
 [gd_scene load_steps=20 format=3 uid="uid://ur1624qxlyln"]
 
-[ext_resource type="Script" path="res://Scripts/lucy_player.gd" id="1_kpkkb"]
+[ext_resource type="Script" uid="uid://t44u4rjrdn4f" path="res://Scripts/lucy_player.gd" id="1_kpkkb"]
 [ext_resource type="Texture2D" uid="uid://gtqi8x5y78s" path="res://personajes/Lucy_Derecha.png" id="1_mrkkf"]
 [ext_resource type="Texture2D" uid="uid://du2q1g1w5f71h" path="res://images/Lucy_Abajo.png" id="2_bci34"]
 [ext_resource type="Texture2D" uid="uid://bx7kvsiwv71a" path="res://personajes/Lucy_Izquierda.png" id="2_va1bc"]

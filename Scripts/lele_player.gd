@@ -5,7 +5,7 @@ extends CharacterBody2D
 
 func _physics_process(_delta):
 	var direction = Vector2.ZERO
-	
+
 	# Movimiento horizontal
 	if Input.is_action_pressed("ui_right"):
 		direction.x += 1

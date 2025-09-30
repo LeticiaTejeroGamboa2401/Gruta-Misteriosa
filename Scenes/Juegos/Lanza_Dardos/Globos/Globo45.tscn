@@ -1,6 +1,6 @@
 [gd_scene load_steps=7 format=3 uid="uid://clny6j5mg0qfl"]
 
-[ext_resource type="Script" path="res://Scripts/Juegos/LanzaDardos/Globos/globo45.gd" id="1_q0gl5"]
+[ext_resource type="Script" uid="uid://tkx8wbv1ajoj" path="res://Scripts/Juegos/LanzaDardos/Globos/globo45.gd" id="1_q0gl5"]
 [ext_resource type="Texture2D" uid="uid://cc80n3ofynkx" path="res://images/Juegos/Lanza_Dardos/Globos/45.png" id="1_w8upr"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_521i6"]

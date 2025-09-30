@@ -1,6 +1,6 @@
 [gd_resource type="Resource" script_class="QuizQuestionRuletitaArea" load_steps=2 format=3 uid="uid://u355bvmds3pd"]
 
-[ext_resource type="Script" path="res://Scripts/Juegos/Ruleta/items/Perímetro-Área/question.gd" id="1_b03xk"]
+[ext_resource type="Script" uid="uid://c8712hvk34uhj" path="res://Scripts/Juegos/Ruleta/items/Perímetro-Área/question.gd" id="1_b03xk"]
 
 [resource]
 script = ExtResource("1_b03xk")

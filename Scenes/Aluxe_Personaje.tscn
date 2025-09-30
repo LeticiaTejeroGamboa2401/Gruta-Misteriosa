@@ -1,6 +1,6 @@
 [gd_scene load_steps=12 format=3 uid="uid://1kydvnjxixmp"]
 
-[ext_resource type="Script" path="res://Scripts/aluxe_personaje.gd" id="1_f6xoo"]
+[ext_resource type="Script" uid="uid://bwvwnlunibnkl" path="res://Scripts/aluxe_personaje.gd" id="1_f6xoo"]
 [ext_resource type="Texture2D" uid="uid://b56mum6rq5lxj" path="res://images/aluxe.png" id="1_wnbvk"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_1kdp2"]

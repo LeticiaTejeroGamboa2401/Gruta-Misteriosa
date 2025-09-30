@@ -1,6 +1,6 @@
 [gd_scene load_steps=32 format=3 uid="uid://dfoifcypnt7aj"]
 
-[ext_resource type="Script" path="res://Scripts/Juegos/Ruleta/items/Gráfica-Datos/gráficos_datos.gd" id="1_xgcof"]
+[ext_resource type="Script" uid="uid://d0cxx3nssqklf" path="res://Scripts/Juegos/Ruleta/items/Gráfica-Datos/gráficos_datos.gd" id="1_xgcof"]
 [ext_resource type="Resource" uid="uid://cjs8chq0pymj5" path="res://resources/theme/Ruleta/theme_graficos.tres" id="2_d27mf"]
 [ext_resource type="Texture2D" uid="uid://b4icwsejgesow" path="res://images/Juegos/Ruleta/Fondo.png" id="2_lgx51"]
 [ext_resource type="FontFile" uid="uid://ex6sf638yhh5" path="res://font/Chonky Bunny.ttf" id="2_o1p38"]

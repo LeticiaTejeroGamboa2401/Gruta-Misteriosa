@@ -1,6 +1,6 @@
 [gd_resource type="Resource" script_class="QuizQuestionRuletitaFracciones" load_steps=2 format=3 uid="uid://byesa7xsx03s8"]
 
-[ext_resource type="Script" path="res://Scripts/Juegos/Ruleta/items/Fracciones/question.gd" id="1_ioui5"]
+[ext_resource type="Script" uid="uid://w586p1y7q5at" path="res://Scripts/Juegos/Ruleta/items/Fracciones/question.gd" id="1_ioui5"]
 
 [resource]
 script = ExtResource("1_ioui5")

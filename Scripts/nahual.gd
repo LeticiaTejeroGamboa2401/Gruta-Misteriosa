@@ -9,7 +9,7 @@ func _ready():
 	print("Nahual listo")
 
 func _physics_process(_delta: float) -> void:
-	apply_gravity(_delta)
+	#apply_gravity(_delta)
 
 	if global_position.x < target_position_x:
 		velocity.x = speed

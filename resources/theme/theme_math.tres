@@ -1,7 +1,7 @@
 [gd_resource type="Resource" script_class="QuizTheme" load_steps=28 format=3 uid="uid://bsd62iacmqeje"]
 
-[ext_resource type="Script" path="res://Scripts/Juegos/AdivinaProducto/resources/theme.gd" id="1_djuse"]
-[ext_resource type="Script" path="res://Scripts/Juegos/AdivinaProducto/resources/questions.gd" id="2_3htld"]
+[ext_resource type="Script" uid="uid://b7gkux7m32ukp" path="res://Scripts/Juegos/AdivinaProducto/resources/theme.gd" id="1_djuse"]
+[ext_resource type="Script" uid="uid://1o6c2qiutkaj" path="res://Scripts/Juegos/AdivinaProducto/resources/questions.gd" id="2_3htld"]
 [ext_resource type="Resource" uid="uid://bj3de4asi2i8x" path="res://resources/variado/questionAdivinaProducto/1.tres" id="3_nvah2"]
 [ext_resource type="Resource" uid="uid://clbamtd3e1nd1" path="res://resources/variado/questionAdivinaProducto/2.tres" id="4_d71v8"]
 [ext_resource type="Resource" uid="uid://cfvk8uba14ny1" path="res://resources/variado/questionAdivinaProducto/3.tres" id="5_sjoiv"]

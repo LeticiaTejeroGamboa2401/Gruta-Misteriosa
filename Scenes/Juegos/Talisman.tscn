@@ -1,7 +1,7 @@
 [gd_scene load_steps=5 format=3 uid="uid://cosimb50whwtw"]
 
-[ext_resource type="Script" path="res://Scripts/Juegos/talisman.gd" id="1_gmfx3"]
-[ext_resource type="VideoStream" path="res://images/Talismán_Completo.ogv" id="1_u02gc"]
+[ext_resource type="Script" uid="uid://dismnswy4q6hw" path="res://Scripts/Juegos/talisman.gd" id="1_gmfx3"]
+[ext_resource type="VideoStream" uid="uid://b55m8ysmqfquh" path="res://images/Talismán_Completo.ogv" id="1_u02gc"]
 [ext_resource type="FontFile" uid="uid://ex6sf638yhh5" path="res://font/Chonky Bunny.ttf" id="2_tukrb"]
 
 [sub_resource type="LabelSettings" id="LabelSettings_w64lp"]

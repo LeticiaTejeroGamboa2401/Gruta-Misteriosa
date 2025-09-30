@@ -6,7 +6,7 @@
 [ext_resource type="Texture2D" uid="uid://k8e0l1w2qhym" path="res://images/Platano.png" id="4_7ecwx"]
 [ext_resource type="Texture2D" uid="uid://chk841wvagfr8" path="res://images/Tamal.png" id="5_o4uqn"]
 [ext_resource type="Texture2D" uid="uid://dmjq602s6q7aj" path="res://images/Tortilla.png" id="6_obifg"]
-[ext_resource type="Script" path="res://Scripts/Juegos/AdivinaProducto/resources/questions.gd" id="7_u1tkn"]
+[ext_resource type="Script" uid="uid://1o6c2qiutkaj" path="res://Scripts/Juegos/AdivinaProducto/resources/questions.gd" id="7_u1tkn"]
 
 [resource]
 script = ExtResource("7_u1tkn")

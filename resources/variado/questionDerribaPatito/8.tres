@@ -1,7 +1,7 @@
 [gd_resource type="Resource" script_class="QuizQuestionPatito" load_steps=10 format=3 uid="uid://c0itsc5kee3n3"]
 
 [ext_resource type="PackedScene" uid="uid://cqstednhcedej" path="res://Scenes/Juegos/Derriba_al_Pato/Patos/Pato12.tscn" id="1_copc5"]
-[ext_resource type="Script" path="res://Scripts/Juegos/DerribaPato/question.gd" id="1_g7swi"]
+[ext_resource type="Script" uid="uid://bxh2nq4gv8nr1" path="res://Scripts/Juegos/DerribaPato/question.gd" id="1_g7swi"]
 [ext_resource type="PackedScene" uid="uid://b624q6wut6ubb" path="res://Scenes/Juegos/Derriba_al_Pato/Patos/Pato9.tscn" id="2_5swrk"]
 [ext_resource type="PackedScene" uid="uid://ds2ipdiv80mcf" path="res://Scenes/Juegos/Derriba_al_Pato/Patos/Pato18.tscn" id="3_s024y"]
 [ext_resource type="PackedScene" uid="uid://oxtuirf6toq6" path="res://Scenes/Juegos/Derriba_al_Pato/Patos/Pato14.tscn" id="4_j6y4a"]

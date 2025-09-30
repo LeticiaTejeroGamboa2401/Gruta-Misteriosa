@@ -1,7 +1,7 @@
 [gd_scene load_steps=12 format=3 uid="uid://b5olele54is7q"]
 
 [ext_resource type="Texture2D" uid="uid://p14a3p8k04i7" path="res://personajes/Nahual_Derecha.png" id="1_0ewoj"]
-[ext_resource type="Script" path="res://Scripts/nahual.gd" id="1_lv5a4"]
+[ext_resource type="Script" uid="uid://d1jeef3qmsygp" path="res://Scripts/nahual.gd" id="1_lv5a4"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_k88ho"]
 atlas = ExtResource("1_0ewoj")

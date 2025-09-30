@@ -1,7 +1,7 @@
 [gd_resource type="Resource" script_class="QuizThemeRuletaUnidades" load_steps=9 format=3 uid="uid://le8a8stww4ye"]
 
-[ext_resource type="Script" path="res://Scripts/Juegos/Ruleta/items/Medición-Unidades/theme.gd" id="1_m32nf"]
-[ext_resource type="Script" path="res://Scripts/Juegos/Ruleta/items/Medición-Unidades/question.gd" id="1_xoqv7"]
+[ext_resource type="Script" uid="uid://dnasv8qostb3j" path="res://Scripts/Juegos/Ruleta/items/Medición-Unidades/theme.gd" id="1_m32nf"]
+[ext_resource type="Script" uid="uid://c0ki45hk3gpag" path="res://Scripts/Juegos/Ruleta/items/Medición-Unidades/question.gd" id="1_xoqv7"]
 [ext_resource type="Resource" uid="uid://b4fq7ebhpt346" path="res://resources/variado/Ruleta/Medición-Unidades/1.tres" id="3_y4567"]
 [ext_resource type="Resource" uid="uid://br02v6w3fcgjg" path="res://resources/variado/Ruleta/Medición-Unidades/2.tres" id="4_etmv4"]
 [ext_resource type="Resource" uid="uid://dydy03r1eorwo" path="res://resources/variado/Ruleta/Medición-Unidades/3.tres" id="5_6sxn8"]

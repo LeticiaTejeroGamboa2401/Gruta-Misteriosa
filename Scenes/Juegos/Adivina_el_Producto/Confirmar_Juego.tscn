@@ -1,6 +1,6 @@
 [gd_scene load_steps=32 format=3 uid="uid://d3oj7i28ad8kq"]
 
-[ext_resource type="Script" path="res://Scripts/Juegos/AdivinaProducto/confirmar_juego.gd" id="1_p8h1m"]
+[ext_resource type="Script" uid="uid://mespr8sm8jkm" path="res://Scripts/Juegos/AdivinaProducto/confirmar_juego.gd" id="1_p8h1m"]
 [ext_resource type="Texture2D" uid="uid://ce5ueoos67bfl" path="res://images/fondo_juego_adiv_el_prod.png" id="2_8wlw3"]
 [ext_resource type="Texture2D" uid="uid://2hrlki10uwee" path="res://images/aluxe_vendedor.png" id="3_u6rm6"]
 [ext_resource type="FontFile" uid="uid://ex6sf638yhh5" path="res://font/Chonky Bunny.ttf" id="4_1gs4q"]

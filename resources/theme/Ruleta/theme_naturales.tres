@@ -1,7 +1,7 @@
 [gd_resource type="Resource" script_class="QuizThemeRuletaNumNat" load_steps=10 format=3 uid="uid://7rvovs2ysc0t"]
 
-[ext_resource type="Script" path="res://Scripts/Juegos/Ruleta/items/Operaciones-Numeros-Naturales/theme.gd" id="1_4mqmh"]
-[ext_resource type="Script" path="res://Scripts/Juegos/Ruleta/items/Operaciones-Numeros-Naturales/question.gd" id="2_waj0t"]
+[ext_resource type="Script" uid="uid://bx240apdqo3pk" path="res://Scripts/Juegos/Ruleta/items/Operaciones-Numeros-Naturales/theme.gd" id="1_4mqmh"]
+[ext_resource type="Script" uid="uid://btbsslfjnpbp5" path="res://Scripts/Juegos/Ruleta/items/Operaciones-Numeros-Naturales/question.gd" id="2_waj0t"]
 [ext_resource type="Resource" uid="uid://bvfvsnyb14per" path="res://resources/variado/Ruleta/Naturales/1.tres" id="3_ukns2"]
 [ext_resource type="Resource" uid="uid://chlcyv48bchkm" path="res://resources/variado/Ruleta/Naturales/2.tres" id="4_s3tsf"]
 [ext_resource type="Resource" uid="uid://b23woq06h4adw" path="res://resources/variado/Ruleta/Naturales/3.tres" id="5_fant6"]

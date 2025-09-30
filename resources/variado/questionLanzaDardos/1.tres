@@ -12,7 +12,7 @@
 [ext_resource type="PackedScene" uid="uid://bo215x56tr6kn" path="res://Scenes/Juegos/Lanza_Dardos/Globos/Globo4.tscn" id="10_caw0m"]
 [ext_resource type="PackedScene" uid="uid://bulj3hw3s31ri" path="res://Scenes/Juegos/Lanza_Dardos/Globos/Globo20.tscn" id="11_n4ux2"]
 [ext_resource type="PackedScene" uid="uid://b416biqkafxue" path="res://Scenes/Juegos/Lanza_Dardos/Globos/Globo8.tscn" id="12_xjap4"]
-[ext_resource type="Script" path="res://Scripts/Juegos/LanzaDardos/question.gd" id="13_bxqbi"]
+[ext_resource type="Script" uid="uid://cgq8qvoafs5j7" path="res://Scripts/Juegos/LanzaDardos/question.gd" id="13_bxqbi"]
 
 [resource]
 script = ExtResource("13_bxqbi")

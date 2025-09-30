@@ -1,10 +1,10 @@
 [gd_scene load_steps=12 format=3 uid="uid://76cc3p1lvffq"]
 
-[ext_resource type="Script" path="res://Scripts/bosque.gd" id="1_52jtc"]
+[ext_resource type="Script" uid="uid://bvismpwbhlsj0" path="res://Scripts/bosque.gd" id="1_52jtc"]
 [ext_resource type="Texture2D" uid="uid://c4ljuuy56jopt" path="res://images/Bosque.jpg" id="1_anv7h"]
 [ext_resource type="Texture2D" uid="uid://dgix8j6333h6i" path="res://images/HuayChivo.png" id="4_jyrlr"]
 [ext_resource type="PackedScene" uid="uid://cshqucsavs7df" path="res://Scenes/Murcielago_Volando.tscn" id="5_imvvr"]
-[ext_resource type="Script" path="res://Scripts/bosque1.gd" id="6_4u0ug"]
+[ext_resource type="Script" uid="uid://dpx8483orn4lp" path="res://Scripts/bosque1.gd" id="6_4u0ug"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_viedp"]
 size = Vector2(584, 1)

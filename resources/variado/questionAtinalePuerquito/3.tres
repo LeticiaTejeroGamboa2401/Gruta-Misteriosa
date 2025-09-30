@@ -1,6 +1,6 @@
 [gd_resource type="Resource" script_class="QuizQuestionPuerquito" load_steps=2 format=3 uid="uid://dyom26kqj04pk"]
 
-[ext_resource type="Script" path="res://Scripts/Juegos/AtinalePuerquito/question.gd" id="1_qalqr"]
+[ext_resource type="Script" uid="uid://4nbjhyg05qd" path="res://Scripts/Juegos/AtinalePuerquito/question.gd" id="1_qalqr"]
 
 [resource]
 script = ExtResource("1_qalqr")

@@ -1,7 +1,7 @@
 [gd_scene load_steps=7 format=3 uid="uid://rqo63y37eqf"]
 
 [ext_resource type="Texture2D" uid="uid://cssawogrxt0vj" path="res://images/Juegos/Lanza_Dardos/Globos/14.png" id="1_cb3dj"]
-[ext_resource type="Script" path="res://Scripts/Juegos/LanzaDardos/Globos/globo14.gd" id="1_nst7y"]
+[ext_resource type="Script" uid="uid://dc04ia3dhb45f" path="res://Scripts/Juegos/LanzaDardos/Globos/globo14.gd" id="1_nst7y"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_an2nl"]
 size = Vector2(61, 118)

@@ -1,11 +1,11 @@
 [gd_scene load_steps=19 format=3 uid="uid://bibebft18idp2"]
 
-[ext_resource type="Script" path="res://Scenes/alux_encuentro_final.gd" id="1_dj3yf"]
+[ext_resource type="Script" uid="uid://b4g3dpsmnl5yn" path="res://Scenes/alux_encuentro_final.gd" id="1_dj3yf"]
 [ext_resource type="Texture2D" uid="uid://3hqd2syyrgry" path="res://images/HistoriaCompa.jpg" id="2_6qju3"]
 [ext_resource type="PackedScene" uid="uid://1kydvnjxixmp" path="res://Scenes/Aluxe_Personaje.tscn" id="2_ecajx"]
 [ext_resource type="Texture2D" uid="uid://b1ckv3yhn4dwv" path="res://images/background.png" id="4_aodgo"]
 [ext_resource type="FontFile" uid="uid://q4llc3uguqs2" path="res://font/KGCorneroftheSky.ttf" id="5_7bjss"]
-[ext_resource type="Script" path="res://Scenes/question_label.gd" id="6_hoqg8"]
+[ext_resource type="Script" uid="uid://dpam8cu8dqot7" path="res://Scenes/question_label.gd" id="6_hoqg8"]
 [ext_resource type="FontFile" uid="uid://bd321yblpf1ew" path="res://font/Supermarket of Love.ttf" id="7_8p7qp"]
 [ext_resource type="Texture2D" uid="uid://bwf8mkwr4gktp" path="res://images/siguiente_flecha.png" id="8_of8xo"]
 [ext_resource type="FontFile" uid="uid://ex6sf638yhh5" path="res://font/Chonky Bunny.ttf" id="9_4dwhh"]
@@ -182,8 +182,8 @@ tracks/5/keys = {
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_8kje7"]
 _data = {
-"RESET": SubResource("Animation_r4jw5"),
-"amulet_glow": SubResource("Animation_ht2k5")
+&"RESET": SubResource("Animation_r4jw5"),
+&"amulet_glow": SubResource("Animation_ht2k5")
 }
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_272dm"]
@@ -332,7 +332,7 @@ metadata/_edit_lock_ = true
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="AmuletComplete"]
 libraries = {
-"": SubResource("AnimationLibrary_8kje7")
+&"": SubResource("AnimationLibrary_8kje7")
 }
 autoplay = "amulet_glow"
 

@@ -1,6 +1,6 @@
 [gd_scene load_steps=32 format=3 uid="uid://dfoifcypnt7aj"]
 
-[ext_resource type="Script" path="res://Scripts/Juegos/Ruleta/items/Probabilidad-Básica/probabiildad_basica.gd" id="1_n4g8r"]
+[ext_resource type="Script" uid="uid://y3wso8ixyaot" path="res://Scripts/Juegos/Ruleta/items/Probabilidad-Básica/probabiildad_basica.gd" id="1_n4g8r"]
 [ext_resource type="Resource" uid="uid://dt1jevc2expru" path="res://resources/theme/Ruleta/theme_probabilidad.tres" id="2_8wd6y"]
 [ext_resource type="Texture2D" uid="uid://cm6tx2ipop17h" path="res://images/Juegos/Ruleta/correcto.png" id="2_mhuav"]
 [ext_resource type="FontFile" uid="uid://ex6sf638yhh5" path="res://font/Chonky Bunny.ttf" id="2_o1p38"]

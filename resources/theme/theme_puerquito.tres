@@ -1,7 +1,7 @@
 [gd_resource type="Resource" script_class="QuizThemeAlcancia" load_steps=28 format=3 uid="uid://b0f24i5te2ads"]
 
-[ext_resource type="Script" path="res://Scripts/Juegos/AtinalePuerquito/theme.gd" id="1_lj4n6"]
-[ext_resource type="Script" path="res://Scripts/Juegos/AtinalePuerquito/question.gd" id="2_vfgli"]
+[ext_resource type="Script" uid="uid://dp5k0vh6yxet7" path="res://Scripts/Juegos/AtinalePuerquito/theme.gd" id="1_lj4n6"]
+[ext_resource type="Script" uid="uid://4nbjhyg05qd" path="res://Scripts/Juegos/AtinalePuerquito/question.gd" id="2_vfgli"]
 [ext_resource type="Resource" uid="uid://qhnuhu3aw8pj" path="res://resources/variado/questionAtinalePuerquito/1.tres" id="3_v4xmx"]
 [ext_resource type="Resource" uid="uid://cjmcqan8kdxnp" path="res://resources/variado/questionAtinalePuerquito/2.tres" id="4_7beyx"]
 [ext_resource type="Resource" uid="uid://dyom26kqj04pk" path="res://resources/variado/questionAtinalePuerquito/3.tres" id="5_y3nnf"]

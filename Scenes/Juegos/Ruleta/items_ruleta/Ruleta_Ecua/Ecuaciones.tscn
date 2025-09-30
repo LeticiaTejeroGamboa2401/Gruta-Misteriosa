@@ -1,6 +1,6 @@
 [gd_scene load_steps=32 format=3 uid="uid://dfoifcypnt7aj"]
 
-[ext_resource type="Script" path="res://Scripts/Juegos/Ruleta/items/Ecuaciones/ecuaciones.gd" id="1_04f3h"]
+[ext_resource type="Script" uid="uid://d0bwwrbw56ewo" path="res://Scripts/Juegos/Ruleta/items/Ecuaciones/ecuaciones.gd" id="1_04f3h"]
 [ext_resource type="FontFile" uid="uid://ex6sf638yhh5" path="res://font/Chonky Bunny.ttf" id="2_o1p38"]
 [ext_resource type="Texture2D" uid="uid://b4icwsejgesow" path="res://images/Juegos/Ruleta/Fondo.png" id="2_tvucf"]
 [ext_resource type="Resource" uid="uid://bjsucxw0dujq2" path="res://resources/theme/Ruleta/theme_ecuaciones.tres" id="2_vwcqo"]

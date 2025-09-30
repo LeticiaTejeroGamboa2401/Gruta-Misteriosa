@@ -1,6 +1,6 @@
 [gd_scene load_steps=20 format=3 uid="uid://dp7f17w34esul"]
 
-[ext_resource type="Script" path="res://Scripts/lele_player.gd" id="1_83m7h"]
+[ext_resource type="Script" uid="uid://dv8sxd5fov15g" path="res://Scripts/lele_player.gd" id="1_83m7h"]
 [ext_resource type="Texture2D" uid="uid://ce3vft1f7lti8" path="res://personajes/Lele_Derecha.png" id="1_xq3gg"]
 [ext_resource type="Texture2D" uid="uid://j6r7bod16nu" path="res://images/Lele_Abajo.png" id="2_5huft"]
 [ext_resource type="Texture2D" uid="uid://qouemu6hm1f" path="res://personajes/Lele_Izquierda.png" id="2_afxyx"]
@@ -128,3 +128,6 @@ position = Vector2(-0.999998, -0.999996)
 scale = Vector2(0.715827, 0.62963)
 sprite_frames = SubResource("SpriteFrames_mhkpy")
 animation = &"Derecha"
+
+[node name="Hand" type="Marker2D" parent="."]
+position = Vector2(48, 48)

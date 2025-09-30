@@ -1,7 +1,7 @@
 [gd_resource type="Resource" script_class="QuizThemeRuletaEcuaciones" load_steps=9 format=3 uid="uid://bjsucxw0dujq2"]
 
-[ext_resource type="Script" path="res://Scripts/Juegos/Ruleta/items/Ecuaciones/theme.gd" id="1_b8rig"]
-[ext_resource type="Script" path="res://Scripts/Juegos/Ruleta/items/Ecuaciones/question.gd" id="2_4nfif"]
+[ext_resource type="Script" uid="uid://bgj5g46otew7f" path="res://Scripts/Juegos/Ruleta/items/Ecuaciones/theme.gd" id="1_b8rig"]
+[ext_resource type="Script" uid="uid://cfju2bb2vcoap" path="res://Scripts/Juegos/Ruleta/items/Ecuaciones/question.gd" id="2_4nfif"]
 [ext_resource type="Resource" uid="uid://k8mjx55oet52" path="res://resources/variado/Ruleta/Ecuaciones-Básicas/1.tres" id="3_joq84"]
 [ext_resource type="Resource" uid="uid://c4oac7d6hpdqm" path="res://resources/variado/Ruleta/Ecuaciones-Básicas/2.tres" id="4_07q5l"]
 [ext_resource type="Resource" uid="uid://dtlw7eumj6ic0" path="res://resources/variado/Ruleta/Ecuaciones-Básicas/3.tres" id="5_q47o6"]

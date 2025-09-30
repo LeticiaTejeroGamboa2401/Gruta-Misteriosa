@@ -1,7 +1,7 @@
 [gd_resource type="Resource" script_class="QuizThemeRuletaMultDiv" load_steps=9 format=3 uid="uid://bg17r0a3pei3u"]
 
-[ext_resource type="Script" path="res://Scripts/Juegos/Ruleta/items/Multiplicación-División/theme.gd" id="1_nc6d3"]
-[ext_resource type="Script" path="res://Scripts/Juegos/Ruleta/items/Multiplicación-División/question.gd" id="2_ygpfr"]
+[ext_resource type="Script" uid="uid://dmc0etbl0dxsw" path="res://Scripts/Juegos/Ruleta/items/Multiplicación-División/theme.gd" id="1_nc6d3"]
+[ext_resource type="Script" uid="uid://b2iuop4mkiuwl" path="res://Scripts/Juegos/Ruleta/items/Multiplicación-División/question.gd" id="2_ygpfr"]
 [ext_resource type="Resource" uid="uid://biirho8s8306r" path="res://resources/variado/Ruleta/Multiplicación-División/1.tres" id="3_ggldl"]
 [ext_resource type="Resource" uid="uid://dcq2vhtus6wri" path="res://resources/variado/Ruleta/Multiplicación-División/2.tres" id="4_culeh"]
 [ext_resource type="Resource" uid="uid://cgbnm46md3yic" path="res://resources/variado/Ruleta/Multiplicación-División/3.tres" id="5_6oewy"]

@@ -1,6 +1,6 @@
 [gd_resource type="Resource" script_class="QuizQuestionRuletitaPorcentaje" load_steps=2 format=3 uid="uid://3nlb3hj4cvnb"]
 
-[ext_resource type="Script" path="res://Scripts/Juegos/Ruleta/items/Porcentaje/question.gd" id="1_cjjwm"]
+[ext_resource type="Script" uid="uid://dlq8hii4nl0f7" path="res://Scripts/Juegos/Ruleta/items/Porcentaje/question.gd" id="1_cjjwm"]
 
 [resource]
 script = ExtResource("1_cjjwm")

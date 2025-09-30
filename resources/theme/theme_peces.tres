@@ -1,7 +1,7 @@
 [gd_resource type="Resource" script_class="QuizThemePeces" load_steps=28 format=3 uid="uid://1w8qxs8oa3lf"]
 
-[ext_resource type="Script" path="res://Scripts/Juegos/AtrapaPeces/theme.gd" id="1_72kn1"]
-[ext_resource type="Script" path="res://Scripts/Juegos/AtrapaPeces/question.gd" id="2_iqtrc"]
+[ext_resource type="Script" uid="uid://cchm73lt2d3ek" path="res://Scripts/Juegos/AtrapaPeces/theme.gd" id="1_72kn1"]
+[ext_resource type="Script" uid="uid://dw515hyxrn6d" path="res://Scripts/Juegos/AtrapaPeces/question.gd" id="2_iqtrc"]
 [ext_resource type="Resource" uid="uid://b14akbt1gj0ut" path="res://resources/variado/questionAtrapaPeces/1.tres" id="3_88bxv"]
 [ext_resource type="Resource" uid="uid://ctwdwvpaunpgl" path="res://resources/variado/questionAtrapaPeces/2.tres" id="4_7y42l"]
 [ext_resource type="Resource" uid="uid://d1nphcnhsn2ks" path="res://resources/variado/questionAtrapaPeces/3.tres" id="5_op8lp"]

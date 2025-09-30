@@ -1,7 +1,7 @@
 [gd_resource type="Resource" script_class="QuizThemeRuletaAngulos" load_steps=10 format=3 uid="uid://c4sba73816o7o"]
 
-[ext_resource type="Script" path="res://Scripts/Juegos/Ruleta/items/Angulos-Geometría/theme.gd" id="1_u5ufh"]
-[ext_resource type="Script" path="res://Scripts/Juegos/Ruleta/items/Angulos-Geometría/question.gd" id="2_ko50j"]
+[ext_resource type="Script" uid="uid://l62vi0wucdjn" path="res://Scripts/Juegos/Ruleta/items/Angulos-Geometría/theme.gd" id="1_u5ufh"]
+[ext_resource type="Script" uid="uid://sw8ymqksip6r" path="res://Scripts/Juegos/Ruleta/items/Angulos-Geometría/question.gd" id="2_ko50j"]
 [ext_resource type="Resource" uid="uid://bpy7bjfq75b2h" path="res://resources/variado/Ruleta/Angulos/1.tres" id="3_erqi6"]
 [ext_resource type="Resource" uid="uid://cmywxdw0wo1uk" path="res://resources/variado/Ruleta/Angulos/2.tres" id="4_r6gv4"]
 [ext_resource type="Resource" uid="uid://di3v3j160june" path="res://resources/variado/Ruleta/Angulos/3.tres" id="5_oxfp4"]

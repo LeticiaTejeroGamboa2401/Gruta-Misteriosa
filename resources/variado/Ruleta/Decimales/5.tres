@@ -1,6 +1,6 @@
 [gd_resource type="Resource" script_class="QuizQuestionRuletitaDecimales" load_steps=2 format=3 uid="uid://b84kt6a73yqwr"]
 
-[ext_resource type="Script" path="res://Scripts/Juegos/Ruleta/items/Números-Decimales/question.gd" id="1_herqh"]
+[ext_resource type="Script" uid="uid://bc6rur8v33imj" path="res://Scripts/Juegos/Ruleta/items/Números-Decimales/question.gd" id="1_herqh"]
 
 [resource]
 script = ExtResource("1_herqh")

@@ -1,6 +1,6 @@
 [gd_scene load_steps=12 format=3 uid="uid://bscvl1kbdvgkl"]
 
-[ext_resource type="Script" path="res://Scripts/personaje.gd" id="1_3uqtx"]
+[ext_resource type="Script" uid="uid://4lut5sb7da0f" path="res://Scripts/personaje.gd" id="1_3uqtx"]
 [ext_resource type="Texture2D" uid="uid://dqydg8h8ws00p" path="res://images/Lucy.png" id="1_oh42h"]
 [ext_resource type="Texture2D" uid="uid://n1kg61eev4fv" path="res://images/Lele.png" id="2_bpw3o"]
 [ext_resource type="FontFile" uid="uid://ex6sf638yhh5" path="res://font/Chonky Bunny.ttf" id="4_qka6c"]

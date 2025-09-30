@@ -1,7 +1,7 @@
 [gd_resource type="Resource" script_class="QuizThemeRuletaGraficos" load_steps=8 format=3 uid="uid://cjs8chq0pymj5"]
 
-[ext_resource type="Script" path="res://Scripts/Juegos/Ruleta/items/Gráfica-Datos/theme.gd" id="1_u4pr1"]
-[ext_resource type="Script" path="res://Scripts/Juegos/Ruleta/items/Gráfica-Datos/question.gd" id="2_ttrfm"]
+[ext_resource type="Script" uid="uid://3hp6sekllx3w" path="res://Scripts/Juegos/Ruleta/items/Gráfica-Datos/theme.gd" id="1_u4pr1"]
+[ext_resource type="Script" uid="uid://bqk5iw2w4mj5u" path="res://Scripts/Juegos/Ruleta/items/Gráfica-Datos/question.gd" id="2_ttrfm"]
 [ext_resource type="Resource" uid="uid://boqhvmy2ldbxh" path="res://resources/variado/Ruleta/Gráficas-Datos/1.tres" id="3_qlu43"]
 [ext_resource type="Resource" uid="uid://d0js8selhdbl0" path="res://resources/variado/Ruleta/Gráficas-Datos/2.tres" id="4_yc4le"]
 [ext_resource type="Resource" uid="uid://xvxcw70jqvl3" path="res://resources/variado/Ruleta/Gráficas-Datos/3.tres" id="5_jt5xc"]

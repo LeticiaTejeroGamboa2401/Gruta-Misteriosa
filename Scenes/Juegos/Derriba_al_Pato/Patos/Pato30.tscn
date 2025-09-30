@@ -1,6 +1,6 @@
 [gd_scene load_steps=57 format=3 uid="uid://bnt4u70ladyu5"]
 
-[ext_resource type="Script" path="res://Scripts/Juegos/DerribaPato/Patos/pato_30.gd" id="1_8bn1p"]
+[ext_resource type="Script" uid="uid://dufvp0l2bktjq" path="res://Scripts/Juegos/DerribaPato/Patos/pato_30.gd" id="1_8bn1p"]
 [ext_resource type="Texture2D" uid="uid://6khgagbpg4s8" path="res://images/Juegos/Derriba_al_Pato/30/1.png" id="1_pkrtw"]
 [ext_resource type="Texture2D" uid="uid://b411du3fscgx2" path="res://images/Juegos/Derriba_al_Pato/30/2.png" id="2_wdfmx"]
 [ext_resource type="Texture2D" uid="uid://b8x8d688xxot1" path="res://images/Juegos/Derriba_al_Pato/30/3.png" id="3_kw740"]

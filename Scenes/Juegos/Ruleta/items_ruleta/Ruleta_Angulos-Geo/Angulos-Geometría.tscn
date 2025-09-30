@@ -1,6 +1,6 @@
 [gd_scene load_steps=32 format=3 uid="uid://dfoifcypnt7aj"]
 
-[ext_resource type="Script" path="res://Scripts/Juegos/Ruleta/items/Angulos-Geometría/angulos_geometría.gd" id="1_d8b0k"]
+[ext_resource type="Script" uid="uid://c0rbxvrcbtlm1" path="res://Scripts/Juegos/Ruleta/items/Angulos-Geometría/angulos_geometría.gd" id="1_d8b0k"]
 [ext_resource type="Resource" uid="uid://c4sba73816o7o" path="res://resources/theme/Ruleta/theme_angulos.tres" id="2_cftym"]
 [ext_resource type="FontFile" uid="uid://ex6sf638yhh5" path="res://font/Chonky Bunny.ttf" id="2_o1p38"]
 [ext_resource type="Texture2D" uid="uid://b4icwsejgesow" path="res://images/Juegos/Ruleta/Fondo.png" id="2_owfds"]

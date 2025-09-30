@@ -1,6 +1,6 @@
 [gd_scene load_steps=6 format=3 uid="uid://wcxrwmkglnup"]
 
-[ext_resource type="Script" path="res://Scripts/Juegos/AtinalePuerquito/perdiste.gd" id="1_skiv2"]
+[ext_resource type="Script" uid="uid://cf824r0qfq0ab" path="res://Scripts/Juegos/AtinalePuerquito/perdiste.gd" id="1_skiv2"]
 [ext_resource type="Texture2D" uid="uid://ce5ueoos67bfl" path="res://images/fondo_juego_adiv_el_prod.png" id="2_6lk3k"]
 [ext_resource type="FontFile" uid="uid://bd321yblpf1ew" path="res://font/Supermarket of Love.ttf" id="3_d0j0w"]
 

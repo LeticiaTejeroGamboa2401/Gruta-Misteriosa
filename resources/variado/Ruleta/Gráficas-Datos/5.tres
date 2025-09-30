@@ -1,7 +1,7 @@
 [gd_resource type="Resource" script_class="QuizQuestionRuletitaGraficos" load_steps=3 format=3 uid="uid://bk4hi6coixyn5"]
 
 [ext_resource type="Texture2D" uid="uid://caxy6i5luwu8" path="res://images/Juegos/Ruleta/5.png" id="1_7l4k6"]
-[ext_resource type="Script" path="res://Scripts/Juegos/Ruleta/items/Gráfica-Datos/question.gd" id="1_l27nh"]
+[ext_resource type="Script" uid="uid://bqk5iw2w4mj5u" path="res://Scripts/Juegos/Ruleta/items/Gráfica-Datos/question.gd" id="1_l27nh"]
 
 [resource]
 script = ExtResource("1_l27nh")

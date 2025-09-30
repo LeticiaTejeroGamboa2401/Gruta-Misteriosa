@@ -1,7 +1,7 @@
 [gd_scene load_steps=31 format=3 uid="uid://mjqeihld7oa5"]
 
 [ext_resource type="Texture2D" uid="uid://bngvmn4pxexsn" path="res://images/Juegos/Atinale_al_Puerquito/fondo_confirmacion.png" id="1_2iut6"]
-[ext_resource type="Script" path="res://Scripts/Juegos/AtinalePuerquito/confirmar_juego.gd" id="1_kebh3"]
+[ext_resource type="Script" uid="uid://5d4jgs1r0j2v" path="res://Scripts/Juegos/AtinalePuerquito/confirmar_juego.gd" id="1_kebh3"]
 [ext_resource type="FontFile" uid="uid://ex6sf638yhh5" path="res://font/Chonky Bunny.ttf" id="2_a30ve"]
 [ext_resource type="FontFile" uid="uid://q4llc3uguqs2" path="res://font/KGCorneroftheSky.ttf" id="4_o46rl"]
 

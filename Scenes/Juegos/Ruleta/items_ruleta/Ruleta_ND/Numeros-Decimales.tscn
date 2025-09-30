@@ -1,6 +1,6 @@
 [gd_scene load_steps=32 format=3 uid="uid://dfoifcypnt7aj"]
 
-[ext_resource type="Script" path="res://Scripts/Juegos/Ruleta/items/Números-Decimales/numeros_decimales.gd" id="1_j2qad"]
+[ext_resource type="Script" uid="uid://bj3y1uxpypfne" path="res://Scripts/Juegos/Ruleta/items/Números-Decimales/numeros_decimales.gd" id="1_j2qad"]
 [ext_resource type="Texture2D" uid="uid://b4icwsejgesow" path="res://images/Juegos/Ruleta/Fondo.png" id="2_6k120"]
 [ext_resource type="FontFile" uid="uid://ex6sf638yhh5" path="res://font/Chonky Bunny.ttf" id="2_o1p38"]
 [ext_resource type="Resource" uid="uid://di78enfod7vcm" path="res://resources/theme/Ruleta/theme_decimal.tres" id="2_yv4k7"]

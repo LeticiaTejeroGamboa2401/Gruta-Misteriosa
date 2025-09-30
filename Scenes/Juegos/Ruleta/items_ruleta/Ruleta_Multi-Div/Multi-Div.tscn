@@ -1,6 +1,6 @@
 [gd_scene load_steps=32 format=3 uid="uid://dfoifcypnt7aj"]
 
-[ext_resource type="Script" path="res://Scripts/Juegos/Ruleta/items/Multiplicación-División/multi_div.gd" id="1_i2fll"]
+[ext_resource type="Script" uid="uid://hs7leq41o61q" path="res://Scripts/Juegos/Ruleta/items/Multiplicación-División/multi_div.gd" id="1_i2fll"]
 [ext_resource type="Resource" uid="uid://bg17r0a3pei3u" path="res://resources/theme/Ruleta/theme_multdiv.tres" id="2_1feoh"]
 [ext_resource type="Texture2D" uid="uid://b4icwsejgesow" path="res://images/Juegos/Ruleta/Fondo.png" id="2_nv8y3"]
 [ext_resource type="FontFile" uid="uid://ex6sf638yhh5" path="res://font/Chonky Bunny.ttf" id="2_o1p38"]

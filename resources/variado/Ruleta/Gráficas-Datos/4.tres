@@ -1,6 +1,6 @@
 [gd_resource type="Resource" script_class="QuizQuestionRuletitaGraficos" load_steps=3 format=3 uid="uid://x68sni6qbk0k"]
 
-[ext_resource type="Script" path="res://Scripts/Juegos/Ruleta/items/Gráfica-Datos/question.gd" id="1_d7xfi"]
+[ext_resource type="Script" uid="uid://bqk5iw2w4mj5u" path="res://Scripts/Juegos/Ruleta/items/Gráfica-Datos/question.gd" id="1_d7xfi"]
 [ext_resource type="Texture2D" uid="uid://clwpy0mtkvyan" path="res://images/Juegos/Ruleta/4.png" id="1_ul8f3"]
 
 [resource]

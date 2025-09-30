@@ -1,7 +1,7 @@
 [gd_resource type="Resource" script_class="QuizThemeRuletaFracciones" load_steps=9 format=3 uid="uid://bsw3yvp5a0grw"]
 
-[ext_resource type="Script" path="res://Scripts/Juegos/Ruleta/items/Fracciones/theme.gd" id="1_edodl"]
-[ext_resource type="Script" path="res://Scripts/Juegos/Ruleta/items/Fracciones/question.gd" id="2_ttby8"]
+[ext_resource type="Script" uid="uid://2m38krrvrxbg" path="res://Scripts/Juegos/Ruleta/items/Fracciones/theme.gd" id="1_edodl"]
+[ext_resource type="Script" uid="uid://w586p1y7q5at" path="res://Scripts/Juegos/Ruleta/items/Fracciones/question.gd" id="2_ttby8"]
 [ext_resource type="Resource" uid="uid://byesa7xsx03s8" path="res://resources/variado/Ruleta/Fracciones/1.tres" id="3_djocb"]
 [ext_resource type="Resource" uid="uid://cn2wp8vibjqkd" path="res://resources/variado/Ruleta/Fracciones/2.tres" id="4_uslg2"]
 [ext_resource type="Resource" uid="uid://dpyoggci7gqnw" path="res://resources/variado/Ruleta/Fracciones/3.tres" id="5_l2a0e"]

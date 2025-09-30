@@ -1,6 +1,6 @@
 [gd_scene load_steps=32 format=3 uid="uid://cyv5618hph7lk"]
 
-[ext_resource type="Script" path="res://Scripts/Juegos/Ruleta/items/Medición-Unidades/medición_unidades.gd" id="1_jkqia"]
+[ext_resource type="Script" uid="uid://dgb046wxb3oao" path="res://Scripts/Juegos/Ruleta/items/Medición-Unidades/medición_unidades.gd" id="1_jkqia"]
 [ext_resource type="Texture2D" uid="uid://b4icwsejgesow" path="res://images/Juegos/Ruleta/Fondo.png" id="2_ojx1l"]
 [ext_resource type="Resource" uid="uid://le8a8stww4ye" path="res://resources/theme/Ruleta/theme_unidades.tres" id="2_wo01p"]
 [ext_resource type="FontFile" uid="uid://ex6sf638yhh5" path="res://font/Chonky Bunny.ttf" id="2_xu3ek"]

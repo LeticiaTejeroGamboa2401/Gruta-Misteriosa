@@ -1,7 +1,7 @@
 [gd_resource type="Resource" script_class="QuizThemeRuletaProbabilidad" load_steps=9 format=3 uid="uid://dt1jevc2expru"]
 
-[ext_resource type="Script" path="res://Scripts/Juegos/Ruleta/items/Probabilidad-Básica/theme.gd" id="1_yx5eb"]
-[ext_resource type="Script" path="res://Scripts/Juegos/Ruleta/items/Probabilidad-Básica/question.gd" id="2_gp046"]
+[ext_resource type="Script" uid="uid://b0v5g7ulw3ycs" path="res://Scripts/Juegos/Ruleta/items/Probabilidad-Básica/theme.gd" id="1_yx5eb"]
+[ext_resource type="Script" uid="uid://bmw8n1fyj4e6e" path="res://Scripts/Juegos/Ruleta/items/Probabilidad-Básica/question.gd" id="2_gp046"]
 [ext_resource type="Resource" uid="uid://e1dt4jw58517" path="res://resources/variado/Ruleta/Probabilidad-Básica/1.tres" id="3_57dpt"]
 [ext_resource type="Resource" uid="uid://bx2p5y7px2rcd" path="res://resources/variado/Ruleta/Probabilidad-Básica/2.tres" id="4_3vv7u"]
 [ext_resource type="Resource" uid="uid://3mhuc6mom267" path="res://resources/variado/Ruleta/Probabilidad-Básica/3.tres" id="5_efcjq"]

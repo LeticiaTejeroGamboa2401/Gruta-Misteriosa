@@ -1,7 +1,7 @@
 [gd_scene load_steps=12 format=3 uid="uid://cdi8wd4866i6s"]
 
 [ext_resource type="Texture2D" uid="uid://c7rl57paaaf2m" path="res://images/Lucy_camina_bosque.png" id="1_8nlr0"]
-[ext_resource type="Script" path="res://Scripts/lucy_sale_casa.gd" id="1_g0f5i"]
+[ext_resource type="Script" uid="uid://hkwsqjlbssqb" path="res://Scripts/lucy_sale_casa.gd" id="1_g0f5i"]
 [ext_resource type="Texture2D" uid="uid://dlmspgti705ed" path="res://images/omitirBoton.png" id="3_f05c2"]
 [ext_resource type="Texture2D" uid="uid://ci1roshk4clhe" path="res://images/Siguiente.png" id="4_qsht5"]
 [ext_resource type="FontFile" uid="uid://bd321yblpf1ew" path="res://font/Supermarket of Love.ttf" id="5_hcxdn"]

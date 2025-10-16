@@ -1,5 +1,6 @@
 extends CharacterBody2D
 
+@export var can_animate: bool = true
 @export var speed: float = 100.0
 @onready var sprite: AnimatedSprite2D = $AnimatedSprite2D
 
@@ -18,17 +19,18 @@ func _physics_process(_delta):
 	elif Input.is_action_pressed("ui_up"):
 		direction.y -= 1
 
-	# Animaciones básicas (puedes expandirlas con más direcciones)
-	if direction.x > 0:
-		sprite.play("Derecha")
-	elif direction.x < 0:
-		sprite.play("Izquierda")
-	elif direction.y > 0:
-		sprite.play("Abajo")  # Asegúrate de tener esta animación
-	elif direction.y < 0:
-		sprite.play("Arriba")  # Asegúrate de tener esta animación
-	else:
-		sprite.stop()
+	if can_animate:
+		# Animaciones básicas (puedes expandirlas con más direcciones)
+		if direction.x > 0:
+			sprite.play("Derecha")
+		elif direction.x < 0:
+			sprite.play("Izquierda")
+		elif direction.y > 0:
+			sprite.play("Abajo")  # Asegúrate de tener esta animación
+		elif direction.y < 0:
+			sprite.play("Arriba")  # Asegúrate de tener esta animación
+		else:
+			sprite.stop()
 
 	# Movimiento
 	if direction != Vector2.ZERO:

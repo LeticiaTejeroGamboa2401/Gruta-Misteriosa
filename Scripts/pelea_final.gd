@@ -9,7 +9,13 @@ var current_phase: String = "dialog" # dialog -> dogs -> huaychivo -> victory/de
 
 var selected_weapon: String = "" # viene de Global.selected_weapon
 var processing_turn: bool = false # renombrado para evitar shadowing
-@export var test_selected_weapon: String = "weapon_c" # Para pruebas: si no está vacío, forza la arma seleccionada (ej: "correcta")
+
+# Timing constants (restaurables)
+const DIALOG_AUTO_ADVANCE_TIME: float = 3.0
+const RETURN_TO_IDLE_DELAY: float = 1.0
+const ENEMY_HIT_FLASH_DOGS: float = 0.14
+const ENEMY_HIT_FLASH_HUAYCHIVO: float = 0.18
+const POST_HIT_DELAY: float = 0.25
 
 # ----- Variables para el sistema de diálogos -----
 var dialog_lines: Array = []
@@ -20,6 +26,42 @@ var next_btn_cooldown: bool = false
 var player_instance: Node2D = null
 # Referencia al arma instanciada
 var player_weapon: Node2D = null
+var original_player_sprite_scale: Vector2 = Vector2.ONE
+
+
+# Helper para leer valores desde el autoload Global de forma robusta
+func _get_global_value(key: String, default_val):
+	# Intentar obtener autoload Global desde el árbol de nodos (/root/Global)
+	var g = get_node_or_null("/root/Global")
+	if g:
+		var v = null
+		if g.has_method("get"):
+			v = g.get(key)
+			if v != null:
+				print("DEBUG: _get_global_value found '%s' in /root/Global" % key)
+				return v
+
+	# Si no está en /root/Global, buscar en los hijos del root (por si el autoload tiene otro nombre)
+	var root = get_tree().get_root()
+	for c in root.get_children():
+		if c == null:
+			continue
+		if c == self:
+			continue
+		if c.has_method("get"):
+			var vv = c.get(key)
+			if vv != null:
+				print("DEBUG: _get_global_value found '%s' in node %s" % [key, str(c)])
+				return vv
+	# Intentar Engine singleton como último recurso
+	if Engine.has_singleton("Global"):
+		var gs = Engine.get_singleton("Global")
+		if gs and gs.has_method("get"):
+			var v2 = gs.get(key)
+			if v2 != null:
+				print("DEBUG: _get_global_value found '%s' via Engine.get_singleton(Global)" % key)
+				return v2
+	return default_val
 
 # ----- Rutas según tu estructura -----
 @onready var background: TextureRect = $Background
@@ -37,14 +79,14 @@ var player_weapon: Node2D = null
 @onready var healthbar: Control = $CanvasLayer/HealthBar
 @onready var action_buttons: Control = $CanvasLayer/ActionButtons
 @onready var btn_attack_dogs: Button = $CanvasLayer/ActionButtons/AttackDogs
-@onready var btn_attack_huaychivo: Button = get_node_or_null("CanvasLayer/ActionButtons/AttackHuaychivo") # Fix incorrect path if needed
+@onready var btn_attack_huaychivo: Button = null
 # Verificar path completo si el botón no se encuentra
 @onready var dialog_box: Control = $CanvasLayer/DialogBox
 @onready var dialog_label: Label = $CanvasLayer/DialogBox/Label
 @onready var huaychivo_label: Label = $CanvasLayer/HuaychivoLabel
 @onready var personaje_label: Label = $CanvasLayer/PersonajeLabel
 @onready var dialog_next_btn: Button = $CanvasLayer/NextButton
-@onready var dialog_card: ColorRect = $CanvasLayer/DialogBox/Card
+@onready var dialog_card: Panel = $CanvasLayer/DialogBox/Card
 var phase_label: Label = null
 
 # Barra de vida general de enemigos
@@ -126,95 +168,74 @@ func _spawn_enemy_healthbars() -> void:
 
 # ----- Inicialización -----
 func _initialize_scene() -> void:
-	if Engine.has_singleton("Global") and Global.has_property("selected_weapon"):
-		selected_weapon = Global.selected_weapon
-	# Preferir variable de prueba si fue configurada en el inspector
-	if test_selected_weapon != "":
-		selected_weapon = test_selected_weapon
-	if selected_weapon == "":
-		selected_weapon = "inutil"
+	# Cargar el arma desde el singleton Global de forma segura
+	# first try Global, then fallback to a simple test property on the scene (test_selected_weapon), then default
+	var gw = _get_global_value("selected_weapon", null)
+	if gw != null:
+		selected_weapon = str(gw)
+		print("DEBUG: selected_weapon leído desde Global: %s" % selected_weapon)
+		# Normalizar inmediatamente
+		selected_weapon = _normalize_weapon(selected_weapon)
+		print("DEBUG: selected_weapon normalizado a: %s" % selected_weapon)
+	else:
+		# Try a test override present in the .tscn (property on the root node)
+		var t = null
+		if has_method("get"):
+			# get() may return null if not present
+			t = get("test_selected_weapon") if has_method("get") else null
+		if t != null and str(t) != "":
+			selected_weapon = str(t)
+			print("DEBUG: selected_weapon leído desde propiedad de escena test_selected_weapon: %s" % selected_weapon)
+			selected_weapon = _normalize_weapon(selected_weapon)
+			print("DEBUG: selected_weapon normalizado a: %s" % selected_weapon)
+		else:
+			selected_weapon = "inutil"
+			print("ADVERTENCIA: No se encontró 'selected_weapon' en Global ni override; usando arma por defecto.")
 
-	# Normalizar el token del arma a "weapon_a|weapon_b|weapon_c" para evitar variantes
+	# --- PARA PRUEBAS ---
+	# Descomenta la siguiente línea para forzar un arma específica.
+	# selected_weapon = "weapon_c"
+
+	# Normalizar el token del arma
 	selected_weapon = _normalize_weapon(selected_weapon)
 
-
-	# Single attack button flow: use AttackDogs as the single attack button and hide the Huaychivo-specific button
-	# Conectar señales usando Callable para compatibilidad
+	# Conectar señales de UI
 	if btn_attack_dogs:
 		btn_attack_dogs.connect("pressed", Callable(self, "_on_attack_pressed"))
-	# Conectar el botón de atacar HuayChivo a la misma lógica unificada
+	# Intentar localizar el botón de atacar huaychivo; si no existe, reutilizar el botón de perros
+	if not btn_attack_huaychivo:
+		btn_attack_huaychivo = get_node_or_null("CanvasLayer/ActionButtons/AttackHuaychivo")
+		if not btn_attack_huaychivo:
+			btn_attack_huaychivo = btn_attack_dogs
 	if btn_attack_huaychivo:
-		# Conectarlo al handler unificado
 		if not btn_attack_huaychivo.is_connected("pressed", Callable(self, "_on_attack_pressed")):
 			btn_attack_huaychivo.connect("pressed", Callable(self, "_on_attack_pressed"))
-		# Solo se mostrará cuando sea relevante (fase huaychivo)
+	# Si no existe botón huaychivo en escena, crear uno y ubicarlo (para mantener interfaz anterior)
+	if action_buttons and not get_node_or_null("CanvasLayer/ActionButtons/AttackHuaychivo"):
+		if btn_attack_dogs:
+			var new_btn = Button.new()
+			new_btn.name = "AttackHuaychivo"
+			new_btn.text = "Atacar Huaychivo"
+			# copiar tamaño/flags del botón existente si aplica
+			new_btn.size_flags_horizontal = btn_attack_dogs.size_flags_horizontal
+			new_btn.size_flags_vertical = btn_attack_dogs.size_flags_vertical
+			action_buttons.add_child(new_btn)
+			new_btn.position = btn_attack_dogs.position + Vector2(140, 0)
+			btn_attack_huaychivo = new_btn
+			new_btn.connect("pressed", Callable(self, "_on_attack_pressed"))
 	if dialog_next_btn:
 		dialog_next_btn.connect("pressed", Callable(self, "_on_dialog_next_pressed"))
-	# Ocultar el botón Next al iniciar la escena
+
+	# Configuración inicial de la UI
 	dialog_next_btn.visible = false
-	# Mantener la card oculta hasta que empiecen los diálogos
 	if dialog_card:
 		dialog_card.visible = false
-	# Ocultar botones de ataque hasta que terminen los diálogos
 	if action_buttons:
 		action_buttons.visible = false
-
-	# Ocultar los labels de personajes inicialmente
 	if huaychivo_label:
 		huaychivo_label.visible = false
 	if personaje_label:
 		personaje_label.visible = false
-
-	# Mejorar la legibilidad del label de diálogo: usar autowrap inteligente y tamaño
-	if dialog_label:
-		# Preferir el modo de autowrap del TextServer (como hace DialogBox.gd) cuando esté disponible
-		if Engine.has_singleton("TextServer"):
-			dialog_label.autowrap_mode = TextServer.AUTOWRAP_WORD_SMART
-
-		# Intentar aumentar fuente si hay una fuente en el Theme (get_theme_font) o evitar tocar la fuente
-		var f = null
-		if dialog_label.has_method("get_theme_font"):
-			f = dialog_label.get_theme_font("font")
-		# Si encontramos un font tipo DynamicFont con size, ajustarlo; si no, aplicar fallback de escala
-		if f and ("size" in f):
-			var new_size = int(f.size * 1.4)
-			if new_size < 18:
-				new_size = 18
-			f.size = new_size
-			# Aplicar la fuente con la API disponible en esta versión de Godot
-			if dialog_label.has_method("add_font_override"):
-				dialog_label.add_font_override("font", f)
-			elif dialog_label.has_method("add_theme_font_override"):
-				dialog_label.add_theme_font_override("font", f)
-			elif dialog_label.has_method("add_theme_font"):
-				dialog_label.add_theme_font("font", f)
-			else:
-				print("Aviso: no se pudo aplicar la fuente (método desconocido en esta versión de Godot).")
-		else:
-			# Intentar cargar directamente la TTF importada y asignarla al Theme del Label.
-			var font_path := "res://font/Supermarket of Love.ttf"
-			var font_res = null
-			if FileAccess.file_exists(font_path):
-				font_res = load(font_path)
-			else:
-				var alt := "res://font/Chonky Bunny.ttf"
-				if FileAccess.file_exists(alt):
-					font_res = load(alt)
-			# Si cargamos algo, intentar aplicarlo (si el recurso soporta tamaño, no garantizado)
-			if font_res:
-				if "size" in font_res:
-					font_res.size = 32
-				# Aplicar la fuente con la API disponible
-				if dialog_label.has_method("add_font_override"):
-					dialog_label.add_font_override("font", font_res)
-				elif dialog_label.has_method("add_theme_font_override"):
-					dialog_label.add_theme_font_override("font", font_res)
-				elif dialog_label.has_method("add_theme_font"):
-					dialog_label.add_theme_font("font", font_res)
-				else:
-					print("Aviso: no se pudo aplicar la fuente a dialog_label; asigna un DynamicFont en el inspector.")
-			else:
-				print("Aviso: no se pudo cargar la fuente para dialog_label; asigna un DynamicFont en el inspector para ajustar tamaño.")
 
 	update_health_ui()
 	_spawn_player()
@@ -225,35 +246,116 @@ func _initialize_scene() -> void:
 
 	# Evitar parpadeo: asegurarse de que el HuayChivo empiece invisible (alpha 0)
 	if huaychivo:
-		# Preferir el Sprite2D hijo si existe
 		var sprite_child := huaychivo.get_node_or_null("Sprite2D")
 		if sprite_child:
 			sprite_child.modulate.a = 0.0
 			sprite_child.visible = true
-			# Voltear horizontalmente para que mire al lado correcto (espejo)
 			sprite_child.scale.x = - abs(sprite_child.scale.x)
 		else:
-			# Si no hay sprite hijo, girar el nodo principal
 			if huaychivo.has_method("set_flip_h") or huaychivo.has_property("flip_h"):
 				huaychivo.flip_h = true
 			else:
 				huaychivo.scale.x = - abs(huaychivo.scale.x)
 			huaychivo.visible = false
 
-		# Crear label de debug para mostrar fase actual/siguiente en pantalla
 		phase_label = Label.new()
 		phase_label.name = "PhaseLabel"
 		phase_label.text = ""
 		phase_label.position = Vector2(12, 12)
 		phase_label.add_theme_color_override("font_color", Color(1, 1, 1))
-		# Ajuste de alineación compatible: algunas versiones usan 'horizontal_alignment' o 'align'
 		if "horizontal_alignment" in phase_label:
 			phase_label.set("horizontal_alignment", 0)
 		elif "align" in phase_label:
 			phase_label.set("align", 0)
 		canvas.add_child(phase_label)
-		# Inicializar texto de fase
 		_set_phase_label_text()
+
+
+func _spawn_player() -> void:
+	# Cargar la escena del personaje desde el singleton Global de forma segura
+	var scene: PackedScene = null
+	var sc = _get_global_value("selected_character_scene", null)
+	if sc != null:
+		scene = sc
+		print("DEBUG: selected_character_scene leído desde Global")
+	if not scene:
+		print("ADVERTENCIA: No se encontró 'selected_character_scene' en Global. Cargando personaje por defecto.")
+		scene = load("res://Scenes/Lele_Player.tscn")
+
+	if scene and scene is PackedScene:
+		var inst = scene.instantiate()
+		inst.can_animate = false # Desactivar animación de movimiento
+		inst.position = player_spawn.position
+		# Voltear horizontalmente el nodo visual del personaje si existe
+		var sprite_child := inst.get_node_or_null("AnimatedSprite2D")
+		if sprite_child:
+			sprite_child.scale.x = - abs(sprite_child.scale.x)
+		else:
+			inst.scale.x = - abs(inst.scale.x)
+		characters.add_child(inst)
+		player_instance = inst
+
+		# Instanciar y adjuntar el arma seleccionada usando la textura guardada en Global
+		var weapon_texture: Texture2D = _get_global_value("selected_weapon_texture", null)
+
+		if weapon_texture:
+			# Crear un Sprite2D para mostrar el arma
+			player_weapon = Sprite2D.new()
+			player_weapon.texture = weapon_texture
+
+			# Ajustar escala del arma para que se vea proporcional y horizontal
+			player_weapon.scale = Vector2(0.15, 0.15) # Escala más pequeña para mejor proporción
+
+			# Rotar el arma 90 grados para que quede horizontal
+			# La imagen del arma está en vertical, necesitamos rotarla para que sea horizontal
+			player_weapon.rotation_degrees = -90
+
+			# Flip horizontal para que el arma apunte hacia la izquierda (dirección del enemigo)
+			player_weapon.flip_v = true
+
+			# Buscar marker de mano
+			var hand_marker = player_instance.get_node_or_null("Hand")
+			if hand_marker:
+				player_instance.add_child(player_weapon)
+				player_weapon.position = hand_marker.position + Vector2(-10, -15)
+			else:
+				# Si no hay marker, poner en una posición relativa al personaje
+				# Ajustada para que parezca que el personaje sostiene el arma
+				player_instance.add_child(player_weapon)
+				player_weapon.position = Vector2(-20, -10)
+
+			print("DEBUG: Arma instanciada con textura desde Global (rotada a horizontal)")
+		else:
+			print("ADVERTENCIA: No se encontró 'selected_weapon_texture' en Global")
+
+		# Forzar animación base al spawnear
+		var anim_sprite = inst.get_node_or_null("AnimatedSprite2D")
+		if anim_sprite:
+			original_player_sprite_scale = anim_sprite.scale
+			anim_sprite.play("Derecha")
+
+		# Slide hacia la izquierda tras spawnear
+		var slide_tween = create_tween()
+		var target_x = inst.position.x - 200.0
+		slide_tween.tween_property(inst, "position:x", target_x, 0.5).set_trans(Tween.TRANS_SINE).set_ease(Tween.EASE_OUT)
+		slide_tween.finished.connect(_stop_player_animation)
+
+func _stop_player_animation() -> void:
+	if player_instance:
+		var anim_sprite = player_instance.get_node_or_null("AnimatedSprite2D")
+		if anim_sprite:
+			anim_sprite.stop()
+
+func _return_player_to_idle() -> void:
+	if player_instance:
+		var anim_sprite = player_instance.get_node_or_null("AnimatedSprite2D")
+		if anim_sprite:
+			anim_sprite.scale = original_player_sprite_scale
+			anim_sprite.animation = "Derecha"
+			anim_sprite.frame = 0
+			anim_sprite.stop()
+
+# ----- El resto del archivo sin cambios -----
 
 # Funciones para manejar el texto de fase (top-level para evitar nested functions)
 func set_phase(new_phase: String) -> void:
@@ -330,15 +432,34 @@ func _set_phase_label_text() -> void:
 		phase_label.text = "Fase: %s\nSiguiente: %s" % [current_phase, next_phase]
 
 
-# Mostrar un mensaje temporal en la caja de diálogo durante `duration` segundos
+# Mostrar un mensaje temporal en la caja de diálogo durante `duration` segundos con animación
 func _show_temporary_message(text: String, duration: float = 1.4) -> void:
-	if dialog_box and huaychivo_label:
+	if dialog_box and dialog_label:
+		# Usar el dialog_label principal con animación suave
+		dialog_label.text = text
+		dialog_label.modulate.a = 0.0
+		dialog_label.visible = true
+		dialog_box.modulate.a = 0.0
 		dialog_box.visible = true
-		huaychivo_label.text = text
-		huaychivo_label.visible = true
+		huaychivo_label.visible = false
 		personaje_label.visible = false
-		dialog_label.visible = false
-	await _delay(duration)
+
+		# Fade in
+		var tween_in = create_tween()
+		tween_in.set_parallel(true)
+		tween_in.tween_property(dialog_box, "modulate:a", 1.0, 0.3).set_trans(Tween.TRANS_SINE)
+		tween_in.tween_property(dialog_label, "modulate:a", 1.0, 0.3).set_trans(Tween.TRANS_SINE)
+
+		await _delay(duration)
+
+		# Fade out al terminar
+		var tween_out = create_tween()
+		tween_out.set_parallel(true)
+		tween_out.tween_property(dialog_box, "modulate:a", 0.0, 0.3).set_trans(Tween.TRANS_SINE)
+		tween_out.tween_property(dialog_label, "modulate:a", 0.0, 0.3).set_trans(Tween.TRANS_SINE)
+
+		await tween_out.finished
+
 	# Al terminar el mensaje, ocultar la caja si no estamos en dialog
 	if current_phase != "dialog":
 		if dialog_box:
@@ -434,7 +555,7 @@ func _get_damage_for(target: String) -> int:
 			return damage # Golpe letal al Huaychivo
 		return 2 # Daño normal a perros
 	else:
-		# Default razonable: sin daño a ninguno (comportamiento seguro)
+		# Fallback razonable: sin daño a ninguno (comportamiento seguro)
 		return 0
 
 # Enemigos responden: un perro vivo ataca con daño menor; si ya no hay perros, HuayChivo ataca con daño mayor
@@ -451,7 +572,7 @@ func _enemy_retaliation() -> void:
 		print("Jugador recibe %d de daño por %d perro(s)" % [pdmg, alive_count])
 		# Efecto de impacto
 		hit_flash.visible = true
-		await _delay(0.14)
+		await _delay(ENEMY_HIT_FLASH_DOGS)
 		hit_flash.visible = false
 		update_health_ui()
 	else:
@@ -460,7 +581,7 @@ func _enemy_retaliation() -> void:
 		player_health -= hdmg
 		print("Jugador recibe %d de daño por HuayChivo" % hdmg)
 		hit_flash.visible = true
-		await _delay(0.18)
+		await _delay(ENEMY_HIT_FLASH_HUAYCHIVO)
 		hit_flash.visible = false
 		update_health_ui()
 
@@ -494,97 +615,9 @@ func _normalize_weapon(w: String) -> String:
 		return w
 	return "weapon_a"
 
-func _spawn_player() -> void:
-	var scene: PackedScene
-	if Engine.has_singleton("Global") and Global.has_property("selected_character_scene"):
-		scene = Global.selected_character_scene
-	else:
-		var scene_path = "res://Scenes/Lele_Player.tscn"
-		if FileAccess.file_exists(scene_path):
-			scene = load(scene_path)
-		else:
-			print("ADVERTENCIA: No se encontró la escena del personaje")
-
-	if scene and scene is PackedScene:
-		var inst = scene.instantiate()
-		inst.position = player_spawn.position
-		# Voltear horizontalmente el nodo visual del personaje si existe
-		var sprite_child := inst.get_node_or_null("Sprite2D")
-		if sprite_child:
-			sprite_child.scale.x = - abs(sprite_child.scale.x)
-		else:
-			inst.scale.x = - abs(inst.scale.x)
-		characters.add_child(inst)
-		player_instance = inst
-
-		# Instanciar y adjuntar el arma seleccionada según el valor de selected_weapon
-		var weapon_map = {
-			"weapon_a": "res://Scenes/Weapon_A.tscn",
-			"weapon_b": "res://Scenes/Weapon_B.tscn",
-			"weapon_c": "res://Scenes/Weapon_C.tscn"
-		}
-		var weapon_scene_path = weapon_map[selected_weapon] if weapon_map.has(selected_weapon) else "res://Scenes/Weapon_A.tscn"
-		if not FileAccess.file_exists(weapon_scene_path):
-			weapon_scene_path = "res://Scenes/Weapon_A.tscn"
-		if FileAccess.file_exists(weapon_scene_path):
-			var weapon_scene = load(weapon_scene_path)
-			if weapon_scene and weapon_scene is PackedScene:
-				player_weapon = weapon_scene.instantiate()
-				# Buscar marker de mano
-				var hand_marker = player_instance.get_node_or_null("Hand")
-				if hand_marker:
-					player_instance.add_child(player_weapon)
-					player_weapon.position = hand_marker.position
-				else:
-					# Si no hay marker, poner en el centro
-					player_instance.add_child(player_weapon)
-					player_weapon.position = Vector2.ZERO
-
-
-		# Slide hacia la izquierda tras spawnear
-		var slide_tween = create_tween()
-		var target_x = inst.position.x - 200.0
-		slide_tween.tween_property(inst, "position:x", target_x, 0.5).set_trans(Tween.TRANS_SINE).set_ease(Tween.EASE_OUT)
-
-# ----- Configuración -----
-func _configure_dogs_collision() -> void:
-	# Perros en capa 2 (valor entero 2) y solo colisionan con la capa 1 (jugador/ataques)
-	nahual1.collision_layer = 2
-	nahual2.collision_layer = 2
-	nahual3.collision_layer = 2
-	nahual1.collision_mask = 1
-	nahual2.collision_mask = 1
-	nahual3.collision_mask = 1
-
-func _set_dogs_target_positions(target_x: float) -> void:
-	nahual1.target_position_x = target_x
-	nahual2.target_position_x = target_x
-	nahual3.target_position_x = target_x
-
-func _configure_dogs_properties() -> void:
-	nahual1.target_position_x = 575
-	nahual2.target_position_x = 575
-	nahual3.target_position_x = 575
-
-	nahual1.speed = 200
-	nahual2.speed = 220
-	nahual3.speed = 240
-
-# ----- Métodos faltantes -----
-func _on_attack_dogs_pressed() -> void:
-	# Punto de entrada legacy re-encaminado al handler unificado
-	_on_attack_pressed()
-
-func _on_attack_huaychivo_pressed() -> void:
-	# Punto de entrada re-encaminado al handler unificado
-	_on_attack_pressed()
-
+# ----- Métodos de ataque -----
 func _on_attack_pressed() -> void:
-	# Unified attack handler. If there are any dogs alive, attack the first one.
-	# Una vez muertos todos, atacar al HuayChivo.
 	# Solo aceptar ataques en fases de combate
-	print("DEBUG: Ataque iniciado en fase: %s, arma: %s" % [current_phase, selected_weapon])
-
 	if current_phase != "dogs" and current_phase != "huaychivo":
 		print("No se puede atacar en la fase actual: %s" % current_phase)
 		return
@@ -592,95 +625,93 @@ func _on_attack_pressed() -> void:
 	if processing_turn:
 		print("DEBUG: Ya hay un turno en proceso, ignorando")
 		return
-	processing_turn = true
 
-	# Deshabilitar botón hasta que termine el turno
+	# Iniciar el turno
+	processing_turn = true
 	if btn_attack_dogs:
 		btn_attack_dogs.disabled = true
 
-	# ...existing code...
+	# --- Animación de golpe de Lele ---
+	if player_instance:
+		var anim_sprite = player_instance.get_node_or_null("AnimatedSprite2D")
+		if anim_sprite and anim_sprite.sprite_frames and "Golpe" in anim_sprite.sprite_frames.get_animation_names():
+			# Aplicar escala correctiva para la animación "Golpe"
+			var corrective_scale_factor = 324.0 / 768.0 # idle_height / golpe_height
+			anim_sprite.scale = original_player_sprite_scale * corrective_scale_factor
+			anim_sprite.play("Golpe")
+			get_tree().create_timer(RETURN_TO_IDLE_DELAY).timeout.connect(_return_player_to_idle)
 
-	# Si aún hay perros vivos, reutilizar la lógica existente
-	var idx: int = -1
+	# Ejecutar la lógica del turno de forma asíncrona
+	_execute_combat_turn()
+
+func _execute_combat_turn() -> void:
+	# Lógica de ataque a los perros
+	var dog_to_attack_idx: int = -1
 	for i in range(dogs_alive.size()):
 		if dogs_alive[i]:
-			idx = i
+			dog_to_attack_idx = i
 			break
 
-	if idx != -1:
-		# atacar perro usando daño por arma
+	if dog_to_attack_idx != -1:
 		var dmg = _get_damage_for("dog")
-		dogs_health[idx] -= dmg
-		# evitar HP negativo
-		if dogs_health[idx] < 0:
-			dogs_health[idx] = 0
-		print("Perro %d golpeado (unificado), daño: %d, vida restante: %d" % [idx + 1, dmg, dogs_health[idx]])
-		if dogs_health[idx] <= 0:
-			dogs_alive[idx] = false
-			var node_path := "Characters/Dogs/nahual%d" % (idx + 1)
-			if has_node(node_path):
-				var dog_node := get_node(node_path)
-				if dog_node:
-					dog_node.hide()
-					_play_death_effect_at(dog_node.global_position)
-		# actualizar UI (la UI de enemigos es mínima por ahora)
+		dogs_health[dog_to_attack_idx] -= dmg
+		if dogs_health[dog_to_attack_idx] < 0:
+			dogs_health[dog_to_attack_idx] = 0
+
+		print("Perro %d golpeado, daño: %d, vida restante: %d" % [dog_to_attack_idx + 1, dmg, dogs_health[dog_to_attack_idx]])
+
+		if dogs_health[dog_to_attack_idx] <= 0:
+			dogs_alive[dog_to_attack_idx] = false
+			var dog_node = get_node_or_null("Characters/Dogs/nahual%d" % (dog_to_attack_idx + 1))
+			if dog_node:
+				dog_node.hide()
+				_play_death_effect_at(dog_node.global_position)
+
 		update_health_ui()
-
-		# Después del ataque del jugador, permitir una breve respuesta enemiga
-		await _delay(0.25)
+		await _delay(POST_HIT_DELAY)
 		await _enemy_retaliation()
-		processing_turn = false
-		# Reactivar botón si la fase aún permite atacar
-		if current_phase == "dogs" or current_phase == "huaychivo":
-			if btn_attack_dogs:
-				btn_attack_dogs.disabled = false
-		# Verificar si quedan perros
-		var any_alive := false
-		for a in dogs_alive:
-			if a:
-				any_alive = true
-				break
-		if not any_alive:
-			print("DEBUG: Todos los perros han sido derrotados")
-			# Mostrar mensaje intermedio y luego cambiar a fase HuayChivo
-			await _show_temporary_message("¡Todos los perros derrotados! Ahora enfrenta al Huaychivo", 1.4)
-			set_phase("huaychivo")
 
-			# Asegurar que el botón esté configurado correctamente para la fase huaychivo
+		# Verificar si quedan perros
+		var any_dog_alive = false
+		for is_alive in dogs_alive:
+			if is_alive:
+				any_dog_alive = true
+				break
+
+		if not any_dog_alive:
+			print("DEBUG: Todos los perros han sido derrotados")
+			await _show_temporary_message("¡Todos los perros derrotados! Ahora enfrenta al Huaychivo", DIALOG_AUTO_ADVANCE_TIME)
+			set_phase("huaychivo")
 			if btn_attack_dogs:
 				btn_attack_dogs.text = "Atacar Huaychivo"
-				btn_attack_dogs.disabled = false
-				print("DEBUG: Botón actualizado para atacar al Huaychivo")
-		return
 
-# Si no hay perros, atacar al HuayChivo
-	if current_phase == "huaychivo":
-		print("DEBUG: Atacando al huaychivo con arma: %s" % selected_weapon)
+	# Lógica de ataque al Huaychivo (solo si no quedan perros)
+	elif current_phase == "huaychivo":
 		var dmg_h = _get_damage_for("huaychivo")
-		print("DEBUG: selected_weapon='%s' -> damage to huaychivo computed=%d" % [selected_weapon, dmg_h])
 		huaychivo_health -= dmg_h
 		print("HuayChivo golpeado, daño: %d, vida restante: %d" % [dmg_h, huaychivo_health])
 
-		# Efecto visual del golpe
 		if huaychivo:
 			_play_death_effect_at(huaychivo.global_position)
 
 		update_health_ui()
 
-		# Si el golpe fue letal (arma correcta), victoria inmediata sin contraataque
 		if huaychivo_health <= 0:
 			print("DEBUG: ¡Victoria! Huaychivo derrotado.")
 			if huaychivo:
 				huaychivo.hide()
-			processing_turn = false
 			set_phase("victory")
-			return # Solo si el HuayChivo sigue vivo, contraataque
-		await _delay(0.25)
+			# No reactivar el botón ni el turno, el juego termina
+			return
+
+		await _delay(POST_HIT_DELAY)
 		await _enemy_retaliation()
+
+	# Fin del turno: reactivar controles si el combate continúa
+	if current_phase == "dogs" or current_phase == "huaychivo":
 		processing_turn = false
-		if current_phase == "dogs" or current_phase == "huaychivo":
-			if btn_attack_dogs:
-				btn_attack_dogs.disabled = false
+		if btn_attack_dogs:
+			btn_attack_dogs.disabled = false
 
 
 func update_health_ui() -> void:
@@ -738,51 +769,59 @@ func _get_huaychivo_max_hp() -> int:
 
 # Secuencias finales: victoria y derrota
 func victory() -> void:
-	# Mostrar mensaje de victoria y cambiar de escena o volver al mapa
-	if dialog_box and huaychivo_label:
+	# Mostrar mensaje de victoria con animación épica
+	if dialog_box and dialog_label:
+		# Usar el dialog_label principal para mensaje de victoria
+		dialog_label.text = "¡VICTORIA!\n\nHas derrotado al Huaychivo.\nEl bastón de chechén ha demostrado su poder sagrado.\n¡Puedes regresar a casa!"
+		dialog_label.modulate.a = 0.0
+		dialog_label.visible = true
+		dialog_box.modulate.a = 0.0
 		dialog_box.visible = true
-
-		# Mensaje educativo sobre mitología maya
-		if selected_weapon == "weapon_c":
-			huaychivo_label.text = "¡Victoria! Has derrotado al Huaychivo con el bastón de chechén, el arma tradicional maya. El chechén es un árbol sagrado cuya madera tiene propiedades especiales. En la cultura maya, elegir la herramienta correcta es clave para resolver problemas."
-		else:
-			# No debería ocurrir, pero por si acaso
-			huaychivo_label.text = "¡Victoria! Has derrotado al Huaychivo y puedes regresar a casa"
-
-		huaychivo_label.visible = true
+		huaychivo_label.visible = false
 		personaje_label.visible = false
-		dialog_label.visible = false
-	# pequeños efectos visuales
-	await _delay(1.2)
-	# Intentar ir a la escena de la casa si existe, sino mostrar GameOver
-	if FileAccess.file_exists("res://Casa.tscn"):
-		get_tree().change_scene_to_file("res://Casa.tscn")
-	elif FileAccess.file_exists("res://Scenes/mapa.tscn"):
-		get_tree().change_scene_to_file("res://Scenes/mapa.tscn")
-	else:
-		# Fallback: ir a GameOver (que muestra imagen estática)
-		if FileAccess.file_exists("res://Scenes/GameOver.tscn"):
-			get_tree().change_scene_to_file("res://Scenes/GameOver.tscn")
+
+		# Animación de entrada dramática
+		var tween = create_tween()
+		tween.set_parallel(true)
+		tween.tween_property(dialog_box, "modulate:a", 1.0, 0.8).set_trans(Tween.TRANS_BOUNCE).set_ease(Tween.EASE_OUT)
+		tween.tween_property(dialog_label, "modulate:a", 1.0, 0.8).set_trans(Tween.TRANS_BOUNCE).set_ease(Tween.EASE_OUT)
+		tween.tween_property(dialog_label, "scale", Vector2(1.1, 1.1), 0.5).set_trans(Tween.TRANS_ELASTIC).set_ease(Tween.EASE_OUT)
+
+	# Esperar un poco antes de cambiar de escena
+	await get_tree().create_timer(3.5).timeout
+
+	# Ir a la escena de regreso a casa
+	get_tree().change_scene_to_file("res://Scenes/ReturnHome.tscn")
 
 func defeat() -> void:
-	# Mostrar mensaje educativo de derrota según el arma elegida
-	if dialog_box and huaychivo_label:
-		dialog_box.visible = true
+	# Mostrar mensaje educativo de derrota según el arma elegida con animación
+	if dialog_box and dialog_label:
+		var defeat_message = ""
 
 		# Personalizar mensaje según el arma elegida
 		if selected_weapon == "weapon_a":
-			huaychivo_label.text = "Has sido derrotado. La jícara decorativa no es un arma, sino un recipiente ceremonial maya. Para vencer al Huaychivo necesitas un arma con poder sagrado. Intenta con el bastón de chechén."
+			defeat_message = "DERROTA\n\nLa jícara no es un arma.\nEs un recipiente ceremonial maya.\n\nNecesitas el bastón de chechén\npara vencer al Huaychivo."
 		elif selected_weapon == "weapon_b":
-			huaychivo_label.text = "Has sido derrotado. La honda yucateca solo funciona contra animales pequeños. El Huaychivo es una criatura mágica que solo puede ser vencida con un arma especial: el bastón de chechén."
+			defeat_message = "DERROTA\n\nLa honda solo funciona\ncontra animales pequeños.\n\nNecesitas el bastón de chechén\npara vencer al Huaychivo."
 		else:
-			huaychivo_label.text = "Has sido derrotado... Intenta de nuevo eligiendo el bastón de chechén para vencer al Huaychivo."
+			defeat_message = "DERROTA\n\nHas sido derrotado...\n\nIntenta de nuevo con\nel bastón de chechén."
 
-		huaychivo_label.visible = true
+		dialog_label.text = defeat_message
+		dialog_label.modulate.a = 0.0
+		dialog_label.visible = true
+		dialog_box.modulate.a = 0.0
+		dialog_box.visible = true
+		huaychivo_label.visible = false
 		personaje_label.visible = false
-		dialog_label.visible = false
 
-	# Esperar 3 segundos antes de cambiar
-	await _delay(3.0)
+		# Animación de entrada
+		var tween = create_tween()
+		tween.set_parallel(true)
+		tween.tween_property(dialog_box, "modulate:a", 1.0, 0.6).set_trans(Tween.TRANS_SINE)
+		tween.tween_property(dialog_label, "modulate:a", 1.0, 0.6).set_trans(Tween.TRANS_SINE)
+
+	# Esperar 4 segundos antes de cambiar
+	await _delay(4.0)
 
 	# Ir a GameOver; su script hará la transición automática a la selección de armas.
 	if FileAccess.file_exists("res://Scenes/GameOver.tscn"):
@@ -819,6 +858,56 @@ func _configure_collision_layers() -> void:
 				print("Advertencia: no se encontró CharacterBody2D para HuayChivo; capas no configuradas")
 	else:
 		print("Advertencia: huaychivo_body no encontrado, no se cambiaron sus capas")
+
+
+## ----- Missing helper implementations added below -----
+
+func _configure_dogs_collision() -> void:
+	# Asegurar que los perros estén en la capa 2 y colisionen con el jugador (capa 1)
+	for i in range(3):
+		var path = "Characters/Dogs/nahual%d" % (i + 1)
+		var node = get_node_or_null(path)
+		if node:
+			# si el nodo es CharacterBody2D o Area2D, ajustar capas
+			if node is CharacterBody2D:
+				node.collision_layer = 2
+				node.collision_mask = 1
+			else:
+				# buscar Area2D hijo
+				var area = node.get_node_or_null("Area2D")
+				if area:
+					area.collision_layer = 2
+					area.collision_mask = 1
+				else:
+					print("Advertencia: no se encontró Area2D para %s" % path)
+
+func _configure_dogs_properties() -> void:
+	# Inicializar propiedades simples que otros scripts esperan (target_position_x, velocity)
+	for n in [nahual1, nahual2, nahual3]:
+		if n:
+			if not ("target_position_x" in n):
+				# usar set metaproperty si fuera necesario
+				n.target_position_x = 0
+			# asegurar que exista velocity
+			if not ("velocity" in n):
+				n.velocity = Vector2.ZERO
+
+func can_damage_enemy(target_type: String) -> bool:
+	# Devuelve si el arma seleccionada puede dañar al tipo indicado
+	var dmg = _get_damage_for(target_type)
+	return dmg > 0
+
+func attack_dogs() -> void:
+	# Lógica pública para que UI invoque atacar a perros
+	# Redirige a la misma lógica que _on_attack_pressed cuando estamos en fase de perros
+	if current_phase != "dogs":
+		print("attack_dogs ignorado: fase actual = %s" % current_phase)
+		return
+	_on_attack_pressed()
+
+func change_phase(new_phase: String) -> void:
+	# Wrapper sencillo para cambiar fase desde otras escenas o botones
+	set_phase(new_phase)
 
 
 func _get_dialogues_for_weapon() -> Array:
@@ -875,36 +964,93 @@ func _show_current_dialog_line() -> void:
 		var line = dialog_lines[current_dialog_index]
 		if line.begins_with("HUAYCHIVO:"):
 			var text = line.substr(10).strip_edges() # Remove "HUAYCHIVO: "
+
+			# Animación de entrada suave para el diálogo del Huaychivo
 			huaychivo_label.text = text
+			huaychivo_label.modulate.a = 0.0
 			huaychivo_label.visible = true
 			personaje_label.visible = false
-			dialog_label.visible = false # Hide the main label
+			dialog_label.visible = false
+
 			# Ocultar DialogBox para personajes
 			if dialog_box:
 				dialog_box.visible = false
+
+			# Fade in del label del Huaychivo
+			var tween = create_tween()
+			tween.tween_property(huaychivo_label, "modulate:a", 1.0, 0.4).set_trans(Tween.TRANS_SINE).set_ease(Tween.EASE_OUT)
+
+			# Auto-avanzar después de DIALOG_AUTO_ADVANCE_TIME si el jugador no interacciona
+			var my_idx = current_dialog_index
+			await _delay(DIALOG_AUTO_ADVANCE_TIME)
+			if current_dialog_index == my_idx and not next_btn_cooldown:
+				next_btn_cooldown = true
+				current_dialog_index += 1
+				_show_current_dialog_line()
+				await _delay(0.1)
+				next_btn_cooldown = false
 		elif line.begins_with("PERSONAJE:"):
 			var text = line.substr(10).strip_edges() # Remove "PERSONAJE: "
+
+			# Animación de entrada suave para el diálogo del Personaje
 			personaje_label.text = text
+			personaje_label.modulate.a = 0.0
 			personaje_label.visible = true
 			huaychivo_label.visible = false
-			dialog_label.visible = false # Hide the main label
+			dialog_label.visible = false
+
 			# Ocultar DialogBox para personajes
 			if dialog_box:
 				dialog_box.visible = false
+
+			# Fade in del label del Personaje
+			var tween = create_tween()
+			tween.tween_property(personaje_label, "modulate:a", 1.0, 0.4).set_trans(Tween.TRANS_SINE).set_ease(Tween.EASE_OUT)
+
+			# Auto-avanzar después de DIALOG_AUTO_ADVANCE_TIME si el jugador no interacciona
+			var my_idx2 = current_dialog_index
+			await _delay(DIALOG_AUTO_ADVANCE_TIME)
+			if current_dialog_index == my_idx2 and not next_btn_cooldown:
+				next_btn_cooldown = true
+				current_dialog_index += 1
+				_show_current_dialog_line()
+				await _delay(0.1)
+				next_btn_cooldown = false
 		else:
-			# Explicación: mostrar en dialog_label dentro de DialogBox
+			# Explicación: mostrar en dialog_label dentro de DialogBox con animación
 			dialog_label.text = line
+			dialog_label.modulate.a = 0.0
 			dialog_label.visible = true
 			huaychivo_label.visible = false
 			personaje_label.visible = false
-			# Mostrar DialogBox para explicaciones
+
+			# Mostrar DialogBox para explicaciones con animación
 			if dialog_box:
+				dialog_box.modulate.a = 0.0
 				dialog_box.visible = true
+				var tween = create_tween()
+				tween.set_parallel(true)
+				tween.tween_property(dialog_box, "modulate:a", 1.0, 0.5).set_trans(Tween.TRANS_SINE)
+				tween.tween_property(dialog_label, "modulate:a", 1.0, 0.5).set_trans(Tween.TRANS_SINE)
+
 			if dialog_card:
 				dialog_card.visible = true
+
 		dialog_next_btn.visible = true
 	else:
-		# Diálogo terminado: ocultar UI de diálogo y pasar a fase de perros
+		# Diálogo terminado: ocultar UI de diálogo con fade out y pasar a fase de perros
+		var tween = create_tween()
+		tween.set_parallel(true)
+
+		if dialog_box:
+			tween.tween_property(dialog_box, "modulate:a", 0.0, 0.3)
+		if huaychivo_label and huaychivo_label.visible:
+			tween.tween_property(huaychivo_label, "modulate:a", 0.0, 0.3)
+		if personaje_label and personaje_label.visible:
+			tween.tween_property(personaje_label, "modulate:a", 0.0, 0.3)
+
+		await tween.finished
+
 		if dialog_box:
 			dialog_box.visible = false
 		if dialog_next_btn:
@@ -915,6 +1061,7 @@ func _show_current_dialog_line() -> void:
 			personaje_label.visible = false
 		if action_buttons:
 			action_buttons.visible = true
+
 		# Actualizar fase a 'dogs'
 		set_phase("dogs")
 

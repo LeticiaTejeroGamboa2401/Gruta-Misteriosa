@@ -4,9 +4,10 @@ extends Node
 var selected_character_scene: PackedScene = null
 var selected_character_name: String = ""
 var selected_weapon = ""
+var selected_weapon_texture: Texture2D = null
 
 # Reaparición en el mapa
-var respawn_position: Vector2 = Vector2(100, 250)  # Posición por defecto
+var respawn_position: Vector2 = Vector2(100, 250) # Posición por defecto
 var use_respawn_in_scene: String = "res://Scenes/mapa.tscn"
 
 # Status de los juegos
@@ -21,7 +22,7 @@ var juegos_ganados = {
 }
 
 # Vidas en el juego del nahual
-var lives: int =3
+var lives: int = 3
 
 var ruleta_rotation := 0.0
 var area_seleccionada := ""

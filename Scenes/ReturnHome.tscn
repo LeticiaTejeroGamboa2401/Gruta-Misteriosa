@@ -1,0 +1,27 @@
+[gd_scene load_steps=5 format=3 uid="uid://b1y2x3w4q5r6d"]
+
+[ext_resource type="Script" uid="uid://c5hasmslujoej" path="res://Scripts/return_home.gd" id="1_xyzab"]
+[ext_resource type="Texture2D" uid="uid://cugna1ksux3jk" path="res://fondo_regreso_casa.jpg" id="2_3jt17"]
+[ext_resource type="Texture2D" uid="uid://b7jehgtxaogvs" path="res://madre.png" id="3_u8rm5"]
+[ext_resource type="Texture2D" uid="uid://ceoeykfqlv01e" path="res://padre.png" id="4_ekemg"]
+
+[node name="ReturnHome" type="Node2D"]
+script = ExtResource("1_xyzab")
+
+[node name="FondoRegresoCasa" type="Sprite2D" parent="."]
+position = Vector2(576, 324)
+scale = Vector2(0.972973, 0.75)
+texture = ExtResource("2_3jt17")
+metadata/_edit_lock_ = true
+
+[node name="Madre" type="Sprite2D" parent="."]
+position = Vector2(504, 360)
+scale = Vector2(0.146254, 0.133249)
+texture = ExtResource("3_u8rm5")
+metadata/_edit_lock_ = true
+
+[node name="Padre" type="Sprite2D" parent="."]
+position = Vector2(560, 360)
+scale = Vector2(0.136594, 0.13769)
+texture = ExtResource("4_ekemg")
+metadata/_edit_lock_ = true

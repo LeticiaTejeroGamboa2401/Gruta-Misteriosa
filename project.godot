@@ -26,4 +26,4 @@ window/stretch/mode="canvas_items"
 
 [editor_plugins]
 
-enabled=PackedStringArray("res://addons/gamedev_assistant/plugin.cfg")
+enabled=PackedStringArray()

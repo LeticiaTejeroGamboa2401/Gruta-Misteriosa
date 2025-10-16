@@ -1,10 +1,11 @@
-[gd_scene load_steps=20 format=3 uid="uid://dp7f17w34esul"]
+[gd_scene load_steps=23 format=3 uid="uid://dp7f17w34esul"]
 
 [ext_resource type="Script" uid="uid://dv8sxd5fov15g" path="res://Scripts/lele_player.gd" id="1_83m7h"]
 [ext_resource type="Texture2D" uid="uid://ce3vft1f7lti8" path="res://personajes/Lele_Derecha.png" id="1_xq3gg"]
 [ext_resource type="Texture2D" uid="uid://j6r7bod16nu" path="res://images/Lele_Abajo.png" id="2_5huft"]
 [ext_resource type="Texture2D" uid="uid://qouemu6hm1f" path="res://personajes/Lele_Izquierda.png" id="2_afxyx"]
 [ext_resource type="Texture2D" uid="uid://cpwoberbelqmv" path="res://images/Lele_Arriba.png" id="3_c7i2v"]
+[ext_resource type="Texture2D" uid="uid://dm47tpe42rrmw" path="res://lele_frames_golpe.png" id="5_ut1dr"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_udjv5"]
 size = Vector2(98, 208)
@@ -44,6 +45,14 @@ region = Rect2(139, 0, 139, 324)
 [sub_resource type="AtlasTexture" id="AtlasTexture_a3gxk"]
 atlas = ExtResource("1_xq3gg")
 region = Rect2(0, 324, 139, 324)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_r6swp"]
+atlas = ExtResource("5_ut1dr")
+region = Rect2(0, 0, 672, 768)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_co744"]
+atlas = ExtResource("5_ut1dr")
+region = Rect2(0, 768, 672, 768)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_a15ik"]
 atlas = ExtResource("2_afxyx")
@@ -97,9 +106,20 @@ animations = [{
 "duration": 1.0,
 "texture": SubResource("AtlasTexture_a3gxk")
 }],
-"loop": true,
+"loop": false,
 "name": &"Derecha",
 "speed": 7.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_r6swp")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_co744")
+}],
+"loop": false,
+"name": &"Golpe",
+"speed": 2.0
 }, {
 "frames": [{
 "duration": 1.0,
@@ -125,9 +145,9 @@ shape = SubResource("RectangleShape2D_udjv5")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 position = Vector2(-0.999998, -0.999996)
-scale = Vector2(0.715827, 0.62963)
+scale = Vector2(0.7, 0.7)
 sprite_frames = SubResource("SpriteFrames_mhkpy")
-animation = &"Derecha"
+animation = &"Izquierda"
 
 [node name="Hand" type="Marker2D" parent="."]
 position = Vector2(48, 48)

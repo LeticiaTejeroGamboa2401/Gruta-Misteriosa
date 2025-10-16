@@ -1,0 +1,18 @@
+[gd_scene load_steps=3 format=3 uid="uid://dpsvj8a0j1m0t"]
+
+[ext_resource type="Script" uid="uid://br7qvkwffkkd5" path="res://Scripts/walk_to_battle.gd" id="1_abcde"]
+[ext_resource type="Texture2D" uid="uid://c4ljuuy56jopt" path="res://images/Bosque.jpg" id="2_fghij"]
+
+[node name="WalkToBattle" type="Node2D"]
+script = ExtResource("1_abcde")
+
+[node name="Background" type="TextureRect" parent="."]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_top = 16.0
+offset_right = 1152.0
+offset_bottom = 648.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("2_fghij")

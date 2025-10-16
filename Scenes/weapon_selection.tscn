@@ -1,11 +1,13 @@
-[gd_scene load_steps=16 format=3 uid="uid://db5edwl1b6gqq"]
+[gd_scene load_steps=18 format=3 uid="uid://db5edwl1b6gqq"]
 
 [ext_resource type="Script" uid="uid://c4x38eeblyd33" path="res://Scenes/weapon_selection.gd" id="1_nh8ak"]
 [ext_resource type="Texture2D" uid="uid://3hqd2syyrgry" path="res://images/HistoriaCompa.jpg" id="2_eedlv"]
 [ext_resource type="FontFile" uid="uid://bd321yblpf1ew" path="res://font/Supermarket of Love.ttf" id="3_51dip"]
+[ext_resource type="Texture2D" uid="uid://h1rrkoofao4q" path="res://images/weapon_a.png" id="4_47cll"]
 [ext_resource type="Texture2D" uid="uid://bwf8mkwr4gktp" path="res://images/siguiente_flecha.png" id="4_h1xwn"]
-[ext_resource type="Texture2D" uid="uid://4w0ugse17nmx" path="res://assets/lanza.png" id="4_yeakg"]
 [ext_resource type="Texture2D" uid="uid://so77a6nnvylc" path="res://assets/Amulet.png" id="5_hv7js"]
+[ext_resource type="Texture2D" uid="uid://bq6ntj4ujal4u" path="res://images/weapon_b.png" id="5_v5kh5"]
+[ext_resource type="Texture2D" uid="uid://brnkedlxkbxrl" path="res://images/weapon_c.png" id="6_38s7c"]
 [ext_resource type="FontFile" uid="uid://ex6sf638yhh5" path="res://font/Chonky Bunny.ttf" id="6_owu1s"]
 
 [sub_resource type="Animation" id="Animation_r4jw5"]
@@ -245,13 +247,11 @@ offset_left = -46.0
 offset_top = -45.0
 offset_right = 44.0
 offset_bottom = 45.0
-metadata/_edit_lock_ = true
 
 [node name="Lanza" type="Sprite2D" parent="WeaponOptions/WeaponA"]
-position = Vector2(7, 15)
-scale = Vector2(0.0832031, 0.0588672)
-texture = ExtResource("4_yeakg")
-metadata/_edit_lock_ = true
+position = Vector2(54, 34)
+scale = Vector2(0.250216, 0.23661)
+texture = ExtResource("4_47cll")
 
 [node name="WeaponB" type="TextureButton" parent="WeaponOptions"]
 layout_mode = 1
@@ -266,10 +266,9 @@ offset_right = 45.0
 offset_bottom = 45.0
 
 [node name="Lanza2" type="Sprite2D" parent="WeaponOptions/WeaponB"]
-position = Vector2(42, 39)
-scale = Vector2(0.0832031, 0.0588672)
-texture = ExtResource("4_yeakg")
-metadata/_edit_lock_ = true
+position = Vector2(57, 50)
+scale = Vector2(0.256973, 0.338461)
+texture = ExtResource("5_v5kh5")
 
 [node name="WeaponC" type="TextureButton" parent="WeaponOptions"]
 layout_mode = 1
@@ -284,10 +283,9 @@ offset_right = 40.0
 offset_bottom = 39.0
 
 [node name="Lanza3" type="Sprite2D" parent="WeaponOptions/WeaponC"]
-position = Vector2(58, 24)
-scale = Vector2(0.0832031, 0.0588672)
-texture = ExtResource("4_yeakg")
-metadata/_edit_lock_ = true
+position = Vector2(-11, 10)
+scale = Vector2(0.275554, 0.235452)
+texture = ExtResource("6_38s7c")
 
 [node name="UI" type="CanvasLayer" parent="."]
 

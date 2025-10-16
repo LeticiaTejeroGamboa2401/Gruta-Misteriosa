@@ -1,9 +1,9 @@
 [gd_scene load_steps=19 format=3 uid="uid://bibebft18idp2"]
 
 [ext_resource type="Script" uid="uid://b4g3dpsmnl5yn" path="res://Scenes/alux_encuentro_final.gd" id="1_dj3yf"]
-[ext_resource type="Texture2D" uid="uid://3hqd2syyrgry" path="res://images/HistoriaCompa.jpg" id="2_6qju3"]
+[ext_resource type="Texture2D" uid="uid://brecquw82vupe" path="res://images/DentroCueva.jpg" id="2_d0lch"]
 [ext_resource type="PackedScene" uid="uid://1kydvnjxixmp" path="res://Scenes/Aluxe_Personaje.tscn" id="2_ecajx"]
-[ext_resource type="Texture2D" uid="uid://b1ckv3yhn4dwv" path="res://images/background.png" id="4_aodgo"]
+[ext_resource type="Texture2D" uid="uid://uxakb2p53vxm" path="res://images/fondo_texto.png" id="4_d0lch"]
 [ext_resource type="FontFile" uid="uid://q4llc3uguqs2" path="res://font/KGCorneroftheSky.ttf" id="5_7bjss"]
 [ext_resource type="Script" uid="uid://dpam8cu8dqot7" path="res://Scenes/question_label.gd" id="6_hoqg8"]
 [ext_resource type="FontFile" uid="uid://bd321yblpf1ew" path="res://font/Supermarket of Love.ttf" id="7_8p7qp"]
@@ -15,9 +15,11 @@
 
 [sub_resource type="LabelSettings" id="LabelSettings_4fh3p"]
 font = ExtResource("5_7bjss")
-font_size = 15
-shadow_size = 2
-shadow_color = Color(0.0382144, 0.0224192, 0.0111756, 0)
+font_size = 20
+font_color = Color(0, 0, 0, 1)
+shadow_size = 3
+shadow_color = Color(1, 1, 1, 0.8)
+shadow_offset = Vector2(2, 2)
 
 [sub_resource type="LabelSettings" id="LabelSettings_dyuei"]
 font = ExtResource("7_8p7qp")
@@ -202,55 +204,52 @@ metadata/_edit_lock_ = true
 anchors_preset = 5
 anchor_left = 0.5
 anchor_right = 0.5
-offset_left = 223.0
-offset_top = -1.0
-offset_right = 901.0
-offset_bottom = 479.0
+offset_left = -56.0
+offset_right = 1224.0
+offset_bottom = 480.0
 grow_horizontal = 2
-texture = ExtResource("2_6qju3")
+texture = ExtResource("2_d0lch")
 metadata/_edit_lock_ = true
 
 [node name="Alux" parent="." instance=ExtResource("2_ecajx")]
-position = Vector2(702, 289)
-metadata/_edit_lock_ = true
+position = Vector2(856, 288)
 
 [node name="UI" type="CanvasLayer" parent="."]
 
 [node name="Feedback" type="Sprite2D" parent="UI"]
-position = Vector2(809, 147)
+position = Vector2(974, 143)
 metadata/_edit_lock_ = true
 
 [node name="ProblemPopup" type="Panel" parent="UI"]
-offset_left = 391.0
+offset_left = 276.0
 offset_top = 32.0
-offset_right = 710.0
-offset_bottom = 283.0
+offset_right = 876.0
+offset_bottom = 300.0
 theme_override_styles/panel = SubResource("StyleBoxEmpty_ef12v")
-metadata/_edit_lock_ = true
 
 [node name="Background" type="Sprite2D" parent="UI/ProblemPopup"]
-position = Vector2(161, 48)
-scale = Vector2(0.722433, 0.378981)
-texture = ExtResource("4_aodgo")
+position = Vector2(300, 60)
+scale = Vector2(1.58, 1.3)
+texture = ExtResource("4_d0lch")
 
 [node name="QuestionLabel" type="Label" parent="UI/ProblemPopup"]
 layout_mode = 0
-offset_right = 319.0
-offset_bottom = 97.0
+offset_left = 10.0
+offset_top = 10.0
+offset_right = 590.0
+offset_bottom = 107.0
 label_settings = SubResource("LabelSettings_4fh3p")
 horizontal_alignment = 1
 vertical_alignment = 1
 autowrap_mode = 3
 script = ExtResource("6_hoqg8")
-metadata/_edit_lock_ = true
 
 [node name="OptionButtons" type="VBoxContainer" parent="UI/ProblemPopup"]
 layout_mode = 0
-offset_left = 40.0
-offset_top = 118.0
-offset_right = 290.0
-offset_bottom = 168.0
-metadata/_edit_lock_ = true
+offset_left = 80.0
+offset_top = 135.0
+offset_right = 520.0
+offset_bottom = 235.0
 
 [node name="Option1" type="Button" parent="UI/ProblemPopup/OptionButtons"]
 layout_mode = 2
@@ -266,7 +265,6 @@ offset_left = 590.0
 offset_top = 694.0
 offset_right = 630.0
 offset_bottom = 734.0
-metadata/_edit_lock_ = true
 
 [node name="DialogLabel" type="Label" parent="UI/DialogPopup"]
 layout_mode = 1
@@ -302,16 +300,15 @@ flat = true
 
 [node name="CounterLabel" type="Label" parent="UI"]
 anchors_preset = -1
-anchor_left = 0.677
-anchor_top = 0.074
-anchor_right = 0.677
-anchor_bottom = 0.074
-offset_left = -19.9041
-offset_top = -4.952
-offset_right = 20.0959
-offset_bottom = 18.048
+anchor_left = 0.045
+anchor_top = 0.099
+anchor_right = 0.045
+anchor_bottom = 0.099
+offset_left = -19.84
+offset_top = -16.152
+offset_right = 20.16
+offset_bottom = 10.848
 label_settings = SubResource("LabelSettings_mv38f")
-metadata/_edit_lock_ = true
 
 [node name="PlayerSpawnPoint" type="Marker2D" parent="."]
 position = Vector2(295, 365)
@@ -359,3 +356,4 @@ modulate = Color(1, 1, 1, 0)
 offset_right = 1152.0
 offset_bottom = 648.0
 color = Color(0, 0, 0, 1)
+metadata/_edit_lock_ = true

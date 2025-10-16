@@ -63,6 +63,12 @@ func init_ui():
 	amulet_complete.visible = true
 	animation_player.play("amulet_idle_glow")
 
+	# Cargar texturas de las armas
+	# POR FAVOR, REEMPLAZA CON LOS NOMBRES DE ARCHIVO CORRECTOS PARA weapon_a y weapon_b
+	# weapon_a.texture_normal = load("res://assets/NOMBRE_DEL_ARCHIVO_ARMA_A.png")
+	# weapon_b.texture_normal = load("res://assets/NOMBRE_DEL_ARCHIVO_ARMA_B.png")
+	weapon_c.texture_normal = load("res://assets/lanza.png")
+
 	# Conectar señales
 	_connect_signals()
 
@@ -132,6 +138,27 @@ func _on_weapon_selected(weapon_type: String):
 	# Guardar selección en Global
 	Global.selected_weapon = weapon_type
 
+	# Obtener la textura del arma desde el Sprite2D hijo del botón
+	var weapon_button = get_weapon_button(weapon_type)
+	if weapon_button:
+		# Los botones tienen un Sprite2D hijo con la textura del arma
+		var sprite_child = null
+		for child in weapon_button.get_children():
+			if child is Sprite2D:
+				sprite_child = child
+				break
+
+		if sprite_child and sprite_child.texture:
+			Global.selected_weapon_texture = sprite_child.texture
+			print("DEBUG: Textura de arma guardada: ", sprite_child.texture.resource_path)
+		else:
+			# Fallback: intentar usar texture_normal del botón
+			if weapon_button.texture_normal:
+				Global.selected_weapon_texture = weapon_button.texture_normal
+				print("DEBUG: Textura de arma guardada desde texture_normal")
+			else:
+				print("ADVERTENCIA: No se pudo obtener la textura del arma seleccionada")
+
 	# Efecto visual de selección
 	show_selection_effect(weapon_type)
 
@@ -186,7 +213,7 @@ func transition_to_battle():
 	await tween.finished
 
 	# Cambiar a escena de batalla
-	get_tree().change_scene_to_file("res://Scenes/Pelea_Final.tscn")
+	get_tree().change_scene_to_file("res://Scenes/WalkToBattle.tscn")
 
 func get_weapon_button(weapon_type: String) -> TextureButton:
 	match weapon_type:

@@ -1,4 +1,4 @@
-[gd_scene load_steps=19 format=3 uid="uid://bibebft18idp2"]
+[gd_scene load_steps=27 format=3 uid="uid://bibebft18idp2"]
 
 [ext_resource type="Script" uid="uid://b4g3dpsmnl5yn" path="res://Scenes/alux_encuentro_final.gd" id="1_dj3yf"]
 [ext_resource type="Texture2D" uid="uid://brecquw82vupe" path="res://images/DentroCueva.jpg" id="2_d0lch"]
@@ -10,6 +10,14 @@
 [ext_resource type="Texture2D" uid="uid://bwf8mkwr4gktp" path="res://images/siguiente_flecha.png" id="8_of8xo"]
 [ext_resource type="FontFile" uid="uid://ex6sf638yhh5" path="res://font/Chonky Bunny.ttf" id="9_4dwhh"]
 [ext_resource type="Texture2D" uid="uid://so77a6nnvylc" path="res://assets/Amulet.png" id="10_btf4k"]
+[ext_resource type="Texture2D" uid="uid://biibsujjgbq0r" path="res://assets/amuleto-piezas/1.png" id="11_p1"]
+[ext_resource type="Texture2D" uid="uid://xhhq5oe5ay2u" path="res://assets/amuleto-piezas/2.png" id="12_p2"]
+[ext_resource type="Texture2D" uid="uid://dr3tkkgof6j32" path="res://assets/amuleto-piezas/3.png" id="13_p3"]
+[ext_resource type="Texture2D" uid="uid://3vyn87xynhcf" path="res://assets/amuleto-piezas/4.png" id="14_p4"]
+[ext_resource type="Texture2D" uid="uid://bi0sn1dekmtdr" path="res://assets/amuleto-piezas/5.png" id="15_p5"]
+[ext_resource type="Texture2D" uid="uid://j4epje7oej6h" path="res://assets/amuleto-piezas/6.png" id="16_p6"]
+[ext_resource type="Texture2D" uid="uid://dj3vaalf34rrh" path="res://assets/amuleto-piezas/7.png" id="17_p7"]
+[ext_resource type="Texture2D" uid="uid://beayjsk5l13lr" path="res://assets/amuleto-piezas/8.png" id="18_p8"]
 
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_ef12v"]
 
@@ -221,6 +229,7 @@ position = Vector2(974, 143)
 metadata/_edit_lock_ = true
 
 [node name="ProblemPopup" type="Panel" parent="UI"]
+visible = false
 offset_left = 276.0
 offset_top = 32.0
 offset_right = 876.0
@@ -314,6 +323,7 @@ label_settings = SubResource("LabelSettings_mv38f")
 position = Vector2(295, 365)
 
 [node name="AmuletComplete" type="Node2D" parent="."]
+visible = false
 
 [node name="GlowEffect" type="Sprite2D" parent="AmuletComplete"]
 position = Vector2(547, 174)
@@ -331,7 +341,48 @@ metadata/_edit_lock_ = true
 libraries = {
 &"": SubResource("AnimationLibrary_8kje7")
 }
-autoplay = "amulet_glow"
+
+[node name="AmuletPieces" type="Node2D" parent="."]
+
+[node name="Part1" type="Sprite2D" parent="AmuletPieces"]
+position = Vector2(544, 88)
+scale = Vector2(0.227539, 0.227539)
+texture = ExtResource("11_p1")
+
+[node name="Part2" type="Sprite2D" parent="AmuletPieces"]
+position = Vector2(576, 104)
+scale = Vector2(0.227539, 0.227539)
+texture = ExtResource("12_p2")
+
+[node name="Part3" type="Sprite2D" parent="AmuletPieces"]
+position = Vector2(568, 192)
+scale = Vector2(0.227539, 0.227539)
+texture = ExtResource("13_p3")
+
+[node name="Part4" type="Sprite2D" parent="AmuletPieces"]
+position = Vector2(544, 216)
+scale = Vector2(0.227539, 0.227539)
+texture = ExtResource("14_p4")
+
+[node name="Part5" type="Sprite2D" parent="AmuletPieces"]
+position = Vector2(464, 216)
+scale = Vector2(0.227539, 0.227539)
+texture = ExtResource("15_p5")
+
+[node name="Part6" type="Sprite2D" parent="AmuletPieces"]
+position = Vector2(432, 200)
+scale = Vector2(0.227539, 0.227539)
+texture = ExtResource("16_p6")
+
+[node name="Part7" type="Sprite2D" parent="AmuletPieces"]
+position = Vector2(432, 112)
+scale = Vector2(0.227539, 0.227539)
+texture = ExtResource("17_p7")
+
+[node name="Part8" type="Sprite2D" parent="AmuletPieces"]
+position = Vector2(464, 88)
+scale = Vector2(0.227539, 0.227539)
+texture = ExtResource("18_p8")
 
 [node name="StaticBody2D2" type="StaticBody2D" parent="."]
 

@@ -150,4 +150,4 @@ sprite_frames = SubResource("SpriteFrames_mhkpy")
 animation = &"Izquierda"
 
 [node name="Hand" type="Marker2D" parent="."]
-position = Vector2(48, 48)
+position = Vector2(-16, 40)

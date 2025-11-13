@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://4w0ugse17nmx"
-path="res://.godot/imported/lanza.png-ff1aa19c488f689963669a1c0d5c0b8d.ctex"
+uid="uid://biibsujjgbq0r"
+path="res://.godot/imported/1.png-e949be821234cdcea5269daa36abbfa5.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/lanza.png"
-dest_files=["res://.godot/imported/lanza.png-ff1aa19c488f689963669a1c0d5c0b8d.ctex"]
+source_file="res://assets/amuleto-piezas/1.png"
+dest_files=["res://.godot/imported/1.png-e949be821234cdcea5269daa36abbfa5.ctex"]
 
 [params]
 

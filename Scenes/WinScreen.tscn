@@ -1,0 +1,16 @@
+[gd_scene load_steps=2 format=3 uid="uid://c0skh5njtdu1j"]
+
+[ext_resource type="Texture2D" uid="uid://b5ptnx0tp4nlu" path="res://images/win_screen.jpg" id="1"]
+
+[node name="WinScreen" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="WinScreen" type="Sprite2D" parent="."]
+position = Vector2(576, 348)
+scale = Vector2(0.972973, 0.842593)
+texture = ExtResource("1")

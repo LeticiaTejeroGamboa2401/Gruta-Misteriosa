@@ -68,9 +68,7 @@ func _ready():
 	setup_questions()
 	spawn_player()
 	init_ui()
-	# Iniciar animación del amuleto PRIMERO (después de 1 segundo)
-	start_amulet_animation_delayed()
-	# Esperar a que pase el delay antes de mostrar diálogos
+	# Esperar a que pase un pequeño delay antes de mostrar diálogos
 	await get_tree().create_timer(1.0).timeout
 	show_dialog()
 
@@ -92,28 +90,33 @@ func spawn_player():
 		player.position = $PlayerSpawnPoint.position
 
 func init_ui():
-	# El amuleto debe estar visible desde el inicio
-	amulet_complete.visible = true
+	# Mostrar piezas al inicio, ocultar amuleto completo hasta el final
+	if has_node("AmuletPieces"):
+		$AmuletPieces.visible = true
+	amulet_complete.visible = false
 	problem_popup.hide()
 	dialog_popup.hide()
 	feedback.hide()
 	update_counter_display()
 	_connect_signals()
+	# Pequeño temblor inicial de las piezas para dar vida a la escena
+	_shake_amulet_pieces()
 
 func start_amulet_animation_delayed():
-	# Esperar 1 segundo antes de iniciar la animación del amuleto
-	await get_tree().create_timer(1.0).timeout
+	# Ya no se usa al inicio; se mantiene para futuras transiciones si se requiere
+	await get_tree().create_timer(0.1).timeout
 	if animation_player:
 		animation_player.play("amulet_glow")
 
 func fade_out_amulet():
-	# Hacer fade-out del amuleto antes de comenzar las preguntas
-	if amulet_complete:
+	# Hacer fade-out de las piezas antes de comenzar las preguntas
+	if has_node("AmuletPieces"):
+		var pieces = $AmuletPieces
 		var tween = create_tween()
 		tween.set_parallel(true)
-		tween.tween_property(amulet_complete, "modulate:a", 0.0, 1.0).set_trans(Tween.TRANS_SINE).set_ease(Tween.EASE_IN_OUT)
+		tween.tween_property(pieces, "modulate:a", 0.0, 1.0).set_trans(Tween.TRANS_SINE).set_ease(Tween.EASE_IN_OUT)
 		await tween.finished
-		amulet_complete.visible = false
+		pieces.visible = false
 
 func update_counter_display():
 	if correct_answers >= answers_needed:
@@ -256,8 +259,12 @@ func check_progress():
 		show_question()
 
 func complete_amulet():
+	# Ocultar piezas y mostrar amuleto completo con animación
+	if has_node("AmuletPieces"):
+		$AmuletPieces.visible = false
 	amulet_complete.visible = true
-	animation_player.play("amulet_glow")
+	if animation_player:
+		animation_player.play("amulet_glow")
 	#Global.amulet_complete = true
 
 	# Esperar solo 1 segundo en lugar de esperar toda la animación
@@ -297,6 +304,56 @@ func reset_game_state():
 	is_processing_answer = false
 	is_showing_feedback = false
 	can_show_next_question = true
+
+# --- Efectos visuales para piezas del amuleto ---
+func _shake_amulet_pieces():
+	if not has_node("AmuletPieces"):
+		return
+	var pieces = $AmuletPieces.get_children()
+	# Ejecutar el shake secuencialmente, pieza por pieza, a un ritmo más lento
+	for n in pieces:
+		if n is Node2D:
+			await _shake_node(n, 6.0, 2, 0.10)
+			await get_tree().create_timer(0.08).timeout
+	# Al terminar el último shake, mover todas las piezas 1 segundo hacia el centro
+	_start_pieces_motion_until_fadeout()
+
+func _shake_node(node: Node2D, intensity: float = 6.0, cycles: int = 2, step: float = 0.10) -> void:
+	# Temblor suave horizontal y regreso a posición original (más lento)
+	var start := node.position
+	var tw = create_tween()
+	tw.set_parallel(false)
+	tw.set_trans(Tween.TRANS_SINE)
+	tw.set_ease(Tween.EASE_IN_OUT)
+	for i in range(cycles):
+		tw.tween_property(node, "position", start + Vector2(intensity, 0), step)
+		tw.tween_property(node, "position", start - Vector2(intensity, 0), step)
+	tw.tween_property(node, "position", start, step)
+	await tw.finished
+
+func _start_pieces_motion_until_fadeout():
+	if not has_node("AmuletPieces"):
+		return
+	var pieces_node := $AmuletPieces
+	if not has_node("AmuletComplete/AmuletSprite"):
+		return
+	var center: Vector2 = $AmuletComplete/AmuletSprite.position
+	# Lanzar un movimiento concurrente (no en bucle) de 1.0s hacia el centro para cada pieza
+	for n in pieces_node.get_children():
+		if n is Node2D:
+			_drift_piece_towards_center(n, center)
+
+func _drift_piece_towards_center(node: Node2D, center: Vector2) -> void:
+	# Movimiento único de 1.0s hacia el centro (más sutil, ~12% del trayecto)
+	if node == null or not is_instance_valid(node):
+		return
+	var target := node.position + (center - node.position) * 0.12
+	var tw = create_tween()
+	tw.set_parallel(false)
+	tw.set_trans(Tween.TRANS_SINE)
+	tw.set_ease(Tween.EASE_IN_OUT)
+	tw.tween_property(node, "position", target, 1.0)
+	await tw.finished
 
 func _connect_signals():
 	# Conectar señal del botón siguiente

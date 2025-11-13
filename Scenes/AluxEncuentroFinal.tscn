@@ -345,42 +345,42 @@ libraries = {
 [node name="AmuletPieces" type="Node2D" parent="."]
 
 [node name="Part1" type="Sprite2D" parent="AmuletPieces"]
-position = Vector2(544, 88)
+position = Vector2(611.083, 90.855)
 scale = Vector2(0.227539, 0.227539)
 texture = ExtResource("11_p1")
 
 [node name="Part2" type="Sprite2D" parent="AmuletPieces"]
-position = Vector2(576, 104)
+position = Vector2(635.083, 106.855)
 scale = Vector2(0.227539, 0.227539)
 texture = ExtResource("12_p2")
 
 [node name="Part3" type="Sprite2D" parent="AmuletPieces"]
-position = Vector2(568, 192)
+position = Vector2(635.083, 194.855)
 scale = Vector2(0.227539, 0.227539)
 texture = ExtResource("13_p3")
 
 [node name="Part4" type="Sprite2D" parent="AmuletPieces"]
-position = Vector2(544, 216)
+position = Vector2(611.083, 218.855)
 scale = Vector2(0.227539, 0.227539)
 texture = ExtResource("14_p4")
 
 [node name="Part5" type="Sprite2D" parent="AmuletPieces"]
-position = Vector2(464, 216)
+position = Vector2(531.083, 218.855)
 scale = Vector2(0.227539, 0.227539)
 texture = ExtResource("15_p5")
 
 [node name="Part6" type="Sprite2D" parent="AmuletPieces"]
-position = Vector2(432, 200)
+position = Vector2(507.083, 194.855)
 scale = Vector2(0.227539, 0.227539)
 texture = ExtResource("16_p6")
 
 [node name="Part7" type="Sprite2D" parent="AmuletPieces"]
-position = Vector2(432, 112)
+position = Vector2(507.083, 114.855)
 scale = Vector2(0.227539, 0.227539)
 texture = ExtResource("17_p7")
 
 [node name="Part8" type="Sprite2D" parent="AmuletPieces"]
-position = Vector2(464, 88)
+position = Vector2(531.083, 90.855)
 scale = Vector2(0.227539, 0.227539)
 texture = ExtResource("18_p8")
 

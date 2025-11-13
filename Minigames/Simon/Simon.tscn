@@ -1,0 +1,120 @@
+[gd_scene load_steps=2 format=3]
+
+[ext_resource type="Script" path="res://Minigames/Simon/Simon.gd" id="1_1"]
+
+[node name="Simon" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+script = ExtResource("1_1")
+
+[node name="Title" type="Label" parent="."]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -300
+offset_right = 300
+offset_top = 60
+offset_bottom = 110
+horizontal_alignment = 1
+text = "Observa el patrón del alux"
+
+[node name="SubTitle" type="Label" parent="."]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -300
+offset_right = 300
+offset_top = 110
+offset_bottom = 145
+horizontal_alignment = 1
+text = "Memoriza y repite el patrón"
+
+[node name="Progress" type="ProgressBar" parent="."]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -240
+offset_right = 240
+offset_top = 150
+offset_bottom = 175
+value = 0.0
+min_value = 0.0
+max_value = 100.0
+
+[node name="Time" type="ProgressBar" parent="."]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -240
+offset_right = 240
+offset_top = 180
+offset_bottom = 205
+value = 0.0
+min_value = 0.0
+max_value = 100.0
+
+[node name="TimeLabel" type="Label" parent="."]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -300
+offset_right = 300
+offset_top = 205
+offset_bottom = 235
+horizontal_alignment = 1
+text = "Tiempo"
+
+[node name="Grid" type="GridContainer" parent="."]
+position = Vector2(320, 240)
+size = Vector2(640, 360)
+columns = 2
+
+[node name="Btn1" type="Button" parent="Grid"]
+custom_minimum_size = Vector2(300, 160)
+text = "1"
+
+[node name="Btn2" type="Button" parent="Grid"]
+custom_minimum_size = Vector2(300, 160)
+text = "2"
+
+[node name="Btn3" type="Button" parent="Grid"]
+custom_minimum_size = Vector2(300, 160)
+text = "3"
+
+[node name="Btn4" type="Button" parent="Grid"]
+custom_minimum_size = Vector2(300, 160)
+text = "4"
+
+[node name="StartBtn" type="Button" parent="."]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -80
+offset_right = 80
+offset_top = 630
+offset_bottom = 670
+text = "Iniciar"
+
+[node name="RetryBtn" type="Button" parent="."]
+visible = false
+anchors_preset = 8
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -80
+offset_right = 80
+offset_top = 630
+offset_bottom = 670
+text = "Reintentar"
+
+[node name="Tip" type="Label" parent="."]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -360
+offset_right = 360
+offset_top = 680
+offset_bottom = 715
+horizontal_alignment = 1
+text = "Consejo: presta atención a ritmo y orden."

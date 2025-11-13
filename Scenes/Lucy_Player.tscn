@@ -124,8 +124,10 @@ position = Vector2(1, 1.5)
 shape = SubResource("RectangleShape2D_udjv5")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
-position = Vector2(0, 1)
 scale = Vector2(0.640129, 0.576074)
 sprite_frames = SubResource("SpriteFrames_p3hkm")
 animation = &"Derecha"
 frame_progress = 0.647346
+
+[node name="Hand" type="Marker2D" parent="."]
+position = Vector2(-16, 40)

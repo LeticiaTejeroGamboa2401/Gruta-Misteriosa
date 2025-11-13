@@ -1,4 +1,4 @@
-[gd_scene load_steps=21 format=3 uid="uid://dim68p1d2qeg4"]
+[gd_scene load_steps=20 format=3 uid="uid://dim68p1d2qeg4"]
 
 [ext_resource type="Script" uid="uid://c6d0xmsb568gh" path="res://Scripts/pelea_final.gd" id="1_gqqbk"]
 [ext_resource type="Texture2D" uid="uid://c4ljuuy56jopt" path="res://images/Bosque.jpg" id="2_4umc2"]
@@ -68,10 +68,6 @@ size = Vector2(171, 57)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_onwlg"]
 size = Vector2(461.817, 585.241)
-
-[sub_resource type="SegmentShape2D" id="SegmentShape2D_onwlg"]
-a = Vector2(1016, 432)
-b = Vector2(416, 432)
 
 [node name="Pelea_Final" type="Node2D"]
 script = ExtResource("1_gqqbk")
@@ -303,64 +299,16 @@ offset_bottom = 24.0
 metadata/_edit_use_anchors_ = true
 
 [node name="DialogBox" type="Control" parent="CanvasLayer"]
+visible = false
 layout_mode = 3
 anchor_left = 0.5
 anchor_top = 0.85
 anchor_right = 0.5
 anchor_bottom = 0.85
-offset_left = -500.0
-offset_top = -100.0
+offset_left = -472.0
+offset_top = -86.8
 offset_right = 500.0
-offset_bottom = 20.0
-
-[node name="Card" type="Panel" parent="CanvasLayer/DialogBox"]
-visible = false
-layout_mode = 1
-anchors_preset = 15
-anchor_right = 1.0
-anchor_bottom = 1.0
-grow_horizontal = 2
-grow_vertical = 2
-
-[node name="Background" type="ColorRect" parent="CanvasLayer/DialogBox/Card"]
-visible = false
-layout_mode = 1
-anchors_preset = 15
-anchor_right = 1.0
-anchor_bottom = 1.0
-grow_horizontal = 2
-grow_vertical = 2
-color = Color(0.1, 0.05, 0.15, 0.92)
-
-[node name="Border" type="ColorRect" parent="CanvasLayer/DialogBox/Card"]
-visible = false
-layout_mode = 1
-anchors_preset = 15
-anchor_right = 1.0
-anchor_bottom = 1.0
-offset_left = 20.0
-offset_top = -194.8
-offset_right = 20.0
-offset_bottom = -194.8
-grow_horizontal = 2
-grow_vertical = 2
-mouse_filter = 2
-color = Color(0.8, 0.6, 0.3, 1)
-
-[node name="InnerBorder" type="ColorRect" parent="CanvasLayer/DialogBox/Card/Border"]
-visible = false
-layout_mode = 1
-anchors_preset = 15
-anchor_right = 1.0
-anchor_bottom = 1.0
-offset_left = 12.0
-offset_top = -202.8
-offset_right = 4.0
-offset_bottom = -210.8
-grow_horizontal = 2
-grow_vertical = 2
-mouse_filter = 2
-color = Color(0.1, 0.05, 0.15, 1)
+offset_bottom = 20.2
 
 [node name="Background" type="Sprite2D" parent="CanvasLayer/DialogBox"]
 position = Vector2(500, -242.8)
@@ -372,16 +320,16 @@ layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
-offset_left = 20.0
-offset_top = -306.8
-offset_right = -20.0
-offset_bottom = -336.8
+offset_left = 184.0
+offset_top = -320.0
+offset_right = -156.0
+offset_bottom = -267.0
 grow_horizontal = 2
 grow_vertical = 2
-theme_override_colors/font_color = Color(1, 1, 1, 1)
-theme_override_colors/font_shadow_color = Color(0, 0, 0, 0.5)
-theme_override_constants/shadow_offset_x = 2
-theme_override_constants/shadow_offset_y = 2
+theme_override_colors/font_color = Color(0.34, 0.25, 0.18, 1)
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 0.25)
+theme_override_constants/shadow_offset_x = 1
+theme_override_constants/shadow_offset_y = 1
 theme_override_font_sizes/font_size = 28
 text = "Texto de diálogo general"
 horizontal_alignment = 1
@@ -401,10 +349,10 @@ offset_left = 336.0
 offset_top = 384.0
 offset_right = 836.0
 offset_bottom = 504.0
-theme_override_colors/font_color = Color(1, 0.3, 0.3, 1)
-theme_override_colors/font_shadow_color = Color(0, 0, 0, 0.8)
-theme_override_constants/shadow_offset_x = 3
-theme_override_constants/shadow_offset_y = 3
+theme_override_colors/font_color = Color(0.4, 0.28, 0.18, 1)
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 0.4)
+theme_override_constants/shadow_offset_x = 1
+theme_override_constants/shadow_offset_y = 1
 theme_override_font_sizes/font_size = 26
 text = "Diálogo del Huaychivo"
 vertical_alignment = 1
@@ -430,7 +378,7 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
-color = Color(0.3, 0.05, 0.05, 0.9)
+color = Color(0.94, 0.9, 0.82, 0.92)
 
 [node name="HuaychivoBorder" type="ColorRect" parent="CanvasLayer/HuaychivoLabel/HuaychivoPanel"]
 layout_mode = 1
@@ -440,7 +388,7 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 mouse_filter = 2
-color = Color(0.8, 0.2, 0.2, 1)
+color = Color(0.4, 0.28, 0.16, 1)
 
 [node name="HuaychivoInner" type="ColorRect" parent="CanvasLayer/HuaychivoLabel/HuaychivoPanel/HuaychivoBorder"]
 layout_mode = 1
@@ -452,7 +400,7 @@ offset_bottom = -6.0
 grow_horizontal = 2
 grow_vertical = 2
 mouse_filter = 2
-color = Color(0.3, 0.05, 0.05, 1)
+color = Color(0.88, 0.82, 0.72, 1)
 
 [node name="HuaychivoName" type="Label" parent="CanvasLayer/HuaychivoLabel"]
 layout_mode = 1
@@ -461,7 +409,7 @@ anchor_right = 1.0
 offset_top = -25.0
 offset_bottom = -5.0
 grow_horizontal = 2
-theme_override_colors/font_color = Color(1, 0.8, 0.3, 1)
+theme_override_colors/font_color = Color(0.8, 0.66, 0.36, 1)
 theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
 theme_override_constants/shadow_offset_x = 2
 theme_override_constants/shadow_offset_y = 2
@@ -474,10 +422,10 @@ offset_left = 336.0
 offset_top = 384.0
 offset_right = 836.0
 offset_bottom = 504.0
-theme_override_colors/font_color = Color(0.3, 0.8, 1, 1)
-theme_override_colors/font_shadow_color = Color(0, 0, 0, 0.8)
-theme_override_constants/shadow_offset_x = 3
-theme_override_constants/shadow_offset_y = 3
+theme_override_colors/font_color = Color(0.4, 0.28, 0.18, 1)
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 0.4)
+theme_override_constants/shadow_offset_x = 1
+theme_override_constants/shadow_offset_y = 1
 theme_override_font_sizes/font_size = 26
 text = "Diálogo del Personaje"
 vertical_alignment = 1
@@ -503,7 +451,7 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
-color = Color(0.05, 0.1, 0.3, 0.9)
+color = Color(0.94, 0.9, 0.82, 0.92)
 
 [node name="PersonajeBorder" type="ColorRect" parent="CanvasLayer/PersonajeLabel/PersonajePanel"]
 layout_mode = 1
@@ -513,7 +461,7 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 mouse_filter = 2
-color = Color(0.3, 0.6, 1, 1)
+color = Color(0.4, 0.28, 0.16, 1)
 
 [node name="PersonajeInner" type="ColorRect" parent="CanvasLayer/PersonajeLabel/PersonajePanel/PersonajeBorder"]
 layout_mode = 1
@@ -527,7 +475,7 @@ offset_bottom = -3.0
 grow_horizontal = 2
 grow_vertical = 2
 mouse_filter = 2
-color = Color(0.05, 0.1, 0.3, 1)
+color = Color(0.88, 0.82, 0.72, 1)
 
 [node name="PersonajeName" type="Label" parent="CanvasLayer/PersonajeLabel"]
 layout_mode = 1
@@ -536,7 +484,7 @@ anchor_right = 1.0
 offset_top = -25.0
 offset_bottom = -5.0
 grow_horizontal = 2
-theme_override_colors/font_color = Color(0.8, 1, 0.3, 1)
+theme_override_colors/font_color = Color(0.8, 0.66, 0.36, 1)
 theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
 theme_override_constants/shadow_offset_x = 2
 theme_override_constants/shadow_offset_y = 2
@@ -545,20 +493,4 @@ text = "GUERRERO MAYA"
 horizontal_alignment = 1
 
 [node name="Effects" type="Node2D" parent="."]
-visible = false
 position = Vector2(96, 200)
-
-[node name="HitFlash" type="ColorRect" parent="Effects"]
-offset_left = -64.0
-offset_top = -8.0
-offset_right = -24.0
-offset_bottom = 32.0
-metadata/_edit_use_anchors_ = true
-
-[node name="DeathEffect" type="CPUParticles2D" parent="Effects"]
-position = Vector2(32, 8)
-
-[node name="Area2D" type="Area2D" parent="Effects/DeathEffect"]
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Effects/DeathEffect/Area2D"]
-shape = SubResource("SegmentShape2D_onwlg")

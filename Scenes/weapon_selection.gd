@@ -4,19 +4,19 @@ extends Node2D
 var is_selecting_weapon = false
 var selected_weapon = ""
 
-# Información de las armas (puedes cambiar estos datos cuando definas las armas definitivas)
+# Información de las armas (nombres canónicos visibles en UI)
 var weapon_info = {
 	"weapon_a": {
-		"name": "Arma Ancestral A",
-		"description": "Arma tradicional maya con poder espiritual."
+		"name": "Macana Maya",
+		"description": "Bastón de madera, usado por guerreros mayas para combate cuerpo a cuerpo."
 	},
 	"weapon_b": {
-		"name": "Arma Ancestral B",
-		"description": "Arma sagrada usada por guerreros mayas."
+		"name": "Jícara",
+		"description": "Jícara pintada y pulida, usada tradicionalmente para servir alimentos y bebidas."
 	},
 	"weapon_c": {
-		"name": "Arma Ancestral C",
-		"description": "Arma mística bendecida por los dioses mayas."
+		"name": "Lanza con Obsidiana",
+		"description": "Lanza sagrada con punta de obsidiana, bendecida por los dioses mayas."
 	}
 }
 
@@ -288,15 +288,15 @@ func update_weapon_info():
 	weapon_info = {
 		"weapon_a": {
 			"name": "Macana Maya",
-			"description": "Bastón de madera de chicozapote, usado por guerreros mayas para combate cuerpo a cuerpo."
+			"description": "Bastón de madera, usado por guerreros mayas para combate cuerpo a cuerpo."
 		},
 		"weapon_b": {
-			"name": "Honda Maya",
-			"description": "Arma de proyectiles usada para cazar, hecha de fibras de henequén trenzadas."
+			"name": "Jícara",
+			"description": "Jícara pintada y pulida, usada tradicionalmente para servir alimentos y bebidas."
 		},
 		"weapon_c": {
 			"name": "Lanza con Obsidiana",
-			"description": "Lanza sagrada con punta de obsidiana volcánica, bendecida por los dioses mayas."
+			"description": "Lanza sagrada con punta de obsidiana, bendecida por los dioses mayas."
 		}
 	}
 

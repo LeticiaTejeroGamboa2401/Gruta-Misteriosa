@@ -21,6 +21,11 @@ var _dir: int = 1
 var _best_score: int = 0
 var _presses: int = 0
 
+# Audio
+var perfect_hit_sfx: AudioStreamPlayer
+var good_hit_sfx: AudioStreamPlayer
+var miss_sfx: AudioStreamPlayer
+
 func start(config := {}):
 	super.start(config)
 	duration = float(config.get("duration", duration))
@@ -45,6 +50,31 @@ func start(config := {}):
 	cursor.position.x = 0
 	label.text = "Apunta al centro verde y presiona!"
 	btn.disabled = false
+	_setup_audio()
+
+func _setup_audio() -> void:
+	print("🎵 Configurando audio TimedHit...")
+	# Perfect hit
+	perfect_hit_sfx = AudioStreamPlayer.new()
+	perfect_hit_sfx.stream = load("res://assets/sounds/kenney_impact-sounds/Audio/impactBell_heavy_001.ogg")
+	perfect_hit_sfx.volume_db = 0
+	perfect_hit_sfx.bus = "Master"
+	add_child(perfect_hit_sfx)
+
+	# Good hit
+	good_hit_sfx = AudioStreamPlayer.new()
+	good_hit_sfx.stream = load("res://assets/sounds/kenney_impact-sounds/Audio/impactMetal_medium_001.ogg")
+	good_hit_sfx.volume_db = 0
+	good_hit_sfx.bus = "Master"
+	add_child(good_hit_sfx)
+
+	# Miss
+	miss_sfx = AudioStreamPlayer.new()
+	miss_sfx.stream = load("res://assets/sounds/kenney_interface-sounds/Audio/glass_002.ogg")
+	miss_sfx.volume_db = 0
+	miss_sfx.bus = "Master"
+	add_child(miss_sfx)
+	print("✅ Audio TimedHit configurado")
 
 func _process(delta: float) -> void:
 	if not _running:
@@ -128,6 +158,21 @@ func _on_Button_pressed() -> void:
 	var max_dist: float = zone.size.x * 0.5
 	var score: int = int(round(max(0.0, (1.0 - dist / max_dist) * 100.0)))
 	_best_score = max(_best_score, score)
+
+	# Reproducir sonido según score
+	if score >= 80:
+		print("🔊 PERFECT HIT!")
+		if perfect_hit_sfx:
+			perfect_hit_sfx.play()
+	elif score >= 40:
+		print("🔊 Good hit")
+		if good_hit_sfx:
+			good_hit_sfx.play()
+	else:
+		print("🔊 Miss...")
+		if miss_sfx:
+			miss_sfx.play()
+
 	emit_signal("hit_pressed", score)
 	# Feedback ligero
 	label.text = "Intento %d/%d  •  Puntuación: %d" % [_presses, attempts, score]

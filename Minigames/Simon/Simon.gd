@@ -8,7 +8,7 @@ enum State {IDLE, SHOW, INPUT, RESULT}
 @onready var time_bar: ProgressBar = $Time
 @onready var time_label: Label = $TimeLabel
 @onready var grid: Control = $Grid
-@onready var start_btn: Button = $StartBtn
+
 @onready var retry_btn: Button = $RetryBtn
 @onready var tip_label: Label = $Tip
 @onready var buttons: Array = [
@@ -21,13 +21,15 @@ enum State {IDLE, SHOW, INPUT, RESULT}
 var sequence: Array[int] = []
 var user_index: int = 0
 var playing_back: bool = false
-# Colores base más vivos y con alto contraste (rojo, verde, azul, amarillo)
+# Colores base (Blanco para respetar el arte original de los amuletos)
 var base_colors := [
-	Color(0.93, 0.27, 0.27),
-	Color(0.22, 0.85, 0.35),
-	Color(0.25, 0.45, 0.98),
-	Color(0.98, 0.86, 0.18)
+	Color(1, 1, 1),
+	Color(1, 1, 1),
+	Color(1, 1, 1),
+	Color(1, 1, 1)
 ]
+
+var element_textures: Array[Texture2D] = []
 
 # State and timing
 var state: State = State.IDLE
@@ -45,8 +47,8 @@ var total_rounds: int = 3
 var current_round: int = 1
 var completed_rounds: int = 0
 
-# SFX (optional)
-var click_player: AudioStreamPlayer
+# SFX
+var element_players: Array[AudioStreamPlayer] = [] # 4 players for elemental tones
 var success_player: AudioStreamPlayer
 var fail_player: AudioStreamPlayer
 
@@ -62,47 +64,83 @@ func start(config := {}):
 	total_rounds = int(config.get("rounds", 3))
 	current_round = 1
 	completed_rounds = 0
-	start_btn.visible = false
+
 	retry_btn.visible = false
 	tip_label.visible = true
 	_begin_round()
 
 func _ready() -> void:
+	# Cargar texturas de amuletos desde la carpeta assets/amuleto_elementos
+	var texture_paths = [
+		"res://assets/amuleto_elementos/amulet_fuego.jpg",
+		"res://assets/amuleto_elementos/amulet_tierra.jpg",
+		"res://assets/amuleto_elementos/amulet_agua.jpg",
+		"res://assets/amuleto_elementos/amulet_aire.jpg"
+	]
+
+	element_textures.clear()
+	for path in texture_paths:
+		if FileAccess.file_exists(path):
+			element_textures.append(load(path))
+		else:
+			print("ADVERTENCIA: No se encontró textura en", path)
+			element_textures.append(null)
+
+	# Ajustar Grid para acomodar botones cuadrados más grandes
+	if grid:
+		grid.add_theme_constant_override("h_separation", 30)
+		grid.add_theme_constant_override("v_separation", 30)
+		# Ajustar posición para centrar el nuevo tamaño (aprox 510x510)
+		# Asumiendo pantalla 1280x720, centro es 640,360
+		# Top-left debería ser aprox 385, 105
+		grid.position = Vector2(385, 180)
+
 	# Asegurar colores y conexiones
 	for i in buttons.size():
 		var b: Button = buttons[i]
+		# Hacer botones cuadrados y grandes
+		b.custom_minimum_size = Vector2(240, 240)
+
+		# Usar blanco para mostrar la imagen tal cual es
 		b.modulate = base_colors[i]
 		b.scale = Vector2.ONE
-		# Texto del botón limpio: usaremos un Label hijo grande con sombra
+		# Texto del botón limpio
 		b.text = ""
-		# Crear label numérico si no existe
-		var num_name := "NumLabel"
-		var lbl := b.get_node_or_null(num_name)
-		if lbl == null:
+
+		# Crear TextureRect para el amuleto si no existe
+		var icon_name := "ElementIcon"
+		var icon_rect := b.get_node_or_null(icon_name)
+		if icon_rect == null:
+			icon_rect = TextureRect.new()
+			icon_rect.name = icon_name
+			icon_rect.expand_mode = TextureRect.EXPAND_IGNORE_SIZE
+			icon_rect.stretch_mode = TextureRect.STRETCH_KEEP_ASPECT_CENTERED
+
+			# Configurar layout para llenar casi todo el botón (márgenes mínimos)
+			icon_rect.anchor_left = 0.02
+			icon_rect.anchor_top = 0.02
+			icon_rect.anchor_right = 0.98
+			icon_rect.anchor_bottom = 0.98
+			icon_rect.mouse_filter = Control.MOUSE_FILTER_IGNORE
+
+			b.add_child(icon_rect)
+
+		# Asignar textura si existe
+		if i < element_textures.size() and element_textures[i] != null:
+			icon_rect.texture = element_textures[i]
+		else:
+			# Fallback a número si falla la carga de imagen
 			var l = Label.new()
-			l.name = num_name
 			l.text = str(i + 1)
-			# Centrar y grande
 			l.horizontal_alignment = HORIZONTAL_ALIGNMENT_CENTER
 			l.vertical_alignment = VERTICAL_ALIGNMENT_CENTER
-			l.anchor_left = 0
-			l.anchor_top = 0
-			l.anchor_right = 1
-			l.anchor_bottom = 1
-			l.offset_left = 0
-			l.offset_top = 0
-			l.offset_right = 0
-			l.offset_bottom = 0
+			l.anchor_right = 1.0
+			l.anchor_bottom = 1.0
 			l.add_theme_font_size_override("font_size", 72)
-			l.add_theme_color_override("font_color", Color(1, 1, 1))
-			l.add_theme_color_override("font_shadow_color", Color(0, 0, 0, 0.85))
-			l.add_theme_constant_override("shadow_offset_x", 2)
-			l.add_theme_constant_override("shadow_offset_y", 2)
 			b.add_child(l)
 		if not b.pressed.is_connected(_on_button_pressed):
 			b.pressed.connect(_on_button_pressed.bind(i))
-	if start_btn and not start_btn.pressed.is_connected(_on_start_pressed):
-		start_btn.pressed.connect(_on_start_pressed)
+
 	if retry_btn and not retry_btn.pressed.is_connected(_on_retry_pressed):
 		retry_btn.pressed.connect(_on_retry_pressed)
 	if progress:
@@ -113,26 +151,28 @@ func _ready() -> void:
 		time_bar.max_value = 100
 	# Make fonts big and friendly
 	if title:
-		title.add_theme_font_size_override("font_size", 36)
-		title.anchor_left = 0.2
-		title.anchor_right = 0.8
-		title.anchor_top = 0.15
-		title.anchor_bottom = 0.22
-		title.offset_left = 0
-		title.offset_right = 0
+		title.add_theme_font_size_override("font_size", 42)
+		title.anchor_left = 0.5
+		title.anchor_right = 0.5
+		title.anchor_top = 0.05
+		title.anchor_bottom = 0.12
+		title.offset_left = -300
+		title.offset_right = 300
 		title.offset_top = 0
 		title.offset_bottom = 0
+		title.horizontal_alignment = HORIZONTAL_ALIGNMENT_CENTER
 	if subtitle:
-		subtitle.add_theme_font_size_override("font_size", 24)
-		subtitle.anchor_left = 0.2
-		subtitle.anchor_right = 0.8
-		subtitle.anchor_top = 0.24
-		subtitle.anchor_bottom = 0.32
-		subtitle.offset_left = 0
-		subtitle.offset_right = 0
+		subtitle.add_theme_font_size_override("font_size", 28)
+		subtitle.anchor_left = 0.5
+		subtitle.anchor_right = 0.5
+		subtitle.anchor_top = 0.12
+		subtitle.anchor_bottom = 0.18
+		subtitle.offset_left = -300
+		subtitle.offset_right = 300
 		subtitle.offset_top = 0
 		subtitle.offset_bottom = 0
 		subtitle.horizontal_alignment = HORIZONTAL_ALIGNMENT_CENTER
+
 	for i in buttons.size():
 		var b: Button = buttons[i]
 		# Aumentar padding para que el número respire
@@ -140,48 +180,46 @@ func _ready() -> void:
 
 	# Centrar elementos de la UI
 	if grid:
-		grid.anchor_left = 0.25
-		grid.anchor_right = 0.75
-		grid.anchor_top = 0.38
-		grid.anchor_bottom = 0.82
-		grid.offset_left = 0
-		grid.offset_right = 0
-		grid.offset_top = 0
-		grid.offset_bottom = 0
+		# Posicionar Grid más arriba para aprovechar espacio
+		# Centrado horizontalmente: (1280 - 510) / 2 = 385
+		# Verticalmente: Dejar espacio para título arriba. Y=140
+		grid.position = Vector2(385, 140)
+		# Resetear anchors para que position funcione libremente o usar anchors centrados
+		grid.anchor_left = 0.0
+		grid.anchor_right = 0.0
+		grid.anchor_top = 0.0
+		grid.anchor_bottom = 0.0
+
 	if time_bar:
-		time_bar.anchor_left = 0.3
-		time_bar.anchor_right = 0.7
-		time_bar.anchor_top = 0.34
-		time_bar.anchor_bottom = 0.36
-		time_bar.offset_left = 0
-		time_bar.offset_right = 0
+		# Mover barra de tiempo abajo
+		time_bar.anchor_left = 0.5
+		time_bar.anchor_right = 0.5
+		time_bar.anchor_top = 0.9
+		time_bar.anchor_bottom = 0.93
+		time_bar.offset_left = -200
+		time_bar.offset_right = 200
 		time_bar.offset_top = 0
 		time_bar.offset_bottom = 0
+
 	if time_label:
-		time_label.anchor_left = 0.7
-		time_label.anchor_right = 0.9
-		time_label.anchor_top = 0.32
-		time_label.anchor_bottom = 0.36
-		time_label.offset_left = 0
-		time_label.offset_right = 0
+		# Etiqueta de tiempo justo encima de la barra
+		time_label.anchor_left = 0.5
+		time_label.anchor_right = 0.5
+		time_label.anchor_top = 0.86
+		time_label.anchor_bottom = 0.9
+		time_label.offset_left = -100
+		time_label.offset_right = 100
 		time_label.offset_top = 0
 		time_label.offset_bottom = 0
-	if start_btn:
-		start_btn.anchor_left = 0.4
-		start_btn.anchor_right = 0.6
-		start_btn.anchor_top = 0.86
-		start_btn.anchor_bottom = 0.9
-		start_btn.offset_left = 0
-		start_btn.offset_right = 0
-		start_btn.offset_top = 0
-		start_btn.offset_bottom = 0
+		time_label.horizontal_alignment = HORIZONTAL_ALIGNMENT_CENTER
+
 	if retry_btn:
-		retry_btn.anchor_left = 0.62
-		retry_btn.anchor_right = 0.82
-		retry_btn.anchor_top = 0.86
-		retry_btn.anchor_bottom = 0.9
-		retry_btn.offset_left = 0
-		retry_btn.offset_right = 0
+		retry_btn.anchor_left = 0.5
+		retry_btn.anchor_right = 0.5
+		retry_btn.anchor_top = 0.8
+		retry_btn.anchor_bottom = 0.85
+		retry_btn.offset_left = -80
+		retry_btn.offset_right = 80
 		retry_btn.offset_top = 0
 		retry_btn.offset_bottom = 0
 
@@ -209,15 +247,27 @@ func _playback_sequence() -> void:
 
 func _flash_button(idx: int) -> void:
 	var b: Button = buttons[idx]
-	if click_player and click_player.stream:
-		click_player.play()
+	var original_col = base_colors[idx]
+
+	# Reproducir tono elemental único para cada botón
+	if idx < element_players.size() and element_players[idx] and element_players[idx].stream:
+		print("🔊 Reproduciendo sonido elemental #", idx)
+		element_players[idx].play()
+	else:
+		print("⚠️ No se puede reproducir sonido #", idx, " - No disponible")
+
 	var tw = create_tween()
 	tw.set_parallel(true)
-	tw.tween_property(b, "modulate", Color(1, 1, 1), show_delay * 0.4).from(b.modulate)
+	# Iluminar (ir a blanco o color muy brillante)
+	tw.tween_property(b, "modulate", Color(1.2, 1.2, 1.2), show_delay * 0.4).from(original_col)
 	tw.tween_property(b, "scale", Vector2(1.12, 1.12), show_delay * 0.35).from(Vector2.ONE)
 	await tw.finished
+
+	# Regresar a estado normal
 	var tw2 = create_tween()
+	tw2.set_parallel(true)
 	tw2.tween_property(b, "scale", Vector2.ONE, 0.14).set_trans(Tween.TRANS_BACK).set_ease(Tween.EASE_OUT)
+	tw2.tween_property(b, "modulate", original_col, 0.14)
 
 func _on_button_pressed(idx: int) -> void:
 	if not _running or playing_back or state != State.INPUT:
@@ -232,9 +282,6 @@ func _on_button_pressed(idx: int) -> void:
 	else:
 		_fail_partial()
 
-func _on_start_pressed() -> void:
-	if state == State.IDLE:
-		_begin_round()
 
 func _on_retry_pressed() -> void:
 	_begin_round()
@@ -379,21 +426,43 @@ func _process(_delta: float) -> void:
 			time_bar.value = 100
 
 func _prepare_audio() -> void:
-	# Create players once
-	if click_player == null:
-		click_player = AudioStreamPlayer.new()
-		add_child(click_player)
+	# Crear 4 AudioStreamPlayers para tonos elementales
+	var element_sounds = [
+		"res://assets/sounds/kenney_digital-audio/Audio/tone1.ogg", # Fuego
+		"res://assets/sounds/kenney_digital-audio/Audio/lowThreeTone.ogg", # Tierra
+		"res://assets/sounds/kenney_digital-audio/Audio/phaserDown2.ogg", # Agua
+		"res://assets/sounds/kenney_digital-audio/Audio/phaserUp3.ogg" # Aire
+	]
+
+	element_players.clear()
+	for i in range(4):
+		var player = AudioStreamPlayer.new()
+		player.stream = _try_load_stream(element_sounds[i])
+		if player.stream:
+			print("✅ Sonido elemental #", i, " cargado: ", element_sounds[i])
+		else:
+			print("❌ ERROR: No se pudo cargar sonido elemental #", i)
+		player.volume_db = 0 # Volumen normal (antes era -8)
+		player.bus = "Master" # Asegurar que está en el bus Master
+		add_child(player)
+		element_players.append(player)
+
+	# Crear players de feedback
 	if success_player == null:
 		success_player = AudioStreamPlayer.new()
+		success_player.stream = _try_load_stream("res://assets/sounds/kenney_digital-audio/Audio/powerUp11.ogg")
+		success_player.volume_db = 0 # Volumen normal (antes era -5)
+		success_player.bus = "Master"
 		add_child(success_player)
+		print("✅ Success player configurado")
+
 	if fail_player == null:
 		fail_player = AudioStreamPlayer.new()
+		fail_player.stream = _try_load_stream("res://assets/sounds/kenney_interface-sounds/Audio/error_003.ogg")
+		fail_player.volume_db = 0 # Volumen normal (antes era -5)
+		fail_player.bus = "Master"
 		add_child(fail_player)
-	# No reproducir música de fondo durante el minijuego: no asignar pista al 'click'
-	click_player.stream = null
-	# Efectos de éxito/fracaso (cortos)
-	success_player.stream = _try_load_stream("res://audio/triunfo.ogg")
-	fail_player.stream = _try_load_stream("res://audio/losing.ogg")
+		print("✅ Fail player configurado")
 
 func _try_load_stream(path: String) -> AudioStream:
 	if FileAccess.file_exists(path):

@@ -11,6 +11,12 @@ var is_processing_answer = false
 var is_showing_feedback = false
 var can_show_next_question = true
 
+# Audio
+var ui_next_sfx: AudioStreamPlayer
+var correct_sfx: AudioStreamPlayer
+var incorrect_sfx: AudioStreamPlayer
+var bgm_player: AudioStreamPlayer
+
 var dialogs = [
 	"¡Guerrero valiente! Has reunido los seis fragmentos sagrados.",
 	"Para fusionarlos, debes demostrar tu sabiduría una vez más.",
@@ -71,6 +77,42 @@ func _ready():
 	# Esperar a que pase un pequeño delay antes de mostrar diálogos
 	await get_tree().create_timer(1.0).timeout
 	show_dialog()
+	_setup_audio()
+
+func _setup_audio() -> void:
+	print("🎵 Configurando audio en alux_encuentro_final...")
+	# Botón Next
+	ui_next_sfx = AudioStreamPlayer.new()
+	ui_next_sfx.stream = load("res://assets/sounds/kenney_interface-sounds/Audio/click_001.ogg")
+	ui_next_sfx.volume_db = 0
+	ui_next_sfx.bus = "Master"
+	add_child(ui_next_sfx)
+	print("✅ Next button SFX configurado")
+
+	# Respuesta correcta
+	correct_sfx = AudioStreamPlayer.new()
+	correct_sfx.stream = load("res://assets/sounds/kenney_digital-audio/Audio/powerUp11.ogg")
+	correct_sfx.volume_db = 0
+	correct_sfx.bus = "Master"
+	add_child(correct_sfx)
+	print("✅ Correct answer SFX configurado")
+
+	# Respuesta incorrecta
+	incorrect_sfx = AudioStreamPlayer.new()
+	incorrect_sfx.stream = load("res://assets/sounds/kenney_interface-sounds/Audio/error_003.ogg")
+	incorrect_sfx.volume_db = 0
+	incorrect_sfx.bus = "Master"
+	add_child(incorrect_sfx)
+	print("✅ Incorrect answer SFX configurado")
+
+	# Música de fondo mística
+	bgm_player = AudioStreamPlayer.new()
+	bgm_player.stream = load("res://audio/historia.ogg")
+	bgm_player.volume_db = -12
+	bgm_player.bus = "Master"
+	bgm_player.autoplay = true
+	add_child(bgm_player)
+	print("✅ BGM historia configurado y reproduciendo")
 
 func setup_questions():
 	question_bank.shuffle()
@@ -101,7 +143,7 @@ func init_ui():
 	_connect_signals()
 	# Pequeño temblor inicial de las piezas para dar vida a la escena
 	_shake_amulet_pieces()
-	_center_alux_ui()
+	# NO llamar _center_alux_ui() - respetamos posiciones del editor
 
 func start_amulet_animation_delayed():
 	# Ya no se usa al inicio; se mantiene para futuras transiciones si se requiere
@@ -146,6 +188,11 @@ func show_sequence_dialog():
 	dialog_popup.show()
 
 func _on_next_pressed():
+	# Reproducir sonido
+	print("🔊 Click en Next")
+	if ui_next_sfx:
+		ui_next_sfx.play()
+
 	# Evitar múltiples clics
 	if is_processing_answer:
 		return
@@ -223,6 +270,16 @@ func enable_option_buttons():
 func show_feedback(is_correct: bool):
 	is_showing_feedback = true
 
+	# Reproducir sonido según respuesta
+	if is_correct:
+		print("🔊 Respuesta CORRECTA!")
+		if correct_sfx:
+			correct_sfx.play()
+	else:
+		print("🔊 Respuesta incorrecta")
+		if incorrect_sfx:
+			incorrect_sfx.play()
+
 	# Configurar imagen de feedback
 	feedback.texture = correct_img if is_correct else incorrect_img
 
@@ -264,6 +321,19 @@ func complete_amulet():
 	if has_node("AmuletPieces"):
 		$AmuletPieces.visible = false
 	amulet_complete.visible = true
+
+	# Reproducir sonido épico de victoria
+	print("🎵 ¡AMULETO COMPLETADO! Reproduciendo sonido épico")
+	if correct_sfx:
+		correct_sfx.stop() # Detener el anterior si estaba sonando
+		# Usar un sonido más épico o el mismo pero más fuerte
+		var completion_sfx = AudioStreamPlayer.new()
+		completion_sfx.stream = load("res://audio/triunfo.ogg")
+		completion_sfx.volume_db = 0
+		completion_sfx.bus = "Master"
+		add_child(completion_sfx)
+		completion_sfx.play()
+
 	if animation_player:
 		animation_player.play("amulet_glow")
 	#Global.amulet_complete = true
@@ -379,40 +449,3 @@ func _input(event):
 			print("- Can show next: ", can_show_next_question)
 			print("- Questions attempted: ", questions_attempted)
 			print("- Correct answers: ", correct_answers)
-func _center_alux_ui():
-	if dialog_popup:
-		dialog_popup.anchor_left = 0.2
-		dialog_popup.anchor_right = 0.8
-		dialog_popup.anchor_top = 0.25
-		dialog_popup.anchor_bottom = 0.45
-		dialog_popup.offset_left = 0
-		dialog_popup.offset_right = 0
-		dialog_popup.offset_top = 0
-		dialog_popup.offset_bottom = 0
-	if problem_popup:
-		problem_popup.anchor_left = 0.2
-		problem_popup.anchor_right = 0.8
-		problem_popup.anchor_top = 0.5
-		problem_popup.anchor_bottom = 0.85
-		problem_popup.offset_left = 0
-		problem_popup.offset_right = 0
-		problem_popup.offset_top = 0
-		problem_popup.offset_bottom = 0
-	if option_buttons:
-		option_buttons.anchor_left = 0.25
-		option_buttons.anchor_right = 0.75
-		option_buttons.anchor_top = 0.7
-		option_buttons.anchor_bottom = 0.85
-		option_buttons.offset_left = 0
-		option_buttons.offset_right = 0
-		option_buttons.offset_top = 0
-		option_buttons.offset_bottom = 0
-	if counter_label:
-		counter_label.anchor_left = 0.8
-		counter_label.anchor_right = 0.95
-		counter_label.anchor_top = 0.1
-		counter_label.anchor_bottom = 0.18
-		counter_label.offset_left = 0
-		counter_label.offset_right = 0
-		counter_label.offset_top = 0
-		counter_label.offset_bottom = 0

@@ -5,6 +5,11 @@ var player
 var dialog_box
 var current_dialog_index = 0
 
+# Audio
+var dialog_open_sfx: AudioStreamPlayer
+var dialog_typewriter_sfx: AudioStreamPlayer
+var bgm_player: AudioStreamPlayer
+
 # Sistema de diálogos - Historia del regreso a casa
 var dialogs = [
 	{"speaker": "MADRE", "text": "¡%s! ¡Gracias al cielo que estás bien! ¿Dónde has estado toda la tarde?"},
@@ -63,6 +68,36 @@ func _ready() -> void:
 	tween.finished.connect(_on_walk_finished)
 
 	print("Tween iniciado - Esperando que el personaje llegue...")
+
+	# Configurar audio
+	_setup_audio()
+
+func _setup_audio() -> void:
+	print("🎵 Configurando audio en return_home...")
+	# Sonido al abrir diálogo
+	dialog_open_sfx = AudioStreamPlayer.new()
+	dialog_open_sfx.stream = load("res://assets/sounds/kenney_interface-sounds/Audio/open_001.ogg")
+	dialog_open_sfx.volume_db = 0
+	dialog_open_sfx.bus = "Master"
+	add_child(dialog_open_sfx)
+	print("✅ Dialog open SFX configurado")
+
+	# Sonido de typewriter (tick rápido)
+	dialog_typewriter_sfx = AudioStreamPlayer.new()
+	dialog_typewriter_sfx.stream = load("res://assets/sounds/kenney_interface-sounds/Audio/tick_002.ogg")
+	dialog_typewriter_sfx.volume_db = -5 # Un poco más bajo para el tick repetitivo
+	dialog_typewriter_sfx.bus = "Master"
+	add_child(dialog_typewriter_sfx)
+	print("✅ Dialog typewriter SFX configurado")
+
+	# Música de victoria
+	bgm_player = AudioStreamPlayer.new()
+	bgm_player.stream = load("res://audio/triunfo.ogg")
+	bgm_player.volume_db = -10
+	bgm_player.bus = "Master"
+	bgm_player.autoplay = true
+	add_child(bgm_player)
+	print("✅ BGM triunfo configurado y reproduciendo")
 
 func _on_walk_finished() -> void:
 	print("¡Personaje llegó al destino! Iniciando diálogos...")
@@ -158,13 +193,32 @@ func _show_next_dialog() -> void:
 
 	print("Hablante: ", speaker_text, " - Texto: ", dialog_text)
 
+	# Reproducir sonido de diálogo abriendo
+	print("🔊 Abriendo diálogo...")
+	if dialog_open_sfx:
+		dialog_open_sfx.play()
+
 	# Efecto de escritura
 	text_label.text = dialog_text
 	text_label.visible_characters = 0
 
 	var tween = create_tween()
 	tween.tween_property(text_label, "visible_characters", dialog_text.length(), 2.0)
+
+	# Reproducir tick cada pocos caracteres para simular typewriter
+	_play_typewriter_effect(dialog_text.length(), 2.0)
+
 	tween.finished.connect(_on_dialog_text_finished)
+
+func _play_typewriter_effect(char_count: int, duration: float) -> void:
+	# Reproducir ticks a intervalos durante la escritura
+	var tick_interval = duration / float(char_count) * 3.0 # Cada 3 caracteres aprox
+	var ticks_needed = int(float(char_count) / 3.0)
+
+	for i in range(ticks_needed):
+		await get_tree().create_timer(tick_interval).timeout
+		if dialog_typewriter_sfx:
+			dialog_typewriter_sfx.play()
 
 func _on_dialog_text_finished() -> void:
 	# Esperar 2 segundos antes del siguiente diálogo

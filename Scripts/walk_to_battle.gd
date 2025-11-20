@@ -2,6 +2,10 @@ extends Node2D
 
 @onready var background: TextureRect = $Background
 
+var footstep_sfx: AudioStreamPlayer
+var footstep_timer: Timer
+var bgm_player: AudioStreamPlayer
+
 func _ready() -> void:
 	# 1. Instanciar al personaje seleccionado
 	var player_scene = Global.get("selected_character_scene")
@@ -109,5 +113,44 @@ func _ready() -> void:
 	# 4. Conectar la señal de finalización del tween para cambiar de escena
 	tween.finished.connect(_on_walk_finished)
 
+	# 5. Configurar sonidos de pasos
+	_setup_footsteps()
+
+func _setup_footsteps() -> void:
+	print("🎵 Configurando footsteps...")
+	# Crear player de pasos
+	footstep_sfx = AudioStreamPlayer.new()
+	footstep_sfx.stream = load("res://assets/sounds/kenney_impact-sounds/Audio/footstep_grass_000.ogg")
+	footstep_sfx.volume_db = -3
+	footstep_sfx.bus = "Master"
+	add_child(footstep_sfx)
+
+	# Timer para reproducir pasos cada 0.5 segundos
+	footstep_timer = Timer.new()
+	footstep_timer.wait_time = 0.5
+	footstep_timer.autostart = true
+	footstep_timer.timeout.connect(_play_footstep)
+	add_child(footstep_timer)
+	print("✅ Footsteps configurados")
+
+	# Música de tensión
+	bgm_player = AudioStreamPlayer.new()
+	bgm_player.stream = load("res://audio/suspenso.ogg")
+	bgm_player.volume_db = -12
+	bgm_player.bus = "Master"
+	bgm_player.autoplay = true
+	add_child(bgm_player)
+	print("✅ BGM suspenso configurado y reproduciendo")
+
+func _play_footstep() -> void:
+	if footstep_sfx:
+		# Variar entre los 5 sonidos de pasto disponibles
+		var random_step = randi() % 5
+		footstep_sfx.stream = load("res://assets/sounds/kenney_impact-sounds/Audio/footstep_grass_00" + str(random_step) + ".ogg")
+		footstep_sfx.play()
+
 func _on_walk_finished() -> void:
+	# Detener pasos
+	if footstep_timer:
+		footstep_timer.stop()
 	get_tree().change_scene_to_file("res://Scenes/Pelea_Final.tscn")

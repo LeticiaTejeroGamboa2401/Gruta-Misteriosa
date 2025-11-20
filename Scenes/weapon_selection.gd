@@ -49,6 +49,12 @@ var showing_weapon_selection = false
 # Efectos visuales
 @onready var selection_effect = $SelectionEffect
 
+# Audio
+var ui_hover_sfx: AudioStreamPlayer
+var ui_select_sfx: AudioStreamPlayer
+var weapon_confirm_sfx: AudioStreamPlayer
+var bgm_player: AudioStreamPlayer
+
 func _ready():
 	init_ui()
 	show_dialog()
@@ -72,6 +78,9 @@ func init_ui():
 	# Conectar señales
 	_connect_signals()
 
+	# Configurar audio
+	_setup_audio()
+
 func show_dialog():
 	if current_dialog < dialogs.size():
 		dialog_label.text = dialogs[current_dialog]
@@ -80,6 +89,9 @@ func show_dialog():
 		start_weapon_selection()
 
 func _on_next_pressed():
+	print("🔊 Click en Next button")
+	if ui_select_sfx:
+		ui_select_sfx.play()
 	dialog_popup.hide()
 	current_dialog += 1
 
@@ -182,6 +194,10 @@ func show_selection_effect(weapon_type: String):
 			tween.tween_property(weapon, "modulate:a", 0.3, 0.5)
 
 func show_weapon_confirmation(weapon_type: String):
+	# Reproducir sonido de confirmación épico
+	if weapon_confirm_sfx:
+		weapon_confirm_sfx.play()
+
 	var info = weapon_info[weapon_type]
 
 	# Actualizar el texto del diálogo con información del arma seleccionada
@@ -227,6 +243,11 @@ func get_weapon_button(weapon_type: String) -> TextureButton:
 			return null
 
 func _on_weapon_hover_entered(weapon_type: String):
+	# Reproducir sonido de hover
+	print("🔊 Hover en arma: ", weapon_type)
+	if ui_hover_sfx:
+		ui_hover_sfx.play()
+
 	if not is_selecting_weapon:
 		return
 
@@ -299,6 +320,41 @@ func update_weapon_info():
 			"description": "Lanza sagrada con punta de obsidiana, bendecida por los dioses mayas."
 		}
 	}
+
+func _setup_audio() -> void:
+	print("🎵 Configurando audio en weapon_selection...")
+	# Hover sobre armas
+	ui_hover_sfx = AudioStreamPlayer.new()
+	ui_hover_sfx.stream = load("res://assets/sounds/kenney_ui-audio-2/Audio/rollover3.ogg")
+	ui_hover_sfx.volume_db = 0
+	ui_hover_sfx.bus = "Master"
+	add_child(ui_hover_sfx)
+	print("✅ Hover SFX configurado")
+
+	# Click en botón Next
+	ui_select_sfx = AudioStreamPlayer.new()
+	ui_select_sfx.stream = load("res://assets/sounds/kenney_interface-sounds/Audio/click_001.ogg")
+	ui_select_sfx.volume_db = 0
+	ui_select_sfx.bus = "Master"
+	add_child(ui_select_sfx)
+	print("✅ Select SFX configurado")
+
+	# Confirmación de arma seleccionada
+	weapon_confirm_sfx = AudioStreamPlayer.new()
+	weapon_confirm_sfx.stream = load("res://assets/sounds/kenney_digital-audio/Audio/powerUp3.ogg")
+	weapon_confirm_sfx.volume_db = 0
+	weapon_confirm_sfx.bus = "Master"
+	add_child(weapon_confirm_sfx)
+	print("✅ Weapon confirm SFX configurado")
+
+	# Música de fondo
+	bgm_player = AudioStreamPlayer.new()
+	bgm_player.stream = load("res://audio/suspenso.ogg")
+	bgm_player.volume_db = -12
+	bgm_player.bus = "Master"
+	bgm_player.autoplay = true # Iniciar automáticamente
+	add_child(bgm_player)
+	print("✅ BGM suspenso configurado y reproduciendo")
 
 # Función de debug
 func _input(event):

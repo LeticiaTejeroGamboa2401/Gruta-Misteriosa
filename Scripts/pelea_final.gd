@@ -4,7 +4,7 @@ extends Node2D
 var player_health: int = 6
 var dogs_health: Array = [3, 3, 3] # cada perro requiere 3 golpes bien acertados
 var dogs_alive: Array = [true, true, true]
-var huaychivo_health: int = 5
+var huaychivo_health: int = 1 # Reducido a 1 para victoria con un solo ataque
 var current_phase: String = "dialog" # dialog -> dogs -> huaychivo -> victory/defeat
 
 var selected_weapon: String = "" # viene de Global.selected_weapon
@@ -52,6 +52,17 @@ var dog_minigame_active: bool = false
 var macana_tokens: int = 0 # Con arma A: necesitas 2 ataques completos (3+3 aciertos) para derrotar 1 perro
 var huaychivo_tutorial_shown: bool = false
 var waiting_huaychivo_instructions: bool = false
+
+# ----- Variables de Audio -----
+var ui_click_sfx: AudioStreamPlayer
+var ui_hover_sfx: AudioStreamPlayer
+var dialog_open_sfx: AudioStreamPlayer
+var dialog_next_sfx: AudioStreamPlayer
+var attack_swing_sfx: AudioStreamPlayer
+var attack_hit_sfx: AudioStreamPlayer
+var enemy_hurt_sfx: AudioStreamPlayer
+var player_hurt_sfx: AudioStreamPlayer
+var bgm_player: AudioStreamPlayer # Música de fondo
 
 
 # Helper para leer valores desde el autoload Global de forma robusta
@@ -141,6 +152,7 @@ func _ready() -> void:
 	_init_dog_motion_state()
 	start_intro_sequence()
 	_create_tutorial_overlay()
+	_setup_audio()
 
 func _process(_delta: float) -> void:
 	pass
@@ -419,6 +431,19 @@ func _return_player_to_idle() -> void:
 func set_phase(new_phase: String) -> void:
 	current_phase = new_phase
 	_set_phase_label_text()
+
+	# Controlar música según fase
+	if current_phase == "dogs" or current_phase == "huaychivo":
+		# Iniciar música de combate
+		if bgm_player and not bgm_player.playing:
+			print("🎵 Iniciando música de combate")
+			bgm_player.play()
+	elif current_phase == "victory" or current_phase == "defeat":
+		# Detener música al terminar
+		if bgm_player and bgm_player.playing:
+			print("🎵 Deteniendo música de combate")
+			bgm_player.stop()
+
 	# Ajustes de UI por fase
 	if current_phase == "dialog":
 		if dialog_card:
@@ -538,6 +563,8 @@ func _show_temporary_message(text: String, duration: float = 1.4) -> void:
 
 # Mostrar instrucciones del minijuego de Huaychivo antes del primer intento
 func _show_huaychivo_instructions() -> void:
+	# Ocultar y deshabilitar todos los botones de ataque
+	_hide_all_attack_buttons()
 	if action_buttons:
 		action_buttons.visible = false
 	waiting_huaychivo_instructions = true
@@ -670,6 +697,12 @@ func _enemy_retaliation() -> void:
 	}
 	var inc: int = int(dmg_map.get(wnorm, 3))
 	player_health -= inc
+
+	# Reproducir sonido de daño al jugador
+	print("🔊 Jugador recibe daño")
+	if player_hurt_sfx:
+		player_hurt_sfx.play()
+
 	if (current_phase == "dogs" or current_phase == "huaychivo") and wnorm == "weapon_c" and player_health <= 1:
 		player_health = 1
 	print("DEBUG: incoming -> phase=%s, weapon=%s, dmg=%d" % [current_phase, wnorm, inc])
@@ -723,6 +756,11 @@ func _normalize_weapon(w: String) -> String:
 
 # ----- Métodos de ataque -----
 func _on_attack_pressed() -> void:
+	# Reproducir sonido de click
+	print("🔊 Click en botón de ataque")
+	if ui_click_sfx:
+		ui_click_sfx.play()
+
 	# Solo aceptar ataques en fases de combate
 	if current_phase != "dogs" and current_phase != "huaychivo":
 		print("No se puede atacar en la fase actual: %s" % current_phase)
@@ -732,12 +770,14 @@ func _on_attack_pressed() -> void:
 		print("DEBUG: Ya hay un turno en proceso, ignorando")
 		return
 
+	# Guard adicional: si hay un minijuego activo, ignorar
+	if minigame_running:
+		print("DEBUG: Minijuego en curso, ignorando ataque")
+		return
+
 	# Iniciar el turno
 	processing_turn = true
-	if btn_attack_dogs:
-		btn_attack_dogs.disabled = true
-	if btn_attack_huaychivo:
-		btn_attack_huaychivo.disabled = true
+	_disable_all_attack_buttons()
 
 	# --- Animación de golpe de Lele ---
 	if player_instance:
@@ -756,6 +796,8 @@ func _on_attack_pressed() -> void:
 	if current_phase == "dogs":
 		if not dogs_tutorial_shown:
 			if tutorial_overlay and timedhit_tutorial:
+				# Ocultar botones durante tutorial
+				_hide_all_attack_buttons()
 				tutorial_overlay.visible = true
 				timedhit_tutorial.visible = true
 				return
@@ -825,6 +867,8 @@ func start_minigame(type: String) -> void:
 		return
 	active_minigame = Packed.instantiate()
 	minigame_running = true
+	# Ocultar botones durante el minijuego
+	_hide_all_attack_buttons()
 	if type == "timed_hit":
 		dog_press_hits = 0
 		dog_minigame_active = true
@@ -926,6 +970,7 @@ func _on_minigame_finished(_success: bool, score: int) -> void:
 			if huaychivo_health <= 0:
 				if huaychivo:
 					huaychivo.hide()
+				# No reactivar botones, la fase terminó
 				set_phase("victory")
 				return
 	else:
@@ -954,12 +999,13 @@ func _on_minigame_finished(_success: bool, score: int) -> void:
 				any_dog_alive = true
 				break
 		if not any_dog_alive:
-			# Ocultar botón de perros de inmediato para evitar confusión
-			if btn_attack_dogs:
-				btn_attack_dogs.visible = false
+			# Ocultar y deshabilitar botón de perros de inmediato para evitar confusión
+			_hide_all_attack_buttons()
 			await _show_temporary_message("¡Todos los perros derrotados! Ahora enfrenta al Huaychivo", DIALOG_AUTO_ADVANCE_TIME)
 			set_phase("huaychivo")
 			transitioned_to_huaychivo = true
+			# No reactivar botones aquí, set_phase lo hará
+			return
 		else:
 			# Reanudar bobbing del nuevo perro en turno
 			_refresh_dog_agro_loops()
@@ -970,12 +1016,26 @@ func _on_minigame_finished(_success: bool, score: int) -> void:
 		await _enemy_retaliation()
 		_did_retaliate = true
 
-	# Cierre del turno: reactivar UI siempre, haya o no retaliación
+	# Cierre del turno: reactivar UI solo si seguimos en fase de combate
 	processing_turn = false
-	if btn_attack_dogs:
-		btn_attack_dogs.disabled = false
-	if btn_attack_huaychivo:
-		btn_attack_huaychivo.disabled = false
+	print("DEBUG: Fin de minijuego - current_phase:", current_phase, ", processing_turn:", processing_turn)
+
+	if current_phase == "dogs" or current_phase == "huaychivo":
+		print("DEBUG: Reactivando botones para fase:", current_phase)
+		print("DEBUG: btn_attack_huaychivo existe?", btn_attack_huaychivo != null)
+		if btn_attack_huaychivo:
+			print("DEBUG: btn_attack_huaychivo.visible:", btn_attack_huaychivo.visible, ", disabled:", btn_attack_huaychivo.disabled)
+		_enable_phase_appropriate_buttons()
+
+		# Verificar después de habilitar
+		await get_tree().process_frame # Esperar un frame
+		if current_phase == "huaychivo" and btn_attack_huaychivo:
+			print("DEBUG: Después de habilitar - visible:", btn_attack_huaychivo.visible, ", disabled:", btn_attack_huaychivo.disabled)
+			# Forzar si no está visible
+			if not btn_attack_huaychivo.visible:
+				print("⚠️ FORZANDO visibilidad de botón Huaychivo")
+				btn_attack_huaychivo.visible = true
+				btn_attack_huaychivo.disabled = false
 
 # Reaccionar a cada intento de golpe en TimedHit
 func _on_timedhit_attempt(score: int) -> void:
@@ -1034,6 +1094,11 @@ func _on_timedhit_attempt(score: int) -> void:
 
 # Reproducir animación de ataque del jugador (Golpe)
 func _play_player_attack_anim() -> void:
+	# Reproducir sonido de swing
+	print("🔊 Swing de ataque")
+	if attack_swing_sfx:
+		attack_swing_sfx.play()
+
 	if not player_instance:
 		return
 	var anim_sprite = player_instance.get_node_or_null("AnimatedSprite2D")
@@ -1180,6 +1245,15 @@ func _dog_preact(idx: int) -> void:
 	_maybe_resume_bob(idx)
 
 func _dog_on_hit(idx: int) -> void:
+	# Reproducir sonido de impacto exitoso
+	print("🔊 Hit exitoso en perro")
+	if attack_hit_sfx:
+		attack_hit_sfx.play()
+
+	# Reproducir sonido de daño a enemigo
+	if enemy_hurt_sfx:
+		enemy_hurt_sfx.play()
+
 	var dog = _get_dog_node(idx)
 	if not dog:
 		return
@@ -1541,6 +1615,8 @@ func _on_timedhit_tutorial_start() -> void:
 		dogs_tutorial_shown = true
 		practice_active = true
 		pending_minigame_type = "timed_hit"
+		# Asegurar que botones estén ocultos antes de iniciar
+		_hide_all_attack_buttons()
 		start_minigame("timed_hit")
 
 func _on_simon_tutorial_start() -> void:
@@ -1550,6 +1626,8 @@ func _on_simon_tutorial_start() -> void:
 		waiting_huaychivo_instructions = false
 		practice_active = true
 		pending_minigame_type = "simon"
+		# Asegurar que botones estén ocultos antes de iniciar
+		_hide_all_attack_buttons()
 		start_minigame("simon")
 
 
@@ -2004,3 +2082,126 @@ func _center_battle_ui() -> void:
 			btn_attack_huaychivo.offset_top = 0
 			btn_attack_huaychivo.offset_bottom = 0
 			btn_attack_huaychivo.custom_minimum_size = Vector2(220, 52)
+
+# ----- Funciones auxiliares para manejo de botones -----
+
+# Deshabilita todos los botones de ataque
+func _disable_all_attack_buttons() -> void:
+	if btn_attack_dogs:
+		btn_attack_dogs.disabled = true
+	if btn_attack_huaychivo:
+		btn_attack_huaychivo.disabled = true
+
+# Oculta todos los botones de ataque
+func _hide_all_attack_buttons() -> void:
+	if btn_attack_dogs:
+		btn_attack_dogs.visible = false
+		btn_attack_dogs.disabled = true
+	if btn_attack_huaychivo:
+		btn_attack_huaychivo.visible = false
+		btn_attack_huaychivo.disabled = true
+
+# Habilita y muestra los botones apropiados según la fase actual
+func _enable_phase_appropriate_buttons() -> void:
+	print("DEBUG: _enable_phase_appropriate_buttons llamada - fase:", current_phase)
+	if current_phase == "dogs":
+		print("DEBUG: Habilitando botón de perros")
+		if btn_attack_dogs:
+			btn_attack_dogs.visible = true
+			btn_attack_dogs.disabled = false
+			print("DEBUG: Botón perros ahora visible:", btn_attack_dogs.visible)
+		if btn_attack_huaychivo:
+			btn_attack_huaychivo.visible = false
+			btn_attack_huaychivo.disabled = true
+	elif current_phase == "huaychivo":
+		print("DEBUG: Habilitando botón de huaychivo")
+		if btn_attack_huaychivo:
+			btn_attack_huaychivo.visible = true
+			btn_attack_huaychivo.disabled = false
+			print("DEBUG: Botón huaychivo ahora visible:", btn_attack_huaychivo.visible, ", disabled:", btn_attack_huaychivo.disabled)
+		else:
+			print("⚠️ btn_attack_huaychivo es NULL!")
+		if btn_attack_dogs:
+			btn_attack_dogs.visible = false
+			btn_attack_dogs.disabled = true
+	else:
+		# En otras fases, ocultar todos
+		_hide_all_attack_buttons()
+
+# ====== CONFIGURACIÓN DE AUDIO ======
+func _setup_audio() -> void:
+	# Actualizar volúmenes con debug
+	print("🎵 Configurando audio en pelea_final...")
+	# UI Clicks
+	ui_click_sfx = AudioStreamPlayer.new()
+	ui_click_sfx.stream = load("res://assets/sounds/kenney_interface-sounds/Audio/click_001.ogg")
+	ui_click_sfx.volume_db = 0
+	ui_click_sfx.bus = "Master"
+	add_child(ui_click_sfx)
+	print("✅ UI Click configurado")
+
+	# UI Hover (para futuros botones con hover)
+	ui_hover_sfx = AudioStreamPlayer.new()
+	ui_hover_sfx.stream = load("res://assets/sounds/kenney_ui-audio-2/Audio/rollover1.ogg")
+	ui_hover_sfx.volume_db = 0
+	ui_hover_sfx.bus = "Master"
+	add_child(ui_hover_sfx)
+
+	# Diálogo abierto
+	dialog_open_sfx = AudioStreamPlayer.new()
+	dialog_open_sfx.stream = load("res://assets/sounds/kenney_interface-sounds/Audio/open_001.ogg")
+	dialog_open_sfx.volume_db = 0
+	dialog_open_sfx.bus = "Master"
+	add_child(dialog_open_sfx)
+	print("✅ Dialog open configurado")
+
+	# Diálogo siguiente
+	dialog_next_sfx = AudioStreamPlayer.new()
+	dialog_next_sfx.stream = load("res://assets/sounds/kenney_interface-sounds/Audio/tick_002.ogg")
+	dialog_next_sfx.volume_db = 0
+	dialog_next_sfx.bus = "Master"
+	add_child(dialog_next_sfx)
+	print("✅ Dialog next configurado")
+
+	# Ataque swing
+	attack_swing_sfx = AudioStreamPlayer.new()
+	attack_swing_sfx.stream = load("res://assets/sounds/kenney_impact-sounds/Audio/impactWood_medium_000.ogg")
+	attack_swing_sfx.volume_db = 0
+	attack_swing_sfx.bus = "Master"
+	add_child(attack_swing_sfx)
+	print("✅ Attack swing configurado")
+
+	# Ataque hit exitoso
+	attack_hit_sfx = AudioStreamPlayer.new()
+	attack_hit_sfx.stream = load("res://assets/sounds/kenney_impact-sounds/Audio/impactPunch_heavy_002.ogg")
+	attack_hit_sfx.volume_db = 0
+	attack_hit_sfx.bus = "Master"
+	add_child(attack_hit_sfx)
+	print("✅ Attack hit configurado")
+
+	# Enemigo herido
+	enemy_hurt_sfx = AudioStreamPlayer.new()
+	enemy_hurt_sfx.stream = load("res://assets/sounds/kenney_impact-sounds/Audio/impactSoft_heavy_001.ogg")
+	enemy_hurt_sfx.volume_db = 0
+	enemy_hurt_sfx.bus = "Master"
+	add_child(enemy_hurt_sfx)
+	print("✅ Enemy hurt configurado")
+
+	# Jugador herido
+	player_hurt_sfx = AudioStreamPlayer.new()
+	player_hurt_sfx.stream = load("res://assets/sounds/kenney_impact-sounds/Audio/impactSoft_heavy_002.ogg")
+	player_hurt_sfx.volume_db = 0
+	player_hurt_sfx.bus = "Master"
+	add_child(player_hurt_sfx)
+	print("✅ Player hurt configurado")
+
+	# Música de fondo para combate
+	bgm_player = AudioStreamPlayer.new()
+	bgm_player.stream = load("res://audio/persecución1.ogg")
+	bgm_player.volume_db = -8 # Más bajo que SFX para no tapar efectos
+	bgm_player.bus = "Master"
+	bgm_player.autoplay = false # Lo iniciaremos manualmente
+	add_child(bgm_player)
+	print("✅ BGM configurado")
+
+	print("✅ Audio de pelea_final completamente configurado")

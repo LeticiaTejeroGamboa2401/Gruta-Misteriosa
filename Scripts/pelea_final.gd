@@ -121,6 +121,12 @@ var general_enemy_healthbar: ProgressBar = null
 # Barras de vida de enemigos
 var dog_healthbars: Array[ProgressBar] = []
 var huaychivo_healthbar: ProgressBar = null
+var tutorial_overlay: Panel = null
+var timedhit_tutorial: Panel = null
+var simon_tutorial: Panel = null
+var dogs_tutorial_shown: bool = false
+var practice_active: bool = false
+var pending_minigame_type: String = ""
 
 # Effects
 @onready var hit_flash: ColorRect = get_node_or_null("Effects/HitFlash") as ColorRect
@@ -131,10 +137,13 @@ var huaychivo_healthbar: ProgressBar = null
 func _ready() -> void:
 	_initialize_scene()
 	_spawn_general_enemy_healthbar()
-	# Crear las barras individuales de enemigos en la UI
 	_spawn_enemy_healthbars()
 	_init_dog_motion_state()
 	start_intro_sequence()
+	_create_tutorial_overlay()
+
+func _process(_delta: float) -> void:
+	pass
 
 func _spawn_general_enemy_healthbar() -> void:
 	# Instanciar ProgressBar general y agregarla a la HUD
@@ -159,39 +168,11 @@ func _spawn_general_enemy_healthbar() -> void:
 	general_enemy_healthbar.offset_right = 150
 	general_enemy_healthbar.offset_top = 0
 	general_enemy_healthbar.offset_bottom = 18
+	general_enemy_healthbar.mouse_filter = Control.MOUSE_FILTER_IGNORE
 
 func _spawn_enemy_healthbars() -> void:
-	# Instanciar ProgressBar para cada perro
-	# No dependemos de un recurso externo; creamos barras dinámicamente
 	dog_healthbars.clear()
-	for i in range(3):
-		var bar = ProgressBar.new()
-		bar.min_value = 0
-		bar.max_value = 3
-		bar.value = dogs_health[i]
-		# No confiar en percent_visible; mantener la barra visual y ajustar tamaño
-		bar.size_flags_horizontal = Control.SIZE_SHRINK_CENTER
-		bar.size_flags_vertical = Control.SIZE_SHRINK_CENTER
-		bar.custom_minimum_size = Vector2(60, 10)
-		# Posicionar sobre cada perro
-		var dog = [nahual1, nahual2, nahual3][i]
-		# Añadir las barras al CanvasLayer (HUD) para que sean Controls
-		canvas.add_child(bar)
-		# Posición por encima del perro (global)
-		bar.global_position = dog.global_position + Vector2(0, -40)
-		dog_healthbars.append(bar)
-
-	# Instanciar ProgressBar para Huaychivo
-	huaychivo_healthbar = ProgressBar.new()
-	huaychivo_healthbar.min_value = 0
-	huaychivo_healthbar.max_value = 5
-	huaychivo_healthbar.value = huaychivo_health
-	# Evitar uso de percent_visible por compatibilidad
-	huaychivo_healthbar.size_flags_horizontal = Control.SIZE_SHRINK_CENTER
-	huaychivo_healthbar.size_flags_vertical = Control.SIZE_SHRINK_CENTER
-	huaychivo_healthbar.custom_minimum_size = Vector2(80, 12)
-	canvas.add_child(huaychivo_healthbar)
-	huaychivo_healthbar.global_position = huaychivo.global_position + Vector2(0, -50)
+	huaychivo_healthbar = null
 
 # ----- Inicialización -----
 func _initialize_scene() -> void:
@@ -251,7 +232,14 @@ func _initialize_scene() -> void:
 			new_btn.size_flags_horizontal = btn_attack_dogs.size_flags_horizontal
 			new_btn.size_flags_vertical = btn_attack_dogs.size_flags_vertical
 			action_buttons.add_child(new_btn)
-			new_btn.position = btn_attack_dogs.position + Vector2(140, 0)
+			new_btn.anchor_left = btn_attack_dogs.anchor_left
+			new_btn.anchor_right = btn_attack_dogs.anchor_right
+			new_btn.anchor_top = btn_attack_dogs.anchor_top
+			new_btn.anchor_bottom = btn_attack_dogs.anchor_bottom
+			new_btn.offset_left = btn_attack_dogs.offset_left + 140
+			new_btn.offset_right = btn_attack_dogs.offset_right + 140
+			new_btn.offset_top = btn_attack_dogs.offset_top
+			new_btn.offset_bottom = btn_attack_dogs.offset_bottom
 			btn_attack_huaychivo = new_btn
 			new_btn.connect("pressed", Callable(self, "_on_attack_pressed"))
 	if dialog_next_btn:
@@ -302,6 +290,9 @@ func _initialize_scene() -> void:
 			phase_label.set("align", 0)
 		canvas.add_child(phase_label)
 		_set_phase_label_text()
+	_center_battle_ui()
+	if healthbar:
+		healthbar.mouse_filter = Control.MOUSE_FILTER_IGNORE
 
 func _init_dog_motion_state() -> void:
 	# Guardar posiciones base locales de cada perro al inicio
@@ -547,18 +538,12 @@ func _show_temporary_message(text: String, duration: float = 1.4) -> void:
 
 # Mostrar instrucciones del minijuego de Huaychivo antes del primer intento
 func _show_huaychivo_instructions() -> void:
-	# Ocultar botones de acción mientras se leen
 	if action_buttons:
 		action_buttons.visible = false
 	waiting_huaychivo_instructions = true
-	if dialog_box and dialog_label and dialog_next_btn:
-		dialog_label.text = "Repite la secuencia\nPresiona ‘Siguiente’ para comenzar."
-		dialog_label.modulate.a = 1.0
-		dialog_label.visible = true
-		dialog_box.modulate.a = 1.0
-		dialog_box.visible = true
-		dialog_next_btn.visible = true
-		dialog_next_btn.disabled = false
+	if tutorial_overlay and simon_tutorial:
+		tutorial_overlay.visible = true
+		simon_tutorial.visible = true
 	return
 # ----- Secuencia de introducción -----
 func start_intro_sequence() -> void:
@@ -665,8 +650,7 @@ func _get_damage_for(target: String) -> int:
 		# En fallback (sin minijuego) no causa daño directo
 		return 0
 	elif w == "weapon_b":
-		# Jícara no progresa: 0 de daño a todos
-		return 0
+		return (1 if target == "dog" else 0)
 	elif w == "weapon_c":
 		# Correcta: daño base en fallback = 1 (perros y Huaychivo) si no hay minijuego
 		return 1
@@ -686,6 +670,8 @@ func _enemy_retaliation() -> void:
 	}
 	var inc: int = int(dmg_map.get(wnorm, 3))
 	player_health -= inc
+	if (current_phase == "dogs" or current_phase == "huaychivo") and wnorm == "weapon_c" and player_health <= 1:
+		player_health = 1
 	print("DEBUG: incoming -> phase=%s, weapon=%s, dmg=%d" % [current_phase, wnorm, inc])
 	# Efecto de impacto
 	if hit_flash:
@@ -768,6 +754,11 @@ func _on_attack_pressed() -> void:
 
 	# Lanzar minijuego según fase. Si falla, se usará fallback en start_minigame.
 	if current_phase == "dogs":
+		if not dogs_tutorial_shown:
+			if tutorial_overlay and timedhit_tutorial:
+				tutorial_overlay.visible = true
+				timedhit_tutorial.visible = true
+				return
 		start_minigame("timed_hit")
 	elif current_phase == "huaychivo":
 		start_minigame("simon")
@@ -841,6 +832,21 @@ func start_minigame(type: String) -> void:
 		canvas.add_child(active_minigame)
 	else:
 		add_child(active_minigame)
+	if active_minigame is Control:
+		var cm := active_minigame as Control
+		cm.anchor_left = 0.0
+		cm.anchor_top = 0.0
+		cm.anchor_right = 1.0
+		cm.anchor_bottom = 1.0
+		cm.offset_left = 0.0
+		cm.offset_top = 0.0
+		cm.offset_right = 0.0
+		cm.offset_bottom = 0.0
+	else:
+		if active_minigame is Node2D:
+			var n2 := active_minigame as Node2D
+			var center := get_viewport().get_visible_rect().size * 0.5
+			n2.global_position = center
 	if active_minigame.has_signal("finished"):
 		active_minigame.connect("finished", Callable(self, "_on_minigame_finished"))
 	# Conectar intentos de golpe del minijuego de perros para animar estocada
@@ -863,6 +869,14 @@ func _on_minigame_finished(_success: bool, score: int) -> void:
 		active_minigame.queue_free()
 	active_minigame = null
 	minigame_running = false
+	if practice_active:
+		practice_active = false
+		if pending_minigame_type != "":
+			start_minigame(pending_minigame_type)
+			pending_minigame_type = ""
+		return
+	if not _success:
+		pass
 
 	var wnorm := _normalize_weapon(selected_weapon)
 	var target := ("huaychivo" if current_phase == "huaychivo" else "dog")
@@ -977,15 +991,13 @@ func _on_timedhit_attempt(score: int) -> void:
 	# Arma C (Lanza con Obsidiana): cada acierto resta 1 de vida (3 aciertos -> muere el perro)
 	# Arma A (Macana): no hace daño por golpe; se evalúa por tokens al final del minijuego
 	if score > 0:
-		# Contar aciertos del turno para consistencia (C) y para tokens (A)
 		dog_press_hits += 1
-		if wnorm == "weapon_c":
+		if wnorm == "weapon_c" or wnorm == "weapon_b":
 			per_press_dmg = 1
 
 	print("DEBUG: timedhit_attempt -> idx=%d, score=%d, dmg=%d, weapon=%s, health=%d" % [idx, score, per_press_dmg, wnorm, dogs_health[idx]])
 
 	if per_press_dmg > 0:
-		dog_press_hits += 1
 		dogs_health[idx] = max(0, dogs_health[idx] - per_press_dmg)
 		if dogs_health[idx] <= 0:
 			await _dog_on_death(idx)
@@ -1265,7 +1277,7 @@ func compute_damage_from_score(score: int, target_type: String) -> int:
 	else:
 		return 3
 
-func _apply_weapon_rules(base_damage: int, _target_type: String) -> int:
+func _apply_weapon_rules(base_damage: int, target_type: String) -> int:
 	# Reglas robustas y consistentes:
 	# - weapon_a: 0 daño a todos
 	# - weapon_b: 0 daño a todos (Jícara no progresa)
@@ -1274,7 +1286,7 @@ func _apply_weapon_rules(base_damage: int, _target_type: String) -> int:
 	if w == "weapon_a":
 		return 0
 	if w == "weapon_b":
-		return 0
+		return (base_damage if target_type == "dog" else 0)
 	if w == "weapon_c":
 		# Sin privilegios especiales: requiere buen desempeño para hacer daño
 		return base_damage
@@ -1371,27 +1383,13 @@ func update_health_ui() -> void:
 
 	# Actualizar barra de vida general de enemigos
 	if general_enemy_healthbar:
-		# Asegurar max consistente (3 por perro, 5 Huaychivo)
 		var max_total := 3 * 3 + 5
 		general_enemy_healthbar.max_value = max_total
 		var total := 0
 		for i in range(3):
-			# Actualizar barras individuales si existen
-			if i < dog_healthbars.size():
-				var bar := dog_healthbars[i]
-				if dogs_alive[i]:
-					bar.visible = true
-					bar.value = dogs_health[i]
-				else:
-					bar.visible = false
-			# acumular para la barra general
 			if dogs_alive[i]:
 				total += dogs_health[i]
-		# Huaychivo
 		if huaychivo and huaychivo.visible:
-			if huaychivo_healthbar:
-				huaychivo_healthbar.visible = huaychivo_health > 0
-				huaychivo_healthbar.value = huaychivo_health
 			total += huaychivo_health
 		general_enemy_healthbar.value = total
 
@@ -1410,6 +1408,149 @@ func _play_death_effect_at(global_pos: Vector2) -> void:
 func _get_huaychivo_max_hp() -> int:
 	# Mantener un único sitio para el HP máximo del HuayChivo
 	return 5
+
+
+func _create_tutorial_overlay() -> void:
+	tutorial_overlay = Panel.new()
+	if canvas:
+		canvas.add_child(tutorial_overlay)
+	else:
+		add_child(tutorial_overlay)
+	tutorial_overlay.anchor_left = 0.0
+	tutorial_overlay.anchor_top = 0.0
+	tutorial_overlay.anchor_right = 1.0
+	tutorial_overlay.anchor_bottom = 1.0
+	tutorial_overlay.offset_left = 0.0
+	tutorial_overlay.offset_top = 0.0
+	tutorial_overlay.offset_right = 0.0
+	tutorial_overlay.offset_bottom = 0.0
+	tutorial_overlay.visible = false
+	tutorial_overlay.mouse_filter = Control.MOUSE_FILTER_STOP
+	var overlay_bg := StyleBoxFlat.new()
+	overlay_bg.bg_color = Color(0, 0, 0, 0.55)
+	tutorial_overlay.add_theme_stylebox_override("panel", overlay_bg)
+	timedhit_tutorial = Panel.new()
+	tutorial_overlay.add_child(timedhit_tutorial)
+	timedhit_tutorial.anchor_left = 0.2
+	timedhit_tutorial.anchor_top = 0.2
+	timedhit_tutorial.anchor_right = 0.8
+	timedhit_tutorial.anchor_bottom = 0.8
+	var th_title := Label.new()
+	th_title.text = "Golpe Cronometrado"
+	timedhit_tutorial.add_child(th_title)
+	th_title.anchor_left = 0.0
+	th_title.anchor_top = 0.0
+	th_title.anchor_right = 1.0
+	th_title.anchor_bottom = 0.2
+	th_title.horizontal_alignment = HORIZONTAL_ALIGNMENT_CENTER
+	th_title.add_theme_font_size_override("font_size", 36)
+	th_title.add_theme_color_override("font_color", Color(1, 1, 1))
+	var th_desc := Label.new()
+	th_desc.text = "Presiona cuando el indicador esté en la zona correcta. Completa 3 aciertos para dañar al enemigo."
+	timedhit_tutorial.add_child(th_desc)
+	th_desc.anchor_left = 0.05
+	th_desc.anchor_top = 0.22
+	th_desc.anchor_right = 0.95
+	th_desc.anchor_bottom = 0.66
+	th_desc.horizontal_alignment = HORIZONTAL_ALIGNMENT_CENTER
+	th_desc.add_theme_font_size_override("font_size", 24)
+	th_desc.add_theme_color_override("font_color", Color(1, 1, 1))
+	th_desc.autowrap_mode = TextServer.AUTOWRAP_WORD
+	var th_start := Button.new()
+	th_start.text = "Comenzar"
+	timedhit_tutorial.add_child(th_start)
+	th_start.anchor_left = 0.37
+	th_start.anchor_top = 0.72
+	th_start.anchor_right = 0.63
+	th_start.anchor_bottom = 0.86
+	th_start.custom_minimum_size = Vector2(260, 64)
+	th_start.add_theme_font_size_override("font_size", 24)
+	var th_style := StyleBoxFlat.new()
+	th_style.bg_color = Color(0.2, 0.6, 1.0, 1.0)
+	th_style.border_color = Color(1, 1, 1, 1)
+	th_style.border_width_top = 2
+	th_style.border_width_left = 2
+	th_style.border_width_bottom = 2
+	th_style.border_width_right = 2
+	var th_style_hover := th_style.duplicate()
+	th_style_hover.bg_color = Color(0.3, 0.7, 1.0, 1.0)
+	var th_style_pressed := th_style.duplicate()
+	th_style_pressed.bg_color = Color(0.1, 0.5, 0.9, 1.0)
+	th_start.add_theme_stylebox_override("normal", th_style)
+	th_start.add_theme_stylebox_override("hover", th_style_hover)
+	th_start.add_theme_stylebox_override("pressed", th_style_pressed)
+	th_start.pressed.connect(_on_timedhit_tutorial_start)
+	timedhit_tutorial.visible = false
+	simon_tutorial = Panel.new()
+	tutorial_overlay.add_child(simon_tutorial)
+	simon_tutorial.anchor_left = 0.2
+	simon_tutorial.anchor_top = 0.2
+	simon_tutorial.anchor_right = 0.8
+	simon_tutorial.anchor_bottom = 0.8
+	var si_title := Label.new()
+	si_title.text = "Sigue la Secuencia"
+	simon_tutorial.add_child(si_title)
+	si_title.anchor_left = 0.0
+	si_title.anchor_top = 0.0
+	si_title.anchor_right = 1.0
+	si_title.anchor_bottom = 0.2
+	si_title.horizontal_alignment = HORIZONTAL_ALIGNMENT_CENTER
+	si_title.add_theme_font_size_override("font_size", 36)
+	si_title.add_theme_color_override("font_color", Color(1, 1, 1))
+	var si_desc := Label.new()
+	si_desc.text = "Observa la secuencia y repítela en el mismo orden. Mejores aciertos, mayor daño."
+	simon_tutorial.add_child(si_desc)
+	si_desc.anchor_left = 0.05
+	si_desc.anchor_top = 0.22
+	si_desc.anchor_right = 0.95
+	si_desc.anchor_bottom = 0.66
+	si_desc.horizontal_alignment = HORIZONTAL_ALIGNMENT_CENTER
+	si_desc.add_theme_font_size_override("font_size", 24)
+	si_desc.add_theme_color_override("font_color", Color(1, 1, 1))
+	si_desc.autowrap_mode = TextServer.AUTOWRAP_WORD
+	var si_start := Button.new()
+	si_start.text = "Comenzar"
+	simon_tutorial.add_child(si_start)
+	si_start.anchor_left = 0.37
+	si_start.anchor_top = 0.72
+	si_start.anchor_right = 0.63
+	si_start.anchor_bottom = 0.86
+	si_start.custom_minimum_size = Vector2(260, 64)
+	si_start.add_theme_font_size_override("font_size", 24)
+	var si_style := StyleBoxFlat.new()
+	si_style.bg_color = Color(0.2, 0.6, 1.0, 1.0)
+	si_style.border_color = Color(1, 1, 1, 1)
+	si_style.border_width_top = 2
+	si_style.border_width_left = 2
+	si_style.border_width_bottom = 2
+	si_style.border_width_right = 2
+	var si_style_hover := si_style.duplicate()
+	si_style_hover.bg_color = Color(0.3, 0.7, 1.0, 1.0)
+	var si_style_pressed := si_style.duplicate()
+	si_style_pressed.bg_color = Color(0.1, 0.5, 0.9, 1.0)
+	si_start.add_theme_stylebox_override("normal", si_style)
+	si_start.add_theme_stylebox_override("hover", si_style_hover)
+	si_start.add_theme_stylebox_override("pressed", si_style_pressed)
+	si_start.pressed.connect(_on_simon_tutorial_start)
+	simon_tutorial.visible = false
+
+func _on_timedhit_tutorial_start() -> void:
+	tutorial_overlay.visible = false
+	timedhit_tutorial.visible = false
+	if not dogs_tutorial_shown:
+		dogs_tutorial_shown = true
+		practice_active = true
+		pending_minigame_type = "timed_hit"
+		start_minigame("timed_hit")
+
+func _on_simon_tutorial_start() -> void:
+	tutorial_overlay.visible = false
+	simon_tutorial.visible = false
+	if waiting_huaychivo_instructions:
+		waiting_huaychivo_instructions = false
+		practice_active = true
+		pending_minigame_type = "simon"
+		start_minigame("simon")
 
 
 # Secuencias finales: victoria y derrota
@@ -1831,3 +1972,35 @@ func _on_dialog_next_pressed() -> void:
 	await _delay(0.5) # cooldown de 0.5 segundos
 	next_btn_cooldown = false
 	dialog_next_btn.disabled = false
+func _center_battle_ui() -> void:
+	if action_buttons:
+		action_buttons.anchor_left = 0.3
+		action_buttons.anchor_right = 0.7
+		action_buttons.anchor_top = 0.68
+		action_buttons.anchor_bottom = 0.78
+		action_buttons.offset_left = 0
+		action_buttons.offset_right = 0
+		action_buttons.offset_top = 0
+		action_buttons.offset_bottom = 0
+		if action_buttons is BoxContainer:
+			(action_buttons as BoxContainer).alignment = BoxContainer.ALIGNMENT_CENTER
+		if btn_attack_dogs:
+			btn_attack_dogs.anchor_left = 0.36
+			btn_attack_dogs.anchor_right = 0.48
+			btn_attack_dogs.anchor_top = 0.68
+			btn_attack_dogs.anchor_bottom = 0.74
+			btn_attack_dogs.offset_left = 0
+			btn_attack_dogs.offset_right = 0
+			btn_attack_dogs.offset_top = 0
+			btn_attack_dogs.offset_bottom = 0
+			btn_attack_dogs.custom_minimum_size = Vector2(220, 52)
+		if btn_attack_huaychivo:
+			btn_attack_huaychivo.anchor_left = 0.56
+			btn_attack_huaychivo.anchor_right = 0.68
+			btn_attack_huaychivo.anchor_top = 0.72
+			btn_attack_huaychivo.anchor_bottom = 0.78
+			btn_attack_huaychivo.offset_left = 0
+			btn_attack_huaychivo.offset_right = 0
+			btn_attack_huaychivo.offset_top = 0
+			btn_attack_huaychivo.offset_bottom = 0
+			btn_attack_huaychivo.custom_minimum_size = Vector2(220, 52)

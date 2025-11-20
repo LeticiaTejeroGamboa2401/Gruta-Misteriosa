@@ -71,15 +71,50 @@ func _ready() -> void:
 	# Si la barra no tiene tamaño (cargado por código), forzar valores amigables
 	if bar.size == Vector2.ZERO:
 		bar.size = Vector2(600, 24)
-		bar.position = Vector2(200, 260)
 		cursor.size = Vector2(8, 36)
 		cursor.position = Vector2(0, -6)
 		zone.size = Vector2(zone_width, 36)
 		zone.position = Vector2((bar.size.x - zone_width) / 2, -6)
+	# Anclar barra al centro
+	bar.anchor_left = 0.2
+	bar.anchor_right = 0.8
+	bar.anchor_top = 0.5
+	bar.anchor_bottom = 0.5
+	bar.offset_left = 0
+	bar.offset_right = 0
+	bar.offset_top = -12
+	bar.offset_bottom = 12
 
 	# Conectar botón si aún no está conectado
 	if btn and not btn.pressed.is_connected(_on_Button_pressed):
 		btn.pressed.connect(_on_Button_pressed)
+
+	# Hacer el texto de instrucción más visible
+	if label:
+		label.add_theme_font_size_override("font_size", 32)
+		label.horizontal_alignment = HORIZONTAL_ALIGNMENT_CENTER
+		label.add_theme_color_override("font_color", Color(1, 1, 1))
+		label.anchor_left = 0.2
+		label.anchor_right = 0.8
+		label.anchor_top = 0.3
+		label.anchor_bottom = 0.38
+		label.offset_left = 0
+		label.offset_right = 0
+		label.offset_top = 0
+		label.offset_bottom = 0
+
+	if btn:
+		btn.anchor_left = 0.4
+		btn.anchor_right = 0.6
+		btn.anchor_top = 0.62
+		btn.anchor_bottom = 0.7
+		btn.offset_left = 0
+		btn.offset_right = 0
+		btn.offset_top = 0
+		btn.offset_bottom = 0
+
+	zone.size = Vector2(zone_width, 36)
+	zone.position = Vector2((bar.size.x - zone_width) / 2, -6)
 
 func _on_Button_pressed() -> void:
 	if not _running:

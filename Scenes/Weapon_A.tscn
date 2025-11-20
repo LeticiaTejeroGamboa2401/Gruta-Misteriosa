@@ -1,11 +1,7 @@
-[gd_scene format=3]
-
-[ext_resource type="Texture2D" path="res://assets/lanza.png" id="1"]
+[gd_scene format=3 uid="uid://de24yy023dgce"]
 
 [node name="Weapon_A" type="Node2D"]
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
-texture = ExtResource("1")
-; position = Vector2(0, 0)
+rotation = 1.5708
 scale = Vector2(0.15, 0.15)
-rotation_degrees = 90

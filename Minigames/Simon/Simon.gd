@@ -106,9 +106,7 @@ func _ready() -> void:
 	if retry_btn and not retry_btn.pressed.is_connected(_on_retry_pressed):
 		retry_btn.pressed.connect(_on_retry_pressed)
 	if progress:
-		progress.value = 0
-		progress.min_value = 0
-		progress.max_value = 100
+		progress.visible = false
 	if time_bar:
 		time_bar.value = 100
 		time_bar.min_value = 0
@@ -116,12 +114,76 @@ func _ready() -> void:
 	# Make fonts big and friendly
 	if title:
 		title.add_theme_font_size_override("font_size", 36)
+		title.anchor_left = 0.2
+		title.anchor_right = 0.8
+		title.anchor_top = 0.15
+		title.anchor_bottom = 0.22
+		title.offset_left = 0
+		title.offset_right = 0
+		title.offset_top = 0
+		title.offset_bottom = 0
 	if subtitle:
 		subtitle.add_theme_font_size_override("font_size", 24)
+		subtitle.anchor_left = 0.2
+		subtitle.anchor_right = 0.8
+		subtitle.anchor_top = 0.24
+		subtitle.anchor_bottom = 0.32
+		subtitle.offset_left = 0
+		subtitle.offset_right = 0
+		subtitle.offset_top = 0
+		subtitle.offset_bottom = 0
+		subtitle.horizontal_alignment = HORIZONTAL_ALIGNMENT_CENTER
 	for i in buttons.size():
 		var b: Button = buttons[i]
 		# Aumentar padding para que el número respire
 		b.add_theme_constant_override("h_separation", 12)
+
+	# Centrar elementos de la UI
+	if grid:
+		grid.anchor_left = 0.25
+		grid.anchor_right = 0.75
+		grid.anchor_top = 0.38
+		grid.anchor_bottom = 0.82
+		grid.offset_left = 0
+		grid.offset_right = 0
+		grid.offset_top = 0
+		grid.offset_bottom = 0
+	if time_bar:
+		time_bar.anchor_left = 0.3
+		time_bar.anchor_right = 0.7
+		time_bar.anchor_top = 0.34
+		time_bar.anchor_bottom = 0.36
+		time_bar.offset_left = 0
+		time_bar.offset_right = 0
+		time_bar.offset_top = 0
+		time_bar.offset_bottom = 0
+	if time_label:
+		time_label.anchor_left = 0.7
+		time_label.anchor_right = 0.9
+		time_label.anchor_top = 0.32
+		time_label.anchor_bottom = 0.36
+		time_label.offset_left = 0
+		time_label.offset_right = 0
+		time_label.offset_top = 0
+		time_label.offset_bottom = 0
+	if start_btn:
+		start_btn.anchor_left = 0.4
+		start_btn.anchor_right = 0.6
+		start_btn.anchor_top = 0.86
+		start_btn.anchor_bottom = 0.9
+		start_btn.offset_left = 0
+		start_btn.offset_right = 0
+		start_btn.offset_top = 0
+		start_btn.offset_bottom = 0
+	if retry_btn:
+		retry_btn.anchor_left = 0.62
+		retry_btn.anchor_right = 0.82
+		retry_btn.anchor_top = 0.86
+		retry_btn.anchor_bottom = 0.9
+		retry_btn.offset_left = 0
+		retry_btn.offset_right = 0
+		retry_btn.offset_top = 0
+		retry_btn.offset_bottom = 0
 
 func _set_buttons_enabled(en: bool) -> void:
 	for b in buttons:
@@ -131,7 +193,7 @@ func _playback_sequence() -> void:
 	state = State.SHOW
 	playing_back = true
 	_set_buttons_enabled(false)
-	title.text = "Observa el patrón del alux"
+	title.text = "Observa la secuencia"
 	subtitle.text = "Memoriza el orden"
 	# Pequeña pausa de preparación
 	await get_tree().create_timer(0.5).timeout
@@ -140,8 +202,8 @@ func _playback_sequence() -> void:
 		await get_tree().create_timer(gap_delay).timeout
 	playing_back = false
 	state = State.INPUT
-	title.text = "Repite el patrón"
-	subtitle.text = _progress_text()
+	title.text = "Repite la secuencia"
+	subtitle.text = ""
 	_set_buttons_enabled(true)
 	_restart_input_timer()
 
@@ -183,8 +245,8 @@ func _begin_round() -> void:
 	_generate_sequence()
 	user_index = 0
 	_update_progress()
-	title.text = "Observa el patrón del alux"
-	subtitle.text = _round_and_attempts_text()
+	title.text = "Observa la secuencia"
+	subtitle.text = "Memoriza el orden"
 	retry_btn.visible = false
 	tip_label.visible = true
 	await _playback_sequence()
@@ -195,19 +257,16 @@ func _generate_sequence() -> void:
 		sequence.append(randi() % buttons.size())
 
 func _update_progress() -> void:
-	if progress:
-		var pct = 0.0 if sequence.size() == 0 else (float(user_index) / float(sequence.size()) * 100.0)
-		progress.value = pct
-	subtitle.text = _progress_text()
+	subtitle.text = ""
 
 func _progress_text() -> String:
-	return "Patrón %d/%d  ·  Paso %d/%d  ·  %s" % [current_round, total_rounds, user_index, max(1, sequence.size()), _attempts_text()]
+	return ""
 
 func _attempts_text() -> String:
 	return "Intentos: %d/%d" % [attempts_remaining, max_attempts]
 
 func _round_and_attempts_text() -> String:
-	return "Patrón %d/%d  ·  %s" % [current_round, total_rounds, _attempts_text()]
+	return _attempts_text()
 
 func _success() -> void:
 	# Full success across all rounds
@@ -216,7 +275,7 @@ func _success() -> void:
 	if success_player and success_player.stream:
 		success_player.play()
 	title.text = "¡Excelente!"
-	subtitle.text = "Completaste los %d patrones" % total_rounds
+	subtitle.text = "Completaste las %d rondas" % total_rounds
 	_end(true, 100)
 
 func _round_success() -> void:
@@ -227,7 +286,7 @@ func _round_success() -> void:
 	# Preparar siguiente patrón
 	current_round = min(current_round + 1, total_rounds)
 	title.text = "¡Bien!"
-	subtitle.text = "Patrón %d/%d completado" % [current_round - 1, total_rounds]
+	subtitle.text = "Ronda %d/%d completada" % [current_round - 1, total_rounds]
 	state = State.SHOW
 	_set_buttons_enabled(false)
 	user_index = 0
@@ -246,9 +305,8 @@ func _fail_partial() -> void:
 	_shake_grid()
 	attempts_remaining -= 1
 	if attempts_remaining > 0:
-		# Replay same sequence for another try
 		title.text = "Inténtalo de nuevo"
-		subtitle.text = "%s  ·  Avance %d%%" % [_round_and_attempts_text(), best_progress]
+		subtitle.text = _round_and_attempts_text()
 		state = State.SHOW
 		_set_buttons_enabled(false)
 		user_index = 0
@@ -259,7 +317,7 @@ func _fail_partial() -> void:
 		state = State.RESULT
 		_set_buttons_enabled(false)
 		title.text = "Intento terminado"
-		subtitle.text = "Avance total %d%%" % _aggregate_score()
+		subtitle.text = ""
 		retry_btn.visible = true
 		tip_label.visible = true
 		_end(false, _aggregate_score())

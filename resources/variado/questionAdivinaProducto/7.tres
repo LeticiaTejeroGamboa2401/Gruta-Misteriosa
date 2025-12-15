@@ -1,4 +1,4 @@
-[gd_resource type="Resource" script_class="QuizzQuestion" load_steps=8 format=3 uid="uid://d1wcyl0t0wr1n"]
+[gd_resource type="Resource" script_class="QuizQuestion" load_steps=8 format=3 uid="uid://d1wcyl0t0wr1n"]
 
 [ext_resource type="Texture2D" uid="uid://chk841wvagfr8" path="res://images/Tamal.png" id="1_783kn"]
 [ext_resource type="Script" path="res://Scripts/Juegos/AdivinaProducto/resources/questions.gd" id="1_rha2h"]

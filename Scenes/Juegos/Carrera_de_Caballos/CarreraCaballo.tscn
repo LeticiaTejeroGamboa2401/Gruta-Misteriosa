@@ -1,4 +1,4 @@
-[gd_scene load_steps=26 format=3 uid="uid://7e8sby14esr1"]
+[gd_scene load_steps=31 format=3 uid="uid://7e8sby14esr1"]
 
 [ext_resource type="Texture2D" uid="uid://c0oy83uovjplo" path="res://images/Juegos/Carrera_de_Caballos/fondos.png" id="1_0wigb"]
 [ext_resource type="Script" path="res://Scripts/Juegos/Controllers/game_controller_caballo.gd" id="1_v1scf"]
@@ -8,6 +8,7 @@
 [ext_resource type="Texture2D" uid="uid://47n5dr2lwsn5" path="res://images/Juegos/Carrera_de_Caballos/incorrecto.png" id="4_3uqhw"]
 [ext_resource type="Texture2D" uid="uid://cl6g2pujgh5kv" path="res://images/Juegos/Carrera_de_Caballos/CaballoNegro.png" id="7_pho3x"]
 [ext_resource type="Texture2D" uid="uid://g03nsepo5pce" path="res://images/Juegos/Carrera_de_Caballos/CaballoBlanco.png" id="8_3nk8v"]
+[ext_resource type="FontFile" uid="uid://bd321yblpf1ew" path="res://font/Supermarket of Love.ttf" id="9_iox54"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_syhal"]
 bg_color = Color(0, 0, 0, 0.54902)
@@ -189,6 +190,17 @@ shadow_size = 2
 [sub_resource type="FontVariation" id="FontVariation_fk1ik"]
 base_font = ExtResource("2_hy0ce")
 
+[sub_resource type="FontVariation" id="FontVariation_urnmh"]
+base_font = ExtResource("9_iox54")
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_iqetx"]
+bg_color = Color(0.909804, 0.137255, 0.0392157, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_k0mb5"]
+bg_color = Color(0.909804, 0.137255, 0.0392157, 1)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_ni8ah"]
+
 [node name="Main" type="CanvasLayer"]
 script = ExtResource("1_v1scf")
 quiz = ExtResource("2_lelfk")
@@ -334,3 +346,17 @@ texture = ExtResource("7_pho3x")
 [node name="Sprite2D" type="Sprite2D" parent="Control/CaballoBlanco"]
 position = Vector2(84, 390)
 texture = ExtResource("8_3nk8v")
+
+[node name="Salir" type="Button" parent="Control"]
+offset_left = 5.0
+offset_top = 8.0
+offset_right = 140.0
+offset_bottom = 76.0
+theme_override_fonts/font = SubResource("FontVariation_urnmh")
+theme_override_font_sizes/font_size = 50
+theme_override_styles/hover_pressed = SubResource("StyleBoxFlat_iqetx")
+theme_override_styles/hover = SubResource("StyleBoxFlat_k0mb5")
+theme_override_styles/normal = SubResource("StyleBoxTexture_ni8ah")
+text = "SALIR"
+
+[connection signal="pressed" from="Control/Salir" to="." method="_on_salir_pressed"]

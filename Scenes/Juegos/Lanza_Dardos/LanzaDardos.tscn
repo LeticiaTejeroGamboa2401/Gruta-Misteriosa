@@ -1,4 +1,4 @@
-[gd_scene load_steps=24 format=3 uid="uid://bdodtf2l5pmbj"]
+[gd_scene load_steps=29 format=3 uid="uid://bdodtf2l5pmbj"]
 
 [ext_resource type="Script" path="res://Scripts/Juegos/Controllers/game_controller_dardos.gd" id="1_b4lg5"]
 [ext_resource type="Texture2D" uid="uid://bp7ce3v2tdd4y" path="res://images/Juegos/Lanza_Dardos/Fondo.png" id="1_vqpbw"]
@@ -8,6 +8,7 @@
 [ext_resource type="Texture2D" uid="uid://cfa2lwg0r7f22" path="res://images/Juegos/Lanza_Dardos/incorrecto.png" id="4_2ca0r"]
 [ext_resource type="Texture2D" uid="uid://vyh8qv625m7m" path="res://images/Juegos/Lanza_Dardos/Dardos.png" id="7_axe6u"]
 [ext_resource type="FontFile" uid="uid://q4llc3uguqs2" path="res://font/KGCorneroftheSky.ttf" id="8_n8q6a"]
+[ext_resource type="FontFile" uid="uid://bd321yblpf1ew" path="res://font/Supermarket of Love.ttf" id="9_0vq8j"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_7h7i1"]
 bg_color = Color(1, 1, 1, 0.627451)
@@ -64,6 +65,17 @@ corner_radius_bottom_left = 15
 font = ExtResource("8_n8q6a")
 font_size = 30
 font_color = Color(0, 0, 0, 1)
+
+[sub_resource type="FontVariation" id="FontVariation_5p1h6"]
+base_font = ExtResource("9_0vq8j")
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_gtmt0"]
+bg_color = Color(0.909804, 0.137255, 0.0392157, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_fa5jh"]
+bg_color = Color(0.909804, 0.137255, 0.0392157, 1)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_3nre7"]
 
 [node name="Main" type="CanvasLayer"]
 script = ExtResource("1_b4lg5")
@@ -369,3 +381,24 @@ offset_top = 67.0
 offset_right = 1136.0
 offset_bottom = 113.0
 label_settings = SubResource("LabelSettings_m5llk")
+
+[node name="Salir" type="Button" parent="Control"]
+offset_top = 4.0
+offset_right = 135.0
+offset_bottom = 72.0
+theme_override_colors/font_disabled_color = Color(0, 0, 0, 1)
+theme_override_colors/font_hover_pressed_color = Color(0, 0, 0, 1)
+theme_override_colors/font_hover_color = Color(0, 0, 0, 1)
+theme_override_colors/font_pressed_color = Color(0, 0, 0, 1)
+theme_override_colors/font_focus_color = Color(0, 0, 0, 1)
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_colors/icon_hover_pressed_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = SubResource("FontVariation_5p1h6")
+theme_override_font_sizes/font_size = 50
+theme_override_styles/hover_pressed = SubResource("StyleBoxFlat_gtmt0")
+theme_override_styles/hover = SubResource("StyleBoxFlat_fa5jh")
+theme_override_styles/normal = SubResource("StyleBoxTexture_3nre7")
+text = "SALIR"
+
+[connection signal="pressed" from="Control/Salir" to="." method="_on_salir_pressed"]

@@ -107,3 +107,7 @@ func _show_winner_and_change_scene() -> void:
 				print("No se encontró una escena para el área: ", area_name)
 	else:
 		$Panel/Win.text = "No se detectó área ganadora."
+
+
+func _on_salir_pressed() -> void:
+	get_tree().change_scene_to_file("res://Scenes/Juegos/Atinale_al_Puerquito/Perdiste.tscn")

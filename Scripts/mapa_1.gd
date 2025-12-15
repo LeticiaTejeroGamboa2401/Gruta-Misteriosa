@@ -57,3 +57,7 @@ func actualizar_label_juegos_ganados():
 	$Conteno.text = "X %d" % ganados
 	if ganados == 6:
 		get_tree().change_scene_to_file("res://Scenes/Juegos/Talisman.tscn")
+
+
+func _on_salir_pressed() -> void:
+	get_tree().quit()

@@ -10,7 +10,7 @@
 
 [resource]
 script = ExtResource("1_1ijo7")
-question_info = ""
+question_info = "¿Qué producto es mayor que el coco, pero menor que el maíz?"
 type = 0
 options = Array[Texture2D]([ExtResource("2_silgt"), ExtResource("3_hvr25"), ExtResource("4_uhexd"), ExtResource("1_f7d8m"), ExtResource("5_nbw7a"), ExtResource("6_in3en")])
 correct = ExtResource("1_f7d8m")

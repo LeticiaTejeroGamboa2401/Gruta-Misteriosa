@@ -96,3 +96,7 @@ func show_final_score():
 		get_tree().change_scene_to_file("res://Scenes/Juegos/Derriba_al_Pato/Ganaste.tscn")
 	else:
 		get_tree().change_scene_to_file("res://Scenes/Juegos/Derriba_al_Pato/Perdiste.tscn")
+
+
+func _on_salir_pressed() -> void:
+	get_tree().change_scene_to_file("res://Scenes/Juegos/Derriba_al_Pato/Perdiste.tscn")

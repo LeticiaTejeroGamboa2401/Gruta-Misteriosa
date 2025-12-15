@@ -16,7 +16,7 @@
 
 [resource]
 script = ExtResource("1_ku5mi")
-question_info = "Don alux compró 3 manzanas a $15 pesos cada una para sus hijos."
+question_info = "Don alux compró 3 manzanas a $15 pesos cada una para sus hijos. ¿Cuánto pagó?"
 type = 0
 options = Array[PackedScene]([ExtResource("2_rcvio"), ExtResource("3_lnyho"), ExtResource("1_h41ie"), ExtResource("4_2roni"), ExtResource("5_vw6tj"), ExtResource("6_dgbn5"), ExtResource("7_mo3k8"), ExtResource("8_l52b6"), ExtResource("9_inirn"), ExtResource("10_3crip"), ExtResource("11_whi42"), ExtResource("12_avwgq")])
 correct = ExtResource("1_h41ie")

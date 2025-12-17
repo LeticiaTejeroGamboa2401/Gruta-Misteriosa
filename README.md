@@ -57,6 +57,7 @@ Desarrollar un videojuego funcional utilizando Godot Engine que demuestre habili
  ┣ 📁 scripts       # Scripts en GDScript
  ┣ 📁 images        # Recursos gráficos
  ┣ 📁 sources       # Banco de preguntas de los juegos
+ ┣ 📁 audios        # Sonidos
  ┗ 📄 README.md
 ```
 

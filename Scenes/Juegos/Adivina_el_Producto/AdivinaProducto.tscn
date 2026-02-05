@@ -1,4 +1,4 @@
-[gd_scene load_steps=25 format=3 uid="uid://diis7rlrywery"]
+[gd_scene load_steps=30 format=3 uid="uid://diis7rlrywery"]
 
 [ext_resource type="Texture2D" uid="uid://ce5ueoos67bfl" path="res://images/fondo_juego_adiv_el_prod.png" id="1_2kkp3"]
 [ext_resource type="Script" uid="uid://be7jco0jt5f3w" path="res://Scripts/Juegos/Controllers/game_controller.gd" id="1_v6eyu"]
@@ -7,6 +7,7 @@
 [ext_resource type="Texture2D" uid="uid://84o2c68uke0l" path="res://images/respuesta_correcta.png" id="3_x1tss"]
 [ext_resource type="Texture2D" uid="uid://3yg6jd1c17lr" path="res://images/respuesta_incorrecta.png" id="4_koi0e"]
 [ext_resource type="Texture2D" uid="uid://drkey568lpq68" path="res://images/esperando_respuesta.png" id="8_pq8au"]
+[ext_resource type="FontFile" uid="uid://bd321yblpf1ew" path="res://font/Supermarket of Love.ttf" id="9_ehp4s"]
 [ext_resource type="FontFile" uid="uid://ex6sf638yhh5" path="res://font/Chonky Bunny.ttf" id="9_fr26q"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_0ykvr"]
@@ -68,6 +69,17 @@ corner_radius_bottom_left = 15
 [sub_resource type="LabelSettings" id="LabelSettings_27erm"]
 font = ExtResource("9_fr26q")
 font_size = 40
+
+[sub_resource type="FontVariation" id="FontVariation_82fr7"]
+base_font = ExtResource("9_ehp4s")
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_aglq6"]
+bg_color = Color(0.909804, 0.137255, 0.0392157, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_jwuqg"]
+bg_color = Color(0.909804, 0.137255, 0.0392157, 1)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_2o2f6"]
 
 [node name="Main" type="CanvasLayer"]
 script = ExtResource("1_v6eyu")
@@ -232,3 +244,17 @@ offset_top = 67.0
 offset_right = 478.0
 offset_bottom = 190.0
 texture = ExtResource("8_pq8au")
+
+[node name="Salir" type="Button" parent="Control"]
+offset_left = 5.0
+offset_top = 8.0
+offset_right = 140.0
+offset_bottom = 76.0
+theme_override_fonts/font = SubResource("FontVariation_82fr7")
+theme_override_font_sizes/font_size = 50
+theme_override_styles/hover_pressed = SubResource("StyleBoxFlat_aglq6")
+theme_override_styles/hover = SubResource("StyleBoxFlat_jwuqg")
+theme_override_styles/normal = SubResource("StyleBoxTexture_2o2f6")
+text = "SALIR"
+
+[connection signal="pressed" from="Control/Salir" to="." method="_on_salir_pressed"]

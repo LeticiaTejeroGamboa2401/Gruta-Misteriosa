@@ -1,4 +1,4 @@
-[gd_scene load_steps=23 format=3 uid="uid://dcopm3ywqg7e3"]
+[gd_scene load_steps=34 format=3 uid="uid://dcopm3ywqg7e3"]
 
 [ext_resource type="Texture2D" uid="uid://is538sjidm1k" path="res://images/Juegos/Derriba_al_Pato/Fondo.png" id="1_2wcyq"]
 [ext_resource type="Script" uid="uid://dk2hunckxr14i" path="res://Scripts/Juegos/DerribaPato/descripcion_juego.gd" id="1_8hkx3"]
@@ -6,7 +6,7 @@
 [ext_resource type="Texture2D" uid="uid://cc4pdettce2ln" path="res://images/Juegos/Derriba_al_Pato/incorrecto.png" id="3_m8rba"]
 [ext_resource type="Texture2D" uid="uid://cgtmk0ygac04k" path="res://images/Juegos/Derriba_al_Pato/correcto.png" id="4_lvmty"]
 [ext_resource type="FontFile" uid="uid://ex6sf638yhh5" path="res://font/Chonky Bunny.ttf" id="5_jmfpw"]
-[ext_resource type="Texture2D" uid="uid://bwf8mkwr4gktp" path="res://images/siguiente_flecha.png" id="6_nr0we"]
+[ext_resource type="Texture2D" uid="uid://dkp7oktbuppfq" path="res://images/siguiente_flecha.png" id="6_nr0we"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_wc1rs"]
 bg_color = Color(0.647059, 0.490196, 0.329412, 1)
@@ -81,6 +81,32 @@ corner_radius_bottom_left = 15
 font = ExtResource("5_jmfpw")
 font_size = 35
 font_color = Color(0, 0, 0, 1)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_stsjp"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_e4ew6"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_ylr1b"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_31dqj"]
+bg_color = Color(0, 0, 0, 0.231373)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_0ye4c"]
+bg_color = Color(0, 0, 0, 0.231373)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_yqcwn"]
+bg_color = Color(0, 0, 0, 0.231373)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_8cgg1"]
+bg_color = Color(0, 0, 0, 0.231373)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_0wuoi"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_jthkj"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_hb7wb"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_s6tlf"]
 
 [node name="Control" type="Control"]
 layout_mode = 3
@@ -243,6 +269,17 @@ offset_top = -46.0
 offset_right = 34.0
 grow_horizontal = 2
 grow_vertical = 0
+theme_override_styles/focus = SubResource("StyleBoxTexture_stsjp")
+theme_override_styles/disabled_mirrored = SubResource("StyleBoxTexture_e4ew6")
+theme_override_styles/disabled = SubResource("StyleBoxTexture_ylr1b")
+theme_override_styles/hover_pressed_mirrored = SubResource("StyleBoxFlat_31dqj")
+theme_override_styles/hover_pressed = SubResource("StyleBoxFlat_0ye4c")
+theme_override_styles/hover_mirrored = SubResource("StyleBoxFlat_yqcwn")
+theme_override_styles/hover = SubResource("StyleBoxFlat_8cgg1")
+theme_override_styles/pressed_mirrored = SubResource("StyleBoxTexture_0wuoi")
+theme_override_styles/pressed = SubResource("StyleBoxTexture_jthkj")
+theme_override_styles/normal_mirrored = SubResource("StyleBoxTexture_hb7wb")
+theme_override_styles/normal = SubResource("StyleBoxFlat_s6tlf")
 icon = ExtResource("6_nr0we")
 flat = true
 

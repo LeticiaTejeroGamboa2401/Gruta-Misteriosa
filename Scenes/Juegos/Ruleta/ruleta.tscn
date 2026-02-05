@@ -1,10 +1,11 @@
-[gd_scene load_steps=19 format=3 uid="uid://bd81t3ywtdynk"]
+[gd_scene load_steps=24 format=3 uid="uid://bd81t3ywtdynk"]
 
 [ext_resource type="Script" uid="uid://br45yr7onlft2" path="res://Scripts/Juegos/Controllers/game_controller_ruleta.gd" id="1_6d8p0"]
 [ext_resource type="Texture2D" uid="uid://bj7kr4vnsvxxb" path="res://images/Juegos/Ruleta/ruleta.png" id="1_45eqn"]
 [ext_resource type="Texture2D" uid="uid://b4icwsejgesow" path="res://images/Juegos/Ruleta/Fondo.png" id="2_hkxan"]
 [ext_resource type="FontFile" uid="uid://ex6sf638yhh5" path="res://font/Chonky Bunny.ttf" id="4_8j8vm"]
 [ext_resource type="Texture2D" uid="uid://ba4qftiyc6p7n" path="res://images/Juegos/Ruleta/Manilla.png" id="4_g3jfc"]
+[ext_resource type="FontFile" uid="uid://bd321yblpf1ew" path="res://font/Supermarket of Love.ttf" id="6_56fs0"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_ooip7"]
 bg_color = Color(0, 0, 0, 1)
@@ -53,6 +54,17 @@ corner_radius_bottom_left = 15
 [sub_resource type="LabelSettings" id="LabelSettings_7ucme"]
 font = ExtResource("4_8j8vm")
 font_size = 70
+
+[sub_resource type="FontVariation" id="FontVariation_cflg8"]
+base_font = ExtResource("6_56fs0")
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_psfxy"]
+bg_color = Color(0.909804, 0.137255, 0.0392157, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_3lr2l"]
+bg_color = Color(0.909804, 0.137255, 0.0392157, 1)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_bu372"]
 
 [node name="CanvasLayer" type="CanvasLayer"]
 
@@ -186,5 +198,18 @@ label_settings = SubResource("LabelSettings_7ucme")
 horizontal_alignment = 1
 vertical_alignment = 1
 
+[node name="Salir" type="Button" parent="RuletaScene"]
+offset_left = 5.0
+offset_top = 8.0
+offset_right = 140.0
+offset_bottom = 76.0
+theme_override_fonts/font = SubResource("FontVariation_cflg8")
+theme_override_font_sizes/font_size = 50
+theme_override_styles/hover_pressed = SubResource("StyleBoxFlat_psfxy")
+theme_override_styles/hover = SubResource("StyleBoxFlat_3lr2l")
+theme_override_styles/normal = SubResource("StyleBoxTexture_bu372")
+text = "SALIR"
+
 [connection signal="area_entered" from="RuletaScene/AreaManecilla" to="RuletaScene" method="_on_area_manecilla_area_entered"]
 [connection signal="pressed" from="RuletaScene/Button" to="RuletaScene" method="_on_button_pressed"]
+[connection signal="pressed" from="RuletaScene/Salir" to="RuletaScene" method="_on_salir_pressed"]

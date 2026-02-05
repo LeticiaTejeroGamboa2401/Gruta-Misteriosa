@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://m7v815yn31g0"
-path="res://.godot/imported/siguiente_flecha.png-c4fb4bbefd8875da8d54e0777ff7a07b.ctex"
+uid="uid://c64tcfaah1dkt"
+path="res://.godot/imported/left.png-138ab228c61d46bbaadea5a272c17f30.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://images/siguiente_flecha.png"
-dest_files=["res://.godot/imported/siguiente_flecha.png-c4fb4bbefd8875da8d54e0777ff7a07b.ctex"]
+source_file="res://images/Direcciones-Android/left.png"
+dest_files=["res://.godot/imported/left.png-138ab228c61d46bbaadea5a272c17f30.ctex"]
 
 [params]
 

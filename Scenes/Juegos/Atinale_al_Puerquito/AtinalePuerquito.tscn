@@ -1,4 +1,4 @@
-[gd_scene load_steps=60 format=3 uid="uid://btpr74bawfy3o"]
+[gd_scene load_steps=65 format=3 uid="uid://btpr74bawfy3o"]
 
 [ext_resource type="Texture2D" uid="uid://dkus0r5unvohb" path="res://images/Juegos/Atinale_al_Puerquito/fondo.png" id="1_25d5w"]
 [ext_resource type="Script" uid="uid://2bdoxnvfnp0u" path="res://Scripts/Juegos/Controllers/game_controller_puerquito.gd" id="1_hqy58"]
@@ -8,6 +8,7 @@
 [ext_resource type="FontFile" uid="uid://ex6sf638yhh5" path="res://font/Chonky Bunny.ttf" id="4_bvi87"]
 [ext_resource type="Texture2D" uid="uid://ch81viu3aj55i" path="res://images/Juegos/Atinale_al_Puerquito/imgCorrecto.png" id="4_wg2fi"]
 [ext_resource type="Texture2D" uid="uid://b4axhsaahojxl" path="res://images/Juegos/Atinale_al_Puerquito/imgIncorrecto.png" id="5_hdbkr"]
+[ext_resource type="FontFile" uid="uid://bd321yblpf1ew" path="res://font/Supermarket of Love.ttf" id="9_v6hel"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_mwxkx"]
 bg_color = Color(0, 0, 0, 0.627451)
@@ -209,6 +210,17 @@ corner_radius_top_left = 15
 corner_radius_top_right = 15
 corner_radius_bottom_right = 15
 corner_radius_bottom_left = 15
+
+[sub_resource type="FontVariation" id="FontVariation_4gfjv"]
+base_font = ExtResource("9_v6hel")
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_dsl24"]
+bg_color = Color(0.909804, 0.137255, 0.0392157, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_7rm1i"]
+bg_color = Color(0.909804, 0.137255, 0.0392157, 1)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_6ng60"]
 
 [node name="Main" type="CanvasLayer"]
 script = ExtResource("1_hqy58")
@@ -413,3 +425,17 @@ theme_override_styles/pressed_mirrored = SubResource("StyleBoxEmpty_4gewc")
 theme_override_styles/pressed = SubResource("StyleBoxEmpty_satsu")
 theme_override_styles/normal_mirrored = SubResource("StyleBoxEmpty_8mq33")
 theme_override_styles/normal = SubResource("StyleBoxFlat_3l7cr")
+
+[node name="Salir" type="Button" parent="Control"]
+offset_left = 5.0
+offset_top = 8.0
+offset_right = 140.0
+offset_bottom = 76.0
+theme_override_fonts/font = SubResource("FontVariation_4gfjv")
+theme_override_font_sizes/font_size = 50
+theme_override_styles/hover_pressed = SubResource("StyleBoxFlat_dsl24")
+theme_override_styles/hover = SubResource("StyleBoxFlat_7rm1i")
+theme_override_styles/normal = SubResource("StyleBoxTexture_6ng60")
+text = "SALIR"
+
+[connection signal="pressed" from="Control/Salir" to="." method="_on_salir_pressed"]

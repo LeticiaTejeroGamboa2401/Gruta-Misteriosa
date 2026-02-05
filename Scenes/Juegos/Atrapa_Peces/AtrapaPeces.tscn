@@ -1,4 +1,4 @@
-[gd_scene load_steps=45 format=3 uid="uid://dh8a80lb0i56g"]
+[gd_scene load_steps=50 format=3 uid="uid://dh8a80lb0i56g"]
 
 [ext_resource type="Script" uid="uid://kj7oeh248rva" path="res://Scripts/Juegos/Controllers/game_controller_peces.gd" id="1_dwy8s"]
 [ext_resource type="Texture2D" uid="uid://bnggiecbse3nk" path="res://images/Juegos/Atrapa_Peces/Fondo.png" id="1_wkwfs"]
@@ -7,6 +7,7 @@
 [ext_resource type="Texture2D" uid="uid://bpmcq0vhbsypq" path="res://images/Juegos/Atrapa_Peces/correcto.png" id="3_5i0nu"]
 [ext_resource type="Texture2D" uid="uid://c5quookrq6afa" path="res://images/Juegos/Atrapa_Peces/incorrecto.png" id="4_fl4th"]
 [ext_resource type="FontFile" uid="uid://ex6sf638yhh5" path="res://font/Chonky Bunny.ttf" id="7_xq78p"]
+[ext_resource type="FontFile" uid="uid://bd321yblpf1ew" path="res://font/Supermarket of Love.ttf" id="8_eow4s"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_e68pq"]
 bg_color = Color(1, 1, 1, 0.705882)
@@ -104,6 +105,17 @@ corner_radius_bottom_left = 15
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_kxedo"]
 
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_f7my4"]
+
+[sub_resource type="FontVariation" id="FontVariation_g7fn5"]
+base_font = ExtResource("8_eow4s")
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_txfll"]
+bg_color = Color(0.909804, 0.137255, 0.0392157, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_3v4n0"]
+bg_color = Color(0.909804, 0.137255, 0.0392157, 1)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_6xbmu"]
 
 [node name="Main" type="CanvasLayer"]
 script = ExtResource("1_dwy8s")
@@ -289,3 +301,17 @@ theme_override_styles/pressed_mirrored = SubResource("StyleBoxEmpty_xndic")
 theme_override_styles/pressed = SubResource("StyleBoxEmpty_6spmu")
 theme_override_styles/normal_mirrored = SubResource("StyleBoxEmpty_uixtr")
 theme_override_styles/normal = SubResource("StyleBoxEmpty_f7my4")
+
+[node name="Salir" type="Button" parent="Control"]
+offset_left = 5.0
+offset_top = 8.0
+offset_right = 140.0
+offset_bottom = 76.0
+theme_override_fonts/font = SubResource("FontVariation_g7fn5")
+theme_override_font_sizes/font_size = 50
+theme_override_styles/hover_pressed = SubResource("StyleBoxFlat_txfll")
+theme_override_styles/hover = SubResource("StyleBoxFlat_3v4n0")
+theme_override_styles/normal = SubResource("StyleBoxTexture_6xbmu")
+text = "SALIR"
+
+[connection signal="pressed" from="Control/Salir" to="." method="_on_salir_pressed"]

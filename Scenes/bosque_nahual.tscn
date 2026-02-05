@@ -1,4 +1,4 @@
-[gd_scene load_steps=20 format=3 uid="uid://baprmlaeq60or"]
+[gd_scene load_steps=24 format=3 uid="uid://baprmlaeq60or"]
 
 [ext_resource type="Texture2D" uid="uid://u2rji7tqqd36" path="res://assets/bosque.jpg" id="1_np1lt"]
 [ext_resource type="Script" uid="uid://c3emmldbwbggb" path="res://Scripts/bosque_nahual.gd" id="1_yjny1"]
@@ -6,6 +6,10 @@
 [ext_resource type="Texture2D" uid="uid://p14a3p8k04i7" path="res://personajes/Nahual_Derecha.png" id="4_gc35m"]
 [ext_resource type="Script" uid="uid://bb4v06fydjbbv" path="res://Scripts/tope_scene_bosque_nahuatl.gd" id="5_88eit"]
 [ext_resource type="Texture2D" uid="uid://dvxui8shhcgnj" path="res://images/Juegos/vidas.png" id="6_0otr6"]
+[ext_resource type="Texture2D" uid="uid://c64tcfaah1dkt" path="res://images/Direcciones-Android/left.png" id="7_0wb25"]
+[ext_resource type="Texture2D" uid="uid://bgwc6fqxo72lo" path="res://images/Direcciones-Android/right.png" id="8_rvdfy"]
+[ext_resource type="Texture2D" uid="uid://c2hke2eotm53t" path="res://images/Direcciones-Android/up.png" id="9_6ndmr"]
+[ext_resource type="Texture2D" uid="uid://dul4eebxupnh0" path="res://images/Direcciones-Android/down.png" id="10_1ml8y"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_bc2qh"]
 size = Vector2(1151, 14)
@@ -173,5 +177,43 @@ offset_bottom = 97.0
 texture = ExtResource("6_0otr6")
 expand_mode = 1
 
+[node name="TouchControls" type="CanvasLayer" parent="."]
+
+[node name="left" type="TextureButton" parent="TouchControls"]
+offset_left = 917.0
+offset_top = 558.0
+offset_right = 982.0
+offset_bottom = 623.0
+texture_normal = ExtResource("7_0wb25")
+
+[node name="right" type="TextureButton" parent="TouchControls"]
+offset_left = 1061.0
+offset_top = 558.0
+offset_right = 1126.0
+offset_bottom = 623.0
+texture_normal = ExtResource("8_rvdfy")
+
+[node name="up" type="TextureButton" parent="TouchControls"]
+offset_left = 990.0
+offset_top = 489.0
+offset_right = 1055.0
+offset_bottom = 554.0
+texture_normal = ExtResource("9_6ndmr")
+
+[node name="down" type="TextureButton" parent="TouchControls"]
+offset_left = 990.0
+offset_top = 558.0
+offset_right = 1055.0
+offset_bottom = 623.0
+texture_normal = ExtResource("10_1ml8y")
+
 [connection signal="body_entered" from="nahual/Area2D" to="nahual" method="_on_area_2d_body_entered"]
 [connection signal="body_entered" from="TopeScene" to="TopeScene" method="_on_body_entered"]
+[connection signal="button_down" from="TouchControls/left" to="." method="_on_left_button_down"]
+[connection signal="button_up" from="TouchControls/left" to="." method="_on_left_button_up"]
+[connection signal="button_down" from="TouchControls/right" to="." method="_on_right_button_down"]
+[connection signal="button_up" from="TouchControls/right" to="." method="_on_right_button_up"]
+[connection signal="button_down" from="TouchControls/up" to="." method="_on_up_button_down"]
+[connection signal="button_up" from="TouchControls/up" to="." method="_on_up_button_up"]
+[connection signal="button_down" from="TouchControls/down" to="." method="_on_down_button_down"]
+[connection signal="button_up" from="TouchControls/down" to="." method="_on_down_button_up"]

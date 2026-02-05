@@ -75,3 +75,6 @@ func show_final_score():
 		get_tree().change_scene_to_file("res://Scenes/Juegos/Adivina_el_Producto/Ganaste.tscn")
 	else:
 		get_tree().change_scene_to_file("res://Scenes/Juegos/Atinale_al_Puerquito/Perdiste.tscn")
+
+func _on_salir_pressed() -> void:
+	get_tree().change_scene_to_file("res://Scenes/Juegos/Atinale_al_Puerquito/Perdiste.tscn")

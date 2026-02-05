@@ -7,9 +7,9 @@ func _change_scene():
 
 func _on_body_entered(body: Node2D) -> void:
 	var isAllGamesCompleted = true
-	#for isDone in Global.juegos_ganados.values():
-		#if not isDone:
-			#isAllGamesCompleted = false
-			#return
+	for isDone in Global.juegos_ganados.values():
+		if not isDone:
+			isAllGamesCompleted = false
+			return
 	if isAllGamesCompleted:
 		_change_scene()

@@ -53,7 +53,6 @@ func start(config := {}):
 	_setup_audio()
 
 func _setup_audio() -> void:
-	print("🎵 Configurando audio TimedHit...")
 	# Perfect hit
 	perfect_hit_sfx = AudioStreamPlayer.new()
 	perfect_hit_sfx.stream = load("res://assets/sounds/kenney_impact-sounds/Audio/impactBell_heavy_001.ogg")
@@ -74,7 +73,6 @@ func _setup_audio() -> void:
 	miss_sfx.volume_db = 0
 	miss_sfx.bus = "Master"
 	add_child(miss_sfx)
-	print("✅ Audio TimedHit configurado")
 
 func _process(delta: float) -> void:
 	if not _running:
@@ -161,15 +159,12 @@ func _on_Button_pressed() -> void:
 
 	# Reproducir sonido según score
 	if score >= 80:
-		print("🔊 PERFECT HIT!")
 		if perfect_hit_sfx:
 			perfect_hit_sfx.play()
 	elif score >= 40:
-		print("🔊 Good hit")
 		if good_hit_sfx:
 			good_hit_sfx.play()
 	else:
-		print("🔊 Miss...")
 		if miss_sfx:
 			miss_sfx.play()
 

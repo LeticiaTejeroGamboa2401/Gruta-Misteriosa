@@ -83,23 +83,28 @@ func _ready() -> void:
 		if FileAccess.file_exists(path):
 			element_textures.append(load(path))
 		else:
-			print("ADVERTENCIA: No se encontró textura en", path)
 			element_textures.append(null)
 
-	# Ajustar Grid para acomodar botones cuadrados más grandes
+	# Ajustar Grid para acomodar botones cuadrados (con separación reducida)
 	if grid:
-		grid.add_theme_constant_override("h_separation", 30)
-		grid.add_theme_constant_override("v_separation", 30)
-		# Ajustar posición para centrar el nuevo tamaño (aprox 510x510)
-		# Asumiendo pantalla 1280x720, centro es 640,360
-		# Top-left debería ser aprox 385, 105
-		grid.position = Vector2(385, 180)
+		grid.add_theme_constant_override("h_separation", 20)
+		grid.add_theme_constant_override("v_separation", 20)
+		# Usar anchors para centrado dinámico en lugar de posición fija
+		# Grid size: 180*2 + 20 separation = 380px
+		grid.anchor_left = 0.5
+		grid.anchor_right = 0.5
+		grid.anchor_top = 0.32
+		grid.anchor_bottom = 0.32
+		grid.offset_left = -190
+		grid.offset_right = 190
+		grid.offset_top = 0
+		grid.offset_bottom = 0
 
 	# Asegurar colores y conexiones
 	for i in buttons.size():
 		var b: Button = buttons[i]
-		# Hacer botones cuadrados y grandes
-		b.custom_minimum_size = Vector2(240, 240)
+		# Hacer botones cuadrados (tamaño reducido para mejor ajuste)
+		b.custom_minimum_size = Vector2(180, 180)
 
 		# Usar blanco para mostrar la imagen tal cual es
 		b.modulate = base_colors[i]
@@ -116,11 +121,11 @@ func _ready() -> void:
 			icon_rect.expand_mode = TextureRect.EXPAND_IGNORE_SIZE
 			icon_rect.stretch_mode = TextureRect.STRETCH_KEEP_ASPECT_CENTERED
 
-			# Configurar layout para llenar casi todo el botón (márgenes mínimos)
-			icon_rect.anchor_left = 0.02
-			icon_rect.anchor_top = 0.02
-			icon_rect.anchor_right = 0.98
-			icon_rect.anchor_bottom = 0.98
+			# Configurar layout con márgenes más grandes para imágenes más pequeñas
+			icon_rect.anchor_left = 0.10
+			icon_rect.anchor_top = 0.10
+			icon_rect.anchor_right = 0.90
+			icon_rect.anchor_bottom = 0.90
 			icon_rect.mouse_filter = Control.MOUSE_FILTER_IGNORE
 
 			b.add_child(icon_rect)
@@ -178,17 +183,8 @@ func _ready() -> void:
 		# Aumentar padding para que el número respire
 		b.add_theme_constant_override("h_separation", 12)
 
-	# Centrar elementos de la UI
-	if grid:
-		# Posicionar Grid más arriba para aprovechar espacio
-		# Centrado horizontalmente: (1280 - 510) / 2 = 385
-		# Verticalmente: Dejar espacio para título arriba. Y=140
-		grid.position = Vector2(385, 140)
-		# Resetear anchors para que position funcione libremente o usar anchors centrados
-		grid.anchor_left = 0.0
-		grid.anchor_right = 0.0
-		grid.anchor_top = 0.0
-		grid.anchor_bottom = 0.0
+	# Centrar elementos de la UI usando anchors (ya configurados arriba)
+	# No se necesita reconfigurar el grid aquí, ya está centrado con anchors
 
 	if time_bar:
 		# Mover barra de tiempo abajo
@@ -251,10 +247,7 @@ func _flash_button(idx: int) -> void:
 
 	# Reproducir tono elemental único para cada botón
 	if idx < element_players.size() and element_players[idx] and element_players[idx].stream:
-		print("🔊 Reproduciendo sonido elemental #", idx)
 		element_players[idx].play()
-	else:
-		print("⚠️ No se puede reproducir sonido #", idx, " - No disponible")
 
 	var tw = create_tween()
 	tw.set_parallel(true)
@@ -438,10 +431,6 @@ func _prepare_audio() -> void:
 	for i in range(4):
 		var player = AudioStreamPlayer.new()
 		player.stream = _try_load_stream(element_sounds[i])
-		if player.stream:
-			print("✅ Sonido elemental #", i, " cargado: ", element_sounds[i])
-		else:
-			print("❌ ERROR: No se pudo cargar sonido elemental #", i)
 		player.volume_db = 0 # Volumen normal (antes era -8)
 		player.bus = "Master" # Asegurar que está en el bus Master
 		add_child(player)
@@ -454,7 +443,6 @@ func _prepare_audio() -> void:
 		success_player.volume_db = 0 # Volumen normal (antes era -5)
 		success_player.bus = "Master"
 		add_child(success_player)
-		print("✅ Success player configurado")
 
 	if fail_player == null:
 		fail_player = AudioStreamPlayer.new()
@@ -462,7 +450,6 @@ func _prepare_audio() -> void:
 		fail_player.volume_db = 0 # Volumen normal (antes era -5)
 		fail_player.bus = "Master"
 		add_child(fail_player)
-		print("✅ Fail player configurado")
 
 func _try_load_stream(path: String) -> AudioStream:
 	if FileAccess.file_exists(path):

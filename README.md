@@ -122,8 +122,52 @@ Proyecto realizado para cumplimiento de **Servicio Social**.
 
 ---
 
+## Ejecutables
+
+### Ejecutable para PC Windows
+
+🔗 [.exe](https://acortar.link/ALCObE)
+
+### Ejecutable para Android
+
+🔗 [.apk](https://acortar.link/j5S69l)
+
 ## 📄 Licencia
 
-[Próximamente...]
+Educational Use License – Gruta Misteriosa
+
+Copyright (c) 2026 Facultad de Matemáticas de la Universidad Autónoma de Yucatán
+
+This project was developed as an educational video game intended to support 
+basic education for students in 5th and 6th grade of primary school.
+
+PERMITTED USE
+- The game may be freely used for educational purposes in schools, classrooms,
+  or learning environments.
+- The game may be shared and distributed for non-commercial educational use.
+- The project may serve as inspiration for other educational projects.
+
+REQUIREMENTS
+- Proper credit must always be given to Facultad de Matemáticas de la Universidad Autónoma de Yucatán.
+- Any derivative educational project inspired by this work must remain free
+  for educational use.
+
+PROHIBITED
+- Commercial use of the game or its assets.
+- Modification of the original game.
+- Modification, redistribution, or alteration of any character design,
+  artwork, or character-related assets.
+- Repackaging the game as a paid product.
+
+ASSETS AND CHARACTERS
+All characters, designs, and visual assets included in this project are
+protected and may not be modified, altered, or reused without explicit
+permission from the authors and the institution.
+
+DISCLAIMER
+This project is provided "as is", without warranty of any kind.
+
+For permissions beyond this license, contact:
+cmiranda@correo.uady.mx
 
 

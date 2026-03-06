@@ -51,6 +51,13 @@ func _on_down_button_down() -> void:
 func _on_down_button_up() -> void:
 	Input.action_release("ui_down")
 
+func _input(event):
+	if event is InputEventScreenTouch and not event.pressed:
+		Input.action_release("ui_left")
+		Input.action_release("ui_right")
+		Input.action_release("ui_up")
+		Input.action_release("ui_down")
+
 func update_hearts():
 	$Panel/Heart1.visible = Global.lives >= 1
 	$Panel/Heart2.visible = Global.lives >= 2

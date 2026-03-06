@@ -1,0 +1,10 @@
+res://Scenes/menu.tscn
+res://Scenes/Bosque.tscn
+res://Scripts/bosque.gd
+res://Scripts/mapa_1.gd
+res://Scenes/bosque_nahual.tscn
+res://Scripts/bosque_nahual.gd
+res://Scenes/DentroCueva.tscn
+res://Scripts/dentro_cueva1.gd
+res://Scenes/EntradaCueva.tscn
+res://Scripts/entrada_cueva_control.gd

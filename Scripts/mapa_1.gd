@@ -58,6 +58,12 @@ func actualizar_label_juegos_ganados():
 	if ganados == 6:
 		get_tree().change_scene_to_file("res://Scenes/Juegos/Talisman.tscn")
 
+func _input(event):
+	if event is InputEventScreenTouch and not event.pressed:
+		Input.action_release("ui_left")
+		Input.action_release("ui_right")
+		Input.action_release("ui_up")
+		Input.action_release("ui_down")
 
 func _on_salir_pressed() -> void:
 	get_tree().quit()

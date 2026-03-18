@@ -4,7 +4,7 @@
 [ext_resource type="Texture2D" uid="uid://3hqd2syyrgry" path="res://images/HistoriaCompa.jpg" id="2_eedlv"]
 [ext_resource type="FontFile" uid="uid://bd321yblpf1ew" path="res://font/Supermarket of Love.ttf" id="3_51dip"]
 [ext_resource type="Texture2D" uid="uid://h1rrkoofao4q" path="res://images/weapon_a.png" id="4_47cll"]
-[ext_resource type="Texture2D" uid="uid://bwf8mkwr4gktp" path="res://images/siguiente_flecha.png" id="4_h1xwn"]
+[ext_resource type="Texture2D" uid="uid://m7v815yn31g0" path="res://images/siguiente_flecha.png" id="4_h1xwn"]
 [ext_resource type="Texture2D" uid="uid://so77a6nnvylc" path="res://assets/Amulet.png" id="5_hv7js"]
 [ext_resource type="Texture2D" uid="uid://bq6ntj4ujal4u" path="res://images/weapon_b.png" id="5_v5kh5"]
 [ext_resource type="Texture2D" uid="uid://brnkedlxkbxrl" path="res://images/weapon_c.png" id="6_38s7c"]

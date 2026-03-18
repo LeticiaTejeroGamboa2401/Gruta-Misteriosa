@@ -56,8 +56,7 @@ func actualizar_label_juegos_ganados():
 			ganados += 1
 	$Conteno.text = "X %d" % ganados
 	if ganados == 6:
-		get_tree().change_scene_to_file("res://Scenes/Juegos/Talisman.tscn")
-
+		print("¡Todos los juegos ganados! Dirígete a la salida.")
 func _input(event):
 	if event is InputEventScreenTouch and not event.pressed:
 		Input.action_release("ui_left")

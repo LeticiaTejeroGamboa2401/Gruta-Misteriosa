@@ -9,7 +9,7 @@
 [ext_resource type="Texture2D" uid="uid://47n5dr2lwsn5" path="res://images/Juegos/Carrera_de_Caballos/incorrecto.png" id="6_515xs"]
 [ext_resource type="Texture2D" uid="uid://blu0tedjqpmq4" path="res://images/Juegos/Carrera_de_Caballos/linea.png" id="7_wlc7k"]
 [ext_resource type="Texture2D" uid="uid://cxddbyrdvcdch" path="res://images/Juegos/Carrera_de_Caballos/flecha.png" id="8_7djil"]
-[ext_resource type="Texture2D" uid="uid://bwf8mkwr4gktp" path="res://images/siguiente_flecha.png" id="9_v46do"]
+[ext_resource type="Texture2D" uid="uid://m7v815yn31g0" path="res://images/siguiente_flecha.png" id="9_v46do"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_rfrxq"]
 bg_color = Color(1, 1, 1, 0.686275)

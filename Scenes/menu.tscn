@@ -1,7 +1,7 @@
 [gd_scene load_steps=16 format=3 uid="uid://fwbw1ntakfvw"]
 
 [ext_resource type="Texture2D" uid="uid://ivs8kjm4fl0p" path="res://images/menu.png" id="1_8u2qd"]
-[ext_resource type="Script" path="res://Scripts/menu.gd" id="1_s6pxs"]
+[ext_resource type="Script" uid="uid://c5co20e38ohl6" path="res://Scripts/menu.gd" id="1_s6pxs"]
 [ext_resource type="FontFile" uid="uid://bd321yblpf1ew" path="res://font/Supermarket of Love.ttf" id="3_1fu2u"]
 
 [sub_resource type="FontVariation" id="FontVariation_fmlg1"]

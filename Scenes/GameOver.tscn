@@ -1,7 +1,7 @@
 [gd_scene load_steps=3 format=3 uid="uid://gp15fr1e4fvr"]
 
 [ext_resource type="Texture2D" uid="uid://buir0mmnor3v4" path="res://assets/GameOver.jpg" id="1_0l8vf"]
-[ext_resource type="Script" path="res://Scenes/game_over.gd" id="2_x1qkl"]
+[ext_resource type="Script" uid="uid://cxvoipo4tuuf6" path="res://Scenes/game_over.gd" id="2_x1qkl"]
 
 [node name="GameOver" type="Sprite2D"]
 position = Vector2(580, 321)

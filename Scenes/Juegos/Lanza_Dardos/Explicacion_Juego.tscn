@@ -11,7 +11,7 @@
 [ext_resource type="Texture2D" uid="uid://b7uvl1lqissjo" path="res://images/Juegos/Lanza_Dardos/Rosa.png" id="8_rilx1"]
 [ext_resource type="Texture2D" uid="uid://d2xfhg0fx3jol" path="res://images/Juegos/Lanza_Dardos/correcto.png" id="9_4kxbd"]
 [ext_resource type="Texture2D" uid="uid://cfa2lwg0r7f22" path="res://images/Juegos/Lanza_Dardos/incorrecto.png" id="10_056be"]
-[ext_resource type="Texture2D" uid="uid://bwf8mkwr4gktp" path="res://images/siguiente_flecha.png" id="11_qagwy"]
+[ext_resource type="Texture2D" uid="uid://m7v815yn31g0" path="res://images/siguiente_flecha.png" id="11_qagwy"]
 
 [sub_resource type="LabelSettings" id="LabelSettings_p754y"]
 font = ExtResource("3_3kdut")

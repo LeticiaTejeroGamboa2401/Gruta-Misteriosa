@@ -7,7 +7,7 @@
 [ext_resource type="Texture2D" uid="uid://p14a3p8k04i7" path="res://personajes/Nahual_Derecha.png" id="4_c2wuv"]
 [ext_resource type="Texture2D" uid="uid://dvxui8shhcgnj" path="res://images/Juegos/vidas.png" id="5_4umc2"]
 [ext_resource type="Script" uid="uid://d320xp33aguug" path="res://Scripts/huay_chivo.gd" id="6_8b5x8"]
-[ext_resource type="Texture2D" uid="uid://bwf8mkwr4gktp" path="res://images/siguiente_flecha.png" id="6_onwlg"]
+[ext_resource type="Texture2D" uid="uid://m7v815yn31g0" path="res://images/siguiente_flecha.png" id="6_onwlg"]
 [ext_resource type="Texture2D" uid="uid://uxakb2p53vxm" path="res://images/fondo_texto.png" id="8_c2wuv"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_k88ho"]

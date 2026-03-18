@@ -7,7 +7,7 @@
 [ext_resource type="FontFile" uid="uid://ex6sf638yhh5" path="res://font/Chonky Bunny.ttf" id="4_3hmb6"]
 [ext_resource type="FontFile" uid="uid://q4llc3uguqs2" path="res://font/KGCorneroftheSky.ttf" id="5_apl2y"]
 [ext_resource type="Texture2D" uid="uid://c5acbo24opeyb" path="res://images/Juegos/Carrera_de_Caballos/flecha_curva.png" id="6_mkfkt"]
-[ext_resource type="Texture2D" uid="uid://bwf8mkwr4gktp" path="res://images/siguiente_flecha.png" id="7_rt4f6"]
+[ext_resource type="Texture2D" uid="uid://m7v815yn31g0" path="res://images/siguiente_flecha.png" id="7_rt4f6"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_rfrxq"]
 bg_color = Color(1, 1, 1, 0.686275)

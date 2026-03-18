@@ -6,7 +6,7 @@
 [ext_resource type="Texture2D" uid="uid://ba4qftiyc6p7n" path="res://images/Juegos/Ruleta/Manilla.png" id="3_kuk14"]
 [ext_resource type="Texture2D" uid="uid://bget8l3pb6isp" path="res://images/Juegos/Ruleta/Alux.png" id="4_4vj6x"]
 [ext_resource type="FontFile" uid="uid://ex6sf638yhh5" path="res://font/Chonky Bunny.ttf" id="5_72562"]
-[ext_resource type="Texture2D" uid="uid://bwf8mkwr4gktp" path="res://images/siguiente_flecha.png" id="6_1653n"]
+[ext_resource type="Texture2D" uid="uid://m7v815yn31g0" path="res://images/siguiente_flecha.png" id="6_1653n"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_wxbku"]
 bg_color = Color(0, 0, 0, 0.54902)

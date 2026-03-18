@@ -7,7 +7,7 @@
 [ext_resource type="FontFile" uid="uid://q4llc3uguqs2" path="res://font/KGCorneroftheSky.ttf" id="5_7bjss"]
 [ext_resource type="Script" uid="uid://dpam8cu8dqot7" path="res://Scenes/question_label.gd" id="6_hoqg8"]
 [ext_resource type="FontFile" uid="uid://bd321yblpf1ew" path="res://font/Supermarket of Love.ttf" id="7_8p7qp"]
-[ext_resource type="Texture2D" uid="uid://bwf8mkwr4gktp" path="res://images/siguiente_flecha.png" id="8_of8xo"]
+[ext_resource type="Texture2D" uid="uid://m7v815yn31g0" path="res://images/siguiente_flecha.png" id="8_of8xo"]
 [ext_resource type="FontFile" uid="uid://ex6sf638yhh5" path="res://font/Chonky Bunny.ttf" id="9_4dwhh"]
 [ext_resource type="Texture2D" uid="uid://so77a6nnvylc" path="res://assets/Amulet.png" id="10_btf4k"]
 [ext_resource type="Texture2D" uid="uid://biibsujjgbq0r" path="res://assets/amuleto-piezas/1.png" id="11_p1"]

@@ -8,7 +8,7 @@
 [ext_resource type="Texture2D" uid="uid://d4eexyfqrkvwe" path="res://images/Juegos/Atinale_al_Puerquito/linea.png" id="5_yet8s"]
 [ext_resource type="Texture2D" uid="uid://ccvtkqj7230jh" path="res://images/Juegos/Atinale_al_Puerquito/incorrecto.png" id="6_jcrvb"]
 [ext_resource type="Texture2D" uid="uid://dyidgbixgog6p" path="res://images/Juegos/Atinale_al_Puerquito/correcto.png" id="7_yox2b"]
-[ext_resource type="Texture2D" uid="uid://bwf8mkwr4gktp" path="res://images/siguiente_flecha.png" id="8_6nw8j"]
+[ext_resource type="Texture2D" uid="uid://m7v815yn31g0" path="res://images/siguiente_flecha.png" id="8_6nw8j"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_sg6ff"]
 bg_color = Color(1, 1, 1, 0.54902)
